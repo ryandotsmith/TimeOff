@@ -1,0 +1,401 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100222043429)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100222043429')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-21 22:55:48) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NoMethodError (undefined method `require_no_user' for #<UserSessionsController:0x10334b3a0>):
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (37.6ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-21 22:57:07) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined method `user_sessions_path' for #<ActionView::Base:0x103647ea0>) on line #1 of app/views/user_sessions/new.haml:
+1: - form_for @user_session do |f|
+2:   = f.error_messages
+3: 
+4:   = f.label :username
+
+    haml (2.2.16) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/user_sessions/new.haml:1:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (2.2.16) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (44.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-21 22:57:10) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined method `user_sessions_path' for #<ActionView::Base:0x103201d28>) on line #1 of app/views/user_sessions/new.haml:
+1: - form_for @user_session do |f|
+2:   = f.error_messages
+3: 
+4:   = f.label :username
+
+    haml (2.2.16) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/user_sessions/new.haml:1:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (2.2.16) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (44.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-21 22:57:58) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined method `user_sessions_path' for #<ActionView::Base:0x103359068>) on line #1 of app/views/user_sessions/new.haml:
+1: - form_for @user_session do |f|
+2:   = f.error_messages
+3: 
+4:   = f.label :username
+
+    haml (2.2.16) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/user_sessions/new.haml:1:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (2.2.16) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (113.0ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-21 22:58:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined method `user_sessions_path' for #<ActionView::Base:0x1032f4348>) on line #1 of app/views/user_sessions/new.haml:
+1: - form_for @user_session do |f|
+2:   = f.error_messages
+3: 
+4:   = f.label :username
+
+    haml (2.2.16) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/user_sessions/new.haml:1:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (2.2.16) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (118.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-21 22:58:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined method `user_sessions_path' for #<ActionView::Base:0x1035aedb8>) on line #1 of app/views/user_sessions/new.haml:
+1: - form_for @user_session do |f|
+2:   = f.error_messages
+3: 
+4:   = f.label :username
+
+    haml (2.2.16) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/user_sessions/new.haml:1:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (2.2.16) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (44.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-21 22:58:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined method `user_sessions_path' for #<ActionView::Base:0x103102120>) on line #1 of app/views/user_sessions/new.haml:
+1: - form_for @user_session do |f|
+2:   = f.error_messages
+3: 
+4:   = f.label :username
+
+    haml (2.2.16) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/user_sessions/new.haml:1:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (2.2.16) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (44.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-21 22:58:29) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined method `username' for #<UserSession: no credentials provided>) on line #5 of app/views/user_sessions/new.haml:
+2:   = f.error_messages
+3: 
+4:   = f.label :username
+5:   = f.text_field :username
+6: 
+7:   = f.label :password
+8:   = f.password_field :password
+
+    app/views/user_sessions/new.haml:5:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (2.2.16) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.16) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.16) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.16) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.16) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/user_sessions/new.haml:1:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (2.2.16) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (50.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-02-21 22:59:04) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering users/new
+Rendered users/_form (2.7ms)
+Completed in 111ms (View: 97, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-02-21 22:59:18) [POST]
+  Parameters: {"commit"=>"sign up", "action"=>"create", "authenticity_token"=>"ItQWLDSyGqBswW6lbu52ACjngfRFuWE/CzeF5lAffrE=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"ryandotsmith"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'ryandotsmith') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '86015776aa65aa9d5be1480b08072816c4f56f8d527c41d60d63c7079203b29fa11ab7ca6627fae6900dbcff3344da82da1c0305d3fc2580bd7c7b9942083b81') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'YjkRVk3BI2spvtTAfXh7') LIMIT 1[0m
+Rendering users/new
+Rendered users/_form (1.7ms)
+Completed in 269ms (View: 7, DB: 0) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-02-21 22:59:29) [POST]
+  Parameters: {"commit"=>"sign up", "action"=>"create", "authenticity_token"=>"ItQWLDSyGqBswW6lbu52ACjngfRFuWE/CzeF5lAffrE=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"ryandotsmith@gmail.com"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'ryandotsmith@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '3005c7517dfd1e494ee225bfc93f61a3aa275e59e5cebe3e23a354412d91667f04ad4bea456ef471919b4fa7c280a0a44711755ff65d7ff226ad432209eb01a5') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '86FMwEHEnRRs8ZhKWl2t') LIMIT 1[0m
+Rendering users/new
+Rendered users/_form (1.9ms)
+Completed in 28ms (View: 7, DB: 0) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-21 23:00:27) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+Redirected to http://localhost:3000/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/account]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-21 23:00:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined method `user_sessions_path' for #<ActionView::Base:0x103505100>) on line #1 of app/views/user_sessions/new.haml:
+1: - form_for @user_session do |f|
+2:   = f.error_messages
+3: 
+4:   = f.label :username
+
+    haml (2.2.16) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/user_sessions/new.haml:1:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (2.2.16) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (47.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-21 23:00:34) [GET]
+
+ActionController::RoutingError (No route matches "/user_session/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-02-21 23:00:41) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering users/new
+Rendered users/_form (3.3ms)
+Completed in 25ms (View: 12, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-02-21 23:00:54) [POST]
+  Parameters: {"commit"=>"sign up", "action"=>"create", "authenticity_token"=>"ItQWLDSyGqBswW6lbu52ACjngfRFuWE/CzeF5lAffrE=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"wonder set", "email"=>"this.ryansmith@gmail.com"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'this.ryansmith@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'wonder set') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'Qhtu6qQY-SlUM1b28Xyo') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "last_login_ip", "login", "last_login_at", "email") VALUES('Qhtu6qQY-SlUM1b28Xyo', '2010-02-22 05:00:54', '2010-02-22 05:00:54', '2003cb4b1b551b728f38103cb8311dbee0715b199c304d9f5419410ae2acf8d4e9c92eb43cde41d1bcb0ac932d823188829f2b8d606ca57c390d3b83380f7669', 'eRPu4siS1uDUy1dmNUmH', '2010-02-22 05:00:54', 0, '127.0.0.1', 'NF0PGOaM2xGYFhCPBtqM', '2010-02-22 05:00:54', '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f', 1, NULL, 'wonder set', NULL, 'this.ryansmith@gmail.com')[0m
+Redirected to http://localhost:3000/account
+Completed in 229ms (DB: 1) | 302 Found [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-21 23:00:54) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-02-22 05:00:54', "perishable_token" = 'h2NfG8wwAJFF3j1UK2Np', "last_request_at" = '2010-02-22 05:00:54' WHERE "id" = 1[0m
+
+ActionView::MissingTemplate (Missing template users/show.erb in view path app/views):
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-21 23:02:09) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-02-22 05:02:09', "perishable_token" = '7EE2oX_Yt5e99Wvn90oT', "last_request_at" = '2010-02-22 05:02:09' WHERE "id" = 1[0m
+Rendering users/show
+Completed in 28ms (View: 5, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-21 23:02:34) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-02-22 05:02:34', "perishable_token" = 'EAanzlwfYOO1Hiko2buw', "last_request_at" = '2010-02-22 05:02:34' WHERE "id" = 1[0m
+Rendering users/show
+Completed in 28ms (View: 5, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-02-21 23:02:39) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-02-22 05:02:39', "perishable_token" = 'I_0d50zOUE_bpZOjzeMl', "last_request_at" = '2010-02-22 05:02:39' WHERE "id" = 1[0m
+Rendering users/show
+Completed in 27ms (View: 5, DB: 1) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100222043429)
+Migrating to CreateAccounts (20100222050618)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100222050618')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222043429')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100222043429)
+Migrating to CreateAccounts (20100222050618)
+Migrating to AddAccountIdToUsers (20100222052235)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "users" ADD "account_id" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100222052235')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "account_id" integer) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100222052235')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222043429')[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m

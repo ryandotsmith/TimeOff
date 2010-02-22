@@ -1,0 +1,4 @@
+# Logfile created on Sun Feb 21 16:45:14 -0600 2010REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-21 16:45:17) [GET]
