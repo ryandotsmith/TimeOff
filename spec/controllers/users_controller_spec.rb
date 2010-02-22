@@ -5,7 +5,7 @@ describe "Creating a user" do
   it "should build an account on creation" do
     @user = User.new
     User.should_receive(:new).and_return(@user)
-    @user.should_receive(:build_account)
+    @user.should_receive(:create_account)
     post :create
   end
 end

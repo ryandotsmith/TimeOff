@@ -81,3 +81,61 @@ Processing UsersController#create (for 0.0.0.0 at 2010-02-21 23:24:06) [POST]
   [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'VvFPD_Kbvym6qD2BxKNa') LIMIT 1[0m
 Rendering users/new
 Completed in 11ms (View: 0, DB: 1) | 200 OK [http://test.host/users]
+
+
+Processing UsersController#create (for 0.0.0.0 at 2010-02-21 23:24:48) [POST]
+  Parameters: {"action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '37e317d53152c39a7d12ba733c04512e6e4bd122230f727b8e740cffcc3e85b6b65728ffe09a8ad6bdb67bc91a8f7d3aa5054255a3a6152509526973f06f504e') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'fd36EG8lVljF6TsAL4-6') LIMIT 1[0m
+Rendering users/new
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://test.host/users]
+
+
+Processing UsersController#create (for 0.0.0.0 at 2010-02-21 23:25:10) [POST]
+  Parameters: {"action"=>"create", "controller"=>"users"}
+  [4;36;1mAccount Create (0.6ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "subdomain") VALUES('2010-02-22 05:25:10', '2010-02-22 05:25:10', NULL)[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'd79ac6a0459450333cf2f2cd336b282947202104283d49d4e46bad01012b9164efb997c78837c7c43e90af69cab6fbab7d6b5935288a37b4bdfb189df4ebf98e') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'VRKHPSMU6O_1QgSCOKAF') LIMIT 1[0m
+Rendering users/new
+Completed in 33ms (View: 0, DB: 1) | 200 OK [http://test.host/users]
+
+
+Processing UsersController#create (for 0.0.0.0 at 2010-02-21 23:25:15) [POST]
+  Parameters: {"action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '70b065404266fb497fef3e0380e2470be3a387d865ea26b8dcff9f6d75fb3f9d38dbcaba275b4f668b543a902ecfb22b6b61bb1f16d085c06ccfbac0085c0411') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'RrC5oeACPnsv_hy6knzr') LIMIT 1[0m
+Rendering users/new
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://test.host/users]
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "subdomain") VALUES('2010-02-22 05:25:18', '2010-02-22 05:25:18', 'value for subdomain')[0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2010-02-21 23:25:18) [POST]
+  Parameters: {"action"=>"create", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '144e465ca51795c3abd48a3a952a04f0ac1bc5173b18a64908d49576db97b9adb8fb6eafb5dbc1cdf22a11bf4b76ba2b3069a5c15a3fb340678f5706da2700fd') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '4I1K-QTZV_TocVNfHlp7') LIMIT 1[0m
+Rendering users/new
+Completed in 12ms (View: 0, DB: 1) | 200 OK [http://test.host/users]
+
+
+Processing UsersController#create (for 0.0.0.0 at 2010-02-21 23:25:47) [POST]
+  Parameters: {"action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '3f6fc3cecabff4079da3e61b9972bf1452158c5f060d1901181d6a3b6c55cdad3e6684427894e491c7d3d6bd31d1b4f26da90b14dce69cc2d1c2a92637e166af') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'ETLnjAK_eDm-KDMWkzKX') LIMIT 1[0m
+Rendering users/new
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://test.host/users]
+
+
+Processing UsersController#create (for 0.0.0.0 at 2010-02-21 23:25:52) [POST]
+  Parameters: {"action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'a7ddf58d9ae876b990c8796ee01004ef491b81fdfcd50822d14368a9c1da7e271c0e9ba9f9a0b752f01ba2e00242518de84d20e30289d0443f6b73ae4bcf2fd6') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'MKxE2X89mUBtP_JTiFyB') LIMIT 1[0m
+Rendering users/new
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://test.host/users]
+
+
+Processing UsersController#create (for 0.0.0.0 at 2010-02-22 10:15:22) [POST]
+  Parameters: {"action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '72c616846b539b61bb31ef47f5aab0966089cab1c80ee03271eb3a15cb9fb3a2b9bbb160a2711378473606f0fe9233cdd1e595df361c41e9c695a9e15a9804a3') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'qZp9a4CE5WqBavkucYm6') LIMIT 1[0m
+Rendering users/new
+Completed in 17ms (View: 0, DB: 0) | 200 OK [http://test.host/users]

@@ -8,10 +8,10 @@ class UsersController < ApplicationController
   
   def create
     @user = User.new(params[:user])
-    @user.build_account
+    @user.create_account
     if @user.save
       flash[:notice] = "Account registered!"
-      redirect_back_or_default account_url
+      redirect_to edit_account_url(@user.account)
     else
       render :action => :new
     end

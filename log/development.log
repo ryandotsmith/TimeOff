@@ -399,3 +399,382 @@ Migrating to AddAccountIdToUsers (20100222052235)
   [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100222052235')[0m
   [4;35;1mSQL (1.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222043429')[0m
   [4;36;1mSQL (2.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-21 23:27:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-02-22 05:27:03', "perishable_token" = 'm4SevDWacTvNmLNfM4NE', "last_request_at" = '2010-02-22 05:27:03' WHERE "id" = 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:action=>"show", :controller=>"accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?):
+  (eval):16:in `account_url'
+  app/controllers/application_controller.rb:36:in `require_no_user'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-21 23:28:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-02-22 05:28:39', "perishable_token" = '_FdRsXFtiRYiKc1P8rIf', "last_request_at" = '2010-02-22 05:28:39' WHERE "id" = 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:action=>"show", :controller=>"accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?):
+  (eval):16:in `account_url'
+  app/controllers/application_controller.rb:36:in `require_no_user'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-21 23:28:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;36;1mUser Update (31.7ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-02-22 05:28:40', "perishable_token" = 'vokyGYsUdYO3AAedzaYD', "last_request_at" = '2010-02-22 05:28:40' WHERE "id" = 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:action=>"show", :controller=>"accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?):
+  (eval):16:in `account_url'
+  app/controllers/application_controller.rb:36:in `require_no_user'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-21 23:28:41) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;36;1mUser Update (3.5ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-02-22 05:28:41', "perishable_token" = 'dZ2VTrrs3HsfDqXwVa_z', "last_request_at" = '2010-02-22 05:28:41' WHERE "id" = 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:action=>"show", :controller=>"accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?):
+  (eval):16:in `account_url'
+  app/controllers/application_controller.rb:36:in `require_no_user'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-21 23:28:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-02-22 05:28:52', "perishable_token" = 'BAn3tBIB47w3RE-37gfv', "last_request_at" = '2010-02-22 05:28:52' WHERE "id" = 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:action=>"show", :controller=>"accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?):
+  (eval):16:in `account_url'
+  app/controllers/application_controller.rb:36:in `require_no_user'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-21 23:29:09) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;35;1mUser Update (0.7ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-22 05:29:09', "perishable_token" = '0ZQZueP4j5qWTpZOJi2S', "last_request_at" = '2010-02-22 05:29:09' WHERE "id" = 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:action=>"show", :controller=>"accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?):
+  (eval):16:in `account_url'
+  app/controllers/application_controller.rb:36:in `require_no_user'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-21 23:29:10) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-22 05:29:10', "perishable_token" = '_v5QODYrEbPbzxMQMsHg', "last_request_at" = '2010-02-22 05:29:10' WHERE "id" = 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:action=>"show", :controller=>"accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?):
+  (eval):16:in `account_url'
+  app/controllers/application_controller.rb:36:in `require_no_user'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-21 23:29:47) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-22 05:29:47', "perishable_token" = 'j6vYSn4JacVuKJd8xF6a', "last_request_at" = '2010-02-22 05:29:47' WHERE "id" = 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:action=>"show", :controller=>"accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?):
+  (eval):16:in `account_url'
+  app/controllers/application_controller.rb:36:in `require_no_user'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-22 09:59:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-22 15:59:01', "perishable_token" = 'TPepAcUI8ymcIVtJ_LLz', "last_request_at" = '2010-02-22 15:59:01' WHERE "id" = 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:action=>"show", :controller=>"accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?):
+  (eval):16:in `account_url'
+  app/controllers/application_controller.rb:36:in `require_no_user'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-22 10:00:25) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-22 16:00:25', "perishable_token" = 'j5_Cg32oOa_hSuQjtxk_', "last_request_at" = '2010-02-22 16:00:25' WHERE "id" = 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:action=>"show", :controller=>"accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?):
+  (eval):16:in `account_url'
+  app/controllers/application_controller.rb:36:in `require_no_user'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-02-22 10:00:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"accounts"}
+
+ActionController::UnknownAction (No action responded to new. Actions: ):
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-22 10:00:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-22 16:00:44', "perishable_token" = 'mjrcMgYZgrOfxm61HDYc', "last_request_at" = '2010-02-22 16:00:44' WHERE "id" = 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:action=>"show", :controller=>"accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?):
+  (eval):16:in `account_url'
+  app/controllers/application_controller.rb:36:in `require_no_user'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-22 10:00:58) [GET]
+
+ActionController::RoutingError (No route matches "/user_session/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-22 10:01:10) [GET]
+
+ActionController::RoutingError (No route matches "/user_session/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-22 10:01:44) [GET]
+
+ActionController::RoutingError (No route matches "/user_session/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-22 10:01:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-22 16:01:52', "perishable_token" = 't9dLGBoFKl4sS_Ep8_2n', "last_request_at" = '2010-02-22 16:01:52' WHERE "id" = 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:action=>"show", :controller=>"accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?):
+  (eval):16:in `account_url'
+  app/controllers/application_controller.rb:36:in `require_no_user'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-22 10:02:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-22 16:02:38', "perishable_token" = '7G-Sd9IQLcu_5BZ8EJKT', "last_request_at" = '2010-02-22 16:02:38' WHERE "id" = 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:action=>"show", :controller=>"accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?):
+  (eval):16:in `account_url'
+  app/controllers/application_controller.rb:36:in `require_no_user'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-22 10:02:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-22 16:02:39', "perishable_token" = 'P3h8znW8ZgfwcGu0F6wu', "last_request_at" = '2010-02-22 16:02:39' WHERE "id" = 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:action=>"show", :controller=>"accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?):
+  (eval):16:in `account_url'
+  app/controllers/application_controller.rb:36:in `require_no_user'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-22 10:02:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-22 16:02:52', "perishable_token" = 'GZNoNx4gN-5T_qQCpiK6', "last_request_at" = '2010-02-22 16:02:52' WHERE "id" = 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:action=>"show", :controller=>"accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?):
+  (eval):16:in `account_url'
+  app/controllers/application_controller.rb:36:in `require_no_user'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-22 10:02:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-22 16:02:53', "perishable_token" = 'QiHvTj-rJXgl1xK9ARbe', "last_request_at" = '2010-02-22 16:02:53' WHERE "id" = 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:action=>"show", :controller=>"accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?):
+  (eval):16:in `account_url'
+  app/controllers/application_controller.rb:36:in `require_no_user'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-22 10:03:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-22 16:03:19', "perishable_token" = 'WH6nCGFFmT5lN0oj9QdR', "last_request_at" = '2010-02-22 16:03:19' WHERE "id" = 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:action=>"show", :controller=>"accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?):
+  (eval):16:in `account_url'
+  app/controllers/application_controller.rb:36:in `require_no_user'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-22 10:03:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-22 16:03:27', "perishable_token" = 'Cm93vOexhS06Yj91dui0', "last_request_at" = '2010-02-22 16:03:27' WHERE "id" = 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:action=>"show", :controller=>"accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?):
+  (eval):16:in `account_url'
+  app/controllers/application_controller.rb:36:in `require_no_user'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-22 10:03:28) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;35;1mUser Update (0.8ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-22 16:03:28', "perishable_token" = 'lG45JLvK9V57kWTz_yWK', "last_request_at" = '2010-02-22 16:03:28' WHERE "id" = 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:action=>"show", :controller=>"accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?):
+  (eval):16:in `account_url'
+  app/controllers/application_controller.rb:36:in `require_no_user'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-22 10:03:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-22 16:03:39', "perishable_token" = 'YnACIynu4u4IfLbp-ddY', "last_request_at" = '2010-02-22 16:03:39' WHERE "id" = 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:action=>"show", :controller=>"accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?):
+  (eval):16:in `account_url'
+  app/controllers/application_controller.rb:36:in `require_no_user'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-22 10:04:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-22 16:04:21', "perishable_token" = '76Sh6I99bVGjs3m1ScGO', "last_request_at" = '2010-02-22 16:04:21' WHERE "id" = 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:action=>"show", :controller=>"accounts", :id=>nil}, expected: {:action=>"show", :controller=>"accounts"}, diff: {:id=>nil}):
+  (eval):16:in `account_url'
+  app/controllers/application_controller.rb:36:in `require_no_user'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-22 10:04:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-22 16:04:22', "perishable_token" = 'AgG90mz9ZjcBWxmz4cdY', "last_request_at" = '2010-02-22 16:04:22' WHERE "id" = 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:action=>"show", :controller=>"accounts", :id=>nil}, expected: {:action=>"show", :controller=>"accounts"}, diff: {:id=>nil}):
+  (eval):16:in `account_url'
+  app/controllers/application_controller.rb:36:in `require_no_user'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-22 10:04:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9204e2952ca5a1596671ef0ee37df14e76be7e7b1a90f07122af70ea4f42c56160fe808ea2dc0c054bb3bc0bafab83a140cec98b8e2d9ad0de142956d4b4075f') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-22 16:04:49', "perishable_token" = 'DN173xc-8sdVe4u1HQ5l', "last_request_at" = '2010-02-22 16:04:49' WHERE "id" = 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:action=>"show", :controller=>"accounts", :id=>nil}, expected: {:action=>"show", :controller=>"accounts"}, diff: {:id=>nil}):
+  (eval):16:in `account_path'
+  app/controllers/application_controller.rb:36:in `require_no_user'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-02-22 10:05:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2010-02-22 10:09:05) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+
+NameError (uninitialized constant PagesController):
+  
+
+Rendered rescues/_trace (29.4ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-02-22 10:10:40) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+
+ActionView::TemplateError (undefined local variable or method `new_accounts_url' for #<ActionView::Base:0x103583910>) on line #2 of app/views/pages/index.haml:
+1: %h1 Holiday
+2: %p= link_to "Sign Up", new_accounts_url
+
+    app/views/pages/index.haml:2:in `_run_haml_app47views47pages47index46haml'
+    haml (2.2.16) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.16) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    vendor/plugins/high_voltage/app/controllers/high_voltage/pages_controller.rb:6:in `show'
+    haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (43.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-02-22 10:10:49) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/]
