@@ -1,5 +1,6 @@
-Given /^An account$/ do
-  account = Factory(:account)
-  host! "#{account.subdomain}.example.com"
+Given /^an account exists with a subdomain of "([^\"]*)"$/ do |subdomain|
+  account = Factory(:account,:subdomain => subdomain)
+  #host! "#{account.subdomain}.example.com"
 end
+
 
