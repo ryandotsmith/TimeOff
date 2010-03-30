@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100222052235) do
+ActiveRecord::Schema.define(:version => 20100327170743) do
 
   create_table "accounts", :force => true do |t|
     t.string   "subdomain"
@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(:version => 20100222052235) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "login",                              :null => false
     t.string   "email",                              :null => false
     t.string   "crypted_password",                   :null => false
     t.string   "password_salt",                      :null => false

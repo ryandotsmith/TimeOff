@@ -139,3 +139,137 @@ Processing UsersController#create (for 0.0.0.0 at 2010-02-22 10:15:22) [POST]
   [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'qZp9a4CE5WqBavkucYm6') LIMIT 1[0m
 Rendering users/new
 Completed in 17ms (View: 0, DB: 0) | 200 OK [http://test.host/users]
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "subdomain") VALUES('2010-03-11 16:17:46', '2010-03-11 16:17:46', 'value for subdomain')[0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2010-03-11 10:17:46) [POST]
+  Parameters: {"action"=>"create", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '810f709100bb47e6a2e16b7217ac8a03b234ebfef92329c14d25bd45bf71d1470b6eba7e3bf42d635c347d267a3d171301857af0f736eaa3d64b06a50e116801') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'dUDZXVRXKVyLQ9kIABRT') LIMIT 1[0m
+Rendering users/new
+Completed in 11ms (View: 0, DB: 1) | 200 OK [http://test.host/users]
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "subdomain") VALUES('2010-03-27 16:07:23', '2010-03-27 16:07:23', 'value for subdomain')[0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2010-03-27 11:07:23) [POST]
+  Parameters: {"action"=>"create", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '660ec68aa519f405f1eca6ccbf5b4a3e054fb96558281cd82ad403d385fd6ca00b357dee9286e268cf3612f0b6ed0e870cd2f763104ac7896e6dd10925f15777') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'Zc5eTFfFihUGAzzfQ1cC') LIMIT 1[0m
+Rendering users/new
+Completed in 9ms (View: 0, DB: 1) | 200 OK [http://test.host/users]
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "subdomain") VALUES('2010-03-27 16:31:30', '2010-03-27 16:31:30', 'value for subdomain')[0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2010-03-27 11:31:30) [POST]
+  Parameters: {"action"=>"create", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'ddacc4a2165426e83877ff164418ba77787d9b0f5044bc76b8dbee3427b9a2d8499d5a8348d51352a95065b607c12f3b5a1cc7f383bda4667c5d12fbd2192f8c') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'OafXszOPybWkA7ZK7pIK') LIMIT 1[0m
+Rendering users/new
+Completed in 9ms (View: 0, DB: 1) | 200 OK [http://test.host/users]
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "subdomain") VALUES('2010-03-27 16:32:32', '2010-03-27 16:32:32', 'value for subdomain')[0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2010-03-27 11:32:32) [POST]
+  Parameters: {"action"=>"create", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'bbdc39d55d413f0829f4e9840d26b8114116c51bbae75b41f3a93fb08f1551f8dba406754ca57813e527d59759a04a6db063e7191e7a77e2a02c6bfb57aff1da') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'kv719hhjPeT3fWqFf6SH') LIMIT 1[0m
+Rendering users/new
+Completed in 9ms (View: 0, DB: 1) | 200 OK [http://test.host/users]
+
+
+Processing UsersController#create (for 0.0.0.0 at 2010-03-27 11:43:08) [POST]
+  Parameters: {"action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '4220e520a5913fc5bfb62acf7681a91777888438be1505085cd4637c1823175d0bf3997c6bb7d1788d6900fad67250f34073ca2ea9b97696a4d18755b950c15a') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '9To-2Dc-VR0_vXNXTk7L') LIMIT 1[0m
+Rendering users/new
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://test.host/users]
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "subdomain") VALUES('2010-03-27 16:43:08', '2010-03-27 16:43:08', 'wonderset')[0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2010-03-27 11:43:40) [POST]
+  Parameters: {"action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'b39f2dda1aff15c4f7352d2a0798d80e1a13f69142186fe78eabf8cd8a7347b88810319734288c9e12c783b4a4ddd0f93b2181df7418cd8f1f6dac7473d93ecb') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'ZqD1O2DUI7ma7hMAcDEl') LIMIT 1[0m
+Rendering users/new
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://test.host/users]
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "subdomain") VALUES('2010-03-27 16:43:40', '2010-03-27 16:43:40', 'wonderset')[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+
+
+Processing UsersController#create (for 0.0.0.0 at 2010-03-28 18:55:17) [POST]
+  Parameters: {"action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '6f95ac61534fbc608cb3e1e8e4d0d464609d6407a2a137bf6c03a2d8b62573ed519144aba56982dd00b27c2f886484925d1b554f8680a9c7e84204bad2da283c') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'IApnUOwFJ2zwR21uOe3C') LIMIT 1[0m
+Rendering users/new
+Completed in 17ms (View: 0, DB: 0) | 200 OK [http://test.host/account/users]
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "subdomain") VALUES('2010-03-28 23:55:17', '2010-03-28 23:55:17', 'wonderset')[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+** SubdomainFu: initialized properly
+
+
+Processing UsersController#create (for 0.0.0.0 at 2010-03-28 20:29:16) [POST]
+  Parameters: {"action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '3a65713834b0fe9cd5245ec6e9d8ed5a12df4a21e898fbf3b34b42bbec8847877afe32a4be48284a04825aa425d3912d781022d0b4e013bcf4e9caa0c3c0dbdc') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'tUeOTHKIyAnEB5ZiXH11') LIMIT 1[0m
+Rendering users/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://test.host/account/users]
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "subdomain") VALUES('2010-03-29 01:29:16', '2010-03-29 01:29:16', 'wonderset')[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+** SubdomainFu: initialized properly
+
+
+Processing UsersController#create (for 0.0.0.0 at 2010-03-28 20:31:50) [POST]
+  Parameters: {"action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '322234ca9c0092b2ce7acd86e526e9a247c8db0928c77986226c421c3d188e00de0c0f401a27ab8b22c6551fb5cdbe83a217b86f899580b8ce8e8184c4051c4c') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'dIcuU_HzB0XNVQz_-Dtz') LIMIT 1[0m
+Rendering users/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://test.host/account/users]
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mAccount Create (0.7ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "subdomain") VALUES('2010-03-29 01:31:50', '2010-03-29 01:31:50', 'wonderset')[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+** SubdomainFu: initialized properly
+
+
+Processing UsersController#create (for 0.0.0.0 at 2010-03-29 18:02:44) [POST]
+  Parameters: {"action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'f118ac4356668f36dc414de6aa5420b8097f795d7c2221f0de4a056b3b049ed2092ab913e41453adb0c4a368c0aac6b8fe69d4c7daae5701438ebedbb50e6c8d') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'NhYV-hz3ZjXS62qVD17g') LIMIT 1[0m
+Rendering users/new
+Completed in 21ms (View: 0, DB: 1) | 200 OK [http://test.host/account/users]
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "subdomain") VALUES('2010-03-29 23:02:44', '2010-03-29 23:02:44', 'wonderset')[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly
+** SubdomainFu: initialized properly

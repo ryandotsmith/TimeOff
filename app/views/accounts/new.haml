@@ -1,0 +1,18 @@
+%h1 Sign Up
+- form_for @account, :url => account_path do |form|
+  = form.error_messages
+
+  = form.label :subdomain, "Company Name"
+  = form.text_field :subdomain
+
+  - form.fields_for :users do |user_form|
+    = user_form.label :email, 'Email Address'
+    = user_form.text_field :email
+
+    = user_form.label :password, 'password'
+    = user_form.password_field :password
+
+    = user_form.label :password_confirmation, "password confirmation"
+    = user_form.password_field :password_confirmation
+
+  = form.submit 'Sign Up'

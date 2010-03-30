@@ -5,4 +5,5 @@ require File.join(File.dirname(__FILE__), 'boot')
 Rails::Initializer.run do |config|
   config.time_zone = 'UTC'
   config.gem "authlogic"
+  config.gem 'mbleigh-subdomain-fu', :lib => "subdomain-fu"
 end

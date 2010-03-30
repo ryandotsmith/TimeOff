@@ -1,1 +1,26 @@
+[32m.[0m[31mF[0m[36m-[0m[36m-[0m[36m-[0m[36m-[0m[36m-[0m[36m-[0m[33mU[0m[36m-[0m[36m-[0m[36m-[0m[36m-[0m[36m-[0m[36m-[0m[36m-[0m[36m-[0m[32m.[0m[31mF[0m[36m-[0m[36m-[0m[36m-[0m[36m-[0m[36m-[0m[36m-[0m[36m-[0m
+
+[31m(::) failed steps (::)[0m
+
+[31mNo route matches "/account/new" with {:method=>:get, :host=>"www.example.com", :domain=>"example.com", :subdomain=>"www.example"} (ActionController::RoutingError)
+(eval):2:in `/^(?:|I )follow "([^\"]*)"$/'
+features/creating_a_new_account.feature:8:in `When I follow "Sign Up"'[0m
+
+[31mNo route matches "/account/new" with {:method=>:get, :host=>"www.example.com", :domain=>"example.com", :subdomain=>"www.example"} (ActionController::RoutingError)
+(eval):2:in `/^(?:|I )follow "([^\"]*)"$/'
+features/creating_a_new_account.feature:29:in `When I follow "Sign Up"'[0m
+
+[31mFailing Scenarios:[0m
+[31mcucumber features/creating_a_new_account.feature:6[0m[90m # Scenario: Creating a new account and then updating company info[0m
+[31mcucumber features/creating_a_new_account.feature:27[0m[90m # Scenario: Creating an account and registering the user as the owner of the account[0m
+
+3 scenarios ([31m2 failed[0m, [33m1 undefined[0m)
+26 steps ([31m2 failed[0m, [36m21 skipped[0m, [33m1 undefined[0m, [32m2 passed[0m)
+0m0.122s
+[33m
+You can implement step definitions for undefined steps with these snippets:
+
+Given /^an account exists with a subdomain of "([^\"]*)"$/ do |arg1|
+  pending
+end[0m
 
