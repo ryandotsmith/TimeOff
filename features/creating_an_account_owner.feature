@@ -9,7 +9,6 @@ Feature: Making the account creator the owner
     And I fill in "password confirmation" with "password"
     And I press "sign up"
     Then I should see "Account Administration"
-    And I should see "wonderset's hr department"
 
 
 

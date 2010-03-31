@@ -1,2 +1,5 @@
 %h1 Update Your Company Profile
 %h2= @account.subdomain
+
+- if current_user == @account.owner
+  %h3 Account Administration

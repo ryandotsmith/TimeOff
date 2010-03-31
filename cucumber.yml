@@ -1,2 +1,2 @@
-default: --format pretty
+default: --format progress
 wip: --tags @wip:3 --wip features

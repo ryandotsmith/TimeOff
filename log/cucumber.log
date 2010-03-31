@@ -4151,3 +4151,691 @@ Processing AccountsController#create (for 127.0.0.1 at 2010-03-30 09:12:12) [POS
   [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
 Rendering accounts/new
 Completed in 21ms (View: 10, DB: 1) | 200 OK [http://www.example.com/account]
+** SubdomainFu: initialized properly
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-03-30 23:02:08) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET http://www.example.com/account/new with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-30 23:02:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"accounts"}
+Rendering accounts/new
+Completed in 22ms (View: 9, DB: 0) | 200 OK [http://www.example.com/account/new]
+REQUESTING PAGE: POST /account with {"commit"=>"Sign Up", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"password", "password"=>"password", "email"=>"ryan@wonderset.com"}}}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/account/new"}
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-03-30 23:02:08) [POST]
+  Parameters: {"commit"=>"Sign Up", "action"=>"create", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"ryan@wonderset.com"}}}, "controller"=>"accounts"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e20aaff0fdb5f81bcd037ffe79909e847aea59f507da377e3fb8799dea2c37d7b6697872d03bd6d87e5420affc6d8074353226674f33dbaa4b31e77eafc3ddb3') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'Ed2TfWS-MQTldgGGKgxD') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e20aaff0fdb5f81bcd037ffe79909e847aea59f507da377e3fb8799dea2c37d7b6697872d03bd6d87e5420affc6d8074353226674f33dbaa4b31e77eafc3ddb3') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'Ed2TfWS-MQTldgGGKgxD') LIMIT 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "subdomain") VALUES('2010-03-31 04:02:08', '2010-03-31 04:02:08', 'wonderset')[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "account_id", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "last_login_ip", "last_login_at", "email") VALUES('Ed2TfWS-MQTldgGGKgxD', '2010-03-31 04:02:08', '2010-03-31 04:02:08', '47d46e39e1468ae4a4f378d5a24668ff1dedc43c8d4bae61ffe40d89acf413a79bf00a88ee73c840e5f2555a7a9f0d9da6d243c1d2f9b7860615e7897228ca3a', '-nBlKDzB6PZZUC7oo90g', '2010-03-31 04:02:08', 1, 0, '127.0.0.1', '8WlSgXwC9Cj4KEV0KIj0', '2010-03-31 04:02:08', 'e20aaff0fdb5f81bcd037ffe79909e847aea59f507da377e3fb8799dea2c37d7b6697872d03bd6d87e5420affc6d8074353226674f33dbaa4b31e77eafc3ddb3', 1, NULL, NULL, 'ryan@wonderset.com')[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-31 04:02:08', "perishable_token" = 'yv3eUiLa4tItELAHejhq' WHERE "id" = 1[0m
+Redirected to http://wonderset.example.com/account/edit
+Completed in 295ms (DB: 1) | 302 Found [http://www.example.com/account]
+REQUESTING PAGE: GET http://wonderset.example.com/account/edit with {} and HTTP headers {"HTTP_REFERER"=>"/account"}
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-03-30 23:02:08) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://wonderset.example.com/account/edit]
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;36;1mAccount Create (0.3ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "subdomain") VALUES('2010-03-31 04:02:08', '2010-03-31 04:02:08', 'wonderset')[0m
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-03-30 23:02:08) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET http://www.example.com/account/new with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-30 23:02:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"accounts"}
+Rendering accounts/new
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/account/new]
+REQUESTING PAGE: POST /account with {"commit"=>"Sign Up", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"password", "password"=>"password", "email"=>"ryan@wonderset.com"}}}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/account/new"}
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-03-30 23:02:08) [POST]
+  Parameters: {"commit"=>"Sign Up", "action"=>"create", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"ryan@wonderset.com"}}}, "controller"=>"accounts"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'ef9524669ce60142282871cacc94e3e6d098ab0413c6a7c0bcb0885d28813162181055235bd48746150e8893211a035ae8971727ce2c9d6d9e19b19ce7e8d3f4') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'X1_3OY-m-fEylSApciBW') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'ef9524669ce60142282871cacc94e3e6d098ab0413c6a7c0bcb0885d28813162181055235bd48746150e8893211a035ae8971727ce2c9d6d9e19b19ce7e8d3f4') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'X1_3OY-m-fEylSApciBW') LIMIT 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/new
+Completed in 21ms (View: 9, DB: 1) | 200 OK [http://www.example.com/account]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-03-30 23:02:08) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET http://www.example.com/account/new with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-30 23:02:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"accounts"}
+Rendering accounts/new
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/account/new]
+REQUESTING PAGE: POST /account with {"commit"=>"Sign Up", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"password", "password"=>"password", "email"=>"ryan@wonderset.com"}}}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/account/new"}
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-03-30 23:02:08) [POST]
+  Parameters: {"commit"=>"Sign Up", "action"=>"create", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"ryan@wonderset.com"}}}, "controller"=>"accounts"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'c2fcf26af35cb68bf6ed78f30a8cc5555b6f294791f5a6432f1737edf64205520c25c5d1209c7920f2812d8881bd0cdd4ba880d9461111c3fa7fa6ce96258ef7') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'lliOj4dM7AV2rX4tDPo3') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'c2fcf26af35cb68bf6ed78f30a8cc5555b6f294791f5a6432f1737edf64205520c25c5d1209c7920f2812d8881bd0cdd4ba880d9461111c3fa7fa6ce96258ef7') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'lliOj4dM7AV2rX4tDPo3') LIMIT 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mAccount Create (0.3ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "subdomain") VALUES('2010-03-31 04:02:08', '2010-03-31 04:02:08', 'wonderset')[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "account_id", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "last_login_ip", "last_login_at", "email") VALUES('lliOj4dM7AV2rX4tDPo3', '2010-03-31 04:02:08', '2010-03-31 04:02:08', '37eaba69fad38aa97fa8c36a0180d608da9f8ac21c5386bae59143aefa88798316f1bff2f3ac6a9706172b764137d11cbd716aeed99147c4fac7dc067a16a14e', 'z1tnIXnbFZlC5zDm9GUS', '2010-03-31 04:02:08', 1, 0, '127.0.0.1', 'dSgYHWY6_nOTNPQSUHLL', '2010-03-31 04:02:08', 'c2fcf26af35cb68bf6ed78f30a8cc5555b6f294791f5a6432f1737edf64205520c25c5d1209c7920f2812d8881bd0cdd4ba880d9461111c3fa7fa6ce96258ef7', 1, NULL, NULL, 'ryan@wonderset.com')[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-31 04:02:08', "perishable_token" = '6spBOeYDbKLXZSn9eiXN' WHERE "id" = 1[0m
+Redirected to http://wonderset.example.com/account/edit
+Completed in 21ms (DB: 1) | 302 Found [http://www.example.com/account]
+REQUESTING PAGE: GET http://wonderset.example.com/account/edit with {} and HTTP headers {"HTTP_REFERER"=>"/account"}
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-03-30 23:02:08) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://wonderset.example.com/account/edit]
+** SubdomainFu: initialized properly
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-03-30 23:02:33) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET http://www.example.com/account/new with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-30 23:02:33) [GET]
+  Parameters: {"action"=>"new", "controller"=>"accounts"}
+Rendering accounts/new
+Completed in 21ms (View: 8, DB: 0) | 200 OK [http://www.example.com/account/new]
+REQUESTING PAGE: POST /account with {"commit"=>"Sign Up", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"password", "password"=>"password", "email"=>"ryan@wonderset.com"}}}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/account/new"}
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-03-30 23:02:33) [POST]
+  Parameters: {"commit"=>"Sign Up", "action"=>"create", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"ryan@wonderset.com"}}}, "controller"=>"accounts"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '55c23424ded02bef99e0ad63fb1c9d2e62e13a2ab526ec90ba69e122482525164ee6e08732553b026343d265f4f7f91b57b5cff0a18b3b0fdd3189a5106d7154') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'vIWRAzmIjT-DL0fCEjNa') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '55c23424ded02bef99e0ad63fb1c9d2e62e13a2ab526ec90ba69e122482525164ee6e08732553b026343d265f4f7f91b57b5cff0a18b3b0fdd3189a5106d7154') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'vIWRAzmIjT-DL0fCEjNa') LIMIT 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "subdomain") VALUES('2010-03-31 04:02:34', '2010-03-31 04:02:34', 'wonderset')[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "account_id", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "last_login_ip", "last_login_at", "email") VALUES('vIWRAzmIjT-DL0fCEjNa', '2010-03-31 04:02:34', '2010-03-31 04:02:34', 'a5cd000f61b48fe846433d571438f70a7aa4e5feabe16aeecdfed7eaf2ea62755efbb1681c2425a6a33ca5dfc072f6c03cd237cbe2715d6a95b6892c3d6252a6', 'nKg_MccYm_zodAO0AosF', '2010-03-31 04:02:34', 1, 0, '127.0.0.1', 'RRrOVJ0kAEwhihF2quHK', '2010-03-31 04:02:34', '55c23424ded02bef99e0ad63fb1c9d2e62e13a2ab526ec90ba69e122482525164ee6e08732553b026343d265f4f7f91b57b5cff0a18b3b0fdd3189a5106d7154', 1, NULL, NULL, 'ryan@wonderset.com')[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-31 04:02:34', "perishable_token" = 'XC5h3E0tuJalmsmu4nJy' WHERE "id" = 1[0m
+Redirected to http://wonderset.example.com/account/edit
+Completed in 293ms (DB: 1) | 302 Found [http://www.example.com/account]
+REQUESTING PAGE: GET http://wonderset.example.com/account/edit with {} and HTTP headers {"HTTP_REFERER"=>"/account"}
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-03-30 23:02:34) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://wonderset.example.com/account/edit]
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;36;1mAccount Create (0.3ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "subdomain") VALUES('2010-03-31 04:02:34', '2010-03-31 04:02:34', 'wonderset')[0m
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-03-30 23:02:34) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET http://www.example.com/account/new with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-30 23:02:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"accounts"}
+Rendering accounts/new
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/account/new]
+REQUESTING PAGE: POST /account with {"commit"=>"Sign Up", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"password", "password"=>"password", "email"=>"ryan@wonderset.com"}}}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/account/new"}
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-03-30 23:02:34) [POST]
+  Parameters: {"commit"=>"Sign Up", "action"=>"create", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"ryan@wonderset.com"}}}, "controller"=>"accounts"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'a6f11ced4c7c370aa1fb6bda20798075d3fac68b4b00d69be6b8051f1222b8e7a1954f84fce3f7895565ac446d6db6ec394cdf49657bab0ca17ac152f76c1e4f') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'ZNhCcFFfVh-op90dAkB6') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'a6f11ced4c7c370aa1fb6bda20798075d3fac68b4b00d69be6b8051f1222b8e7a1954f84fce3f7895565ac446d6db6ec394cdf49657bab0ca17ac152f76c1e4f') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'ZNhCcFFfVh-op90dAkB6') LIMIT 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/new
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://www.example.com/account]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-03-30 23:02:34) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET http://www.example.com/account/new with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-30 23:02:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"accounts"}
+Rendering accounts/new
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/account/new]
+REQUESTING PAGE: POST /account with {"commit"=>"Sign Up", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"password", "password"=>"password", "email"=>"ryan@wonderset.com"}}}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/account/new"}
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-03-30 23:02:34) [POST]
+  Parameters: {"commit"=>"Sign Up", "action"=>"create", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"ryan@wonderset.com"}}}, "controller"=>"accounts"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '0c68ad97ea4f166d7e4b9dccd60b1b96cc3f50b9306bfd5f3119e27e96306e57981034bb289e1815d6224952ed8ae0c7c8f8553163a400808a73ae9eb69f16b9') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'd__z0CZ0cvfglZWWpsuC') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '0c68ad97ea4f166d7e4b9dccd60b1b96cc3f50b9306bfd5f3119e27e96306e57981034bb289e1815d6224952ed8ae0c7c8f8553163a400808a73ae9eb69f16b9') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'd__z0CZ0cvfglZWWpsuC') LIMIT 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mAccount Create (0.3ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "subdomain") VALUES('2010-03-31 04:02:34', '2010-03-31 04:02:34', 'wonderset')[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "account_id", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "last_login_ip", "last_login_at", "email") VALUES('d__z0CZ0cvfglZWWpsuC', '2010-03-31 04:02:34', '2010-03-31 04:02:34', '8f5b17873914bce01081e15133167bca49d252e921b10ac7df9d6a396e3f95405b3735c31e9af531c052ac9d565ff505398319ca549b2a762d3c714b6e77116f', 'OFQqLx794baLH4uLNnK3', '2010-03-31 04:02:34', 1, 0, '127.0.0.1', 'PNtRIcDcjxYVJX2_wl5V', '2010-03-31 04:02:34', '0c68ad97ea4f166d7e4b9dccd60b1b96cc3f50b9306bfd5f3119e27e96306e57981034bb289e1815d6224952ed8ae0c7c8f8553163a400808a73ae9eb69f16b9', 1, NULL, NULL, 'ryan@wonderset.com')[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-31 04:02:34', "perishable_token" = 'ZvMs_S4nSDraanuJuDot' WHERE "id" = 1[0m
+Redirected to http://wonderset.example.com/account/edit
+Completed in 21ms (DB: 1) | 302 Found [http://www.example.com/account]
+REQUESTING PAGE: GET http://wonderset.example.com/account/edit with {} and HTTP headers {"HTTP_REFERER"=>"/account"}
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-03-30 23:02:34) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://wonderset.example.com/account/edit]
+** SubdomainFu: initialized properly
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-03-30 23:03:22) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET http://www.example.com/account/new with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-30 23:03:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"accounts"}
+Rendering accounts/new
+Completed in 21ms (View: 8, DB: 0) | 200 OK [http://www.example.com/account/new]
+REQUESTING PAGE: POST /account with {"commit"=>"Sign Up", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"password", "password"=>"password", "email"=>"ryan@wonderset.com"}}}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/account/new"}
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-03-30 23:03:22) [POST]
+  Parameters: {"commit"=>"Sign Up", "action"=>"create", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"ryan@wonderset.com"}}}, "controller"=>"accounts"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '21cf7aac0101174c3cc1d1755f2e4ac228ac62dd2d9ad683b5a8a16825d089b7bb261ad501eb6d1692b5d5d3db1cd7a034b9cf95a7e82729d48f99e9860b8caa') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'iw1PhdO8SWCmsAHeukxL') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '21cf7aac0101174c3cc1d1755f2e4ac228ac62dd2d9ad683b5a8a16825d089b7bb261ad501eb6d1692b5d5d3db1cd7a034b9cf95a7e82729d48f99e9860b8caa') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'iw1PhdO8SWCmsAHeukxL') LIMIT 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "subdomain") VALUES('2010-03-31 04:03:22', '2010-03-31 04:03:22', 'wonderset')[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "account_id", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "last_login_ip", "last_login_at", "email") VALUES('iw1PhdO8SWCmsAHeukxL', '2010-03-31 04:03:22', '2010-03-31 04:03:23', 'cff11004bb02ea710ecd108787e29c241caed5aacc4508ae09b9524ac3a5088339a153af6759ffb5514974df93f23e912a1a6fbf9fd33c07e480ddaed9c34bfd', 'IarqnoaPtP1AmEo1Lj89', '2010-03-31 04:03:23', 1, 0, '127.0.0.1', 'OCX7HYw847jnH_HS7Xkk', '2010-03-31 04:03:22', '21cf7aac0101174c3cc1d1755f2e4ac228ac62dd2d9ad683b5a8a16825d089b7bb261ad501eb6d1692b5d5d3db1cd7a034b9cf95a7e82729d48f99e9860b8caa', 1, NULL, NULL, 'ryan@wonderset.com')[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-31 04:03:23', "perishable_token" = 'qeFQUWFu3P9rRpp1WTx4' WHERE "id" = 1[0m
+Redirected to http://wonderset.example.com/account/edit
+Completed in 301ms (DB: 1) | 302 Found [http://www.example.com/account]
+REQUESTING PAGE: GET http://wonderset.example.com/account/edit with {} and HTTP headers {"HTTP_REFERER"=>"/account"}
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-03-30 23:03:23) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://wonderset.example.com/account/edit]
+** SubdomainFu: initialized properly
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-03-30 23:03:39) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET http://www.example.com/account/new with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-30 23:03:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"accounts"}
+Rendering accounts/new
+Completed in 21ms (View: 8, DB: 0) | 200 OK [http://www.example.com/account/new]
+REQUESTING PAGE: POST /account with {"commit"=>"Sign Up", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"password", "password"=>"password", "email"=>"ryan@wonderset.com"}}}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/account/new"}
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-03-30 23:03:39) [POST]
+  Parameters: {"commit"=>"Sign Up", "action"=>"create", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"ryan@wonderset.com"}}}, "controller"=>"accounts"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'cab2c37a139ccf8daa68abb0a9b56e761b2a5cfcecbda2cef3b4e59903064649500a5e7367999ac5f2779011f767ecf9246f088527cc0b0da543d620aa8a660c') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'pTwozQ4dbR6vy7KdNbdD') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'cab2c37a139ccf8daa68abb0a9b56e761b2a5cfcecbda2cef3b4e59903064649500a5e7367999ac5f2779011f767ecf9246f088527cc0b0da543d620aa8a660c') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'pTwozQ4dbR6vy7KdNbdD') LIMIT 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "subdomain") VALUES('2010-03-31 04:03:39', '2010-03-31 04:03:39', 'wonderset')[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "account_id", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "last_login_ip", "last_login_at", "email") VALUES('pTwozQ4dbR6vy7KdNbdD', '2010-03-31 04:03:39', '2010-03-31 04:03:39', 'd256a76243986066a97fdb352118d5531936242abf4a91890c76917f605cf0a0aa60e958369ac6d78ddd68ba24c9f9625a550487373a5d2ffdf5c38ea303a264', '-Q-HHiWJiFm6irOZ0RnI', '2010-03-31 04:03:39', 1, 0, '127.0.0.1', 'RLdvQN1phBiJfA__rZzJ', '2010-03-31 04:03:39', 'cab2c37a139ccf8daa68abb0a9b56e761b2a5cfcecbda2cef3b4e59903064649500a5e7367999ac5f2779011f767ecf9246f088527cc0b0da543d620aa8a660c', 1, NULL, NULL, 'ryan@wonderset.com')[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-31 04:03:39', "perishable_token" = 'LwnSKFL2kZ_Kg-Uyriyb' WHERE "id" = 1[0m
+Redirected to http://wonderset.example.com/account/edit
+Completed in 294ms (DB: 1) | 302 Found [http://www.example.com/account]
+REQUESTING PAGE: GET http://wonderset.example.com/account/edit with {} and HTTP headers {"HTTP_REFERER"=>"/account"}
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-03-30 23:03:39) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://wonderset.example.com/account/edit]
+** SubdomainFu: initialized properly
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-03-30 23:06:33) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET http://www.example.com/account/new with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-30 23:06:33) [GET]
+  Parameters: {"action"=>"new", "controller"=>"accounts"}
+Rendering accounts/new
+Completed in 22ms (View: 8, DB: 0) | 200 OK [http://www.example.com/account/new]
+REQUESTING PAGE: POST /account with {"commit"=>"Sign Up", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"password", "password"=>"password", "email"=>"ryan@wonderset.com"}}}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/account/new"}
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-03-30 23:06:33) [POST]
+  Parameters: {"commit"=>"Sign Up", "action"=>"create", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"ryan@wonderset.com"}}}, "controller"=>"accounts"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'ace39976351b377e397d9ac8ef94643caebf8087590efbb2cc3638ba9e3382a0224e964e9df87249494785cd6cb6fb9a215d86ab48d679472a0532f3258ec710') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'R3ZurWdsg3jdqmkMcZ98') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'ace39976351b377e397d9ac8ef94643caebf8087590efbb2cc3638ba9e3382a0224e964e9df87249494785cd6cb6fb9a215d86ab48d679472a0532f3258ec710') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'R3ZurWdsg3jdqmkMcZ98') LIMIT 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "subdomain") VALUES('2010-03-31 04:06:33', '2010-03-31 04:06:33', 'wonderset')[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "account_id", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "last_login_ip", "last_login_at", "email") VALUES('R3ZurWdsg3jdqmkMcZ98', '2010-03-31 04:06:33', '2010-03-31 04:06:33', '864f72b762a0c7f87159e8ad4fa0407b56ca67355bc5a58c606dd0bd5ab52bc2729f5bdfeb6a6cdfe0083df92131832ea36c28a9a3e690c6df77d9f9551cc613', 'bnFQaPRAC4NRvyokLj3K', '2010-03-31 04:06:33', 1, 0, '127.0.0.1', 'mqb7f0CRQAME8HfHeN96', '2010-03-31 04:06:33', 'ace39976351b377e397d9ac8ef94643caebf8087590efbb2cc3638ba9e3382a0224e964e9df87249494785cd6cb6fb9a215d86ab48d679472a0532f3258ec710', 1, NULL, NULL, 'ryan@wonderset.com')[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-31 04:06:33', "perishable_token" = 'nuTOglwcVuOjXVV29J-I' WHERE "id" = 1[0m
+Redirected to http://wonderset.example.com/account/edit
+Completed in 296ms (DB: 1) | 302 Found [http://www.example.com/account]
+REQUESTING PAGE: GET http://wonderset.example.com/account/edit with {} and HTTP headers {"HTTP_REFERER"=>"/account"}
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-03-30 23:06:33) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'ace39976351b377e397d9ac8ef94643caebf8087590efbb2cc3638ba9e3382a0224e964e9df87249494785cd6cb6fb9a215d86ab48d679472a0532f3258ec710') LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-03-31 04:06:33', "perishable_token" = 'K6_h_rN8mHftCfLdyj7p', "last_request_at" = '2010-03-31 04:06:33' WHERE "id" = 1[0m
+
+
+Processing ApplicationController#edit (for 127.0.0.1 at 2010-03-30 23:06:33) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"accounts"}
+** SubdomainFu: initialized properly
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-03-30 23:42:02) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET http://www.example.com/account/new with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-30 23:42:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"accounts"}
+Rendering accounts/new
+Completed in 22ms (View: 8, DB: 0) | 200 OK [http://www.example.com/account/new]
+REQUESTING PAGE: POST /account with {"commit"=>"Sign Up", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"password", "password"=>"password", "email"=>"ryan@wonderset.com"}}}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/account/new"}
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-03-30 23:42:02) [POST]
+  Parameters: {"commit"=>"Sign Up", "action"=>"create", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"ryan@wonderset.com"}}}, "controller"=>"accounts"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '56eeff14b79b7b9bf83c1cea0ffd532ee4567ee5d220b14176f3adeb5979287403f9030b630c9a5cbc9ebc82c6106079a8b7e73a059e0aab2c2ead464848b031') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '2BLmTXFzATehUYtLqQt6') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '56eeff14b79b7b9bf83c1cea0ffd532ee4567ee5d220b14176f3adeb5979287403f9030b630c9a5cbc9ebc82c6106079a8b7e73a059e0aab2c2ead464848b031') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '2BLmTXFzATehUYtLqQt6') LIMIT 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "owner_id", "subdomain") VALUES('2010-03-31 04:42:02', '2010-03-31 04:42:02', NULL, 'wonderset')[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "account_id", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "last_login_ip", "last_login_at", "email") VALUES('2BLmTXFzATehUYtLqQt6', '2010-03-31 04:42:02', '2010-03-31 04:42:02', 'c93c02f8a2176c289e9ae7a2acc2f88d1566f32e8a95cb7c26ec9260f0f0bbbc01aa09ad5108048c686e2d190c47b9ef9d6f80cbd142af55d7ff8575aa89dabe', 'HgIRrHoxcIsS9EbOLHfJ', '2010-03-31 04:42:02', 1, 0, '127.0.0.1', 'j2H9u5jI-2lancLWlDUv', '2010-03-31 04:42:02', '56eeff14b79b7b9bf83c1cea0ffd532ee4567ee5d220b14176f3adeb5979287403f9030b630c9a5cbc9ebc82c6106079a8b7e73a059e0aab2c2ead464848b031', 1, NULL, NULL, 'ryan@wonderset.com')[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-31 04:42:02', "perishable_token" = 'IU83GDocIydJhlfH8AkT' WHERE "id" = 1[0m
+Redirected to http://wonderset.example.com/account/edit
+Completed in 296ms (DB: 1) | 302 Found [http://www.example.com/account]
+REQUESTING PAGE: GET http://wonderset.example.com/account/edit with {} and HTTP headers {"HTTP_REFERER"=>"/account"}
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-03-30 23:42:02) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '56eeff14b79b7b9bf83c1cea0ffd532ee4567ee5d220b14176f3adeb5979287403f9030b630c9a5cbc9ebc82c6106079a8b7e73a059e0aab2c2ead464848b031') LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-03-31 04:42:02', "perishable_token" = 'pi_5l8K_hNQnBPaClDOh', "last_request_at" = '2010-03-31 04:42:02' WHERE "id" = 1[0m
+
+
+Processing ApplicationController#edit (for 127.0.0.1 at 2010-03-30 23:42:02) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"accounts"}
+** SubdomainFu: initialized properly
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-03-30 23:49:33) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET http://www.example.com/account/new with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-30 23:49:33) [GET]
+  Parameters: {"action"=>"new", "controller"=>"accounts"}
+Rendering accounts/new
+Completed in 22ms (View: 8, DB: 0) | 200 OK [http://www.example.com/account/new]
+REQUESTING PAGE: POST /account with {"commit"=>"Sign Up", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"password", "password"=>"password", "email"=>"ryan@wonderset.com"}}}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/account/new"}
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-03-30 23:49:33) [POST]
+  Parameters: {"commit"=>"Sign Up", "action"=>"create", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"ryan@wonderset.com"}}}, "controller"=>"accounts"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '8f7bc5ea8753fe7beda58f1c19cf8075e740f57add3b70996d7929703680c47dfcc691727caa8f52b529c2b870269c6b976101e4e6328482087efc700e426f92') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'pPd8E3SFb3wrIUTx_tuc') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '8f7bc5ea8753fe7beda58f1c19cf8075e740f57add3b70996d7929703680c47dfcc691727caa8f52b529c2b870269c6b976101e4e6328482087efc700e426f92') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'pPd8E3SFb3wrIUTx_tuc') LIMIT 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "owner_id", "subdomain") VALUES('2010-03-31 04:49:33', '2010-03-31 04:49:33', NULL, 'wonderset')[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "account_id", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "last_login_ip", "last_login_at", "email") VALUES('pPd8E3SFb3wrIUTx_tuc', '2010-03-31 04:49:33', '2010-03-31 04:49:33', 'a339f673368bf8565d72891fb55a71f8c0a9421fc6122e5726c1c024c0d7e05a260e3cdd7b01dde8b525fe619adf52c4ad10a1dc48376f1749532f5ca50e0660', '3lVM_1Q9Cxehl4fnp8J5', '2010-03-31 04:49:33', 1, 0, '127.0.0.1', 'Q-2nmgiSuKqBUfpl54wj', '2010-03-31 04:49:33', '8f7bc5ea8753fe7beda58f1c19cf8075e740f57add3b70996d7929703680c47dfcc691727caa8f52b529c2b870269c6b976101e4e6328482087efc700e426f92', 1, NULL, NULL, 'ryan@wonderset.com')[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-31 04:49:33', "perishable_token" = 'ldb9FitdxSmaWv8sWmdk' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "login_count" = 2, "updated_at" = '2010-03-31 04:49:33', "perishable_token" = '1dV15zJM2H1UkQkq7UFa', "last_request_at" = '2010-03-31 04:49:33', "last_login_at" = '2010-03-31 04:49:33', "last_login_ip" = '127.0.0.1', "current_login_at" = '2010-03-31 04:49:33' WHERE "id" = 1[0m
+Redirected to http://wonderset.example.com/account/edit
+Completed in 303ms (DB: 2) | 302 Found [http://www.example.com/account]
+REQUESTING PAGE: GET http://wonderset.example.com/account/edit with {} and HTTP headers {"HTTP_REFERER"=>"/account"}
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-03-30 23:49:33) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-03-31 04:49:33', "perishable_token" = '01zTyMlT-hs_VQHvPe2U', "last_request_at" = '2010-03-31 04:49:33' WHERE "id" = 1[0m
+
+
+Processing ApplicationController#edit (for 127.0.0.1 at 2010-03-30 23:49:33) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"accounts"}
+** SubdomainFu: initialized properly
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-03-30 23:50:18) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET http://www.example.com/account/new with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-30 23:50:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"accounts"}
+Rendering accounts/new
+Completed in 22ms (View: 8, DB: 0) | 200 OK [http://www.example.com/account/new]
+REQUESTING PAGE: POST /account with {"commit"=>"Sign Up", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"password", "password"=>"password", "email"=>"ryan@wonderset.com"}}}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/account/new"}
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-03-30 23:50:18) [POST]
+  Parameters: {"commit"=>"Sign Up", "action"=>"create", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"ryan@wonderset.com"}}}, "controller"=>"accounts"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '67e315fa31a84f5044bb238fa3f322ae8c62ebb30c6ac94486254a95e124fbff850a86e46590f172215b16bf8b475d4bebcacee23865860a7fe210fdb08f5d63') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'jdY9QTxEiMj4JlpFYRhI') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '67e315fa31a84f5044bb238fa3f322ae8c62ebb30c6ac94486254a95e124fbff850a86e46590f172215b16bf8b475d4bebcacee23865860a7fe210fdb08f5d63') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'jdY9QTxEiMj4JlpFYRhI') LIMIT 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "owner_id", "subdomain") VALUES('2010-03-31 04:50:18', '2010-03-31 04:50:18', NULL, 'wonderset')[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "account_id", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "last_login_ip", "last_login_at", "email") VALUES('jdY9QTxEiMj4JlpFYRhI', '2010-03-31 04:50:18', '2010-03-31 04:50:18', '8e07e02c225dcab436db22677a4790bcfb5be6e3ad081f85e3ae5cf1776722bc0054f6925465b5d98f88c629c44a0c03ae617e22424c861341859827f26b53a7', 'h_WMZADQM-BgTNMcNrXs', '2010-03-31 04:50:18', 1, 0, '127.0.0.1', 'diwO8i91vw4UlHN0rBse', '2010-03-31 04:50:18', '67e315fa31a84f5044bb238fa3f322ae8c62ebb30c6ac94486254a95e124fbff850a86e46590f172215b16bf8b475d4bebcacee23865860a7fe210fdb08f5d63', 1, NULL, NULL, 'ryan@wonderset.com')[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-31 04:50:18', "perishable_token" = '4PIzIlpPPBhxE2QTxLw2' WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset' AND "accounts".id <> 1) LIMIT 1[0m
+  [4;35;1mAccount Update (0.1ms)[0m   [0mUPDATE "accounts" SET "subdomain" = 'wonderset', "updated_at" = '2010-03-31 04:50:18', "created_at" = '2010-03-31 04:50:18', "owner_id" = 1 WHERE "id" = 1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-03-31 04:50:18', "perishable_token" = 'PjtOpSuv_1SEbghd8OM9' WHERE "id" = 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-31 04:50:18', "perishable_token" = 'OWi7oWyC7FnnWDj_pYyy' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "login_count" = 2, "updated_at" = '2010-03-31 04:50:18', "perishable_token" = 'qbZm6o9bGUJlRYUZpoYY', "last_request_at" = '2010-03-31 04:50:18', "last_login_at" = '2010-03-31 04:50:18', "last_login_ip" = '127.0.0.1', "current_login_at" = '2010-03-31 04:50:18' WHERE "id" = 1[0m
+Redirected to http://wonderset.example.com/account/edit
+Completed in 311ms (DB: 2) | 302 Found [http://www.example.com/account]
+REQUESTING PAGE: GET http://wonderset.example.com/account/edit with {} and HTTP headers {"HTTP_REFERER"=>"/account"}
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-03-30 23:50:18) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-03-31 04:50:18', "perishable_token" = 'IRzk_eoIm7Cbakp4R_4_', "last_request_at" = '2010-03-31 04:50:18' WHERE "id" = 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 11ms (View: 9, DB: 1) | 200 OK [http://wonderset.example.com/account/edit]
+** SubdomainFu: initialized properly
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-03-30 23:50:55) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET http://www.example.com/account/new with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-30 23:50:55) [GET]
+  Parameters: {"action"=>"new", "controller"=>"accounts"}
+Rendering accounts/new
+Completed in 22ms (View: 8, DB: 0) | 200 OK [http://www.example.com/account/new]
+REQUESTING PAGE: POST /account with {"commit"=>"Sign Up", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"password", "password"=>"password", "email"=>"ryan@wonderset.com"}}}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/account/new"}
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-03-30 23:50:55) [POST]
+  Parameters: {"commit"=>"Sign Up", "action"=>"create", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"ryan@wonderset.com"}}}, "controller"=>"accounts"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '8bc7d2cb3a7cb33fcfa0c4d775f2d81b2c4f2a83623b68649cd3431dc0ec61903adef202500f97f74efbe7ccc62fe37b45e7adaa2e40f4259eb71290bcd68a45') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'H7fdLQDdQJ_S1MqxPMDL') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '8bc7d2cb3a7cb33fcfa0c4d775f2d81b2c4f2a83623b68649cd3431dc0ec61903adef202500f97f74efbe7ccc62fe37b45e7adaa2e40f4259eb71290bcd68a45') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'H7fdLQDdQJ_S1MqxPMDL') LIMIT 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "owner_id", "subdomain") VALUES('2010-03-31 04:50:55', '2010-03-31 04:50:55', NULL, 'wonderset')[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "account_id", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "last_login_ip", "last_login_at", "email") VALUES('H7fdLQDdQJ_S1MqxPMDL', '2010-03-31 04:50:55', '2010-03-31 04:50:55', 'b74c0f7b4fae8917e9b223bb9faeb1c09918109f12840cbb4d42ef12dc090df9eb64229a35eadc761b136bef96363b68bda35ae8be4c5b0beafdfe64d798d645', 'vXJJUL7WVDz6IL1Eunkm', '2010-03-31 04:50:55', 1, 0, '127.0.0.1', '_sz7XbVyDtXtXj15uhUc', '2010-03-31 04:50:55', '8bc7d2cb3a7cb33fcfa0c4d775f2d81b2c4f2a83623b68649cd3431dc0ec61903adef202500f97f74efbe7ccc62fe37b45e7adaa2e40f4259eb71290bcd68a45', 1, NULL, NULL, 'ryan@wonderset.com')[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-31 04:50:55', "perishable_token" = 'Pam4R83XgwyNeo4VB501' WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset' AND "accounts".id <> 1) LIMIT 1[0m
+  [4;35;1mAccount Update (0.1ms)[0m   [0mUPDATE "accounts" SET "subdomain" = 'wonderset', "updated_at" = '2010-03-31 04:50:55', "created_at" = '2010-03-31 04:50:55', "owner_id" = 1 WHERE "id" = 1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-03-31 04:50:55', "perishable_token" = 'uD8_R2wsmbgqXh6V-BSN' WHERE "id" = 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-31 04:50:55', "perishable_token" = 'US5rw3t7aBGfhnin1-5b' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "login_count" = 2, "updated_at" = '2010-03-31 04:50:55', "perishable_token" = '9sHGE4zghvxTXp8XV69g', "last_request_at" = '2010-03-31 04:50:55', "last_login_at" = '2010-03-31 04:50:55', "last_login_ip" = '127.0.0.1', "current_login_at" = '2010-03-31 04:50:55' WHERE "id" = 1[0m
+Redirected to http://wonderset.example.com/account/edit
+Completed in 314ms (DB: 2) | 302 Found [http://www.example.com/account]
+REQUESTING PAGE: GET http://wonderset.example.com/account/edit with {} and HTTP headers {"HTTP_REFERER"=>"/account"}
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-03-30 23:50:55) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-03-31 04:50:55', "perishable_token" = 'Hp67H2Cg8R2rs81Afbl-', "last_request_at" = '2010-03-31 04:50:55' WHERE "id" = 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 11ms (View: 9, DB: 1) | 200 OK [http://wonderset.example.com/account/edit]
+** SubdomainFu: initialized properly
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-03-30 23:51:09) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET http://www.example.com/account/new with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-30 23:51:09) [GET]
+  Parameters: {"action"=>"new", "controller"=>"accounts"}
+Rendering accounts/new
+Completed in 22ms (View: 8, DB: 0) | 200 OK [http://www.example.com/account/new]
+REQUESTING PAGE: POST /account with {"commit"=>"Sign Up", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"password", "password"=>"password", "email"=>"ryan@wonderset.com"}}}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/account/new"}
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-03-30 23:51:09) [POST]
+  Parameters: {"commit"=>"Sign Up", "action"=>"create", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"ryan@wonderset.com"}}}, "controller"=>"accounts"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '57853332a5c604bbed930542055603e1e9acd91807e21304c89f03e9be130a69b2ea32b3be854d706ba9bc839be2b0ec966ca3f06a99ef9b43abff36d735f814') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'kvBASHm2gO3LmTRTJf-D') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '57853332a5c604bbed930542055603e1e9acd91807e21304c89f03e9be130a69b2ea32b3be854d706ba9bc839be2b0ec966ca3f06a99ef9b43abff36d735f814') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'kvBASHm2gO3LmTRTJf-D') LIMIT 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "owner_id", "subdomain") VALUES('2010-03-31 04:51:09', '2010-03-31 04:51:09', NULL, 'wonderset')[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "account_id", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "last_login_ip", "last_login_at", "email") VALUES('kvBASHm2gO3LmTRTJf-D', '2010-03-31 04:51:09', '2010-03-31 04:51:09', '17e5cd7169f95d8e4bc05fdb4fc54899be234b8c7efa5c698eaa214d104c1bf59b053052fdfe58347f41abc0a2fbc349fe16a16fc3ffa6ed134c177bea6b103d', 'CNkO4A0W0NcUzi6e7bz0', '2010-03-31 04:51:09', 1, 0, '127.0.0.1', '7zXs4z4WC_815YhCXSci', '2010-03-31 04:51:09', '57853332a5c604bbed930542055603e1e9acd91807e21304c89f03e9be130a69b2ea32b3be854d706ba9bc839be2b0ec966ca3f06a99ef9b43abff36d735f814', 1, NULL, NULL, 'ryan@wonderset.com')[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-31 04:51:10', "perishable_token" = 'HQsIp6oWTOo2vpEagEhp' WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset' AND "accounts".id <> 1) LIMIT 1[0m
+  [4;35;1mAccount Update (0.1ms)[0m   [0mUPDATE "accounts" SET "subdomain" = 'wonderset', "updated_at" = '2010-03-31 04:51:10', "created_at" = '2010-03-31 04:51:09', "owner_id" = 1 WHERE "id" = 1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-03-31 04:51:10', "perishable_token" = '5zc92Dl-_dopkR3fLRJu' WHERE "id" = 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-31 04:51:10', "perishable_token" = 'LpEhs0iW11WlcyZfjvUW' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "login_count" = 2, "updated_at" = '2010-03-31 04:51:10', "perishable_token" = 'IFjm1h0ElH8WulFMJaz0', "last_request_at" = '2010-03-31 04:51:10', "last_login_at" = '2010-03-31 04:51:09', "last_login_ip" = '127.0.0.1', "current_login_at" = '2010-03-31 04:51:10' WHERE "id" = 1[0m
+Redirected to http://wonderset.example.com/account/edit
+Completed in 315ms (DB: 2) | 302 Found [http://www.example.com/account]
+REQUESTING PAGE: GET http://wonderset.example.com/account/edit with {} and HTTP headers {"HTTP_REFERER"=>"/account"}
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-03-30 23:51:10) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-03-31 04:51:10', "perishable_token" = 'NgOvtQjtSxQ6V8ndJ1ub', "last_request_at" = '2010-03-31 04:51:10' WHERE "id" = 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 12ms (View: 9, DB: 1) | 200 OK [http://wonderset.example.com/account/edit]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'person2@example.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '9ef00006333f6ce6dbd7824c32da31990c6dffa75d54477d64fc886d839bfb8fcbd5bf740f8c8b5fe0beb7f43690c92e2352aa802c9f741fa54cf2090f008859') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'k3cFzLIQnZ2MHRmJvJzg') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "account_id", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "last_login_ip", "last_login_at", "email") VALUES('k3cFzLIQnZ2MHRmJvJzg', '2010-03-31 04:51:10', '2010-03-31 04:51:10', '77b0342dc4ef3e2b6a7b328b3557e6c8947ad134390336f0a93509f0955ae61e9103c98224fd525bae397051c011167502e0ebabd4f2ddd0d0e747578e42698b', 'cosuOjlIacWMHgVobppv', '2010-03-31 04:51:10', NULL, 0, '127.0.0.1', 'JH_zJakAz4XrEjLwdcCt', '2010-03-31 04:51:10', '9ef00006333f6ce6dbd7824c32da31990c6dffa75d54477d64fc886d839bfb8fcbd5bf740f8c8b5fe0beb7f43690c92e2352aa802c9f741fa54cf2090f008859', 1, NULL, NULL, 'person2@example.com')[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mAccount Create (0.1ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "owner_id", "subdomain") VALUES('2010-03-31 04:51:10', '2010-03-31 04:51:10', NULL, 'wonderset')[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-03-31 04:51:10', "perishable_token" = 'p-crvHOIiaSMJoPn9-Ja', "account_id" = 1 WHERE "id" = 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-31 04:51:10', "perishable_token" = 'm3ImwB4cq5Z90QQeJBAT' WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset' AND "accounts".id <> 1) LIMIT 1[0m
+  [4;35;1mAccount Update (0.1ms)[0m   [0mUPDATE "accounts" SET "subdomain" = 'wonderset', "updated_at" = '2010-03-31 04:51:10', "created_at" = '2010-03-31 04:51:10', "owner_id" = 1 WHERE "id" = 1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-03-31 04:51:10', "perishable_token" = 'R5yOJU-MMCi6w0bzaIVO' WHERE "id" = 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-31 04:51:10', "perishable_token" = 'v1XuBnGk87wfxaSfZnqp' WHERE "id" = 1[0m
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-03-30 23:51:10) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 2ms (View: 1, DB: 2) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET http://www.example.com/account/new with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-30 23:51:10) [GET]
+  Parameters: {"action"=>"new", "controller"=>"accounts"}
+Rendering accounts/new
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://www.example.com/account/new]
+REQUESTING PAGE: POST /account with {"commit"=>"Sign Up", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"password", "password"=>"password", "email"=>"ryan@wonderset.com"}}}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/account/new"}
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-03-30 23:51:10) [POST]
+  Parameters: {"commit"=>"Sign Up", "action"=>"create", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"ryan@wonderset.com"}}}, "controller"=>"accounts"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'a3e30d5a6ba55acb5f24a245f7db7dba79c3adb9a8453c71045dd63fb32b494e77d7c6c8f4ca058f942c94d1779ee0574aab7a18c02c07326a3a0aac32540559') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'FUSnVl1hdQ9qzMum4xOx') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'a3e30d5a6ba55acb5f24a245f7db7dba79c3adb9a8453c71045dd63fb32b494e77d7c6c8f4ca058f942c94d1779ee0574aab7a18c02c07326a3a0aac32540559') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'FUSnVl1hdQ9qzMum4xOx') LIMIT 1[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/new
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://www.example.com/account]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-03-30 23:51:10) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET http://www.example.com/account/new with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-30 23:51:10) [GET]
+  Parameters: {"action"=>"new", "controller"=>"accounts"}
+Rendering accounts/new
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/account/new]
+REQUESTING PAGE: POST /account with {"commit"=>"Sign Up", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"password", "password"=>"password", "email"=>"ryan@wonderset.com"}}}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/account/new"}
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-03-30 23:51:10) [POST]
+  Parameters: {"commit"=>"Sign Up", "action"=>"create", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"ryan@wonderset.com"}}}, "controller"=>"accounts"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '5c16f8d416a8f47c19e134f6ce57cb49bca3f0173e999a86bac80c6af4034c460f1d03f127bc6d2b0ba00c5a7b97caa0b7a4e970f6b470c6c3e2421d6a01fb0c') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'ziyI35YbJPJL22pZdkTS') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@wonderset.com') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '5c16f8d416a8f47c19e134f6ce57cb49bca3f0173e999a86bac80c6af4034c460f1d03f127bc6d2b0ba00c5a7b97caa0b7a4e970f6b470c6c3e2421d6a01fb0c') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'ziyI35YbJPJL22pZdkTS') LIMIT 1[0m
+  [4;35;1mAccount Load (0.1ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("created_at", "updated_at", "owner_id", "subdomain") VALUES('2010-03-31 04:51:10', '2010-03-31 04:51:10', NULL, 'wonderset')[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "account_id", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "last_login_ip", "last_login_at", "email") VALUES('ziyI35YbJPJL22pZdkTS', '2010-03-31 04:51:10', '2010-03-31 04:51:10', '9c62b06da4e8f437b2c3cfed0fa07a2f2620bbc998f1c5e1f3d32baa607417cad711c5ee6821a25756ad4c2d5fadb4ca7fb17dc6698d3f14094fdfd32f48c74c', 'nzPvn70Gl2ZYrAvJbfzG', '2010-03-31 04:51:10', 1, 0, '127.0.0.1', 'HXW0gxvLaPCkVCQh46h2', '2010-03-31 04:51:10', '5c16f8d416a8f47c19e134f6ce57cb49bca3f0173e999a86bac80c6af4034c460f1d03f127bc6d2b0ba00c5a7b97caa0b7a4e970f6b470c6c3e2421d6a01fb0c', 1, NULL, NULL, 'ryan@wonderset.com')[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-03-31 04:51:10', "perishable_token" = 'BgEuF9oN5eoXsJGw-7V7' WHERE "id" = 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset' AND "accounts".id <> 1) LIMIT 1[0m
+  [4;36;1mAccount Update (0.1ms)[0m   [0;1mUPDATE "accounts" SET "subdomain" = 'wonderset', "updated_at" = '2010-03-31 04:51:10', "created_at" = '2010-03-31 04:51:10', "owner_id" = 1 WHERE "id" = 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-31 04:51:10', "perishable_token" = 'qfQsSw5L_Apr5P7Cgf0B' WHERE "id" = 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-03-31 04:51:10', "perishable_token" = 'KemmgLXVLzT8WPdFINrM' WHERE "id" = 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE "users" SET "login_count" = 2, "updated_at" = '2010-03-31 04:51:10', "perishable_token" = 'nzC85KT7vbI6hHOyRD9D', "last_request_at" = '2010-03-31 04:51:10', "last_login_at" = '2010-03-31 04:51:10', "last_login_ip" = '127.0.0.1', "current_login_at" = '2010-03-31 04:51:10' WHERE "id" = 1[0m
+Redirected to http://wonderset.example.com/account/edit
+Completed in 129ms (DB: 3) | 302 Found [http://www.example.com/account]
+REQUESTING PAGE: GET http://wonderset.example.com/account/edit with {} and HTTP headers {"HTTP_REFERER"=>"/account"}
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-03-30 23:51:10) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"accounts"}
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-31 04:51:10', "perishable_token" = 'tQQ1AkWyWn1g3YwDS24x', "last_request_at" = '2010-03-31 04:51:10' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://wonderset.example.com/account/edit]
