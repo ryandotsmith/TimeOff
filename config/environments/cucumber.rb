@@ -18,8 +18,17 @@ config.action_controller.allow_forgery_protection    = false
 
 # Tell Action Mailer not to deliver emails to the real world.
 # The :test delivery method accumulates sent emails in the
+
 # ActionMailer::Base.deliveries array.
-config.action_mailer.delivery_method = :test
+#config.action_mailer.delivery_method = :test
+
+### ActionMailer Config
+config.action_mailer.default_url_options = { :host => 'local:3000' }
+# A dummy setup for development - no deliveries, but logged
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.perform_deliveries = false
+config.action_mailer.raise_delivery_errors = true
+config.action_mailer.default_charset = "utf-8"
 
 config.gem 'cucumber-rails',   :lib => false, :version => '>=0.3.0' unless File.directory?(File.join(Rails.root, 'vendor/plugins/cucumber-rails'))
 config.gem 'database_cleaner', :lib => false, :version => '>=0.5.0' unless File.directory?(File.join(Rails.root, 'vendor/plugins/database_cleaner'))

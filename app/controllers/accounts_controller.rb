@@ -1,5 +1,7 @@
 class AccountsController < ApplicationController
 
+  before_filter :require_user, :only => [:update,:edit,:show,:destroy]
+
   def show
     @account = current_account
   end
@@ -13,8 +15,7 @@ class AccountsController < ApplicationController
     @account = Account.new( params[:account] )
     respond_to do |wants|
       if @account.save
-        UserSession.create(@account.owner)
-        wants.html { redirect_to edit_account_url( :subdomain => @account.subdomain )}
+        wants.html { redirect_to edit_subdomain_account_path(@account,@account)}
       else
         wants.html { render :action => 'new' }
       end

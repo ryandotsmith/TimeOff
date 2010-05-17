@@ -3,15 +3,14 @@ class UsersController < ApplicationController
   before_filter :require_user, :only => [:show, :edit, :update]
   
   def new
-    @user = User.new
+    @user = current_account.users.build
   end
   
   def create
-    @user = User.new(params[:user])
-    @user.create_account
+    @user = current_account.users.build( params[:user] )
     if @user.save
       flash[:notice] = "Account registered!"
-      redirect_to edit_account_url(@user.account)
+      redirect_back_or_default account_url
     else
       render :action => :new
     end
@@ -20,7 +19,7 @@ class UsersController < ApplicationController
   def show
     @user = @current_user
   end
- 
+
   def edit
     @user = @current_user
   end

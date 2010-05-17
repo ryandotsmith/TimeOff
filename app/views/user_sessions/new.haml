@@ -1,11 +1,11 @@
-- form_for @user_session do |f|
-  = f.error_messages
+%h1 sign in
 
-  = f.label :username
-  = f.text_field :username
+- form_for @user_session , :url => subdomain_user_session_path(current_account,current_account) do |session|
 
-  = f.label :password
-  = f.password_field :password
+  = session.label :email
+  = session.text_field :email
 
-  = f.submit "sign in"
-
+  = session.label :password
+  = session.password_field :password
+  
+  = session.submit 'sign in'

@@ -9,8 +9,11 @@ module NavigationHelpers
     case page_name
     
     when /the home\s?page/
-      '/'
-    
+      system_root_path
+    when /the account edit page/
+      edit_subdomain_account_path(@account,@account)
+    when /account page/
+      subdomain_account_path(@account,@account)
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

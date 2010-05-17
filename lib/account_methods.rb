@@ -21,33 +21,19 @@ module AccountMethods
     end
 
     def account_subdomain
-      #see subdomain_fu
-      current_subdomain 
+      request.subdomain
     end
     
     def account_domain
-      #see subdomain_fu
-      current_domain 
+      request.domain
     end
 
     def subdomain?
-      #see subdomain_fu
-      current_subdomain 
+      request.subdomain.nil?
     end
 
     def http_protocol( use_ssl = request.ssl? )
       (use_ssl ? "https://" : "http://")
     end
     
-    # TODO: Make account_url and account_host methods work
-    # def account_url(account_subdomain = default_account_subdomain, use_ssl = request.ssl?)
-    #   http_protocol(use_ssl) + account_host(account_subdomain)
-    # end
-    # 
-    # def account_host(subdomain)
-    #   account_host = ''
-    #   account_host << subdomain + '.'
-    #   account_host << account_domain
-    # end
-
 end

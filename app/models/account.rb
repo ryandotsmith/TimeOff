@@ -1,5 +1,5 @@
 class Account < ActiveRecord::Base
-
+  has_friendly_id :subdomain
   has_many :users
   accepts_nested_attributes_for :users
 
@@ -19,5 +19,12 @@ class Account < ActiveRecord::Base
     User.find(self.owner_id) 
   end
 
+  def to_param
+    subdomain
+  end
+
+  def name
+    subdomain
+  end
 
 end

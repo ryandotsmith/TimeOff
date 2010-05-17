@@ -1,5 +1,5 @@
 %h1 Sign Up
-- form_for @account, :url => account_path do |form|
+- form_for @account,:url => system_accounts_path do |form|
   = form.error_messages
 
   = form.label :subdomain, "Company Name"

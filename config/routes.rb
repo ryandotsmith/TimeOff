@@ -1,26 +1,24 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resource :user_session
 
-  map.root :controller => "pages",:action => "show",:id => "index", :conditions => {:subdomain => /.+/}
-  map.resources :pages,:controller => 'pages',:only => [:show],     :conditions => {:subdomain => nil}
-
-  map.resource  :account, :conditions => {:subdomain => /.+/} do |a|
-    a.resources :users
+  map.subdomain :www, :namespace => nil, :name => 'system' do |www|
+    www.root      :controller => 'pages', :action => 'show', :id => 'index'
+    www.resources :accounts, :only => [:new, :create]
   end
-  map.resources :users, :conditions => {:subdomain => true} 
-  map.resource :user_session, :conditions => {:subdomain => true} 
 
-  map.login '/login/',   :controller => "user_sessions", :action => "new",     :conditions => {:subdomain => /.+/}
-  map.logout '/logout/', :controller => "user_sessions", :action => "destroy", :conditions => {:subdomain => /.+/}
+  map.subdomain :model => :account, :namespace => nil, :name => 'subdomain' do |account|
+    account.resources :accounts, :only => [:edit, :update, :show, :index, :delete], :as => 'account-information'
+    account.resource  :user_session
+    account.resources :users
+  end
 
-  map.application_root "/", 
-    :controller => "accounts", 
-    :action => "show",  
-    :conditions => {:subdomain => /.+/}
+  map.root :controller => "pages",
+    :action => "show",
+    :id => "index"
 
-  map.public_root      "/", 
-    :controller => "pages",    
-    :action => "show", 
-    :id => 'index', 
-    :conditions => {:subdomain => nil}
- 
+  map.resources :pages,
+    :controller => 'pages',
+    :only => [:show]
+
+
 end
