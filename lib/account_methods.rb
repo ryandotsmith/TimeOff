@@ -35,5 +35,4 @@ module AccountMethods
     def http_protocol( use_ssl = request.ssl? )
       (use_ssl ? "https://" : "http://")
     end
-    
 end

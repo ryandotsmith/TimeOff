@@ -9366,3 +9366,1459 @@ Rendering rescues/layout (internal_server_error)
   [4;36;1mSQL (2.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
   [4;35;1mSQL (2.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
   [4;36;1mSQL (2.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-05-17 12:41:09) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-05-17 12:41:13) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-05-17 12:41:22) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://local/]
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-05-17 12:41:32) [GET]
+  Parameters: {"action"=>"new", "subdomains"=>["www"], "controller"=>"accounts"}
+Rendering accounts/new
+Completed in 104ms (View: 80, DB: 0) | 200 OK [http://www.local/accounts/new]
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-05-17 12:41:35) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"show", "id"=>"index", "subdomains"=>["www"], "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://www.local/]
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-05-17 12:41:37) [GET]
+  Parameters: {"action"=>"new", "subdomains"=>["www"], "controller"=>"accounts"}
+Rendering accounts/new
+Completed in 24ms (View: 6, DB: 0) | 200 OK [http://www.local/accounts/new]
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-05-17 12:41:49) [POST]
+  Parameters: {"commit"=>"Sign Up", "action"=>"create", "authenticity_token"=>"VwR8CgnEyfX8K8QiarkPRrNGmp8fv5+HDpFNYR1h4B4=", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"this.ryansmith@gmail.com"}}}, "subdomains"=>["www"], "controller"=>"accounts"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'this.ryansmith@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'c92f6f1efed733b921e2beb388e395b433e287b05cf278414a547f6b30e2179ba900b51e4bb45dd28165c8efb23de998c0893b9165ee00bebdb37e2b8c0a0aa4') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '-IC1ITtXrOV3ihb__Wwp') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'this.ryansmith@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'c92f6f1efed733b921e2beb388e395b433e287b05cf278414a547f6b30e2179ba900b51e4bb45dd28165c8efb23de998c0893b9165ee00bebdb37e2b8c0a0aa4') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '-IC1ITtXrOV3ihb__Wwp') LIMIT 1[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/new
+Completed in 204ms (View: 11, DB: 1) | 200 OK [http://www.local/accounts]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-05-17 12:42:13) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"show", "id"=>"index", "subdomains"=>["www"], "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://www.local/]
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-05-17 12:42:15) [GET]
+  Parameters: {"action"=>"new", "subdomains"=>["www"], "controller"=>"accounts"}
+Rendering accounts/new
+Completed in 34ms (View: 12, DB: 0) | 200 OK [http://www.local/accounts/new]
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-05-17 12:42:21) [POST]
+  Parameters: {"commit"=>"Sign Up", "action"=>"create", "authenticity_token"=>"VwR8CgnEyfX8K8QiarkPRrNGmp8fv5+HDpFNYR1h4B4=", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"this.ryansmith@gmail.com"}}}, "subdomains"=>["www"], "controller"=>"accounts"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'this.ryansmith@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'f10e56fe140478cb0155a0a4056136df61bd62c99ae6389d134a9560965d05f7ecb0716efa11eb198ffeb837332198b68b25af40a8f81e99956d221532d87b4d') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'uNc1b4uyqyzakmqySRq1') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'this.ryansmith@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'f10e56fe140478cb0155a0a4056136df61bd62c99ae6389d134a9560965d05f7ecb0716efa11eb198ffeb837332198b68b25af40a8f81e99956d221532d87b4d') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'uNc1b4uyqyzakmqySRq1') LIMIT 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "owner_id", "subdomain") VALUES('2010-05-17 17:42:22', '2010-05-17 17:42:22', NULL, 'wonderset')[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "account_id", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "persistence_token", "login_count", "last_login_ip", "last_login_at", "first_name", "email") VALUES('uNc1b4uyqyzakmqySRq1', '2010-05-17 17:42:22', '2010-05-17 17:42:22', '05740f2504db4064b7ea3c41dd1395ed934dc20a880d802b054c4846b8d4ce6f08407a969e0d14367b282985dca0a38eb47a9ff93a3f7146d61d00df4b5ca46d', 'gy6JP2sB2YmNLT0T5J08', '2010-05-17 17:42:22', 1, 0, '127.0.0.1', 'AQ8MTMEaC-kNB30BDwAu', '2010-05-17 17:42:22', NULL, 'f10e56fe140478cb0155a0a4056136df61bd62c99ae6389d134a9560965d05f7ecb0716efa11eb198ffeb837332198b68b25af40a8f81e99956d221532d87b4d', 1, NULL, NULL, NULL, 'this.ryansmith@gmail.com')[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-17 17:42:22', "perishable_token" = 'W_2Sf_QNwlww3uKoaWwV' WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset' AND "accounts".id <> 1) LIMIT 1[0m
+  [4;35;1mAccount Update (0.1ms)[0m   [0mUPDATE "accounts" SET "subdomain" = 'wonderset', "updated_at" = '2010-05-17 17:42:22', "created_at" = '2010-05-17 17:42:22', "owner_id" = 1 WHERE "id" = 1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-17 17:42:22', "perishable_token" = 'CMh6xGsCP636tdlfmqT8' WHERE "id" = 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-17 17:42:22', "perishable_token" = 'v-B8pvommB2S5MfP7RFr' WHERE "id" = 1[0m
+Redirected to http://wonderset.local:3000/account-information/wonderset/edit
+Completed in 315ms (DB: 2) | 302 Found [http://www.local/accounts]
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-05-17 12:42:22) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"accounts"}
+Redirected to http://wonderset.local:3000/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 13ms (DB: 0) | 302 Found [http://wonderset.local/account-information/wonderset/edit]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-17 12:42:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering user_sessions/new
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Completed in 104ms (View: 16, DB: 0) | 200 OK [http://wonderset.local/user_session/new]
+
+
+Processing UserSessionsController#create to #<account:0x1036449f8> (for 127.0.0.1 at 2010-05-17 12:42:29) [POST]
+  Parameters: {"format"=>"#<account:0x1036449f8>", "commit"=>"sign in", "user_session"=>{"password"=>"[FILTERED]", "email"=>"this.ryansmith@gmail.com"}, "action"=>"create", "authenticity_token"=>"+qIlyPnFK4xo7+MDiEM4GYMVS7JWncns03F22C5IL+4=", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'this.ryansmith@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "login_count" = 2, "updated_at" = '2010-05-17 17:42:29', "perishable_token" = '64oRAFoSF5HIsli3P_6W', "last_request_at" = '2010-05-17 17:42:29', "last_login_at" = '2010-05-17 17:42:22', "last_login_ip" = '127.0.0.1', "current_login_at" = '2010-05-17 17:42:29' WHERE "id" = 1[0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Redirected to http://wonderset.local:3000/account-information/wonderset/edit
+Completed in 30ms (DB: 1) | 302 Found [http://wonderset.local/user_session.%23%3Caccount:0x1036449f8%3E]
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-05-17 12:42:29) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"accounts"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-17 17:42:29', "perishable_token" = '-E5t4dgIcFNBP14j_H9n', "last_request_at" = '2010-05-17 17:42:29' WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 38ms (View: 8, DB: 2) | 200 OK [http://wonderset.local/account-information/wonderset/edit]
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-05-17 12:42:32) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"accounts"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-17 17:42:32', "perishable_token" = '347mzM4exSAFtaH-9jnR', "last_request_at" = '2010-05-17 17:42:32' WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 108ms (View: 3, DB: 2) | 200 OK [http://wonderset.local/account-information/wonderset/edit]
+
+
+Processing UsersController#new to #<account:0x1034f22d0> (for 127.0.0.1 at 2010-05-17 12:42:33) [GET]
+  Parameters: {"format"=>"#<account:0x1034f22d0>", "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"users"}
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering users/new
+Completed in 28ms (View: 9, DB: 0) | 200 OK [http://wonderset.local/users/new.%23%3Caccount:0x1034f22d0%3E]
+
+
+Processing UsersController#new to #<account:0x1034f22d0> (for 127.0.0.1 at 2010-05-17 12:42:55) [GET]
+  Parameters: {"format"=>"#<account:0x1034f22d0>", "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"users"}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering users/new
+Completed in 105ms (View: 9, DB: 0) | 200 OK [http://wonderset.local/users/new.%23%3Caccount:0x1034f22d0%3E]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-17 12:43:05) [POST]
+  Parameters: {"commit"=>"add", "authenticity_token"=>"+qIlyPnFK4xo7+MDiEM4GYMVS7JWncns03F22C5IL+4=", "user"=>{"last_name"=>"Smith", "first_name"=>"Ryan", "email"=>"ryan@aol.com"}}
+
+ActionController::MethodNotAllowed (Only get and put requests are allowed.):
+  
+
+Rendered rescues/_trace (26.2ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (method_not_allowed)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-17 12:44:23) [POST]
+  Parameters: {"commit"=>"add", "authenticity_token"=>"+qIlyPnFK4xo7+MDiEM4GYMVS7JWncns03F22C5IL+4=", "user"=>{"last_name"=>"Smith", "first_name"=>"Ryan", "email"=>"ryan@aol.com"}}
+
+ActionController::MethodNotAllowed (Only get, put, and delete requests are allowed.):
+  
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (method_not_allowed)
+
+
+Processing UsersController#new to #<account:0x1034f22d0> (for 127.0.0.1 at 2010-05-17 12:44:26) [GET]
+  Parameters: {"format"=>"#<account:0x1034f22d0>", "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"users"}
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering users/new
+Completed in 27ms (View: 9, DB: 0) | 200 OK [http://wonderset.local/users/new.%23%3Caccount:0x1034f22d0%3E]
+
+
+Processing UsersController#new to #<account:0x1034f22d0> (for 127.0.0.1 at 2010-05-17 12:44:30) [GET]
+  Parameters: {"format"=>"#<account:0x1034f22d0>", "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"users"}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering users/new
+Completed in 23ms (View: 4, DB: 0) | 200 OK [http://wonderset.local/users/new.%23%3Caccount:0x1034f22d0%3E]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-17 12:44:32) [GET]
+
+ActionController::RoutingError (No route matches "/account-information/wonderset/edit" with {:subdomain=>"wonderset", :method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-05-17 12:44:38) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"accounts"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-17 17:44:38', "perishable_token" = 'xfOxdMuonr_TYMhfvNlY', "last_request_at" = '2010-05-17 17:44:38' WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 29ms (View: 3, DB: 2) | 200 OK [http://wonderset.local/account-information/wonderset/edit]
+
+
+Processing UsersController#new to #<account:0x1032c6da8> (for 127.0.0.1 at 2010-05-17 12:44:40) [GET]
+  Parameters: {"format"=>"#<account:0x1032c6da8>", "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"users"}
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering users/new
+Completed in 22ms (View: 4, DB: 0) | 200 OK [http://wonderset.local/users/new.%23%3Caccount:0x1032c6da8%3E]
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-05-17 12:45:17) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"accounts"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-17 17:45:17', "perishable_token" = 'tGa-lkxgW80wS1HKBdxm', "last_request_at" = '2010-05-17 17:45:17' WHERE "id" = 1[0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 34ms (View: 8, DB: 2) | 200 OK [http://wonderset.local/account-information/wonderset/edit]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-05-17 12:45:21) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"users"}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering users/new
+Completed in 22ms (View: 4, DB: 0) | 200 OK [http://wonderset.local/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-05-17 12:45:39) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"users"}
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering users/new
+Completed in 108ms (View: 89, DB: 0) | 200 OK [http://wonderset.local/users/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-17 12:45:48) [POST]
+  Parameters: {"commit"=>"add", "authenticity_token"=>"+qIlyPnFK4xo7+MDiEM4GYMVS7JWncns03F22C5IL+4=", "user"=>{"last_name"=>"Smith", "first_name"=>"Ryan", "email"=>"ryan@aol.com"}}
+
+ActionController::MethodNotAllowed (Only get, put, and delete requests are allowed.):
+  
+
+Rendered rescues/_trace (24.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (method_not_allowed)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-05-17 12:46:17) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"users"}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering users/new
+
+ActionView::TemplateError (subdomain_user_url failed to generate from {:controller=>"users", :action=>"show", :subdomains=>:account_id} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied? You may also need to specify :account_id for the subdomain.) on line #1 of app/views/users/new.haml:
+1: - form_for @user , :url => subdomain_user_url(current_account) do |form|
+2:   = form.label :email
+3:   = form.text_field :email
+4: 
+
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/routes.rb:31:in `raise_named_route_error'
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/url_writer.rb:82:in `rewrite'
+    (eval):16:in `subdomain_user_url'
+    app/views/users/new.haml:1:in `_run_haml_app47views47users47new46haml'
+    haml (2.2.22) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.22) rails/./lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (130.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-05-17 12:46:27) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"users"}
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering users/new
+
+ActionView::TemplateError (subdomain_user_url failed to generate from {:controller=>"users", :action=>"show", :subdomains=>:account_id} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied? You may also need to specify :account_id for the subdomain.) on line #1 of app/views/users/new.haml:
+1: - form_for @user , :url => subdomain_user_url() do |form|
+2:   = form.label :email
+3:   = form.text_field :email
+4: 
+
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/routes.rb:31:in `raise_named_route_error'
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/url_writer.rb:82:in `rewrite'
+    (eval):16:in `subdomain_user_url'
+    app/views/users/new.haml:1:in `_run_haml_app47views47users47new46haml'
+    haml (2.2.22) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.22) rails/./lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (131.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-05-17 12:46:28) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"accounts"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-17 17:46:28', "perishable_token" = 'Kbsi31kczTS28HUzW4K3', "last_request_at" = '2010-05-17 17:46:28' WHERE "id" = 1[0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 35ms (View: 8, DB: 2) | 200 OK [http://wonderset.local/account-information/wonderset/edit]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-05-17 12:46:30) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"users"}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering users/new
+
+ActionView::TemplateError (subdomain_user_url failed to generate from {:controller=>"users", :action=>"show", :subdomains=>:account_id} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied? You may also need to specify :account_id for the subdomain.) on line #1 of app/views/users/new.haml:
+1: - form_for @user , :url => subdomain_user_url() do |form|
+2:   = form.label :email
+3:   = form.text_field :email
+4: 
+
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/routes.rb:31:in `raise_named_route_error'
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/url_writer.rb:82:in `rewrite'
+    (eval):16:in `subdomain_user_url'
+    app/views/users/new.haml:1:in `_run_haml_app47views47users47new46haml'
+    haml (2.2.22) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.22) rails/./lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (127.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-05-17 12:46:58) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"users"}
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering users/new
+
+ActionView::TemplateError (subdomain_user_url failed to generate from {:controller=>"users", :action=>"show", :subdomains=>:account_id} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied? You may also need to specify :account_id for the subdomain.) on line #1 of app/views/users/new.haml:
+1: - form_for @user , :url => subdomain_user_path do |form|
+2:   = form.label :email
+3:   = form.text_field :email
+4: 
+
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/routes.rb:31:in `raise_named_route_error'
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/url_writer.rb:82:in `rewrite'
+    (eval):16:in `subdomain_user_path'
+    app/views/users/new.haml:1:in `_run_haml_app47views47users47new46haml'
+    haml (2.2.22) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.22) rails/./lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (129.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-05-17 12:47:11) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"users"}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering users/new
+Completed in 27ms (View: 8, DB: 0) | 200 OK [http://wonderset.local/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-05-17 12:47:30) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"users"}
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering users/new
+Completed in 26ms (View: 9, DB: 0) | 200 OK [http://wonderset.local/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-05-17 12:47:38) [POST]
+  Parameters: {"commit"=>"add", "action"=>"create", "account_id"=>"wonderset", "authenticity_token"=>"+qIlyPnFK4xo7+MDiEM4GYMVS7JWncns03F22C5IL+4=", "subdomains"=>:account_id, "controller"=>"users", "user"=>{"last_name"=>"Smith", "first_name"=>"Ryan", "email"=>"ryan@aol.com"}}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@aol.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '922085bb072e610293224c3b66216a1cc090e8b59eb79be454dc496c43de4f3691266ae5f33bb0ab840b7478920ae3ea542ffd7ae4d671a8118bb761a45529e8') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'USVA5iI_E53JcuVzm4BM') LIMIT 1[0m
+Rendering users/new
+Completed in 107ms (View: 4, DB: 1) | 200 OK [http://wonderset.local/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-05-17 12:50:10) [POST]
+  Parameters: {"commit"=>"add", "action"=>"create", "account_id"=>"wonderset", "authenticity_token"=>"+qIlyPnFK4xo7+MDiEM4GYMVS7JWncns03F22C5IL+4=", "subdomains"=>:account_id, "controller"=>"users", "user"=>{"last_name"=>"Smith", "first_name"=>"Ryan", "email"=>"ryan@aol.com"}}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@aol.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'fd6ffd32d07dab7a0cd315bee0fc13ebdb831defe794d98c4debd15d53ada3a2d9dbb87516da9102d1985940c9331dfed6b616c13501767b5b7dd6415c53c523') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'sljYAkyTqSOt5tqlnKUc') LIMIT 1[0m
+Rendering users/new
+Completed in 31ms (View: 9, DB: 1) | 200 OK [http://wonderset.local/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-05-17 12:50:31) [POST]
+  Parameters: {"commit"=>"add", "action"=>"create", "account_id"=>"wonderset", "authenticity_token"=>"+qIlyPnFK4xo7+MDiEM4GYMVS7JWncns03F22C5IL+4=", "subdomains"=>:account_id, "controller"=>"users", "user"=>{"last_name"=>"Smith", "first_name"=>"Ryan", "email"=>"ryan@aol.com"}}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@aol.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '567a2edab6d5316acf2ed61f88f557c043c87770ba3dea2a4ef8492f02a123a46793b5f53df0760fd290ff4f4482959edfad52ba8fd9ffebb0deb74e1f75d2d7') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'EUk6XvGAFA3PpUN67Ktf') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@aol.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '567a2edab6d5316acf2ed61f88f557c043c87770ba3dea2a4ef8492f02a123a46793b5f53df0760fd290ff4f4482959edfad52ba8fd9ffebb0deb74e1f75d2d7') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'EUk6XvGAFA3PpUN67Ktf') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@aol.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '7889e8c0c7bec5848cca4b74f1f132b24cdf7505598df87692f989d210bdb7a80c1e0f6bd6c91de431e337333a9bb98a57e13a448ec5a8ecd23d43a02eb0ae1d') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'EUk6XvGAFA3PpUN67Ktf') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@aol.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '7889e8c0c7bec5848cca4b74f1f132b24cdf7505598df87692f989d210bdb7a80c1e0f6bd6c91de431e337333a9bb98a57e13a448ec5a8ecd23d43a02eb0ae1d') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'EUk6XvGAFA3PpUN67Ktf') LIMIT 1[0m
+Rendering users/new
+Completed in 524372ms (View: 6, DB: 1) | 200 OK [http://wonderset.local/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-05-17 12:59:20) [POST]
+  Parameters: {"commit"=>"add", "action"=>"create", "account_id"=>"wonderset", "authenticity_token"=>"+qIlyPnFK4xo7+MDiEM4GYMVS7JWncns03F22C5IL+4=", "subdomains"=>:account_id, "controller"=>"users", "user"=>{"last_name"=>"Smith", "first_name"=>"Ryan", "email"=>"ryan@aol.com"}}
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@aol.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '0e808fc4bfac445ca8d646048e25056b79a9dc8e3571572bcb4a39eb6b8a19d85f2c52ce6d85e5307abb6dcb1b9c299726642c3bf529d10fab85d6967be94762') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'XDc7hyLKSmXyU30RvxNy') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-17 17:59:20', "perishable_token" = 'D4V4UKnbTZXIAiFFonpD', "last_request_at" = '2010-05-17 17:59:20' WHERE "id" = 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mSQLite3::SQLException: users.crypted_password may not be NULL: INSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "account_id", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "persistence_token", "login_count", "last_login_ip", "last_login_at", "first_name", "email") VALUES('XDc7hyLKSmXyU30RvxNy', NULL, '2010-05-17 17:59:20', NULL, 'BFUyHnmQ8fy999YovMW1', '2010-05-17 17:59:20', 1, 0, NULL, NULL, NULL, 'Smith', '0e808fc4bfac445ca8d646048e25056b79a9dc8e3571572bcb4a39eb6b8a19d85f2c52ce6d85e5307abb6dcb1b9c299726642c3bf529d10fab85d6967be94762', 0, NULL, NULL, 'Ryan', 'ryan@aol.com')[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: users.crypted_password may not be NULL: INSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "account_id", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "persistence_token", "login_count", "last_login_ip", "last_login_at", "first_name", "email") VALUES('XDc7hyLKSmXyU30RvxNy', NULL, '2010-05-17 17:59:20', NULL, 'BFUyHnmQ8fy999YovMW1', '2010-05-17 17:59:20', 1, 0, NULL, NULL, NULL, 'Smith', '0e808fc4bfac445ca8d646048e25056b79a9dc8e3571572bcb4a39eb6b8a19d85f2c52ce6d85e5307abb6dcb1b9c299726642c3bf529d10fab85d6967be94762', 0, NULL, NULL, 'Ryan', 'ryan@aol.com')):
+  app/controllers/users_controller.rb:10:in `create'
+  haml (2.2.22) rails/./lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-05-17 13:04:16) [POST]
+  Parameters: {"commit"=>"add", "action"=>"create", "account_id"=>"wonderset", "authenticity_token"=>"+qIlyPnFK4xo7+MDiEM4GYMVS7JWncns03F22C5IL+4=", "subdomains"=>:account_id, "controller"=>"users", "user"=>{"last_name"=>"Smith", "first_name"=>"Ryan", "email"=>"ryan@aol.com"}}
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+
+NoMethodError (undefined method `generate_one_time_password!' for #<User:0x102ef9dd8>):
+  app/controllers/users_controller.rb:10:in `create'
+  haml (2.2.22) rails/./lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (134.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-05-17 13:04:26) [POST]
+  Parameters: {"commit"=>"add", "action"=>"create", "account_id"=>"wonderset", "authenticity_token"=>"+qIlyPnFK4xo7+MDiEM4GYMVS7JWncns03F22C5IL+4=", "subdomains"=>:account_id, "controller"=>"users", "user"=>{"last_name"=>"Smith", "first_name"=>"Ryan", "email"=>"ryan@aol.com"}}
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ryan@aol.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'aff96dd241509e3081ba716256c6c24e453f8f8700c4635e527481d7c4339944c98616e0fb507d5cd4ebc1bac242cafc1fa38e2e5671784ce42397bbdc2428e0') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'CWbwHJmXCHwZ2Qy6NSSc') LIMIT 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-17 18:04:26', "perishable_token" = 't2QMG07ECbGciilfauxv', "last_request_at" = '2010-05-17 18:04:26' WHERE "id" = 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "account_id", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "persistence_token", "login_count", "last_login_ip", "last_login_at", "first_name", "email") VALUES('CWbwHJmXCHwZ2Qy6NSSc', NULL, '2010-05-17 18:04:26', '771a127173c6259d005be5b3d15efe64c39cd992628592501a032f4cdf402c5b81b5da52e516714266037fd647b4ea3c7e4fab5a1bbd8a75786678c9e0ac4a10', 'Vbs8xbMQclZwRVWKxrA2', '2010-05-17 18:04:26', 1, 0, NULL, 'XMW7nG_1K2oqi0aXzht1', NULL, 'Smith', 'aff96dd241509e3081ba716256c6c24e453f8f8700c4635e527481d7c4339944c98616e0fb507d5cd4ebc1bac242cafc1fa38e2e5671784ce42397bbdc2428e0', 0, NULL, NULL, 'Ryan', 'ryan@aol.com')[0m
+
+ActionController::RoutingError (subdomain_account_url failed to generate from {:controller=>"accounts", :action=>"show", :subdomains=>:account_id} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["account-information", :id] - are they all satisfied? You may also need to specify :account_id for the subdomain.):
+  /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/routes.rb:31:in `raise_named_route_error'
+  /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/url_writer.rb:82:in `rewrite'
+  (eval):16:in `subdomain_account_url'
+  app/controllers/users_controller.rb:14:in `create'
+  haml (2.2.22) rails/./lib/sass/plugin/rails.rb:20:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-05-17 13:04:48) [POST]
+  Parameters: {"commit"=>"add", "action"=>"create", "account_id"=>"wonderset", "authenticity_token"=>"+qIlyPnFK4xo7+MDiEM4GYMVS7JWncns03F22C5IL+4=", "subdomains"=>:account_id, "controller"=>"users", "user"=>{"last_name"=>"Smith", "first_name"=>"Ryan", "email"=>"rryan@aol.com"}}
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'rryan@aol.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'bd5d630414c251542e26c2e82a092147b42957e2323e82e4df1c983752e9dfde4fab10425930810f41b55d9a535f554c4d3cb748e2d7feee1cdf51c8f8537a22') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '8B759BWgvEdPsy9fLnvA') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-17 18:04:48', "perishable_token" = '1kXK7_uBRSiTNsEDma0v', "last_request_at" = '2010-05-17 18:04:48' WHERE "id" = 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "account_id", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "persistence_token", "login_count", "last_login_ip", "last_login_at", "first_name", "email") VALUES('8B759BWgvEdPsy9fLnvA', NULL, '2010-05-17 18:04:48', '98ba62c54900c221166120c850bd8d72a4d3e568c2a4c3ccdf53b4b1bd6c3de56e1afba3e91d3f1cfbc6936ef507cf80cd35ddf4b377a78369a07f94645ccbf5', 'h5cir8GCERujZJuUw5J6', '2010-05-17 18:04:48', 1, 0, NULL, 'qlIxcxBzsSj71IYbaZMk', NULL, 'Smith', 'bd5d630414c251542e26c2e82a092147b42957e2323e82e4df1c983752e9dfde4fab10425930810f41b55d9a535f554c4d3cb748e2d7feee1cdf51c8f8537a22', 0, NULL, NULL, 'Ryan', 'rryan@aol.com')[0m
+Redirected to http://wonderset.local:3000/account-information/wonderset
+Completed in 41ms (DB: 2) | 302 Found [http://wonderset.local/users]
+
+
+Processing AccountsController#show (for 127.0.0.1 at 2010-05-17 13:04:48) [GET]
+  Parameters: {"action"=>"show", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"accounts"}
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-17 18:04:48', "perishable_token" = '37vb9IzCdvQwb2W-Qxvc', "last_request_at" = '2010-05-17 18:04:48' WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/show
+Completed in 39ms (View: 6, DB: 1) | 200 OK [http://wonderset.local/account-information/wonderset]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-05-17 13:05:04) [POST]
+  Parameters: {"commit"=>"add", "action"=>"create", "account_id"=>"wonderset", "authenticity_token"=>"+qIlyPnFK4xo7+MDiEM4GYMVS7JWncns03F22C5IL+4=", "subdomains"=>:account_id, "controller"=>"users", "user"=>{"last_name"=>"Smith", "first_name"=>"Ryan", "email"=>"rrryan@aol.com"}}
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'rrryan@aol.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '452967cc23047dc1956df9213c9bd9bc545e358794da241ab6e45099810193b863bfd19bf62a78b79c8a9c83dfd31241498f3b0d2817178d6e7f69fc0a5f1b1e') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'xoPGiFIEfm6X5CzFNoai') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-17 18:05:04', "perishable_token" = 'YQnzp2GtNuPaGo6v3XsA', "last_request_at" = '2010-05-17 18:05:04' WHERE "id" = 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "account_id", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "persistence_token", "login_count", "last_login_ip", "last_login_at", "first_name", "email") VALUES('xoPGiFIEfm6X5CzFNoai', NULL, '2010-05-17 18:05:04', 'c0f001df62de2b6ff031724baa0b494147ae13cb45de420c9c0a2465f316c675565cd2ec3fff03afe5bf711ee2aa515ba59f0efcde47d014b6cfd8ff366ec542', 'GQfuzQr6NCtuy6n2614S', '2010-05-17 18:05:04', 1, 0, NULL, 'Vwi5dcrwAJxxr0MnKzOW', NULL, 'Smith', '452967cc23047dc1956df9213c9bd9bc545e358794da241ab6e45099810193b863bfd19bf62a78b79c8a9c83dfd31241498f3b0d2817178d6e7f69fc0a5f1b1e', 0, NULL, NULL, 'Ryan', 'rrryan@aol.com')[0m
+
+ActionController::RoutingError (edit_subdomain_account_url failed to generate from {:controller=>"accounts", :action=>"edit", :subdomains=>:account_id} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["account-information", :id, "edit"] - are they all satisfied? You may also need to specify :account_id for the subdomain.):
+  /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/routes.rb:31:in `raise_named_route_error'
+  /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/url_writer.rb:82:in `rewrite'
+  (eval):16:in `edit_subdomain_account_url'
+  app/controllers/users_controller.rb:14:in `create'
+  haml (2.2.22) rails/./lib/sass/plugin/rails.rb:20:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-05-17 13:06:08) [GET]
+  Parameters: {"action"=>"index", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"users"}
+
+ActionController::UnknownAction (No action responded to index. Actions: create, edit, new, show, and update):
+  haml (2.2.22) rails/./lib/sass/plugin/rails.rb:20:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-05-17 13:06:11) [POST]
+  Parameters: {"commit"=>"add", "action"=>"create", "account_id"=>"wonderset", "authenticity_token"=>"+qIlyPnFK4xo7+MDiEM4GYMVS7JWncns03F22C5IL+4=", "subdomains"=>:account_id, "controller"=>"users", "user"=>{"last_name"=>"Smith", "first_name"=>"Ryan", "email"=>"rffrryan@aol.com"}}
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'rffrryan@aol.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '1dfb310f1bdbdd9a161a1de5f94b2444cf6213ee3c848d3b3d692f3839363e4b8573cc833b1ae854045e20d5a2993d33ec58602f1dc0647cc0a4017a472a2f3c') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'x-M5bwnulw-DF4Fiqup3') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-17 18:06:11', "perishable_token" = 'XjGyyhoTvtkmO-S54jDh', "last_request_at" = '2010-05-17 18:06:11' WHERE "id" = 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "account_id", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "persistence_token", "login_count", "last_login_ip", "last_login_at", "first_name", "email") VALUES('x-M5bwnulw-DF4Fiqup3', NULL, '2010-05-17 18:06:11', '90f5dde6b1c1928e6700c582720d087e987ceff2de6c0cabbc6d612fdf42c5683c17af1f2b9f9dbf43681c3e5ba2987f56e307e8b1e2d84fe59092e3699b1a90', 'FpZfSHGzIWLbEzz-ctxs', '2010-05-17 18:06:11', 1, 0, NULL, 'tN2Er6ZGWhXEV7igp0ye', NULL, 'Smith', '1dfb310f1bdbdd9a161a1de5f94b2444cf6213ee3c848d3b3d692f3839363e4b8573cc833b1ae854045e20d5a2993d33ec58602f1dc0647cc0a4017a472a2f3c', 0, NULL, NULL, 'Ryan', 'rffrryan@aol.com')[0m
+Redirected to http://wonderset.local:3000/account-information/wonderset/edit
+Completed in 41ms (DB: 2) | 302 Found [http://wonderset.local/users]
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-05-17 13:06:11) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"accounts"}
+  [4;35;1mUser Load (3.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-17 18:06:11', "perishable_token" = '7OfxaqL95Zd_e7IxzCMx', "last_request_at" = '2010-05-17 18:06:11' WHERE "id" = 1[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 47ms (View: 9, DB: 5) | 200 OK [http://wonderset.local/account-information/wonderset/edit]
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-05-17 13:06:13) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"accounts"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-17 18:06:13', "perishable_token" = '9FKZTGrUgZKkaDjTkOjO', "last_request_at" = '2010-05-17 18:06:13' WHERE "id" = 1[0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 116ms (View: 4, DB: 2) | 200 OK [http://wonderset.local/account-information/wonderset/edit]
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-05-17 13:08:16) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"accounts"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-17 18:08:16', "perishable_token" = 'p1H6imMlaEEt5XyplOm6', "last_request_at" = '2010-05-17 18:08:16' WHERE "id" = 1[0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users".account_id = 1) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+) on line #10 of app/views/accounts/edit.haml:
+7: 
+8: %ul
+9:   - @account.users.each do |user|
+10:     %li= user.name
+
+    app/models/user.rb:12:in `name'
+    app/views/accounts/edit.haml:10:in `_run_haml_app47views47accounts47edit46haml'
+    app/views/accounts/edit.haml:9:in `_run_haml_app47views47accounts47edit46haml'
+    haml (2.2.22) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.22) rails/./lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (143.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-05-17 13:08:39) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"accounts"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-17 18:08:39', "perishable_token" = '6N8HfEt0tWiP5vElXnIg', "last_request_at" = '2010-05-17 18:08:39' WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users".account_id = 1) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+) on line #10 of app/views/accounts/edit.haml:
+7: 
+8: %ul
+9:   - @account.users.each do |user|
+10:     %li= user.try :name
+
+    app/models/user.rb:12:in `name'
+    app/views/accounts/edit.haml:10:in `try'
+    app/views/accounts/edit.haml:10:in `_run_haml_app47views47accounts47edit46haml'
+    app/views/accounts/edit.haml:9:in `_run_haml_app47views47accounts47edit46haml'
+    haml (2.2.22) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.22) rails/./lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (148.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mUser Load (63.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" LIMIT 1[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-17 18:10:23', "perishable_token" = 'rzDSyEESLZJAcJGHo4c1', "last_name" = 'Smith', "first_name" = 'Ryan' WHERE "id" = 1[0m
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-05-17 13:10:25) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"accounts"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-17 18:10:25', "perishable_token" = 'DJCa4e-EUCbVDeJ4KoKw', "last_request_at" = '2010-05-17 18:10:25' WHERE "id" = 1[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users".account_id = 1) [0m
+Completed in 47ms (View: 11, DB: 3) | 200 OK [http://wonderset.local/account-information/wonderset/edit]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-05-17 13:10:53) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"users"}
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering users/new
+Completed in 28ms (View: 5, DB: 0) | 200 OK [http://wonderset.local/users/new]
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-05-17 13:15:40) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"accounts"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-17 18:15:40', "perishable_token" = 'ytJqgODU2Pse-k09FUk3', "last_request_at" = '2010-05-17 18:15:40' WHERE "id" = 1[0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering accounts/edit
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users".account_id = 1) [0m
+Completed in 123ms (View: 6, DB: 3) | 200 OK [http://wonderset.local/account-information/wonderset/edit]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m

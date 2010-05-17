@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  before_filter :require_no_user, :only => [:new, :create]
   before_filter :require_user, :only => [:show, :edit, :update]
   
   def new
@@ -8,9 +7,11 @@ class UsersController < ApplicationController
   
   def create
     @user = current_account.users.build( params[:user] )
+    @user.generate_one_time_password!
+
     if @user.save
-      flash[:notice] = "Account registered!"
-      redirect_back_or_default account_url
+      flash[:notice] = "a new user was added to your account"
+      redirect_to edit_subdomain_account_url(current_account,current_account)
     else
       render :action => :new
     end

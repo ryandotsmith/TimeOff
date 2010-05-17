@@ -6,6 +6,13 @@
   = form.text_field :subdomain
 
   - form.fields_for :users do |user_form|
+
+    = user_form.label :first_name
+    = user_form.text_field :first_name
+
+    = user_form.label :last_name
+    = user_form.text_field :last_name
+
     = user_form.label :email, 'Email Address'
     = user_form.text_field :email
 

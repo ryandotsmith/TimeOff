@@ -6,6 +6,7 @@ end
 Given /^I am signed in as the account owner$/ do
   @user = Factory(:user)
   @account.owner_id = @user.id
+  @account.save
 
   visit new_subdomain_user_session_path(@account,@account)
   fill_in('email',    :with => @user.email)

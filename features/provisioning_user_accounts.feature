@@ -1,4 +1,3 @@
-@wip
 Feature: Provisioning useres for accounts
   In order to get employees in the system
   As an account owner
@@ -15,4 +14,4 @@ Feature: Provisioning useres for accounts
     And I fill in "first name" with "Ryan"
     And I fill in "last name" with "Smith"
     And I press "add"
-    Then I should see "email confirmation sent"
+    Then I should see "a new user was added to your account"

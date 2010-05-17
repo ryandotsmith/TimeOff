@@ -3,4 +3,8 @@
 
 - if current_user == @account.owner
   %h3 Account Administration
-  = link_to 'add user', new
+  = link_to 'add user', new_subdomain_user_path(@account)
+
+%ul
+  - @account.users.each do |user|
+    %li= user.try :name

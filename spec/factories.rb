@@ -3,6 +3,8 @@ Factory.sequence :email do |n|
 end
 Factory.define :user do |u|
   u.email Factory.next :email
+  u.first_name "Ryan"
+  u.last_name "Smith"
   u.password "password"
   u.password_confirmation "password"
 end
