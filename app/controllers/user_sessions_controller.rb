@@ -18,7 +18,8 @@ class UserSessionsController < ApplicationController
   def destroy
     current_user_session.destroy
     flash[:notice] = 'Goodbye'
-    redirect_to new_subdomain_user_session_url(current_account,current_account)
+    require 'ruby-debug';debugger
+    redirect_to new_subdomain_user_session_url(current_account)
   end
 end
 
