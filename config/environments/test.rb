@@ -36,4 +36,3 @@ config.action_mailer.default_charset = "utf-8"
 # like if you have constraints or database-specific column types
 # config.active_record.schema_format = :sql
 
-config.gem 'factory_girl'
