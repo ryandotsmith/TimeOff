@@ -16474,3 +16474,169 @@ Completed in 42ms (View: 11, DB: 2) | 200 OK [http://wonderset.timeoff.local/acc
   [4;36;1mSQL (3.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
   [4;35;1mSQL (2.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
   [4;36;1mSQL (2.6ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+
+
+Processing Subdomain::AccountsController#edit (for 127.0.0.1 at 2010-05-18 17:18:47) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/accounts"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-18 22:18:47', "perishable_token" = '0jcGl40Q9LmbSH5l_xpN', "last_request_at" = '2010-05-18 22:18:47' WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering subdomain/accounts/edit
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users".account_id = 1) [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."owner_id" = 1) LIMIT 1[0m
+Rendered shared/_session (0.1ms)
+Completed in 40ms (View: 11, DB: 2) | 200 OK [http://wonderset.timeoff.local/account-details/wonderset/edit]
+
+
+Processing Subdomain::UsersController#new (for 127.0.0.1 at 2010-05-18 17:18:51) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/users"}
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering subdomain/users/new
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-18 22:18:51', "perishable_token" = 'ZPQe14a1ai-_VkgM2sVn', "last_request_at" = '2010-05-18 22:18:51' WHERE "id" = 1[0m
+Rendered shared/_session (9.8ms)
+Completed in 122ms (View: 19, DB: 1) | 200 OK [http://wonderset.timeoff.local/users/new]
+
+
+Processing Subdomain::UsersController#create (for 127.0.0.1 at 2010-05-18 17:19:00) [POST]
+  Parameters: {"commit"=>"add", "action"=>"create", "account_id"=>"wonderset", "authenticity_token"=>"gkatCRfFskdvJOy/Y8zoFSiXRetJghmpcECorX5YxNk=", "subdomains"=>:account_id, "controller"=>"subdomain/users", "user"=>{"last_name"=>"Rivers", "first_name"=>"Jone", "email"=>"jone@aol.com"}}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jone@aol.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'd0d72a687f034e74a3098b992c0e7fc035d0b4f0934e2a2e08249406e329bf08f399cd38cb61be68ccd09a9da9484365dee33a8b71630768e17f04f5ccf097da') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'HXM492A_fepc-HlhbsMJ') LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-18 22:19:00', "perishable_token" = 'aK5Q-MW9tpYhBPhrjIaO', "last_request_at" = '2010-05-18 22:19:00' WHERE "id" = 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "account_id", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "persistence_token", "login_count", "last_login_ip", "last_login_at", "first_name", "email") VALUES('HXM492A_fepc-HlhbsMJ', NULL, '2010-05-18 22:19:00', 'dfd522990be5f0544fa184920022ec129eeb3791dc43b13678230bc17ded10e72cfb0c29c2f4e90c466123e224aa3b27da9a15f4e798e614d5807e034727eaf9', 'U7xz96wsMDVrvkmh6DBP', '2010-05-18 22:19:00', 1, 0, NULL, 'ixbaxYRks4WlCHehXIKV', NULL, 'Rivers', 'd0d72a687f034e74a3098b992c0e7fc035d0b4f0934e2a2e08249406e329bf08f399cd38cb61be68ccd09a9da9484365dee33a8b71630768e17f04f5ccf097da', 0, NULL, NULL, 'Jone', 'jone@aol.com')[0m
+Redirected to http://wonderset.timeoff.local:3000/account-details/wonderset/edit
+Completed in 33ms (DB: 1) | 302 Found [http://wonderset.timeoff.local/users]
+
+
+Processing Subdomain::AccountsController#edit (for 127.0.0.1 at 2010-05-18 17:19:00) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/accounts"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-18 22:19:00', "perishable_token" = 'scVe40NbijMpmD4WmwIq', "last_request_at" = '2010-05-18 22:19:00' WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering subdomain/accounts/edit
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users".account_id = 1) [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."owner_id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."owner_id" = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."owner_id" = 2) LIMIT 1[0m
+Rendered shared/_session (0.1ms)
+Completed in 113ms (View: 7, DB: 2) | 200 OK [http://wonderset.timeoff.local/account-details/wonderset/edit]
+
+
+Processing Subdomain::AccountsController#edit (for 127.0.0.1 at 2010-05-18 17:19:03) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/accounts"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.7ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-18 22:19:03', "perishable_token" = '8Hd5uRTPIbB8jsxjOVnH', "last_request_at" = '2010-05-18 22:19:03' WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering subdomain/accounts/edit
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users".account_id = 1) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."owner_id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."owner_id" = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."owner_id" = 2) LIMIT 1[0m
+Rendered shared/_session (0.1ms)
+Completed in 36ms (View: 8, DB: 3) | 200 OK [http://wonderset.timeoff.local/account-details/wonderset/edit]
+
+
+Processing Subdomain::AccountsController#edit (for 127.0.0.1 at 2010-05-18 17:19:15) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/accounts"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-18 22:19:15', "perishable_token" = 'XUx6jim6hi_j2tC1Ml_7', "last_request_at" = '2010-05-18 22:19:15' WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering subdomain/accounts/edit
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (81.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users".account_id = 1) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."owner_id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."owner_id" = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."owner_id" = 2) LIMIT 1[0m
+Rendered shared/_session (1.5ms)
+Completed in 125ms (View: 17, DB: 83) | 200 OK [http://wonderset.timeoff.local/account-details/wonderset/edit]
+
+
+Processing Subdomain::UserSessionsController#destroy (for 127.0.0.1 at 2010-05-18 17:19:17) [DELETE]
+  Parameters: {"action"=>"destroy", "account_id"=>"wonderset", "_method"=>"delete", "authenticity_token"=>"gkatCRfFskdvJOy/Y8zoFSiXRetJghmpcECorX5YxNk=", "subdomains"=>:account_id, "controller"=>"subdomain/user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-18 22:19:17', "perishable_token" = 'GE-DbcoEx3sgrEq96PDr', "last_request_at" = '2010-05-18 22:19:17' WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Redirected to http://wonderset.timeoff.local:3000/user_session/new
+Completed in 29ms (DB: 1) | 302 Found [http://wonderset.timeoff.local/user_session]
+
+
+Processing Subdomain::UserSessionsController#new (for 127.0.0.1 at 2010-05-18 17:19:17) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/user_sessions"}
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering subdomain/user_sessions/new
+Rendered shared/_session (0.1ms)
+Completed in 25ms (View: 6, DB: 0) | 200 OK [http://wonderset.timeoff.local/user_session/new]
+
+
+Processing Subdomain::UserSessionsController#create (for 127.0.0.1 at 2010-05-18 17:19:24) [POST]
+  Parameters: {"commit"=>"sign in", "user_session"=>{"password"=>"[FILTERED]", "email"=>"jone@aol.com"}, "action"=>"create", "account_id"=>"wonderset", "authenticity_token"=>"gkatCRfFskdvJOy/Y8zoFSiXRetJghmpcECorX5YxNk=", "subdomains"=>:account_id, "controller"=>"subdomain/user_sessions"}
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jone@aol.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "failed_login_count" = 1, "updated_at" = '2010-05-18 22:19:25', "perishable_token" = 'mtkdFS47QKH4HRneeKgr' WHERE "id" = 2[0m
+Rendering template within layouts/application
+Rendering subdomain/user_sessions/new
+Rendered shared/_session (0.1ms)
+Completed in 123ms (View: 6, DB: 1) | 200 OK [http://wonderset.timeoff.local/user_session]
+
+
+Processing Subdomain::UserSessionsController#create (for 127.0.0.1 at 2010-05-18 17:19:28) [POST]
+  Parameters: {"commit"=>"sign in", "user_session"=>{"password"=>"[FILTERED]", "email"=>"jone@aol.com"}, "action"=>"create", "account_id"=>"wonderset", "authenticity_token"=>"gkatCRfFskdvJOy/Y8zoFSiXRetJghmpcECorX5YxNk=", "subdomains"=>:account_id, "controller"=>"subdomain/user_sessions"}
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jone@aol.com') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "login_count" = 1, "current_login_ip" = '127.0.0.1', "failed_login_count" = 0, "updated_at" = '2010-05-18 22:19:28', "perishable_token" = '3lYqpn7vo79LGoYLSsOM', "last_request_at" = '2010-05-18 22:19:28', "current_login_at" = '2010-05-18 22:19:28' WHERE "id" = 2[0m
+Redirected to http://wonderset.timeoff.local:3000/account-details/wonderset
+Completed in 32ms (DB: 1) | 302 Found [http://wonderset.timeoff.local/user_session]
+
+
+Processing Subdomain::AccountsController#show (for 127.0.0.1 at 2010-05-18 17:19:28) [GET]
+  Parameters: {"action"=>"show", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/accounts"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '2') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-18 22:19:28', "perishable_token" = 'Qba9hPGdk9P0faIne7Nf', "last_request_at" = '2010-05-18 22:19:28' WHERE "id" = 2[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering subdomain/accounts/show
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered shared/_session (0.8ms)
+Completed in 112ms (View: 83, DB: 2) | 200 OK [http://wonderset.timeoff.local/account-details/wonderset]
+
+
+Processing Subdomain::AccountsController#show (for 127.0.0.1 at 2010-05-18 17:19:29) [GET]
+  Parameters: {"action"=>"show", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/accounts"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '2') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-18 22:19:29', "perishable_token" = 'ObYYOjClSE2PMjo-MZ5v', "last_request_at" = '2010-05-18 22:19:29' WHERE "id" = 2[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering subdomain/accounts/show
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered shared/_session (0.6ms)
+Completed in 32ms (View: 5, DB: 2) | 200 OK [http://wonderset.timeoff.local/account-details/wonderset]
+
+
+Processing Subdomain::UserSessionsController#destroy (for 127.0.0.1 at 2010-05-18 17:19:32) [DELETE]
+  Parameters: {"action"=>"destroy", "account_id"=>"wonderset", "_method"=>"delete", "authenticity_token"=>"gkatCRfFskdvJOy/Y8zoFSiXRetJghmpcECorX5YxNk=", "subdomains"=>:account_id, "controller"=>"subdomain/user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '2') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-18 22:19:32', "perishable_token" = 'z_Eh5WV0gL8t5rvqrSGP', "last_request_at" = '2010-05-18 22:19:32' WHERE "id" = 2[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Redirected to http://wonderset.timeoff.local:3000/user_session/new
+Completed in 29ms (DB: 1) | 302 Found [http://wonderset.timeoff.local/user_session]
+
+
+Processing Subdomain::UserSessionsController#new (for 127.0.0.1 at 2010-05-18 17:19:33) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/user_sessions"}
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering subdomain/user_sessions/new
+Rendered shared/_session (0.1ms)
+Completed in 104ms (View: 5, DB: 0) | 200 OK [http://wonderset.timeoff.local/user_session/new]
