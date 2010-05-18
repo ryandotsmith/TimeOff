@@ -113,7 +113,7 @@ specs:
     version: 0.3.1
 - webrat: 
     version: 0.7.0
-hash: 351353d9debb4dbe365c816c6028520e3c236090
+hash: 509cea22b9a62df3069fb5febff12188d5d6fcad
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org

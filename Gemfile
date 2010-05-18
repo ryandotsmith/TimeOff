@@ -8,11 +8,6 @@ gem 'authlogic'
 gem "subdomain_routes",   '>= 0.3.1'
 gem 'friendly_id',        '>= 2.2.7'
 
-group :development do
-  # bundler requires these gems in development
-  # gem "rails-footnotes"
-end
-
 group :test do
   gem "factory_girl"
   gem 'rspec',             '1.3.0' 

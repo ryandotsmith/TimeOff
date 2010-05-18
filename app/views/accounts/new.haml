@@ -2,25 +2,13 @@
 
 - semantic_form_for @account,:url => system_accounts_path do |form|
   = form.error_messages
+  = form.input :subdomain, :label => 'Company Name'
 
-  = form.label :subdomain, "Company Name"
-  = form.text_field :subdomain
+  - form.semantic_fields_for :users do |user|
+    = user.input :first_name 
+    = user.input :last_name
+    = user.input :email
+    = user.input :password 
+    = user.input :password_confirmation
 
-  - form.fields_for :users do |user_form|
-
-    = user_form.label :first_name
-    = user_form.text_field :first_name
-
-    = user_form.label :last_name
-    = user_form.text_field :last_name
-
-    = user_form.label :email, 'Email Address'
-    = user_form.text_field :email
-
-    = user_form.label :password, 'password'
-    = user_form.password_field :password
-
-    = user_form.label :password_confirmation, "password confirmation"
-    = user_form.password_field :password_confirmation
-
-  = form.submit 'Sign Up'
+  = form.buttons
