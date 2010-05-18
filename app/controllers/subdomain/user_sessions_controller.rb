@@ -1,6 +1,7 @@
-class UserSessionsController < ApplicationController
+class Subdomain::UserSessionsController < ApplicationController
   before_filter :require_no_user, :only => [:new, :create]
   before_filter :require_user, :only => :destroy
+  before_filter :require_account
   
   def new
     @user_session = UserSession.new
@@ -18,8 +19,13 @@ class UserSessionsController < ApplicationController
   def destroy
     current_user_session.destroy
     flash[:notice] = 'Goodbye'
-    require 'ruby-debug';debugger
     redirect_to new_subdomain_user_session_url(current_account)
   end
+
+  private
+  def require_account
+    redirect_to new_system_account_url if current_account.nil?
+  end
+
 end
 

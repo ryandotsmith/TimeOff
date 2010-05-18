@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   filter_parameter_logging :password, :password_confirmation
   helper_method :current_user_session, :current_user
   helper_method :current_account
+  
 
   private
 
@@ -24,7 +25,7 @@ class ApplicationController < ActionController::Base
       unless current_user
         store_location
         flash[:notice] = "You must be logged in to access this page"
-        redirect_to new_user_session_url
+        redirect_to new_subdomain_user_session_path
         return false
       end
     end
@@ -33,7 +34,7 @@ class ApplicationController < ActionController::Base
       if current_user
         store_location
         flash[:notice] = "You must be logged out to access this page"
-        redirect_to account_url
+        redirect_to subdomain_account_url(current_account,current_account)
         return false
       end
     end

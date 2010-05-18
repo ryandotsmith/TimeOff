@@ -5,21 +5,19 @@ ActionController::Routing::Routes.draw do |map|
     www.resources :accounts, :only => [:new, :create]
   end
 
-  map.subdomain :model => :account, :namespace => nil, :name => 'subdomain' do |account|
-    account.resources :accounts, 
-      :only => [:edit, :update, :show, :delete], 
-      :as => 'account-information',
-      :has_many => :users
-    account.resource  :user_session
-    #account.resources :users
+  map.subdomain :model => :account, :name => 'subdomain' do |account|
+    account.root :controller => 'user_sessions', :action => 'new' 
+    account.resources :accounts, :only => [:show,:edit,:update], :as => 'account-details'
+    account.resources :users
+    account.resource  :user_session, :only => [:new,:create,:destroy]
   end
 
-  map.root :controller => "pages",
-    :action => "show",
-    :id => "index"
+  #map.root :controller => "pages",
+    #:action => "show",
+    #:id => "index"
 
-  map.resources :pages,
-    :controller => 'pages',
-    :only => [:show]
+  #map.resources :pages,
+    #:controller => 'pages',
+    #:only => [:show]
 
 end

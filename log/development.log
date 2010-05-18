@@ -12496,3 +12496,2094 @@ Rendering rescues/layout (not_found)
   [4;36;1mSQL (2.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
   [4;35;1mSQL (4.5ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
   [4;36;1mSQL (11.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-05-18 14:03:54) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://www.local/]
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-05-18 14:04:16) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://wonderset.local/]
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-05-18 14:04:18) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://wonderset.local/]
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-05-18 14:25:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://wonderset.local/]
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-05-18 14:25:33) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://www.local/]
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-05-18 14:25:35) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://www.local/]
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-05-18 14:25:40) [GET]
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://wonderset.local/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-18 14:26:51) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:subdomain=>"", :method=>:get}):
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-18 14:27:04) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:subdomain=>"", :method=>:get}):
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-18 14:27:24) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:subdomain=>"wonderset", :method=>:get}):
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-18 14:29:10) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:subdomain=>"", :method=>:get}):
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-18 14:29:28) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:subdomain=>"wonderset", :method=>:get}):
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-18 14:30:33) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+
+ActionView::TemplateError (subdomain_user_session_url failed to generate from {:action=>"show", :format=>nil, :subdomains=>:account_id, :controller=>"user_sessions"}, expected: {:action=>"show", :subdomains=>:account_id, :controller=>"user_sessions"}, diff: {:format=>nil} You may also need to specify :account_id for the subdomain.) on line #3 of app/views/user_sessions/new.haml:
+1: %h1 sign in
+2: 
+3: - form_for @user_session , :url => subdomain_user_session_path(current_account,current_account) do |session|
+4: 
+5:   = session.label :email
+6:   = session.text_field :email
+
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/routes.rb:31:in `raise_named_route_error'
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/url_writer.rb:82:in `rewrite'
+    (eval):16:in `subdomain_user_session_path'
+    app/views/user_sessions/new.haml:3:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.6ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-18 14:31:24) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `subdomain_account_user_session_path' for #<ActionView::Base:0x103766160>) on line #3 of app/views/user_sessions/new.haml:
+1: %h1 sign in
+2: 
+3: - form_for @user_session , :url => subdomain_account_user_session_path(current_account,current_account) do |session|
+4: 
+5:   = session.label :email
+6:   = session.text_field :email
+
+    app/views/user_sessions/new.haml:3:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-18 14:31:33) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `subdomain_account_user_sessions_path' for #<ActionView::Base:0x1032153c8>) on line #3 of app/views/user_sessions/new.haml:
+1: %h1 sign in
+2: 
+3: - form_for @user_session , :url => subdomain_account_user_sessions_path(current_account,current_account) do |session|
+4: 
+5:   = session.label :email
+6:   = session.text_field :email
+
+    app/views/user_sessions/new.haml:3:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-18 14:31:54) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+
+ActionView::TemplateError (subdomain_user_session_url failed to generate from {:action=>"show", :format=>nil, :subdomains=>:account_id, :controller=>"user_sessions"}, expected: {:action=>"show", :subdomains=>:account_id, :controller=>"user_sessions"}, diff: {:format=>nil} You may also need to specify :account_id for the subdomain.) on line #3 of app/views/user_sessions/new.haml:
+1: %h1 sign in
+2: 
+3: - form_for @user_session , :url => subdomain_user_session_path(current_account,current_account) do |session|
+4: 
+5:   = session.label :email
+6:   = session.text_field :email
+
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/routes.rb:31:in `raise_named_route_error'
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/url_writer.rb:82:in `rewrite'
+    (eval):16:in `subdomain_user_session_path'
+    app/views/user_sessions/new.haml:3:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.7ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-18 14:32:04) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+
+ActionView::TemplateError (subdomain_user_session_url failed to generate from {:action=>"show", :subdomains=>:account_id, :controller=>"user_sessions"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["user_session"] - are they all satisfied? You may also need to specify :account_id for the subdomain.) on line #3 of app/views/user_sessions/new.haml:
+1: %h1 sign in
+2: 
+3: - form_for @user_session , :url => subdomain_user_session_path(current_account) do |session|
+4: 
+5:   = session.label :email
+6:   = session.text_field :email
+
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/routes.rb:31:in `raise_named_route_error'
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/url_writer.rb:82:in `rewrite'
+    (eval):16:in `subdomain_user_session_path'
+    app/views/user_sessions/new.haml:3:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.2ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-18 14:32:12) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered shared/_session (1.0ms)
+Completed in 29ms (View: 14, DB: 0) | 200 OK [http://wonderset.local/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-18 14:32:20) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered shared/_session (0.1ms)
+Completed in 102ms (View: 8, DB: 0) | 200 OK [http://wonderset.local/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-18 14:33:34) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Redirected to http://www.local:3000/accounts/new
+Filter chain halted as [:require_account] rendered_or_redirected.
+Completed in 20ms (DB: 1) | 302 Found [http://wonderset.local/]
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-05-18 14:33:35) [GET]
+  Parameters: {"action"=>"new", "subdomains"=>["www"], "controller"=>"accounts"}
+Rendering template within layouts/application
+Rendering accounts/new
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'f10e56fe140478cb0155a0a4056136df61bd62c99ae6389d134a9560965d05f7ecb0716efa11eb198ffeb837332198b68b25af40a8f81e99956d221532d87b4d') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'f10e56fe140478cb0155a0a4056136df61bd62c99ae6389d134a9560965d05f7ecb0716efa11eb198ffeb837332198b68b25af40a8f81e99956d221532d87b4d') LIMIT 1[0m
+Rendered shared/_session (6.9ms)
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://www.local/accounts/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-18 14:33:59) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"new", "account_id"=>"tft", "subdomains"=>:account_id, "controller"=>"user_sessions"}
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'tft') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'tft') LIMIT 1[0m
+Redirected to http://www.local:3000/accounts/new
+Filter chain halted as [:require_account] rendered_or_redirected.
+Completed in 18ms (DB: 0) | 302 Found [http://tft.local/]
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-05-18 14:33:59) [GET]
+  Parameters: {"action"=>"new", "subdomains"=>["www"], "controller"=>"accounts"}
+Rendering template within layouts/application
+Rendering accounts/new
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'f10e56fe140478cb0155a0a4056136df61bd62c99ae6389d134a9560965d05f7ecb0716efa11eb198ffeb837332198b68b25af40a8f81e99956d221532d87b4d') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'f10e56fe140478cb0155a0a4056136df61bd62c99ae6389d134a9560965d05f7ecb0716efa11eb198ffeb837332198b68b25af40a8f81e99956d221532d87b4d') LIMIT 1[0m
+Rendered shared/_session (6.3ms)
+Completed in 35ms (View: 16, DB: 0) | 200 OK [http://www.local/accounts/new]
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-05-18 14:34:22) [POST]
+  Parameters: {"commit"=>"Sign Up", "action"=>"create", "authenticity_token"=>"VwR8CgnEyfX8K8QiarkPRrNGmp8fv5+HDpFNYR1h4B4=", "account"=>{"subdomain"=>"wonderset", "users_attributes"=>{"0"=>{"password_confirmation"=>"[FILTERED]", "last_name"=>"smith", "password"=>"[FILTERED]", "email"=>"this.ryansmith@gmail.com", "first_name"=>"ryan"}}}, "subdomains"=>["www"], "controller"=>"accounts"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'this.ryansmith@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e6a8c94e24fb41d886d488ac9765226cfcad831e2030d6bf2238986f5932825fece513cb87d72455639504956e9508955a1300939811192d86ef66359599a4c3') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '2jw7PBJndiURO_Lv_oeH') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'this.ryansmith@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e6a8c94e24fb41d886d488ac9765226cfcad831e2030d6bf2238986f5932825fece513cb87d72455639504956e9508955a1300939811192d86ef66359599a4c3') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '2jw7PBJndiURO_Lv_oeH') LIMIT 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("created_at", "updated_at", "owner_id", "subdomain") VALUES('2010-05-18 19:34:22', '2010-05-18 19:34:22', NULL, 'wonderset')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'f10e56fe140478cb0155a0a4056136df61bd62c99ae6389d134a9560965d05f7ecb0716efa11eb198ffeb837332198b68b25af40a8f81e99956d221532d87b4d') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'f10e56fe140478cb0155a0a4056136df61bd62c99ae6389d134a9560965d05f7ecb0716efa11eb198ffeb837332198b68b25af40a8f81e99956d221532d87b4d') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "account_id", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "persistence_token", "login_count", "last_login_ip", "last_login_at", "first_name", "email") VALUES('2jw7PBJndiURO_Lv_oeH', '2010-05-18 19:34:22', '2010-05-18 19:34:22', 'b5339578b403ac4a684b10f215fb1aa6f5970b289a3fb47bee33d21103d83898b9384ee6692dae37a907426c195a9bdfb96fae6e70cc25aac7d41fb72081e9ba', 'WNO1N2BSu-2dUFGp3AfV', '2010-05-18 19:34:22', 1, 0, '127.0.0.1', 'cNFZ--mTaL-cIh1ZWUB9', '2010-05-18 19:34:22', 'smith', 'e6a8c94e24fb41d886d488ac9765226cfcad831e2030d6bf2238986f5932825fece513cb87d72455639504956e9508955a1300939811192d86ef66359599a4c3', 1, NULL, NULL, 'ryan', 'this.ryansmith@gmail.com')[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-18 19:34:22', "perishable_token" = '0cVHtiEaszptvVCu0grJ' WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset' AND "accounts".id <> 1) LIMIT 1[0m
+  [4;35;1mAccount Update (0.1ms)[0m   [0mUPDATE "accounts" SET "subdomain" = 'wonderset', "updated_at" = '2010-05-18 19:34:22', "created_at" = '2010-05-18 19:34:22', "owner_id" = 1 WHERE "id" = 1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-18 19:34:22', "perishable_token" = 'Z5fvDgf5PR02hbCtuGX9' WHERE "id" = 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-18 19:34:22', "perishable_token" = 'E7U5T418jhEPGl0ouJqT' WHERE "id" = 1[0m
+Redirected to http://wonderset.local:3000/account-information/wonderset/edit
+Completed in 321ms (DB: 2) | 302 Found [http://www.local/accounts]
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-05-18 14:34:22) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"accounts"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+
+NameError (undefined local variable or method `new_user_session_url' for #<AccountsController:0x1030d2b28>):
+  app/controllers/application_controller.rb:28:in `require_user'
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-05-18 14:34:55) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"accounts"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+
+NameError (undefined local variable or method `new_account_user_session_url' for #<AccountsController:0x10322aea8>):
+  app/controllers/application_controller.rb:28:in `require_user'
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-05-18 14:35:03) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"accounts"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+
+NoMethodError (undefined method `new_account_user_session_url' for #<AccountsController:0x103720200>):
+  app/controllers/application_controller.rb:28:in `require_user'
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (30.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-05-18 14:35:41) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"accounts"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Redirected to http://local:3000/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 18ms (DB: 1) | 302 Found [http://wonderset.local/account-information/wonderset/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-18 14:35:41) [GET]
+
+ActionController::RoutingError (No route matches "/user_session/new" with {:subdomain=>"", :method=>:get}):
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-05-18 14:35:49) [GET]
+  Parameters: {"action"=>"new", "subdomains"=>["www"], "controller"=>"accounts"}
+Rendering template within layouts/application
+Rendering accounts/new
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e6a8c94e24fb41d886d488ac9765226cfcad831e2030d6bf2238986f5932825fece513cb87d72455639504956e9508955a1300939811192d86ef66359599a4c3') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-18 19:35:49', "perishable_token" = 'fjGcT-LOw9QfBfNloYtk', "last_request_at" = '2010-05-18 19:35:49' WHERE "id" = 1[0m
+
+ActionView::TemplateError (subdomain_user_session_url failed to generate from {:action=>"show", :subdomains=>:account_id, :controller=>"user_sessions"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["user_session"] - are they all satisfied? You may also need to specify :account_id for the subdomain.) on line #3 of app/views/shared/_session.haml:
+1: %ul
+2:   - if current_user
+3:     %li= link_to 'sign out', subdomain_user_session_path, :method => :delete
+
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/routes.rb:31:in `raise_named_route_error'
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/url_writer.rb:82:in `rewrite'
+    (eval):16:in `subdomain_user_session_path'
+    app/views/shared/_session.haml:3:in `_run_haml_app47views47shared47_session46haml_locals_object_session'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (3.0.4) lib/haml/helpers.rb:90:in `non_haml'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/layouts/application.haml:5:in `_run_haml_app47views47layouts47application46haml'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (136.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-05-18 14:35:55) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"accounts"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Redirected to http://local:3000/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 19ms (DB: 1) | 302 Found [http://wonderset.local/account-information/wonderset/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-18 14:35:55) [GET]
+
+ActionController::RoutingError (No route matches "/user_session/new" with {:subdomain=>"", :method=>:get}):
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-18 14:35:59) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered shared/_session (0.1ms)
+Completed in 34ms (View: 8, DB: 1) | 200 OK [http://wonderset.local/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-18 14:36:03) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered shared/_session (0.1ms)
+Completed in 29ms (View: 4, DB: 1) | 200 OK [http://wonderset.local/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-18 14:36:06) [POST]
+  Parameters: {"commit"=>"sign in", "user_session"=>{"password"=>"[FILTERED]", "email"=>""}, "authenticity_token"=>"+qIlyPnFK4xo7+MDiEM4GYMVS7JWncns03F22C5IL+4="}
+
+ActionController::RoutingError (No route matches "/user_session" with {:subdomain=>"", :method=>:post}):
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-18 14:36:14) [POST]
+  Parameters: {"commit"=>"sign in", "user_session"=>{"password"=>"[FILTERED]", "email"=>"this.ryansmith@gmail.com"}, "authenticity_token"=>"+qIlyPnFK4xo7+MDiEM4GYMVS7JWncns03F22C5IL+4="}
+
+ActionController::RoutingError (No route matches "/user_session" with {:subdomain=>"", :method=>:post}):
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-18 14:36:51) [POST]
+  Parameters: {"commit"=>"sign in", "user_session"=>{"password"=>"[FILTERED]", "email"=>"this.ryansmith@gmail.com"}, "authenticity_token"=>"+qIlyPnFK4xo7+MDiEM4GYMVS7JWncns03F22C5IL+4="}
+
+ActionController::RoutingError (No route matches "/user_session" with {:subdomain=>"", :method=>:post}):
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-18 14:38:33) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined local variable or method `subdomain_account_user_session_path' for #<ActionView::Base:0x102fa09a8>) on line #3 of app/views/user_sessions/new.haml:
+1: %h1 sign in
+2: 
+3: - form_for @user_session , :url => subdomain_account_user_session_path do |session|
+4: 
+5:   = session.label :email
+6:   = session.text_field :email
+
+    app/views/user_sessions/new.haml:3:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-18 14:38:58) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined local variable or method `subdomain_account_user_session_url' for #<ActionView::Base:0x103070108>) on line #3 of app/views/user_sessions/new.haml:
+1: %h1 sign in
+2: 
+3: - form_for @user_session , :url => subdomain_account_user_session_url do |session|
+4: 
+5:   = session.label :email
+6:   = session.text_field :email
+
+    app/views/user_sessions/new.haml:3:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-18 14:39:05) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined method `subdomain_account_user_session_url' for #<ActionView::Base:0x1030c2b10>) on line #3 of app/views/user_sessions/new.haml:
+1: %h1 sign in
+2: 
+3: - form_for @user_session , :url => subdomain_account_user_session_url(current_account) do |session|
+4: 
+5:   = session.label :email
+6:   = session.text_field :email
+
+    app/views/user_sessions/new.haml:3:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-05-18 14:39:18) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"accounts"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Redirected to http://local:3000/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 18ms (DB: 1) | 302 Found [http://wonderset.local/account-information/wonderset/edit]
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-05-18 14:39:20) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"show", "id"=>"index", "subdomains"=>["www"], "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://www.local/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-18 14:39:25) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined method `subdomain_account_user_session_url' for #<ActionView::Base:0x102ffdd10>) on line #3 of app/views/user_sessions/new.haml:
+1: %h1 sign in
+2: 
+3: - form_for @user_session , :url => subdomain_account_user_session_url(current_account) do |session|
+4: 
+5:   = session.label :email
+6:   = session.text_field :email
+
+    app/views/user_sessions/new.haml:3:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-18 14:40:29) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (subdomain_account_user_session_url failed to generate from {:action=>"show", :subdomains=>:account_id, :controller=>"user_session"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["account-information", :account_id, "user_session", :id] - are they all satisfied? You may also need to specify :account_id for the subdomain.) on line #3 of app/views/user_sessions/new.haml:
+1: %h1 sign in
+2: 
+3: - form_for @user_session , :url => subdomain_account_user_session_url(current_account) do |session|
+4: 
+5:   = session.label :email
+6:   = session.text_field :email
+
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/routes.rb:31:in `raise_named_route_error'
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/url_writer.rb:82:in `rewrite'
+    (eval):16:in `subdomain_account_user_session_url'
+    app/views/user_sessions/new.haml:3:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-18 14:40:41) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (subdomain_account_user_session_url failed to generate from {:action=>"show", :subdomains=>:account_id, :controller=>"user_session"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["account-information", :account_id, "user_session", :id] - are they all satisfied? You may also need to specify :account_id for the subdomain.) on line #3 of app/views/user_sessions/new.haml:
+1: %h1 sign in
+2: 
+3: - form_for @user_session , :url => subdomain_account_user_session_url() do |session|
+4: 
+5:   = session.label :email
+6:   = session.text_field :email
+
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/routes.rb:31:in `raise_named_route_error'
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/url_writer.rb:82:in `rewrite'
+    (eval):16:in `subdomain_account_user_session_url'
+    app/views/user_sessions/new.haml:3:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (42.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-18 14:40:44) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (subdomain_account_user_session_url failed to generate from {:action=>"show", :subdomains=>:account_id, :controller=>"user_session"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["account-information", :account_id, "user_session", :id] - are they all satisfied? You may also need to specify :account_id for the subdomain.) on line #3 of app/views/user_sessions/new.haml:
+1: %h1 sign in
+2: 
+3: - form_for @user_session , :url => subdomain_account_user_session_url() do |session|
+4: 
+5:   = session.label :email
+6:   = session.text_field :email
+
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/routes.rb:31:in `raise_named_route_error'
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/url_writer.rb:82:in `rewrite'
+    (eval):16:in `subdomain_account_user_session_url'
+    app/views/user_sessions/new.haml:3:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-18 14:40:50) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (subdomain_account_user_session_url failed to generate from {:action=>"show", :subdomains=>:account_id, :controller=>"user_session"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["account-information", :account_id, "user_session", :id] - are they all satisfied? You may also need to specify :account_id for the subdomain.) on line #3 of app/views/user_sessions/new.haml:
+1: %h1 sign in
+2: 
+3: - form_for @user_session , :url => subdomain_account_user_session_url(current_account,current_account) do |session|
+4: 
+5:   = session.label :email
+6:   = session.text_field :email
+
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/routes.rb:31:in `raise_named_route_error'
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/url_writer.rb:82:in `rewrite'
+    (eval):16:in `subdomain_account_user_session_url'
+    app/views/user_sessions/new.haml:3:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-18 14:41:08) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (subdomain_account_user_session_url failed to generate from {:action=>"show", :subdomains=>:account_id, :controller=>"user_sessions"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["account-information", :account_id, "user_sessions", :id] - are they all satisfied? You may also need to specify :account_id for the subdomain.) on line #3 of app/views/user_sessions/new.haml:
+1: %h1 sign in
+2: 
+3: - form_for @user_session , :url => subdomain_account_user_session_url(current_account) do |session|
+4: 
+5:   = session.label :email
+6:   = session.text_field :email
+
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/routes.rb:31:in `raise_named_route_error'
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/url_writer.rb:82:in `rewrite'
+    (eval):16:in `subdomain_account_user_session_url'
+    app/views/user_sessions/new.haml:3:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-18 14:41:48) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (subdomain_account_user_session_url failed to generate from {:action=>"show", :subdomains=>:account_id, :controller=>"user_sessions"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["account-information", :account_id, "user_sessions", :id] - are they all satisfied? You may also need to specify :account_id for the subdomain.) on line #3 of app/views/user_sessions/new.haml:
+1: %h1 sign in
+2: 
+3: - form_for @user_session , :url => subdomain_account_user_session_url(current_account) do |session|
+4: 
+5:   = session.label :email
+6:   = session.text_field :email
+
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/routes.rb:31:in `raise_named_route_error'
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/url_writer.rb:82:in `rewrite'
+    (eval):16:in `subdomain_account_user_session_url'
+    app/views/user_sessions/new.haml:3:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-18 14:42:44) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (subdomain_account_user_session_url failed to generate from {:action=>"show", :subdomains=>:account_id, :controller=>"user_session"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["account-information", :account_id, "user_session", :id] - are they all satisfied? You may also need to specify :account_id for the subdomain.) on line #3 of app/views/user_sessions/new.haml:
+1: %h1 sign in
+2: 
+3: - form_for @user_session , :url => subdomain_account_user_session_url(current_account) do |session|
+4: 
+5:   = session.label :email
+6:   = session.text_field :email
+
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/routes.rb:31:in `raise_named_route_error'
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/url_writer.rb:82:in `rewrite'
+    (eval):16:in `subdomain_account_user_session_url'
+    app/views/user_sessions/new.haml:3:in `_run_haml_app47views47user_sessions47new46haml'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (42.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-18 15:14:35) [GET]
+
+SubdomainRoutes::TooManySubdomains (Multiple subdomains found: wonderset.timeoff. (Have you set SubdomainRoutes::Config.domain_length correctly?)):
+  /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/split_host.rb:16:in `split_host'
+  /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/split_host.rb:29:in `subdomain_for_host'
+  /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/routes.rb:11:in `extract_request_environment'
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (23.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-18 15:14:37) [GET]
+
+SubdomainRoutes::TooManySubdomains (Multiple subdomains found: wonderset.timeoff. (Have you set SubdomainRoutes::Config.domain_length correctly?)):
+  /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/split_host.rb:16:in `split_host'
+  /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/split_host.rb:29:in `subdomain_for_host'
+  /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/routes.rb:11:in `extract_request_environment'
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (23.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Account::UserSessionsController#new (for 127.0.0.1 at 2010-05-18 15:14:56) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"account/user_sessions"}
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template account/user_sessions/new.erb in view path app/views:vendor/plugins/high_voltage/app/views):
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Account::UserSessionsController#new (for 127.0.0.1 at 2010-05-18 15:15:34) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"account/user_sessions"}
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering account/user_sessions/new
+
+ActionView::TemplateError (undefined method `subdomain_account_user_session_url' for #<ActionView::Base:0x103162ea8>) on line #3 of app/views/account/user_sessions/new.haml:
+1: %h1 sign in
+2: 
+3: - form_for @user_session , :url => subdomain_account_user_session_url(current_account) do |session|
+4: 
+5:   = session.label :email
+6:   = session.text_field :email
+
+    app/views/account/user_sessions/new.haml:3:in `_run_haml_app47views47account47user_sessions47new46haml'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.8ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Account::UserSessionsController#new (for 127.0.0.1 at 2010-05-18 15:16:07) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"account/user_sessions"}
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering account/user_sessions/new
+
+ActionView::TemplateError (undefined method `subdomain_account_user_session_url' for #<ActionView::Base:0x1033359b0>) on line #3 of app/views/account/user_sessions/new.haml:
+1: %h1 sign in
+2: 
+3: - form_for @user_session , :url => subdomain_account_user_session_url(current_account) do |session|
+4: 
+5:   = session.label :email
+6:   = session.text_field :email
+
+    app/views/account/user_sessions/new.haml:3:in `_run_haml_app47views47account47user_sessions47new46haml'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (107.6ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Account::UserSessionsController#new (for 127.0.0.1 at 2010-05-18 15:17:32) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"account/user_sessions"}
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering account/user_sessions/new
+Rendered shared/_session (1.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://wonderset.timeoff.local/]
+
+
+Processing Account::UserSessionsController#create (for 127.0.0.1 at 2010-05-18 15:20:02) [POST]
+  Parameters: {"commit"=>"sign in", "user_session"=>{"password"=>"[FILTERED]", "email"=>"this.ryansmith@gmail.com"}, "action"=>"create", "account_id"=>"wonderset", "authenticity_token"=>"jLEfKMqzoe8F2W0igDcYKtzp07ZcmKg9GTps/vIrW3o=", "subdomains"=>:account_id, "controller"=>"account/user_sessions"}
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'this.ryansmith@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "login_count" = 2, "updated_at" = '2010-05-18 20:20:03', "perishable_token" = 'Vg6LpF9LHJ_shTjYqzYQ', "last_request_at" = '2010-05-18 20:20:03', "last_login_at" = '2010-05-18 19:34:22', "last_login_ip" = '127.0.0.1', "current_login_at" = '2010-05-18 20:20:03' WHERE "id" = 1[0m
+
+NoMethodError (undefined method `subdomain_account_url' for #<Account::UserSessionsController:0x1031d7000>):
+  app/controllers/account/user_sessions_controller.rb:13:in `create'
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-05-18 15:27:57) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/user_sessions"}
+
+NameError (uninitialized constant Subdomain):
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (27.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-05-18 15:27:59) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/user_sessions"}
+
+NameError (uninitialized constant Subdomain):
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (24.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Subdomain::UserSessionsController#new (for 127.0.0.1 at 2010-05-18 15:29:32) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/user_sessions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-18 20:29:32', "perishable_token" = 'e_UX9tbHYN-wgQPQ7pQv', "last_request_at" = '2010-05-18 20:29:32' WHERE "id" = 1[0m
+
+NameError (undefined local variable or method `account_url' for #<Subdomain::UserSessionsController:0x1030868b8>):
+  app/controllers/application_controller.rb:37:in `require_no_user'
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (115.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Subdomain::UserSessionsController#new (for 127.0.0.1 at 2010-05-18 15:35:37) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/user_sessions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-18 20:35:37', "perishable_token" = 'temn8hmTdhv4LmAUXIln', "last_request_at" = '2010-05-18 20:35:37' WHERE "id" = 1[0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+
+ActionController::RoutingError (subdomain_account_url failed to generate from {:action=>"show", :subdomains=>:account_id, :controller=>"subdomain/accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["account-details", :id] - are they all satisfied? You may also need to specify :account_id for the subdomain.):
+  /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/routes.rb:31:in `raise_named_route_error'
+  /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/url_writer.rb:82:in `rewrite'
+  (eval):16:in `subdomain_account_url'
+  app/controllers/application_controller.rb:37:in `require_no_user'
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Subdomain::UserSessionsController#new (for 127.0.0.1 at 2010-05-18 15:35:57) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-18 20:35:57', "perishable_token" = '9Og6lVz8qgq0e8Ine0YA', "last_request_at" = '2010-05-18 20:35:57' WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+
+ActionController::RoutingError (subdomain_account_url failed to generate from {:action=>"show", :subdomains=>:account_id, :controller=>"subdomain/accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["account-details", :id] - are they all satisfied? You may also need to specify :account_id for the subdomain.):
+  /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/routes.rb:31:in `raise_named_route_error'
+  /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/url_writer.rb:82:in `rewrite'
+  (eval):16:in `subdomain_account_url'
+  app/controllers/application_controller.rb:37:in `require_no_user'
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Subdomain::UserSessionsController#new (for 127.0.0.1 at 2010-05-18 15:36:06) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/user_sessions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-18 20:36:06', "perishable_token" = 'WvwFburSa4KUMglZqzIc', "last_request_at" = '2010-05-18 20:36:06' WHERE "id" = 1[0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Redirected to http://wonderset.timeoff.local:3000/account-details/wonderset
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 27ms (DB: 1) | 302 Found [http://wonderset.timeoff.local/]
+
+
+Processing AccountsController#show (for 127.0.0.1 at 2010-05-18 15:36:06) [GET]
+  Parameters: {"action"=>"show", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/accounts"}
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-18 20:36:06', "perishable_token" = 'SAldAClTSQlYA3q2c9im', "last_request_at" = '2010-05-18 20:36:06' WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering accounts/show
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered shared/_session (0.6ms)
+Completed in 42ms (View: 9, DB: 2) | 200 OK [http://wonderset.timeoff.local/account-details/wonderset]
+
+
+Processing Subdomain::UserSessionsController#new (for 127.0.0.1 at 2010-05-18 15:36:08) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-18 20:36:08', "perishable_token" = 'JL9teaIN1PgfLZo0vomD', "last_request_at" = '2010-05-18 20:36:08' WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Redirected to http://wonderset.timeoff.local:3000/account-details/wonderset
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 119ms (DB: 1) | 302 Found [http://wonderset.timeoff.local/]
+
+
+Processing AccountsController#show (for 127.0.0.1 at 2010-05-18 15:36:08) [GET]
+  Parameters: {"action"=>"show", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/accounts"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-18 20:36:08', "perishable_token" = 'eRtFQPqF86PSdUoMFLG3', "last_request_at" = '2010-05-18 20:36:08' WHERE "id" = 1[0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering accounts/show
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered shared/_session (0.6ms)
+Completed in 39ms (View: 5, DB: 2) | 200 OK [http://wonderset.timeoff.local/account-details/wonderset]
+
+
+Processing Subdomain::UserSessionsController#new (for 127.0.0.1 at 2010-05-18 15:36:09) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/user_sessions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-18 20:36:09', "perishable_token" = 'o6VEuoxo8frPY3_90fGX', "last_request_at" = '2010-05-18 20:36:09' WHERE "id" = 1[0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Redirected to http://wonderset.timeoff.local:3000/account-details/wonderset
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 28ms (DB: 1) | 302 Found [http://wonderset.timeoff.local/]
+
+
+Processing AccountsController#show (for 127.0.0.1 at 2010-05-18 15:36:09) [GET]
+  Parameters: {"action"=>"show", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/accounts"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-18 20:36:09', "perishable_token" = 'P-Q5_aNpmYO8rJDGiLaz', "last_request_at" = '2010-05-18 20:36:09' WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering accounts/show
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered shared/_session (0.6ms)
+Completed in 146ms (View: 5, DB: 2) | 200 OK [http://wonderset.timeoff.local/account-details/wonderset]
+
+
+Processing Subdomain::UserSessionsController#new (for 127.0.0.1 at 2010-05-18 15:36:10) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-18 20:36:10', "perishable_token" = '-9RNjwHsbsJmpnc6i9Ez', "last_request_at" = '2010-05-18 20:36:10' WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Redirected to http://wonderset.timeoff.local:3000/account-details/wonderset
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 35ms (DB: 1) | 302 Found [http://wonderset.timeoff.local/]
+
+
+Processing AccountsController#show (for 127.0.0.1 at 2010-05-18 15:36:10) [GET]
+  Parameters: {"action"=>"show", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/accounts"}
+  [4;35;1mUser Load (3.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-18 20:36:10', "perishable_token" = '2Vzk17xswRH2fToJiiFo', "last_request_at" = '2010-05-18 20:36:10' WHERE "id" = 1[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering accounts/show
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered shared/_session (0.6ms)
+Completed in 53ms (View: 6, DB: 5) | 200 OK [http://wonderset.timeoff.local/account-details/wonderset]
+
+
+Processing AccountsController#show (for 127.0.0.1 at 2010-05-18 15:36:12) [GET]
+  Parameters: {"action"=>"show", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/accounts"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-18 20:36:12', "perishable_token" = 'whe1Ih11qTzqURQhZ2-q', "last_request_at" = '2010-05-18 20:36:12' WHERE "id" = 1[0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering accounts/show
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered shared/_session (0.5ms)
+Completed in 34ms (View: 6, DB: 2) | 200 OK [http://wonderset.timeoff.local/account-details/wonderset]
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-05-18 15:36:29) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/accounts"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-18 20:36:29', "perishable_token" = 'ecziMREhhMwLK7vUmUhD', "last_request_at" = '2010-05-18 20:36:29' WHERE "id" = 1[0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering accounts/edit
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+ActionView::TemplateError (undefined method `new_subdomain_account_user_path' for #<ActionView::Base:0x103294bc8>) on line #6 of app/views/accounts/edit.haml:
+3: 
+4: - if current_user == @account.owner
+5:   %h3 Account Administration
+6:   = link_to 'add user', new_subdomain_account_user_path(@account)
+7: 
+8: %ul
+9:   - @account.users.each do |user|
+
+    app/views/accounts/edit.haml:6:in `_run_haml_app47views47accounts47edit46haml'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (117.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-05-18 15:37:59) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/accounts"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-18 20:37:59', "perishable_token" = '2i1B2e_Ze2hApFOej_uL', "last_request_at" = '2010-05-18 20:37:59' WHERE "id" = 1[0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering accounts/edit
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users".account_id = 1) [0m
+Rendered shared/_session (0.6ms)
+Completed in 38ms (View: 11, DB: 2) | 200 OK [http://wonderset.timeoff.local/account-details/wonderset/edit]
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-05-18 15:38:00) [GET]
+  Parameters: {"action"=>"edit", "account_id"=>"wonderset", "id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/accounts"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-18 20:38:00', "perishable_token" = 'kfd3HCnfjo433Kj-IcEc', "last_request_at" = '2010-05-18 20:38:00' WHERE "id" = 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering accounts/edit
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users".account_id = 1) [0m
+Rendered shared/_session (0.7ms)
+Completed in 117ms (View: 90, DB: 2) | 200 OK [http://wonderset.timeoff.local/account-details/wonderset/edit]
+
+
+Processing Subdomain::UsersController#new (for 127.0.0.1 at 2010-05-18 15:38:59) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/users"}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template subdomain/users/new.erb in view path app/views:vendor/plugins/high_voltage/app/views):
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Subdomain::UsersController#new (for 127.0.0.1 at 2010-05-18 15:41:12) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/users"}
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering subdomain/users/new
+
+ActionView::TemplateError (undefined method `subdomain_account_users_path' for #<ActionView::Base:0x10320f400>) on line #1 of app/views/subdomain/users/new.haml:
+1: - form_for @user , :url => subdomain_account_users_path(current_account) do |form|
+2:   = form.label :email
+3:   = form.text_field :email
+4: 
+
+    app/views/subdomain/users/new.haml:1:in `_run_haml_app47views47subdomain47users47new46haml'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (121.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Subdomain::UsersController#new (for 127.0.0.1 at 2010-05-18 15:41:44) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/users"}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering subdomain/users/new
+
+ActionView::TemplateError (subdomain_user_url failed to generate from {:action=>"show", :subdomains=>:account_id, :controller=>"subdomain/users"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied? You may also need to specify :account_id for the subdomain.) on line #1 of app/views/subdomain/users/new.haml:
+1: - form_for @user , :url => subdomain_user_path(current_account) do |form|
+2:   = form.label :email
+3:   = form.text_field :email
+4: 
+
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/routes.rb:31:in `raise_named_route_error'
+    /Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib/subdomain_routes/url_writer.rb:82:in `rewrite'
+    (eval):16:in `subdomain_user_path'
+    app/views/subdomain/users/new.haml:1:in `_run_haml_app47views47subdomain47users47new46haml'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (130.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Subdomain::UsersController#new (for 127.0.0.1 at 2010-05-18 15:42:37) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/users"}
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering subdomain/users/new
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-18 20:42:37', "perishable_token" = 'ckzr4TifIZtRLIToFN69', "last_request_at" = '2010-05-18 20:42:37' WHERE "id" = 1[0m
+Rendered shared/_session (10.0ms)
+Completed in 38ms (View: 19, DB: 1) | 200 OK [http://wonderset.timeoff.local/users/new]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+
+
+Processing Subdomain::UsersController#new (for 127.0.0.1 at 2010-05-18 15:54:56) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/users"}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering subdomain/users/new
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-18 20:54:57', "perishable_token" = 'DoFmmjlrglSOV23a6Pxd', "last_request_at" = '2010-05-18 20:54:57' WHERE "id" = 1[0m
+Rendered shared/_session (9.9ms)
+Completed in 117ms (View: 97, DB: 1) | 200 OK [http://wonderset.timeoff.local/users/new]
+
+
+Processing Subdomain::UsersController#new (for 127.0.0.1 at 2010-05-18 15:54:57) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"wonderset", "subdomains"=>:account_id, "controller"=>"subdomain/users"}
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'wonderset') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering subdomain/users/new
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-18 20:54:57', "perishable_token" = '-QtYJNyIepE1OEMfzvvy', "last_request_at" = '2010-05-18 20:54:57' WHERE "id" = 1[0m
+Rendered shared/_session (9.4ms)
+Completed in 33ms (View: 14, DB: 1) | 200 OK [http://wonderset.timeoff.local/users/new]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subdomain" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "account_id" integer, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100410210425')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100222050618')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100331041934')[0m
+
+
+Processing Subdomain::UserSessionsController#destroy (for 127.0.0.1 at 2010-05-18 15:56:02) [DELETE]
+  Parameters: {"action"=>"destroy", "account_id"=>"timeoff", "_method"=>"delete", "authenticity_token"=>"jLEfKMqzoe8F2W0igDcYKtzp07ZcmKg9GTps/vIrW3o=", "subdomains"=>:account_id, "controller"=>"subdomain/user_sessions"}
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (unprocessable_entity)
+
+
+Processing Subdomain::UserSessionsController#new (for 127.0.0.1 at 2010-05-18 15:56:15) [GET]
+  Parameters: {"action"=>"new", "account_id"=>"timeoff", "subdomains"=>:account_id, "controller"=>"subdomain/user_sessions"}
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'timeoff') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."subdomain" = 'timeoff') LIMIT 1[0m
+Redirected to http://www.local:3000/accounts/new
+Filter chain halted as [:require_account] rendered_or_redirected.
+Completed in 18ms (DB: 0) | 302 Found [http://timeoff.local/]
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-05-18 15:56:22) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"show", "id"=>"index", "subdomains"=>["www"], "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://www.timeoff.local/]
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-05-18 15:56:23) [GET]
+  Parameters: {"namespace"=>nil, "action"=>"show", "id"=>"index", "subdomains"=>["www"], "controller"=>"pages"}
+Rendering template within layouts/pages
+Rendering pages/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://www.timeoff.local/]
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-05-18 15:56:31) [GET]
+  Parameters: {"action"=>"new", "subdomains"=>["www"], "controller"=>"accounts"}
+
+NameError (uninitialized constant AccountsController):
+  haml (3.0.4) lib/sass/plugin/rack.rb:41:in `call'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (106.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)

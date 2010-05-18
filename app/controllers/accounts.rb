@@ -1,11 +1,5 @@
 class AccountsController < ApplicationController
 
-  before_filter :require_user, :only => [:update,:edit,:show,:destroy]
-
-  def show
-    @account = current_account
-  end
-
   def new
     @account = Account.new
     @account.users.build
@@ -20,10 +14,6 @@ class AccountsController < ApplicationController
         wants.html { render :action => 'new' }
       end
     end
-  end
-
-  def edit
-    @account = current_account
   end
 
 end

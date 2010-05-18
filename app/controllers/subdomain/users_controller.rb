@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class Subdomain::UsersController < ApplicationController
   before_filter :require_user, :only => [:show, :edit, :update]
   
   def new
@@ -11,6 +11,9 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:notice] = "a new user was added to your account"
+      # two account for the route method are needed.
+      # 1) for the subdomain parameter
+      # 2) for the account id parameter
       redirect_to edit_subdomain_account_url(current_account,current_account)
     else
       render :action => :new

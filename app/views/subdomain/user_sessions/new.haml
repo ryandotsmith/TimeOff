@@ -1,6 +1,6 @@
 %h1 sign in
 
-- form_for @user_session , :url => subdomain_user_session_path(current_account,current_account) do |session|
+- form_for @user_session ,:url => subdomain_user_session_url(current_account) do |session|
 
   = session.label :email
   = session.text_field :email
