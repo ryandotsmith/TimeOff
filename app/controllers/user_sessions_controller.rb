@@ -9,8 +9,7 @@ class UserSessionsController < ApplicationController
   def create
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
-      flash[:notice] = "welcome back!"
-      redirect_back_or_default subdomain_account_url(current_account,current_account)
+      redirect_to subdomain_account_url(current_account,current_account)
     else
       render :action => :new
     end
@@ -18,8 +17,9 @@ class UserSessionsController < ApplicationController
   
   def destroy
     current_user_session.destroy
-    flash[:notice] = "Logout successful!"
-    redirect_back_or_default new_user_session_url
+    flash[:notice] = 'Goodbye'
+    require 'ruby-debug';debugger
+    redirect_to new_subdomain_user_session_url(current_account)
   end
 end
 

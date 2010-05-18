@@ -1,5 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resource :user_session
 
   map.subdomain :www, :namespace => nil, :name => 'system' do |www|
     www.root      :controller => 'pages', :action => 'show', :id => 'index'
@@ -7,9 +6,12 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.subdomain :model => :account, :namespace => nil, :name => 'subdomain' do |account|
-    account.resources :accounts, :only => [:edit, :update, :show, :index, :delete], :as => 'account-information'
+    account.resources :accounts, 
+      :only => [:edit, :update, :show, :delete], 
+      :as => 'account-information',
+      :has_many => :users
     account.resource  :user_session
-    account.resources :users
+    #account.resources :users
   end
 
   map.root :controller => "pages",
@@ -19,6 +21,5 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :pages,
     :controller => 'pages',
     :only => [:show]
-
 
 end

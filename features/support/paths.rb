@@ -10,6 +10,8 @@ module NavigationHelpers
     
     when /the home\s?page/
       system_root_path
+    when /the account sign in page/
+      new_subdomain_user_session_url(@account,@account)
     when /the account edit page/
       edit_subdomain_account_path(@account,@account)
     when /account page/

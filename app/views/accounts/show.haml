@@ -1,0 +1,5 @@
+%h1= current_account.subdomain
+%h2= "Welcome back #{current_user.email}"
+
+- if current_user == current_account.owner
+  = link_to 'settings', edit_subdomain_account_path(current_account,current_account)
