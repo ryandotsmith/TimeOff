@@ -1,4 +1,3 @@
-@wip
 Feature: Signing in
   As a person who belongs to an account
   I want to sign in to my account
