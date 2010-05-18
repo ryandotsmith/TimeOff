@@ -1,14 +1,13 @@
 class Subdomain::UsersController < ApplicationController
   before_filter :require_user, :only => [:show, :edit, :update]
   
-  def new
-    @user = current_account.users.build
-  end
+  def show; @user = @current_user;               end
+  def new;  @user = current_account.users.build; end
+  def edit; @user = @current_user;               end
   
   def create
     @user = current_account.users.build( params[:user] )
     @user.generate_one_time_password!
-
     if @user.save
       flash[:notice] = "a new user was added to your account"
       # two account for the route method are needed.
@@ -19,15 +18,7 @@ class Subdomain::UsersController < ApplicationController
       render :action => :new
     end
   end
-  
-  def show
-    @user = @current_user
-  end
-
-  def edit
-    @user = @current_user
-  end
-  
+ 
   def update
     @user = @current_user # makes our views "cleaner" and more consistent
     if @user.update_attributes(params[:user])

@@ -12,12 +12,4 @@ ActionController::Routing::Routes.draw do |map|
     account.resource  :user_session, :only => [:new,:create,:destroy]
   end
 
-  #map.root :controller => "pages",
-    #:action => "show",
-    #:id => "index"
-
-  #map.resources :pages,
-    #:controller => 'pages',
-    #:only => [:show]
-
 end
