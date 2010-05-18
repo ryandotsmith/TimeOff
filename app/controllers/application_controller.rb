@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
       unless current_user
         store_location
         flash[:notice] = "You must be logged in to access this page"
-        redirect_to new_subdomain_user_session_path
+        redirect_to new_subdomain_user_session_url(current_account)
         return false
       end
     end
