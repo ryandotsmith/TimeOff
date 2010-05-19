@@ -9,9 +9,12 @@ class Subdomain::UserSessionsController < ApplicationController
   
   def create
     @user_session = UserSession.new(params[:user_session])
-    require 'ruby-debug';debugger
     if @user_session.save
-      redirect_to subdomain_account_url(current_account,current_account)
+      @account = User.find_by_email(@user_session.email).account
+      if current_account != @account
+        flash[:notice] = "please bookmark <a href='#{subdomain_account_url(@account,@account)}'>#{@account.name} for future sign in"
+      end
+      redirect_to subdomain_account_url(@account,@account)
     else
       render :action => :new
     end

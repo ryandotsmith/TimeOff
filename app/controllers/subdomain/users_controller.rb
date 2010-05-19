@@ -1,19 +1,20 @@
 class Subdomain::UsersController < ApplicationController
+  before_filter :load_account
   before_filter :require_user, :only => [:show, :edit, :update]
   
-  def show; @user = @current_user;               end
-  def new;  @user = current_account.users.build; end
-  def edit; @user = @current_user;               end
+  def show; @user = @current_user;        end
+  def new;  @user = @account.users.build; end
+  def edit; @user = @current_user;        end
   
   def create
-    @user = current_account.users.build( params[:user] )
+    @user = @account.users.build( params[:user] )
     @user.generate_one_time_password!
     if @user.save
       flash[:notice] = "a new user was added to your account"
       # two account for the route method are needed.
       # 1) for the subdomain parameter
       # 2) for the account id parameter
-      redirect_to edit_subdomain_account_url(current_account,current_account)
+      redirect_to edit_subdomain_account_url(@account,@account)
     else
       render :action => :new
     end

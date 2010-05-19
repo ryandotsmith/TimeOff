@@ -5,11 +5,17 @@ class ApplicationController < ActionController::Base
   protect_from_forgery 
 
   filter_parameter_logging :password, :password_confirmation
+
   helper_method :current_user_session, :current_user
   helper_method :current_account
+  helper_method :load_account
   
 
   private
+
+    def load_account
+      @account = current_user.account
+    end
 
     def current_user_session
       return @current_user_session if defined?(@current_user_session)

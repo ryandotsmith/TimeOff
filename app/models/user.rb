@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
 
   acts_as_authentic
 
+  belongs_to :account
+
   def generate_one_time_password!
     self.password = 'onetime'
     self.password_confirmation = 'onetime'

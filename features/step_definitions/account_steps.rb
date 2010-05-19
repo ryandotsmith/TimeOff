@@ -1,16 +1,13 @@
 Given /^an account exists with a subdomain of "([^\"]*)"$/ do |subdomain|
   @account = Factory(:account,:subdomain => subdomain)
-  host! "#{@account.subdomain}.local"
+  host! "#{@account.subdomain}.timeoff.local:3000"
 end
 
 Given /^I am signed in as the account owner$/ do
-  @user = Factory(:user)
-  @account.owner_id = @user.id
-  @account.save
-
-  visit new_subdomain_user_session_path(@account,@account)
-  fill_in('email',    :with => @user.email)
-  fill_in('password', :with => @user.password)
+  @user = @account.owner
+  visit new_subdomain_user_session_url(@account)
+  fill_in('user_session_email',    :with => @user.email)
+  fill_in('user_session_password', :with => 'password' )
   click_button("sign in")
 end
 
