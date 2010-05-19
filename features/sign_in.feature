@@ -13,3 +13,16 @@ Feature: Signing in
     And I fill in "password" with "password"
     And I press "sign in"
     Then I should see "Welcome back ryan@aol.com"
+    And I should see "wonderset"
+
+  @wip
+  Scenario: Signing in to an account with a user that does not belong to the account
+    Given an account exists with a subdomain of "test"
+    And an account has been provisioned with email "ryan@test.com" and password "password"
+    When I navigate to the "wonderset" account signing page
+    And I fill in "email" with "ryan@test.com"
+    And I fill in "password" with "password"
+    And I press "sign in"
+    Then I should see "Welcome back ryan@test.com"
+    And I should see "test"
+    And I should see "please bookmark test.timeoff.local for your sign in page"

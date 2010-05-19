@@ -174,9 +174,9 @@ end
 module Bundler
   ENV_LOADED   = true
   LOCKED_BY    = '0.9.25'
-  FINGERPRINT  = "509cea22b9a62df3069fb5febff12188d5d6fcad"
+  FINGERPRINT  = "505b3bb6e70d9fbd7cc95b13bcc8628780416f27"
   HOME         = '/Users/ryandotsmith/.bundle/ruby/1.8/bundler'
-  AUTOREQUIRES = {:test=>[["factory_girl", false], ["rspec", false], ["rspec-rails", false]], :cucumber=>[["cucumber-rails", false], ["database_cleaner", false], ["webrat", false]], :default=>[["authlogic", false], ["formtastic", false], ["friendly_id", false], ["haml", false], ["rails", false], ["sqlite3", true], ["subdomain_routes", false]]}
+  AUTOREQUIRES = {:test=>[["factory_girl", false], ["rspec", false], ["rspec-rails", false]], :cucumber=>[["cucumber-rails", false], ["database_cleaner", false], ["webrat", false]], :default=>[["authlogic", false], ["formtastic", false], ["friendly_id", false], ["haml", false], ["rails", false], ["ruby-debug", false], ["sqlite3", true], ["subdomain_routes", false]]}
   SPECS        = [
         {:load_paths=>["/Users/ryandotsmith/.bundle/ruby/1.8/gems/rake-0.8.7/lib"], :loaded_from=>"/Users/ryandotsmith/.bundle/ruby/1.8/specifications/rake-0.8.7.gemspec", :name=>"rake"},
         {:load_paths=>["/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/activesupport-2.3.5.gemspec", :name=>"activesupport"},
@@ -187,6 +187,7 @@ module Bundler
         {:load_paths=>["/Library/Ruby/Gems/1.8/gems/activeresource-2.3.5/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/activeresource-2.3.5.gemspec", :name=>"activeresource"},
         {:load_paths=>["/Library/Ruby/Gems/1.8/gems/authlogic-2.1.3/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/authlogic-2.1.3.gemspec", :name=>"authlogic"},
         {:load_paths=>["/Library/Ruby/Gems/1.8/gems/builder-2.1.2/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/builder-2.1.2.gemspec", :name=>"builder"},
+        {:load_paths=>["/Library/Ruby/Gems/1.8/gems/columnize-0.3.1/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/columnize-0.3.1.gemspec", :name=>"columnize"},
         {:load_paths=>["/Library/Ruby/Gems/1.8/gems/diff-lcs-1.1.2/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/diff-lcs-1.1.2.gemspec", :name=>"diff-lcs"},
         {:load_paths=>["/Users/ryandotsmith/.bundle/ruby/1.8/gems/trollop-1.16.2/lib"], :loaded_from=>"/Users/ryandotsmith/.bundle/ruby/1.8/specifications/trollop-1.16.2.gemspec", :name=>"trollop"},
         {:load_paths=>["/Users/ryandotsmith/.bundle/ruby/1.8/gems/gherkin-1.0.29/lib"], :loaded_from=>"/Users/ryandotsmith/.bundle/ruby/1.8/specifications/gherkin-1.0.29.gemspec", :name=>"gherkin"},
@@ -199,11 +200,14 @@ module Bundler
         {:load_paths=>["/Library/Ruby/Gems/1.8/gems/formtastic-0.9.8/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/formtastic-0.9.8.gemspec", :name=>"formtastic"},
         {:load_paths=>["/Users/ryandotsmith/.bundle/ruby/1.8/gems/friendly_id-3.0.4/lib"], :loaded_from=>"/Users/ryandotsmith/.bundle/ruby/1.8/specifications/friendly_id-3.0.4.gemspec", :name=>"friendly_id"},
         {:load_paths=>["/Users/ryandotsmith/.bundle/ruby/1.8/gems/haml-3.0.4/lib"], :loaded_from=>"/Users/ryandotsmith/.bundle/ruby/1.8/specifications/haml-3.0.4.gemspec", :name=>"haml"},
+        {:load_paths=>["/Library/Ruby/Gems/1.8/gems/linecache-0.43/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/linecache-0.43.gemspec", :name=>"linecache"},
         {:load_paths=>["/Library/Ruby/Gems/1.8/gems/nokogiri-1.4.1/lib", "/Library/Ruby/Gems/1.8/gems/nokogiri-1.4.1/ext"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/nokogiri-1.4.1.gemspec", :name=>"nokogiri"},
         {:load_paths=>["/Library/Ruby/Gems/1.8/gems/rack-test-0.5.3/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/rack-test-0.5.3.gemspec", :name=>"rack-test"},
         {:load_paths=>["/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/rails-2.3.5.gemspec", :name=>"rails"},
         {:load_paths=>["/Library/Ruby/Gems/1.8/gems/rspec-1.3.0/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/rspec-1.3.0.gemspec", :name=>"rspec"},
         {:load_paths=>["/Library/Ruby/Gems/1.8/gems/rspec-rails-1.3.2/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/rspec-rails-1.3.2.gemspec", :name=>"rspec-rails"},
+        {:load_paths=>["/Library/Ruby/Gems/1.8/gems/ruby-debug-base-0.10.3/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/ruby-debug-base-0.10.3.gemspec", :name=>"ruby-debug-base"},
+        {:load_paths=>["/Library/Ruby/Gems/1.8/gems/ruby-debug-0.10.3/cli"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/ruby-debug-0.10.3.gemspec", :name=>"ruby-debug"},
         {:load_paths=>["/Users/ryandotsmith/.bundle/ruby/1.8/gems/sqlite3-ruby-1.2.5/lib", "/Users/ryandotsmith/.bundle/ruby/1.8/gems/sqlite3-ruby-1.2.5/ext"], :loaded_from=>"/Users/ryandotsmith/.bundle/ruby/1.8/specifications/sqlite3-ruby-1.2.5.gemspec", :name=>"sqlite3-ruby"},
         {:load_paths=>["/Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/subdomain_routes-0.3.1.gemspec", :name=>"subdomain_routes"},
         {:load_paths=>["/Library/Ruby/Gems/1.8/gems/webrat-0.7.0/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/webrat-0.7.0.gemspec", :name=>"webrat"},

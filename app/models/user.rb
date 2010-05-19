@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
 
-  acts_as_authentic do |configure|
-  end
+  acts_as_authentic
 
   def generate_one_time_password!
     self.password = 'onetime'

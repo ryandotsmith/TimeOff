@@ -1,23 +1,27 @@
 --- 
 dependencies: 
+  ruby-debug: 
+    group: 
+    - :default
+    version: ">= 0"
   rails: 
     group: 
     - :default
     version: ~> 2.3.5
+  authlogic: 
+    group: 
+    - :default
+    version: ">= 0"
+  haml: 
+    group: 
+    - :default
+    version: ">= 2.2.17"
   sqlite3-ruby: 
     group: 
     - :default
     version: ">= 0"
     require: 
     - sqlite3
-  haml: 
-    group: 
-    - :default
-    version: ">= 2.2.17"
-  authlogic: 
-    group: 
-    - :default
-    version: ">= 0"
   rspec: 
     group: 
     - :cucumber
@@ -73,6 +77,8 @@ specs:
     version: 2.1.3
 - builder: 
     version: 2.1.2
+- columnize: 
+    version: 0.3.1
 - diff-lcs: 
     version: 1.1.2
 - trollop: 
@@ -97,6 +103,8 @@ specs:
     version: 3.0.4
 - haml: 
     version: 3.0.4
+- linecache: 
+    version: "0.43"
 - nokogiri: 
     version: 1.4.1
 - rack-test: 
@@ -107,13 +115,17 @@ specs:
     version: 1.3.0
 - rspec-rails: 
     version: 1.3.2
+- ruby-debug-base: 
+    version: 0.10.3
+- ruby-debug: 
+    version: 0.10.3
 - sqlite3-ruby: 
     version: 1.2.5
 - subdomain_routes: 
     version: 0.3.1
 - webrat: 
     version: 0.7.0
-hash: 509cea22b9a62df3069fb5febff12188d5d6fcad
+hash: 505b3bb6e70d9fbd7cc95b13bcc8628780416f27
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org

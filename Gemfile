@@ -7,7 +7,7 @@ gem 'formtastic',         '>= 0.9.7'
 gem 'authlogic'
 gem "subdomain_routes",   '>= 0.3.1'
 gem 'friendly_id',        '>= 2.2.7'
-
+gem 'ruby-debug'
 group :test do
   gem "factory_girl"
   gem 'rspec',             '1.3.0' 

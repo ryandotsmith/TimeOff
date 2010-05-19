@@ -9,6 +9,7 @@ class Subdomain::UserSessionsController < ApplicationController
   
   def create
     @user_session = UserSession.new(params[:user_session])
+    require 'ruby-debug';debugger
     if @user_session.save
       redirect_to subdomain_account_url(current_account,current_account)
     else
@@ -23,6 +24,7 @@ class Subdomain::UserSessionsController < ApplicationController
   end
 
   private
+
   def require_account
     redirect_to new_system_account_url if current_account.nil?
   end

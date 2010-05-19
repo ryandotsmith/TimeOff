@@ -19,3 +19,9 @@ Given /^I belong to the "([^\"]*)" account$/ do |arg1|
   @account.users << user
   @account.save
 end
+
+When /^I navigate to the "([^\"]*)" account signing page$/ do |subdomain|
+  account = Account.find_by_subdomain(subdomain)
+  visit new_subdomain_user_session_url(account)
+end
+
