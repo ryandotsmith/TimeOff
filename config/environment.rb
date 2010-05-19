@@ -6,3 +6,8 @@ Rails::Initializer.run do |config|
   config.action_controller.session ||= {}
   config.time_zone = 'UTC'
 end
+
+ActiveSupport::Inflector.inflections do |inflect|
+ inflect.irregular 'dayoff', 'daysoff'
+end
+
