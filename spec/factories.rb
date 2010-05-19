@@ -14,3 +14,15 @@ Factory.define :account do |account|
   account.subdomain        { "wonderset" }
   account.users            { |users| [users.association(:user,:email => Factory.next(:email)) ]}
 end
+
+Factory.define :dayoff do |h|
+  h.leave_length  {'many'  }
+  h.leave_type    {'etc'   }
+  h.description   {'who ha'}
+  h.state         {0       }
+  h.reviewed_by   {'rsmith'    }
+  h.reviewed_on   { DateTime.now}
+  h.begin_time    { MONDAY_THIS_YEAR}
+  h.end_time      { MONDAY_THIS_YEAR + 2.days}
+  h.user { |user| user.association(:user,:email => Factory.next(:email))}
+end

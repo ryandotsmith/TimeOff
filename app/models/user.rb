@@ -1,8 +1,10 @@
 class User < ActiveRecord::Base
 
+  include DayoffUserMethods
   acts_as_authentic
 
   belongs_to :account
+  has_many :daysoff
 
   def generate_one_time_password!
     self.password = 'onetime'

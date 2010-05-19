@@ -58,6 +58,16 @@ dependencies:
     group: 
     - :default
     version: ">= 0.3.1"
+  sanitize: 
+    group: 
+    - :default
+    version: ">= 0"
+  facets: 
+    group: 
+    - :default
+    version: = 2.5.0
+    require: 
+    - facets/dictionary
 specs: 
 - rake: 
     version: 0.8.7
@@ -95,6 +105,8 @@ specs:
     version: 0.3.0
 - database_cleaner: 
     version: 0.5.0
+- facets: 
+    version: 2.5.0
 - factory_girl: 
     version: 1.2.4
 - formtastic: 
@@ -119,13 +131,15 @@ specs:
     version: 0.10.3
 - ruby-debug: 
     version: 0.10.3
+- sanitize: 
+    version: 1.2.1
 - sqlite3-ruby: 
     version: 1.2.5
 - subdomain_routes: 
     version: 0.3.1
 - webrat: 
     version: 0.7.0
-hash: 505b3bb6e70d9fbd7cc95b13bcc8628780416f27
+hash: 65f6a3c42353faa75c435050ee0791b1d18177c5
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
