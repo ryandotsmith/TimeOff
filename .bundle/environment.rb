@@ -176,7 +176,7 @@ module Bundler
   LOCKED_BY    = '0.9.25'
   FINGERPRINT  = "95d39e4c9ba7d30047225089c55c9f2d737ac604"
   HOME         = '/Users/ryandotsmith/.bundle/ruby/1.8/bundler'
-  AUTOREQUIRES = {:default=>[["authlogic", false], ["facets/dictionary", true], ["formtastic", false], ["friendly_id", false], ["haml", false], ["rails", false], ["ruby-debug", false], ["sanitize", false], ["sqlite3", true], ["subdomain_routes", false]], :cucumber=>[["cucumber-rails", false], ["database_cleaner", false], ["factory_girl", false], ["rspec", false], ["rspec-rails", false], ["webrat", false]]}
+  AUTOREQUIRES = {:test=>[["factory_girl", false], ["rspec", false], ["rspec-rails", false]], :cucumber=>[["cucumber-rails", false], ["database_cleaner", false], ["webrat", false]], :default=>[["authlogic", false], ["facets/dictionary", true], ["formtastic", false], ["friendly_id", false], ["haml", false], ["rails", false], ["ruby-debug", false], ["sanitize", false], ["sqlite3", true], ["subdomain_routes", false]]}
   SPECS        = [
         {:load_paths=>["/Users/ryandotsmith/.bundle/ruby/1.8/gems/rake-0.8.7/lib"], :loaded_from=>"/Users/ryandotsmith/.bundle/ruby/1.8/specifications/rake-0.8.7.gemspec", :name=>"rake"},
         {:load_paths=>["/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/activesupport-2.3.5.gemspec", :name=>"activesupport"},
@@ -190,7 +190,7 @@ module Bundler
         {:load_paths=>["/Library/Ruby/Gems/1.8/gems/columnize-0.3.1/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/columnize-0.3.1.gemspec", :name=>"columnize"},
         {:load_paths=>["/Library/Ruby/Gems/1.8/gems/diff-lcs-1.1.2/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/diff-lcs-1.1.2.gemspec", :name=>"diff-lcs"},
         {:load_paths=>["/Users/ryandotsmith/.bundle/ruby/1.8/gems/trollop-1.16.2/lib"], :loaded_from=>"/Users/ryandotsmith/.bundle/ruby/1.8/specifications/trollop-1.16.2.gemspec", :name=>"trollop"},
-        {:load_paths=>["/Users/ryandotsmith/.bundle/ruby/1.8/gems/gherkin-1.0.29/lib"], :loaded_from=>"/Users/ryandotsmith/.bundle/ruby/1.8/specifications/gherkin-1.0.29.gemspec", :name=>"gherkin"},
+        {:load_paths=>["/Users/ryandotsmith/.bundle/ruby/1.8/gems/gherkin-1.0.30/lib"], :loaded_from=>"/Users/ryandotsmith/.bundle/ruby/1.8/specifications/gherkin-1.0.30.gemspec", :name=>"gherkin"},
         {:load_paths=>["/Users/ryandotsmith/.bundle/ruby/1.8/gems/json_pure-1.4.3/lib"], :loaded_from=>"/Users/ryandotsmith/.bundle/ruby/1.8/specifications/json_pure-1.4.3.gemspec", :name=>"json_pure"},
         {:load_paths=>["/Library/Ruby/Gems/1.8/gems/term-ansicolor-1.0.5/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/term-ansicolor-1.0.5.gemspec", :name=>"term-ansicolor"},
         {:load_paths=>["/Users/ryandotsmith/.bundle/ruby/1.8/gems/cucumber-0.7.3/lib"], :loaded_from=>"/Users/ryandotsmith/.bundle/ruby/1.8/specifications/cucumber-0.7.3.gemspec", :name=>"cucumber"},

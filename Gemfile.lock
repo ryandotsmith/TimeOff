@@ -94,7 +94,7 @@ specs:
 - trollop: 
     version: 1.16.2
 - gherkin: 
-    version: 1.0.29
+    version: 1.0.30
 - json_pure: 
     version: 1.4.3
 - term-ansicolor: 
