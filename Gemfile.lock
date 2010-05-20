@@ -4,28 +4,28 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
-  pg: 
-    group: 
-    - :default
-    version: ">= 0"
   rails: 
     group: 
     - :default
     version: ~> 2.3.5
-  authlogic: 
+  pg: 
     group: 
     - :default
     version: ">= 0"
-  haml: 
-    group: 
-    - :default
-    version: ">= 2.2.17"
   sqlite3-ruby: 
     group: 
     - :default
     version: ">= 0"
     require: 
     - sqlite3
+  haml: 
+    group: 
+    - :default
+    version: ">= 2.2.17"
+  authlogic: 
+    group: 
+    - :default
+    version: ">= 0"
   rspec: 
     group: 
     - :cucumber
@@ -58,14 +58,18 @@ dependencies:
     group: 
     - :default
     version: ">= 2.2.7"
-  subdomain_routes: 
+  hoptoad_notifier: 
     group: 
     - :default
-    version: ">= 0.3.1"
+    version: ">= 0"
   sanitize: 
     group: 
     - :default
     version: ">= 0"
+  subdomain_routes: 
+    group: 
+    - :default
+    version: ">= 0.3.1"
   facets: 
     group: 
     - :default
@@ -119,6 +123,8 @@ specs:
     version: 3.0.4
 - haml: 
     version: 3.0.4
+- hoptoad_notifier: 
+    version: 2.2.2
 - linecache: 
     version: "0.43"
 - nokogiri: 
@@ -145,7 +151,7 @@ specs:
     version: 0.3.1
 - webrat: 
     version: 0.7.0
-hash: 80aeb9018e8878a37b2e92e4d57dd04d358cc7d0
+hash: 0dca700294ee21b37b9c02531aaaca7dbc0671a6
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org

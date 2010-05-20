@@ -1,3 +1,4 @@
+# the following lines are commented out per http://blog.mattgornick.com/how-to-bundler-095-rails-235-and-running-on-h
 #begin
   #require "rubygems"
   #require "bundler"

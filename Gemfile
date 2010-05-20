@@ -11,6 +11,7 @@ gem 'friendly_id',        '>= 2.2.7'
 gem 'sanitize'
 gem 'facets',             '2.5.0', :require => 'facets/dictionary'
 gem 'ruby-debug'
+gem 'hoptoad_notifier'
 
 group :test do
   gem "factory_girl"
