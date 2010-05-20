@@ -1,14 +1,45 @@
-%h1 Sign Up
+.block
+  .block_head
+    .bheadl
+    .bheadr
+    %h2 Sign Up for a FREE Account
+  .block_content
+    - form_for @account,:url => system_accounts_url do |form|
+      = form.error_messages
 
-- semantic_form_for @account,:url => system_accounts_url do |form|
-  = form.error_messages
-  = form.input :subdomain, :label => 'Company Name'
+      %p
+        = form.label :subdomain, "Account Name"
+        %br
+        = form.text_field :subdomain, :class => 'text small'
 
-  - form.semantic_fields_for :users do |user|
-    = user.input :first_name 
-    = user.input :last_name
-    = user.input :email
-    = user.input :password 
-    = user.input :password_confirmation
+      - form.fields_for :users do |user|
 
-  = form.buttons
+        %p
+          = user.label :first_name, "First Name"
+          %br
+          = user.text_field :first_name , :class => 'text small'
+
+        %p
+          = user.label :last_name, "Last Name"
+          %br
+          = user.text_field :last_name, :class => 'text small'
+
+        %p
+          = user.label :email, "Email"
+          %br
+          = user.text_field :email, :class => 'text small'
+
+        %p
+          = user.label :password, "Password"
+          %br
+          = user.password_field :password , :class => 'text small'
+
+        %p
+          = user.label :password_confirmation, "Confirm Password"
+          %br
+          = user.password_field :password_confirmation, :class => 'text small'
+
+      %p
+        = form.submit 'submit', :class => 'submit small'
+  .bendl
+  .bendr

@@ -1,0 +1,12 @@
+- %W(style jquery.wysiwyg facebox visualize date_input).each do |css|
+  = stylesheet_link_tag css
+/
+  [if IE]><meta http-equiv="X-UA-Compatible" content="IE=7" /><![endif]
+/
+  [if lt IE 8]><style type="text/css" media="all">@import url("css/ie.css");</style><![endif]
+/
+  [if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]
+
+- %W(jquery jquery.img.preload jquery.filestyle.mini jquery.wysiwyg jquery.date_input.pack facebox jquery.visualize jquery.select_skin jquery.pngfix custom).each do |js|
+  = javascript_include_tag js
+

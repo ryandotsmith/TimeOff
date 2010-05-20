@@ -1,8 +1,8 @@
-#facebox .b { background:url(../images/b.png); }
-#facebox .tl { background:url(../images/tl.png); }
-#facebox .tr { background:url(../images/tr.png); }
-#facebox .bl { background:url(../images/bl.png); }
-#facebox .br { background:url(../images/br.png); }
+#facebox .b { background:url(/images/theme/b.png); }
+#facebox .tl { background:url(/images/theme/tl.png); }
+#facebox .tr { background:url(/images/theme/tr.png); }
+#facebox .bl { background:url(/images/theme/bl.png); }
+#facebox .br { background:url(/images/theme/br.png); }
 
 #facebox {
 	position: absolute;

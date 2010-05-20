@@ -1,4 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
+  map.root :controller => 'pages', :action => 'show', :id => 'index'
 
   map.subdomain :www, :namespace => nil, :name => 'system' do |www|
     www.root      :controller => 'pages', :action => 'show', :id => 'index'
