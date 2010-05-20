@@ -10,6 +10,7 @@ gem 'friendly_id',        '>= 2.2.7'
 gem 'sanitize'
 gem 'facets',             '2.5.0', :require => 'facets/dictionary'
 gem 'ruby-debug'
+
 group :test do
   gem "factory_girl"
   gem 'rspec',             '1.3.0' 

@@ -1,6 +1,8 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 MONDAY_THIS_YEAR = Date.new(2010,1,4)#monday
+TUESDAY          = Date.new(2010,1,5)#monday
+FRIDAY           = Date.new(2010,1,8)#monday
 describe "trivial" do
   it "should build the assoc" do
     user    = Factory(:user)
@@ -34,34 +36,23 @@ describe "creating a dayoff" do
                                 :end_time   => nil)
       dayoff.save.should eql( true )      
     end
-    it "should fail when days in dayoff are already covered by existing dayoff" do
-      user = Factory(:user)
-      Factory(  :dayoff, 
-                :user => user,
-                :leave_length => 'half',
-                :begin_time => @dt,
-                :end_time   => @dt + 2.days)
-      Factory.build(  :dayoff, 
-                      :user => user,
-                      :leave_length => 'whole',
-                      :begin_time => @dt,
-                      :end_time   => @dt + 2.days)
-    end
-    it "should fail when half day falls into existing range of dayoffs" do
-      dayoff = Factory(  :dayoff, 
-                          :leave_length => 'many',
-                          :user => @user, 
-                          :begin_time => @dt,
-                          :end_time   => @dt + 4.days)
+    it "should fail when half day falls into existing range of daysoff" do
+      dayoff = Factory( :dayoff, 
+                        :leave_length => 'many',
+                        :user         => @user, 
+                        :begin_time   => @dt,
+                        :end_time     => @dt + 4.days)
 
-      bad_dayoff = Factory.build(  :dayoff, 
-                                    :leave_length => 'whole',
-                                    :user => @user, 
-                                    :begin_time => @dt + 2.days,
-                                    :end_time   => nil)
+      bad_dayoff = Factory.build( :dayoff, 
+                                  :leave_length => 'whole',
+                                  :user         => @user, 
+                                  :begin_time   => @dt + 2.days,
+                                  :end_time     => nil)
+      @user.daysoff << dayoff
+      @user.save
+
       bad_dayoff.should_not be_valid
       bad_dayoff.save.should eql( false )            
-      
     end
   end
   describe "validating the users date range" do
@@ -77,7 +68,7 @@ describe "creating a dayoff" do
   end
   describe "two daysoff on one calendar day" do
     it "should not find a dayoff in range when user has only one dayoff" do
-      user    = Factory( :user , :login => 'rsmithwhowho')
+      user    = Factory(:user)
       dayoff = Factory.build(  :dayoff, 
                                 :user => user,
                                 :begin_time =>  DateTime.now,
@@ -85,47 +76,47 @@ describe "creating a dayoff" do
       dayoff.in_range_of_existing.should eql( false )      
     end#it
 
-    it "should error when a user has one dayoff and then requests idenctical set of days for dayoff" do
-      user    = Factory( :user , :login => 'rsmithwhowho')
-      dayoff = Factory.build( :dayoff, 
-                          :leave_length => 'many',
-                          :user => user,
-                          :begin_time =>  DateTime.now,
-                          :end_time   =>  DateTime.now + 2.days)
+    it "should error when a user has one dayoff and then requests idenctical set of days for another dayoff" do
+      user   = Factory(:user)
+      dayoff = Factory( :dayoff, 
+                        :leave_length => 'many',
+                        :user         => user,
+                        :begin_time   => DateTime.now,
+                        :end_time     => DateTime.now + 2.days)
+      user.daysoff << dayoff
+      user.save
 
-      dayoff.in_range_of_existing.should eql( false )      
-      dayoff.save.should eql( true )
+      another_dayoff = Factory.build( :dayoff, 
+                                      :leave_length => 'many',
+                                      :user         => user,
+                                      :begin_time   =>  DateTime.now,
+                                      :end_time     =>  DateTime.now + 2.days)
+      user.daysoff << another_dayoff
+      user.save
 
-      another_dayoff = Factory.build(  :dayoff, 
-                                        :leave_length => 'many',
-                                        :user => user,
-                                        :begin_time =>  DateTime.now,
-                                        :end_time   =>  DateTime.now + 2.days)
       another_dayoff.in_range_of_existing.should eql( true )      
-    end#it
+    end
+
     describe "new daysoff should be inspected and reported if they include a date in users history" do
-      before(:each) do
-        @user = Factory( :user, :login => "whowhoha" )
-      end#before
-
+      before(:each) { @user = Factory(:user) }
       it "should add an error when a new dayoff is spanning previous daysoff" do
-        @dayoff1 = Factory.build(  :dayoff,  
-                                    :leave_length => 'whole',
-                                    :user => @user,
-                                    :begin_time => MONDAY_THIS_YEAR,
-                                    :end_time   => MONDAY_THIS_YEAR + 3.days)
+        dayoff_one = Factory(:dayoff,  
+                             :leave_length => 'whole',
+                             :user         => @user,
+                             :begin_time   => MONDAY_THIS_YEAR,
+                             :end_time     => MONDAY_THIS_YEAR + 3.days)
 
-        @dayoff1.in_range_of_existing.should eql( false )
-        @dayoff1.save.should eql( true )
+        @user.daysoff << dayoff_one
+        @user.save
 
-        @dayoff2 = Factory.build(  :dayoff,  
-                                    :leave_length => 'whole',
-                                    :user => @user,
-                                    :begin_time => MONDAY_THIS_YEAR,
-                                    :end_time   => MONDAY_THIS_YEAR)              
-        @dayoff2.in_range_of_existing.should eql( true )
-        @dayoff2.save
-        @dayoff2.should_not be_valid
+        dayoff_two = Factory.build(:dayoff,  
+                                   :leave_length => 'whole',
+                                   :user         => @user,
+                                   :begin_time   => MONDAY_THIS_YEAR,
+                                   :end_time     => MONDAY_THIS_YEAR )              
+        @user.daysoff << dayoff_two
+        dayoff_two.in_range_of_existing.should eql( true )
+        dayoff_two.should_not be_valid
       end
 
       
@@ -134,22 +125,25 @@ describe "creating a dayoff" do
     context "" do
       date = MONDAY_THIS_YEAR
       before(:each) do
-        @user = Factory( :user )
-        @dayoff1 = Factory(  :dayoff, :user => @user, 
-                              :begin_time => date,
-                              :end_time   => date + 2.days)
+        @user    = Factory( :user )
+        @dayoff1 = Factory( :dayoff, :user => @user, 
+                            :begin_time    => date,
+                            :end_time      => date + 2.days)
 
-        @dayoff2 = Factory.build(  :dayoff, :user => @user, 
-                                    :begin_time => date ,
-                                    :end_time   => date + 2.days)
+        @user.daysoff << @dayoff1
+        @user.save
+        @dayoff2 = Factory.build(:dayoff, :user => @user, 
+                                 :begin_time => date ,
+                                 :end_time   => date + 2.days)
+        @user.daysoff << @dayoff2
+        @user.save
         @dayoff2.should_not be_valid     
       end
       it "should calculate only uniquie dayoff days" do
         @dayoff1.get_length.should eql( 3.0 )
       end
     end
-    
-  end#describe
+  end
 
 
 end
@@ -227,7 +221,7 @@ describe "adjust for half or whole days" do
   end
 
   it "should add 5 hours to the begin date time" do
-    @dayoff = Factory(       :holiday, 
+    @dayoff = Factory(       :dayoff, 
                               :leave_length => 'half',
                               :begin_time => DateTime.now,
                               :end_time   => nil )
@@ -252,41 +246,49 @@ describe "should return specific data sets" do
     describe "get dayoffs statistics for all users" do
     before(:each) do      
       date = MONDAY_THIS_YEAR
-      @user_one       = Factory( :user , :login =>  "jbillings")
-      @user_two       = Factory( :user , :login =>  "jhoover")
+      @user_one       = Factory(:user)
+      @user_two       = Factory(:user)
 
       # 3 days
-      @dayoff_one    = Factory(  :dayoff, 
-                                  :leave_length  => 'many',
-                                  :state => 1, 
-                                  :leave_type => 'etc', 
-                                  :user => @user_one,
-                                  :begin_time => date,
-                                  :end_time   => date + 2.days) 
+      @dayoff_one    = Factory( :dayoff, 
+                                :leave_length  => 'many',
+                                :state => 1, 
+                                :leave_type => 'etc', 
+                                :user => @user_one,
+                                :begin_time => date,
+                                :end_time   => date + 2.days) 
+      @user_one.daysoff << @dayoff_one
+      @user_one.save
       # 3 days
-      @dayoff_two    = Factory(  :dayoff, 
-                                  :leave_length  => 'many',
-                                  :state => 1, 
-                                  :leave_type => 'etc', 
-                                  :user => @user_one, 
-                                  :begin_time => date + 7.days,
-                                  :end_time   => date + 9.days) 
+      @dayoff_two    = Factory( :dayoff, 
+                                :leave_length  => 'many',
+                                :state => 1, 
+                                :leave_type => 'etc', 
+                                :user => @user_one, 
+                                :begin_time => date + 7.days,
+                                :end_time   => date + 9.days) 
+      @user_one.daysoff << @dayoff_two
+      @user_one.save
       # 3 days
-      @dayoff_three  = Factory(  :dayoff, 
-                                  :leave_length  => 'many',
-                                  :state => 1, 
-                                  :leave_type => 'etc', 
-                                  :user => @user_two, 
-                                  :begin_time => date + 14.days,
-                                  :end_time   => date + 16.days ) 
-      
-      @dayoff_four   = Factory(  :dayoff, 
-                                  :leave_length  => 'many',
-                                  :state => 0, 
-                                  :leave_type => 'etc', 
-                                  :user => @user_two, 
-                                  :begin_time => date + 32.days,
-                                  :end_time   => date + 34.days ) 
+      @dayoff_three  = Factory( :dayoff, 
+                                :leave_length  => 'many',
+                                :state => 1, 
+                                :leave_type => 'etc', 
+                                :user => @user_two, 
+                                :begin_time => date + 14.days,
+                                :end_time   => date + 16.days ) 
+       
+      @user_two.daysoff << @dayoff_three
+      @user_two.save
+      @dayoff_four   = Factory( :dayoff, 
+                                :leave_length  => 'many',
+                                :state => 0, 
+                                :leave_type => 'etc', 
+                                :user => @user_two, 
+                                :begin_time => date + 32.days,
+                                :end_time   => date + 34.days ) 
+      @user_two.daysoff << @dayoff_four
+      @user_two.save
     end
 
     it "calculated used leave days for all users" do
@@ -339,20 +341,7 @@ describe "getting a list of dates that the user has daysoff for" do
     @h.included_dates.include?( FRIDAY ).should eql( true )
     @h.included_dates.length.should eql( 1 )
   end
-end#des
-
-describe "pushing a dayoff to gcal" do
-  before(:each) do
-    @user     = Factory( :user)
-    @dayoff  = Factory( :dayoff, :user => @user )
-  end#before
-
-  it "should add a new push job to the queue" do
-    @dayoff.should_receive(:send_later).with(:push_to_calendar)
-    @dayoff.approve( @user )
-  end#it
-
-end#desc
+end
 
 describe "removing weekends from dayoff range" do
   before(:each)do

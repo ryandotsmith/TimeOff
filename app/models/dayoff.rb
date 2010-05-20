@@ -15,6 +15,12 @@ class Dayoff < ActiveRecord::Base
   named_scope :approved, :conditions => {:state => 1 }
   named_scope :pending,  :conditions => {:state => 0 }
   named_scope :denied,   :conditions => {:state => -1}
+
+  def before_validation
+    adjust_time!( self.leave_length )
+    sanitize_input!
+  end
+
   # i expect search to only be called in code when the search parameter 
   # is built. I am not ready to have the search parameter be user input.
   def self.search(search, page)
@@ -25,22 +31,22 @@ class Dayoff < ActiveRecord::Base
   end
  
   def self.get_leave_ratio
-    max   = User.get_total_holiday_time()
-    taken = Holiday.get_taken_leave()
+    max   = User.get_total_dayoff_time()
+    taken = Dayoff.get_taken_leave()
     max / taken
   end
 
   def self.get_taken_leave()
     sum = 0.0
-    Holiday.find(:all).each do |holiday|
-      if holiday.state == 1
-        sum += holiday.get_length()
+    Dayoff.find(:all).each do |dayoff|
+      if dayoff.state == 1
+        sum += dayoff.get_length()
       end
     end
     sum
-  end#def
+  end
     
-  def self.get_holiday_types
+  def self.get_dayoff_types
     ["etc","personal","vacation"]  
   end
 
@@ -50,29 +56,28 @@ class Dayoff < ActiveRecord::Base
   end
  
   def not_nice_twice
-    errors.add_to_base "This request contains a day that already belongs to one of your holidays." if
-      !begin_time.nil? and in_range_of_existing
-  end#not_nice_twice
+    if !begin_time.nil? and in_range_of_existing
+      errors.add_to_base "This request contains a day that already belongs to one of your holidays."
+    end 
+  end
  
   def in_range_of_existing
-    # return false if the intersection of the arrays is 0
-    # return true if the requested holiday has days belonging to other holidays
     (self.user.get_list_of_dates & self.included_dates) != []
-  end#in_range_of_existing
+  end
 
   def sanitize_input!
     self.description = Sanitize.clean( self.description )
   end
  
   def self.get_pending
-    Holiday.find_all_by_state(0).to_a
+    Dayoff.find_all_by_state(0).to_a
   end
   
-  def self.update_calendar( holiday_input, action )
-    holiday = Holiday.find( holiday_input.id )
-    holiday.push_to_calendar if
+  def self.update_calendar( dayoff_input, action )
+    dayoff = Dayoff.find( dayoff_input.id )
+    dayoff.push_to_calendar if
       action.to_sym == :push
-    holiday.delete_from_calendar if
+    dayoff.delete_from_calendar if
       action.to_sym == :delete
   end
 

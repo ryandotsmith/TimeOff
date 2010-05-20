@@ -3,11 +3,11 @@ Factory.sequence :email do |n|
 end
 
 Factory.define :user do |u|
-  u.email Factory.next    :email
-  u.first_name            "Ryan"
-  u.last_name             "Smith"
-  u.password              "password"
-  u.password_confirmation "password"
+  u.email                 { Factory.next(:email) }
+  u.first_name            {"Ryan"                }
+  u.last_name             {"Smith"               }
+  u.password              {"password"            }
+  u.password_confirmation {"password"            }
 end
 
 Factory.define :account do |account|
@@ -16,13 +16,13 @@ Factory.define :account do |account|
 end
 
 Factory.define :dayoff do |h|
-  h.leave_length  {'many'  }
-  h.leave_type    {'etc'   }
-  h.description   {'who ha'}
-  h.state         {0       }
-  h.reviewed_by   {'rsmith'    }
-  h.reviewed_on   { DateTime.now}
-  h.begin_time    { MONDAY_THIS_YEAR}
+  h.leave_length  { 'many'                   }
+  h.leave_type    { 'etc'                    }
+  h.description   { 'who ha'                 }
+  h.state         { 0                        }
+  h.reviewed_by   { 'rsmith'                 }
+  h.reviewed_on   { DateTime.now             }
+  h.begin_time    { MONDAY_THIS_YEAR         }
   h.end_time      { MONDAY_THIS_YEAR + 2.days}
-  h.user { |user| user.association(:user,:email => Factory.next(:email))}
+  h.association :user
 end

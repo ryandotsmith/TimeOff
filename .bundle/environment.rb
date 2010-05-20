@@ -174,7 +174,7 @@ end
 module Bundler
   ENV_LOADED   = true
   LOCKED_BY    = '0.9.25'
-  FINGERPRINT  = "65f6a3c42353faa75c435050ee0791b1d18177c5"
+  FINGERPRINT  = "95d39e4c9ba7d30047225089c55c9f2d737ac604"
   HOME         = '/Users/ryandotsmith/.bundle/ruby/1.8/bundler'
   AUTOREQUIRES = {:test=>[["factory_girl", false], ["rspec", false], ["rspec-rails", false]], :cucumber=>[["cucumber-rails", false], ["database_cleaner", false], ["webrat", false]], :default=>[["authlogic", false], ["facets/dictionary", true], ["formtastic", false], ["friendly_id", false], ["haml", false], ["rails", false], ["ruby-debug", false], ["sanitize", false], ["sqlite3", true], ["subdomain_routes", false]]}
   SPECS        = [
