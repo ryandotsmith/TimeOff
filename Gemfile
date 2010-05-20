@@ -1,6 +1,7 @@
 source :gemcutter
 
 gem "rails", "~> 2.3.5"
+gem "pg"
 gem "sqlite3-ruby", :require => "sqlite3"
 gem 'haml',               '>=2.2.17'
 gem 'formtastic',         '>= 0.9.7'

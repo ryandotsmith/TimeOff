@@ -4,6 +4,10 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
+  pg: 
+    group: 
+    - :default
+    version: ">= 0"
   rails: 
     group: 
     - :default
@@ -119,6 +123,8 @@ specs:
     version: "0.43"
 - nokogiri: 
     version: 1.4.1
+- pg: 
+    version: 0.9.0
 - rack-test: 
     version: 0.5.3
 - rails: 
@@ -139,7 +145,7 @@ specs:
     version: 0.3.1
 - webrat: 
     version: 0.7.0
-hash: 95d39e4c9ba7d30047225089c55c9f2d737ac604
+hash: 80aeb9018e8878a37b2e92e4d57dd04d358cc7d0
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
