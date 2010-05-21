@@ -10,9 +10,9 @@ Feature: Creating a new account
     And I fill in "Email" with "ryan@wonderset.com"
     And I fill in "password" with "password"
     And I fill in "password confirmation" with "password"
-    And I press "create account"
+    And I press "submit"
     Then I should see "wonderset"
-    And I should see "Update Your Company Profile"
+    And I should see "Settings"
 
   Scenario: Creating a new account with company name that is already in use
     Given an account exists with a subdomain of "wonderset"
@@ -22,7 +22,7 @@ Feature: Creating a new account
     And I fill in "Email" with "ryan@wonderset.com"
     And I fill in "password" with "password"
     And I fill in "password confirmation" with "password"
-    And I press "create account"
+    And I press "submit"
     Then I should see "An account with name wonderset already exists."
 
 

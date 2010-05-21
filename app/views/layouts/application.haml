@@ -10,8 +10,17 @@
         #header
           .hdrl
           .hdrr
-          %h1= link_to 'Time Off', root_url
+          %h1= link_to 'Time Off', subdomain_root_url("www")
           = render :partial => 'shared/navigation'
           = render :partial => 'shared/session'
-        = yield
+        .block
+          .block_head
+            .bheadl
+            .bheadr
+            = yield :block_head
+          .block_content
+            = render :partial => 'shared/flash', :locals => {:flash => flash}
+            = yield
+          .bendl
+          .bendr
         #footer

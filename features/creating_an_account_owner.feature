@@ -7,5 +7,5 @@ Feature: Making the account creator the owner
     And I fill in "Email" with "ryan@wonderset.com"
     And I fill in "password" with "password"
     And I fill in "password confirmation" with "password"
-    And I press "create account"
+    And I press "submit"
     Then I should see "Account Administration"

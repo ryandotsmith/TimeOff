@@ -1,9 +1,9 @@
 %ul#nav
   %li= link_to 'calendar', '#'
-  - if current_user == @account.owner
-    %li= link_to 'dashboard'
+  - if @account and current_user and current_user == @account.owner
+    %li= link_to 'dashboard', subdomain_account_url(@account,@account)
     %li 
       admin
       %ul
-        %li= link_to 'settings'
-        %li= link_to 'billing'
+        %li= link_to 'settings', edit_subdomain_account_url(@account,@account)
+        %li= link_to 'billing', page_path('billing')

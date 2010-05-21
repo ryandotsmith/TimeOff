@@ -1,45 +1,40 @@
-.block
-  .block_head
-    .bheadl
-    .bheadr
-    %h2 Sign Up for a FREE Account
-  .block_content
-    - form_for @account,:url => system_accounts_url do |form|
-      = form.error_messages
+- content_for :head_block do
+  %h2 Sign Up for a FREE Account
 
-      %p
-        = form.label :subdomain, "Account Name"
-        %br
-        = form.text_field :subdomain, :class => 'text small'
+- form_for @account,:url => system_accounts_url do |form|
+  = form.error_messages
 
-      - form.fields_for :users do |user|
+  %p
+    = form.label :subdomain, "Company Name"
+    %br
+    = form.text_field :subdomain, :class => 'text small'
 
-        %p
-          = user.label :first_name, "First Name"
-          %br
-          = user.text_field :first_name , :class => 'text small'
+  - form.fields_for :users do |user|
 
-        %p
-          = user.label :last_name, "Last Name"
-          %br
-          = user.text_field :last_name, :class => 'text small'
+    %p
+      = user.label :first_name, "First Name"
+      %br
+      = user.text_field :first_name , :class => 'text small'
 
-        %p
-          = user.label :email, "Email"
-          %br
-          = user.text_field :email, :class => 'text small'
+    %p
+      = user.label :last_name, "Last Name"
+      %br
+      = user.text_field :last_name, :class => 'text small'
 
-        %p
-          = user.label :password, "Password"
-          %br
-          = user.password_field :password , :class => 'text small'
+    %p
+      = user.label :email, "Email"
+      %br
+      = user.text_field :email, :class => 'text small'
 
-        %p
-          = user.label :password_confirmation, "Confirm Password"
-          %br
-          = user.password_field :password_confirmation, :class => 'text small'
+    %p
+      = user.label :password, "Password"
+      %br
+      = user.password_field :password , :class => 'text small'
 
-      %p
-        = form.submit 'submit', :class => 'submit small'
-  .bendl
-  .bendr
+    %p
+      = user.label :password_confirmation, "Password Confirmation"
+      %br
+      = user.password_field :password_confirmation, :class => 'text small'
+
+  %p
+    = form.submit 'submit', :class => 'submit small'

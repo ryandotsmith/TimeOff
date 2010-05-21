@@ -12,7 +12,7 @@ Feature: Signing in
     When I fill in "email" with "ryan@aol.com"
     And I fill in "password" with "password"
     And I press "sign in"
-    Then I should see "Welcome back ryan@aol.com"
+    Then I should see "Welcome Back Ryan Smith"
     And I should see "wonderset"
 
   Scenario: Signing in to an account with a user that does not belong to the account
@@ -22,6 +22,6 @@ Feature: Signing in
     And I fill in "email" with "ryan@test.com"
     And I fill in "password" with "password"
     And I press "sign in"
-    Then I should see "Welcome back ryan@test.com"
+    Then I should see "Welcome Back Ryan Smith"
     And I should see "test"
     And I should see "please bookmark test for future sign in"
