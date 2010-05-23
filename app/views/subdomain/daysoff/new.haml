@@ -2,6 +2,8 @@
   %h2 New Day Off Request
   %ul
     %li= link_to '&larr; back to dashboard', subdomain_account_url(@account,@account)
+
+
 - form_for @dayoff , :url => subdomain_user_daysoff_url(@account,@user) do |form|
 
   %p

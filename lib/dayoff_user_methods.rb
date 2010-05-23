@@ -52,4 +52,8 @@ module DayoffUserMethods
     daysoff.select {|h| h.begin_time.year >= Date.today.year}
   end
 
+  def pending_requests
+    daysoff.pending
+  end
+
 end
