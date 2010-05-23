@@ -2,3 +2,5 @@
   %h2= @account.subdomain
   %ul
     %li= "Welcome Back #{current_user.name}"
+
+= link_to 'request days off', new_subdomain_user_dayoff_url(@account,current_user)

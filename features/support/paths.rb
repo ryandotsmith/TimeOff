@@ -14,6 +14,8 @@ module NavigationHelpers
       new_subdomain_user_session_url(@account,@account)
     when /the account edit page/
       edit_subdomain_account_url(@account,@account)
+    when /the dashboard/
+      subdomain_account_url(@account,@account)
     when /account page/
       subdomain_account_url(@account,@account)
     # Add more mappings here.

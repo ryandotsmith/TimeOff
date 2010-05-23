@@ -7,7 +7,7 @@ ActionController::Routing::Routes.draw do |map|
   map.subdomain :model => :account, :name => 'subdomain' do |account|
     account.root :controller => 'user_sessions', :action => 'new' 
     account.resources :accounts, :only => [:show,:edit,:update], :as => 'account-details'
-    account.resources :users
+    account.resources :users, :has_many => :daysoff
     account.resource  :user_session, :only => [:new,:create,:destroy]
   end
 
