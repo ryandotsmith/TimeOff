@@ -10,5 +10,4 @@ ActionController::Routing::Routes.draw do |map|
     account.resources :users, :has_many => :daysoff
     account.resource  :user_session, :only => [:new,:create,:destroy]
   end
-
 end
