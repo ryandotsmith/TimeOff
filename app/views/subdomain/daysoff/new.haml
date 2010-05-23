@@ -1,0 +1,18 @@
+- form_for @dayoff , :url => subdomain_user_daysoff_url(@account,@user) do |form|
+
+  = form.error_messages
+
+  = form.label :begin_time, 'Start Day'
+  = form.date_select :begin_time, :class => 'text small'
+
+  = form.label :end_time, 'End Day'
+  = form.date_select :end_time, :class => 'text small'
+
+  = radio_button :dayoff, :leave_type, 'half'
+  = radio_button :dayoff, :leave_type, 'whole'
+  = radio_button :dayoff, :leave_type, 'many'
+
+  = form.label :description, 'Message'
+  = form.text_area :description
+
+  = form.submit 'submit', :class => 'submit small'
