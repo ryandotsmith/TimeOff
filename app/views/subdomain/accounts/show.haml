@@ -1,9 +1,4 @@
-.block
-  .block_head
-    .bheadl
-    .bheadr
-    %h2= @account.subdomain
-    %ul
-      %li= "Welcome Back #{current_user.name}"
-  .bendl
-  .bendr
+- content_for :block_head do
+  %h2= @account.subdomain
+  %ul
+    %li= "Welcome Back #{current_user.name}"
