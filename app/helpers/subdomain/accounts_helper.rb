@@ -3,7 +3,8 @@ module Subdomain::AccountsHelper
     messages = []
     pr = user.pending_requests.length
     message = NotificationMessage.new
-    message.title = "#{pluralize(pr,'request')} pending approval"
+
+    message.title = "#{pluralize(pr,'request').split(" ").last} pending approval"
     message.body  = pr
     messages << message
 
