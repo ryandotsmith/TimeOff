@@ -4,6 +4,7 @@ class Dayoff < ActiveRecord::Base
   HALF_DAY  = 0.1875
   WHOLE_DAY = 0.3958
 
+  belongs_to :account
   belongs_to :user
 
   validate :prohibit_time_travel

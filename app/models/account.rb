@@ -1,6 +1,7 @@
 class Account < ActiveRecord::Base
   has_friendly_id :subdomain
   has_many :users
+  has_many :daysoff
   accepts_nested_attributes_for :users
 
   validates_uniqueness_of :subdomain,
