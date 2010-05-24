@@ -7,8 +7,16 @@ Feature: Approving days off
     Given an account exists with a subdomain of "wonderset"
     And I am signed in as the account owner
 
-  @wip
-  Scenario: Displaying pending requests on the dashboard
-    Given I am on the dashboard
-    And There are two pending days off
-    Then I should see "2 requests need approval"
+    Scenario: Displaying pending requests on the dashboard
+      Given There are two pending days off
+      When I am on the dashboard
+      Then I should see "2"
+      And I should see "requests need approval"
+
+    Scenario: Displaying pending reqeusts for the current account on the dashboard
+      Given There are two pending days off
+      And There are two pending days off for another account
+      When I am on the dashboard
+      Then I should see "2"
+      And I should see "requests need approval"
+

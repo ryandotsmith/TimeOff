@@ -11,7 +11,7 @@ Feature: Creating a new account
     And I fill in "password" with "password"
     And I fill in "password confirmation" with "password"
     And I press "submit"
-    Then I should see "wonderset"
+    Then I should see "Account Administration"
     And I should see "Settings"
 
   Scenario: Creating a new account with company name that is already in use

@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe "trivial" do
-  it "should build the assoc" do
+  it "should build the user association" do
     user    = Factory(:user)
     dayoff = Factory(:dayoff,:user => user)
     dayoff.should be_valid

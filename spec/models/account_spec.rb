@@ -7,6 +7,16 @@ describe Account do
       Factory.build(:account).should_not be_valid
     end
   end
+  describe "associations" do
+    context "with daysoff" do
+      it "should scope queries to daysoff which belong to an account" do
+        user   = Factory(:user)
+        account = Factory(:account)
+        dayoff  = account.daysoff.create(Factory.attributes_for(:dayoff,:user => user))
+        account.daysoff.should eql([dayoff])
+      end
+    end
+  end
   describe "callbacks" do
     context "after create" do
       it "should set owner" do

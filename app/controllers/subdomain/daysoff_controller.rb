@@ -10,6 +10,7 @@ class Subdomain::DaysoffController < ApplicationController
     @user   = current_user
     @dayoff = @user.daysoff.build(params[:dayoff]) 
     respond_to do |wants|
+      @dayoff.account = @account
       if @dayoff.save
         flash[:notice] = 'Request submitted! Supervisors have been notified.'
         wants.html { redirect_to subdomain_account_url(@account,@account) }
