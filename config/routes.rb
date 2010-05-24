@@ -9,5 +9,6 @@ ActionController::Routing::Routes.draw do |map|
     account.resources :accounts, :only => [:show,:edit,:update], :as => 'account-details'
     account.resources :users, :has_many => :daysoff
     account.resource  :user_session, :only => [:new,:create,:destroy]
+    account.resources :pages, :controller => 'pages', :only => [:show]
   end
 end

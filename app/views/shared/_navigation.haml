@@ -1,5 +1,6 @@
 %ul#nav
-  %li= link_to 'calendar', '#'
+  - if current_user
+    %li= link_to 'calendar', '#'
   - if @account and current_user and current_user == @account.owner
     %li= link_to 'dashboard', subdomain_account_url(@account,@account)
     %li 

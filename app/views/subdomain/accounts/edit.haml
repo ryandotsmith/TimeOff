@@ -1,7 +1,8 @@
 - content_for :block_head do
   %h2 Settings
   %ul
-    %li= @account.subdomain
+    %li= link_to '&larr; back to dashboard', subdomain_account_url(@account,@account)
+
 
 - if current_user == @account.owner
   %h3 Account Administration
