@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   private
 
     def load_account
-      @account = current_user.account
+      @account = current_user.account if current_user
     end
 
     def current_user_session
