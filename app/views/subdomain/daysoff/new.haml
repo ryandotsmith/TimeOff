@@ -7,7 +7,7 @@
 - form_for @dayoff , :url => subdomain_user_daysoff_url(@account,@user) do |form|
 
   %p
-    = form.error_messages
+    = form.error_messages :class => 'message errormsg'
 
   %p
     = form.label :begin_time, 'Start Day'

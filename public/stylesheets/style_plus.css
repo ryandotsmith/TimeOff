@@ -1,0 +1,20 @@
+.block .block_content table.messages {
+  border-collapse: collapse;
+  margin: 0 auto; }
+
+.block .block_content table.messages tr {
+  background-color: #fbfbfb; }
+
+.block .block_content table.messages th {
+  text-align: center;
+  color: #008ee8;
+  font-size: 3em;
+  border-bottom: none;
+  border-top: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd; }
+
+.block .block_content table.messages td {
+  font-size: 0.9em;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd; }

@@ -538,6 +538,14 @@ a:hover {
 	color: #e3302c;
 	}
 	
+.block .message.errormsg li {
+        background: none;
+        list-style:circle;
+        padding-left:0;
+}
+.block .message.errormsg p {
+        color:#454545;
+}
 .block .message.success {
 	border: 1px solid #bfde84;
 	background: #edfbd8 url(/images/theme/success.gif) 12px 12px no-repeat;
