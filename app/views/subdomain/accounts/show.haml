@@ -4,3 +4,10 @@
     %li= "Welcome Back #{current_user.name}"
 
 = link_to 'request days off', new_subdomain_user_dayoff_url(@account,current_user)
+
+- account_messages(current_user) do |message|
+  .message_box
+    %h4= message.body
+    %span= message.title
+  
+

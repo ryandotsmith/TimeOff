@@ -16,3 +16,4 @@ Feature: Requesting Days Off
     And I fill in "message" with "need some time off"
     When I press "submit"
     Then I should see "Request submitted! Supervisors have been notified."
+    And I should see "1 request pending approval"
