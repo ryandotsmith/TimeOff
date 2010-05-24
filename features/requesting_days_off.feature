@@ -7,7 +7,6 @@ Feature: Requesting Days Off
     Given an account exists with a subdomain of "wonderset"
     And I am signed in as an employee of "wonderset"
 
-  @wip
   Scenario: Requesting a single day off
     Given I am on the dashboard
     When I follow "request days off"

@@ -55,3 +55,8 @@ if defined?(ActiveRecord::Base)
   rescue LoadError => ignore_if_database_cleaner_not_present
   end
 end
+
+MONDAY_THIS_YEAR = Date.new(2010,1,4)#monday
+TUESDAY          = Date.new(2010,1,5)#monday
+FRIDAY           = Date.new(2010,1,8)#monday
+
