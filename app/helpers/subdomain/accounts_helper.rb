@@ -1,5 +1,5 @@
 module Subdomain::AccountsHelper
-  def account_messages(user)
+  def account_messages(account,user)
     messages = []
 
     data = user.pending_requests.length
@@ -8,7 +8,7 @@ module Subdomain::AccountsHelper
     message.body  = data
     messages << message
 
-    data = @account.daysoff.pending.count
+    data = account.daysoff.pending.count
     message = NotificationMessage.new
     message.title = requests_needs(data) + " approval"
     message.body  = data

@@ -5,10 +5,10 @@
 
 %table.messages
   %tr
-    - account_messages(current_user) do |message|
+    - account_messages(@account,current_user) do |message|
       %th= message.body
   %tr
-    - account_messages(current_user) do |message|
+    - account_messages(@account,current_user) do |message|
       %td= message.title
 
 %br
