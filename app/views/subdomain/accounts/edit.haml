@@ -3,7 +3,6 @@
   %ul
     %li= link_to '&larr; back to dashboard', subdomain_account_url(@account,@account)
 
-
 - if current_user == @account.owner
   %h3 Account Administration
   = link_to 'add user', new_subdomain_user_path(@account)
