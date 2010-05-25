@@ -1,4 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
+  map.calendar '/calendar/:year/:month', :controller => 'calendar', :action => 'index', :year => Time.zone.now.year, :month => Time.zone.now.month
   map.subdomain :www, :namespace => nil, :name => 'system' do |www|
     www.root      :controller => 'pages', :action => 'show', :id => 'index'
     www.resources :accounts, :only => [:new, :create]
