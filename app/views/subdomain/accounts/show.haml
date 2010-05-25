@@ -6,7 +6,7 @@
 %table.messages
   %tr
     - account_messages(@account,current_user) do |message|
-      %th= message.body
+      %th{:alt => message.alt}= message.body
   %tr
     - account_messages(@account,current_user) do |message|
       %td= message.title

@@ -1,30 +1,36 @@
-- content_for :block_head do
+- content_for :left_head do
   %h2 New Day Off Request
-  %ul
-    %li= link_to '&larr; back to dashboard', subdomain_account_url(@account,@account)
 
+- content_for :right_head do
+  %h2 Calendar
 
-- form_for @dayoff , :url => subdomain_user_daysoff_url(@account,@user) do |form|
+- content_for :left_body do
+  - form_for @dayoff , :url => subdomain_user_daysoff_url(@account,@user) do |form|
 
-  %p
-    = form.error_messages :class => 'message errormsg'
+    %p
+      = form.error_messages :class => 'message errormsg'
 
-  %p
-    = form.label :begin_time, 'Start Day'
-    = form.date_select :begin_time, :class => 'text small'
+    %p
+      = form.radio_button :leave_type, 'half'
+      = label :leave_type_half, 'Half Day'
+      = form.radio_button :leave_type, 'whole', :checked => true
+      = label :leave_type_whole, 'Whole Day'
+      = form.radio_button :leave_type, 'many'
+      = label :leave_type_many, 'Many Days'
 
-  %p
-    = form.label :end_time, 'End Day'
-    = form.date_select :end_time, :class => 'text small'
+    %p
+      = form.label :begin_time, 'Start Day'
+      = form.date_select :begin_time
 
-  %p
-    = radio_button :dayoff, :leave_type, 'half'
-    = radio_button :dayoff, :leave_type, 'whole'
-    = radio_button :dayoff, :leave_type, 'many'
+    %p
+      = form.label :end_time, 'End Day'
+      = form.date_select :end_time
 
-  %p
-    = form.label :description, 'Message'
-    = form.text_area :description
+    %p
+      = form.label :description, 'Message'
+      = form.text_area :description, :class => 'text'
 
-  %p
-    = form.submit 'submit', :class => 'submit small'
+    %p
+      = form.submit 'submit', :class => 'submit small'
+      \-
+      = link_to 'cancel', subdomain_account_url(@account,@account)

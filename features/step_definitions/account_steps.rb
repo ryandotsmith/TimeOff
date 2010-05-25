@@ -33,3 +33,7 @@ When /^I navigate to the "([^\"]*)" account signing page$/ do |subdomain|
   visit new_subdomain_user_session_url(account)
 end
 
+When /^I should see message "([^\"]*)"$/ do |alt|
+  response.should have_tag("th[alt=#{alt}]")
+end
+

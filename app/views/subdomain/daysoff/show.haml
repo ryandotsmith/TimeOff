@@ -6,3 +6,9 @@
   has
   = @dayoff.user.get_remaining_dayoff_time[:vacation]
   days remaining 
+
+%p
+  - form_for @dayoff, :url => subdomain_user_dayoff_url(@account,@dayoff.user,@dayoff) do |form|
+    = hidden_field_tag :approved,true
+    = form.submit 'approve', :class => 'medium submit'
+

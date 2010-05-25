@@ -95,8 +95,7 @@ class Dayoff < ActiveRecord::Base
   end
 
   def approve( current_user )
-    Delayed::Job.enqueue(GcalPusher.new(self.id))
-    self.reviewed_by = current_user.login
+    self.reviewed_by = current_user.name
     self.reviewed_on = DateTime.now
     self.state       = 1
     self.save!

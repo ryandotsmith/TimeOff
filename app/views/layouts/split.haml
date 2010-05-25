@@ -1,0 +1,35 @@
+!!!
+%html{ :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "Content-Type" }
+    %title Time Off
+    = render :partial => 'shared/js_and_css'
+  %body
+    #hld
+      .wrapper
+        #header
+          .hdrl
+          .hdrr
+          %h1= link_to 'Time Off', subdomain_root_url("www")
+          = render :partial => 'shared/navigation'
+          = render :partial => 'shared/session'
+        .block.small.left
+          .block_head
+            .bheadl
+            .bheadr
+            = yield :left_head
+          .block_content
+            = render :partial => 'shared/flash', :locals => {:flash => flash}
+            = yield :left_body
+          .bendl
+          .bendr
+        .block.small.right
+          .block_head
+            .bheadl
+            .bheadr
+            = yield :right_head
+          .block_content
+            = yield :right_body
+          .bendl
+          .bendr
+        #footer
