@@ -11,4 +11,7 @@ Given /^I am signed in$/ do
   click_button("sign in")
 end
 
+Given /^There is a user with 4 vacation days remaining$/ do
+  @user = Factory(:user, :max_vacation => 4)
+end
 

@@ -13,3 +13,13 @@
 
 %br
 = link_to 'request days off', new_subdomain_user_dayoff_url(@account,current_user)
+
+
+
+%br
+%table.requests
+  - @account.daysoff.pending.each do |request|
+    %tr
+      %td= request.user.name
+      %td= request.get_length
+      %td= link_to 'approve', subdomain_user_dayoff_url(@account,request.user,request)

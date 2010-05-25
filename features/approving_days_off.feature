@@ -20,3 +20,13 @@ Feature: Approving days off
       Then I should see "2"
       And I should see "requests need approval"
 
+    @wip
+    Scenario: Approving a dayoff request
+      Given There is a user with 4 vacation days remaining
+      And The user is asking for 2 days off
+      When I go to the dashboard
+      And I follow "approve"
+      Then I should see "has 4.0 days remaining"
+      And I should see "will have 2 days remaining"
+      When I press "approve"
+      Then I should see "request approved

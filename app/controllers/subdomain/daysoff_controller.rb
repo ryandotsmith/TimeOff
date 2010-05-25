@@ -1,6 +1,11 @@
 class Subdomain::DaysoffController < ApplicationController
   before_filter :load_account
 
+  def show
+    @dayoff = Dayoff.find(params[:id])
+    @user   = current_user
+  end
+
   def new
     @user   = current_user
     @dayoff = @user.daysoff.build

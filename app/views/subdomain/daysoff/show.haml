@@ -1,0 +1,8 @@
+- content_for :block_head do
+  %h2 Request Approval
+
+%p
+  = @dayoff.user.name
+  has
+  = @dayoff.user.get_remaining_dayoff_time[:vacation]
+  days remaining 
