@@ -10,5 +10,7 @@ Feature: A dashboard for users
     And I have 2 approved vacation daysoff
     When I go to the dashboard
     Then I should see message "vacation days remaining 8.0"
+    And I should see message "etc days remaining 10.0"
+    And I should see message "personal days remaining 10.0"
     And I should see message "request needs approval 1" 
 

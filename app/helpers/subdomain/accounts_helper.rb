@@ -6,6 +6,7 @@ module Subdomain::AccountsHelper
     message = NotificationMessage.new
     message.title = "#{pluralize(data,'request').split(" ").last} pending approval"
     message.body  = data
+    message.intended_for_admin!
     messages << message
 
     data = account.daysoff.pending.count
@@ -14,11 +15,13 @@ module Subdomain::AccountsHelper
     message.body  = data
     messages << message
 
-    data = user.get_remaining_dayoff_time[:vacation]
-    message = NotificationMessage.new
-    message.title = "vacation days remaining"
-    message.body  = data
-    messages << message
+    [:vacation, :personal, :etc].each do |type|
+      data = user.get_remaining_dayoff_time[type]
+      message = NotificationMessage.new
+      message.title = "#{type} days remaining"
+      message.body  = data
+      messages << message
+    end
 
     messages.each {|m| yield m }
   end

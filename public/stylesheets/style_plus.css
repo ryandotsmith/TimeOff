@@ -5,6 +5,16 @@
 .block .block_content table.messages tr {
   background-color: #fbfbfb; }
 
+.block .block_content table.messages th.admin {
+  border-top: 0.5px solid #b55f10;
+  border-left: 0.5px solid #b55f10;
+  border-right: 0.5px solid #b55f10; }
+
+.block .block_content table.messages td.admin {
+  border-bottom: 0.5px solid #b55f10;
+  border-left: 0.5px solid #b55f10;
+  border-right: 0.5px solid #b55f10; }
+
 .block .block_content table.messages th {
   text-align: center;
   color: #008ee8;

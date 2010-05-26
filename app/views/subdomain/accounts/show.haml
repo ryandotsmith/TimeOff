@@ -6,10 +6,12 @@
 %table.messages
   %tr
     - account_messages(@account,current_user) do |message|
-      %th{:alt => message.alt}= message.body
+      %th{:alt => message.alt, :class => message.intended_for}
+        = message.body
   %tr
     - account_messages(@account,current_user) do |message|
-      %td= message.title
+      %td{:class => message.intended_for}
+        = message.title
 
 %br
 = link_to 'request days off', new_subdomain_user_dayoff_url(@account,current_user)
