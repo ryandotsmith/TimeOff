@@ -1,12 +1,12 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe Dayoff do
-  describe "json representations" do
-    it "should accommodate fullcalendar format" do
-      date = DateTime.now
-      dayoff = Factory(:dayoff, :description => 'fullcal',:begin_time => date, :end_time => date +1.day)
-      json_string = "{\"title\":\"fullcal\",\"start\":\"2010-05-26T07:30:00Z\",\"end\":\"2010-05-27T17:00:00Z\"}"
-      dayoff.to_fullcalendar_json.should eql(json_string)
+  describe "full calendar formatting" do
+    it "should return a hash of attributes required by the full calendar lib" do
+      date = Time.now
+      dayoff = Factory(:dayoff,:leave_length => 'whole', :begin_time => date)
+      hash = {:title=>"Ryan Smith", :start=>dayoff.begin_time.iso8601, :end=>dayoff.end_time.iso8601, :allDay=>true}
+      dayoff.to_fullcalendar_format.should eql(hash)
     end
   end
 end

@@ -11,8 +11,8 @@ Feature: Requesting Days Off
     Given I am on the dashboard
     When I follow "request days off"
     And I select "December 25, 2008" as the "start day" date
-    And I choose "dayoff_leave_type_whole"
+    And I choose "dayoff_leave_length_whole"
     And I fill in "message" with "need some time off"
     When I press "submit"
     Then I should see "Request submitted! Supervisors have been notified."
-    And I should see "1 request pending approval"
+    And I should see message "request pending approval 1"

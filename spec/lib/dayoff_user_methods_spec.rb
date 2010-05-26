@@ -55,7 +55,6 @@ describe DayoffUserMethods do
       end
 
       it "should return the number of days taken on dayoff" do
-
         ordered_dictionary = Dictionary.new
         ordered_dictionary[:etc] = 6.0
         ordered_dictionary[:personal] = 0
@@ -63,7 +62,6 @@ describe DayoffUserMethods do
         @user.daysoff.length.should eql( 3 )
         @user.get_total_dayoff_time.should eql( 9.0 )
         @user.get_taken_dayoff_time.should == ordered_dictionary
-
       end
       
       it "should return a hash of daysoff with the number of days the user has taken" do

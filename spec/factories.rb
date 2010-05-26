@@ -8,6 +8,9 @@ Factory.define :user do |u|
   u.last_name             {"Smith"               }
   u.password              {"password"            }
   u.password_confirmation {"password"            }
+  u.max_vacation          { 10.0                 }
+  u.max_personal          { 10.0                 }
+  u.max_etc               { 10.0                 }
 end
 
 Factory.define :account do |account|

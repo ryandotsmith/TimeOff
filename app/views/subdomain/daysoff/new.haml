@@ -15,12 +15,12 @@
       = form.error_messages :class => 'message errormsg'
 
     %p
-      = form.radio_button :leave_type, 'half'
-      = label :leave_type_half, 'Half Day'
-      = form.radio_button :leave_type, 'whole', :checked => true
-      = label :leave_type_whole, 'Whole Day'
-      = form.radio_button :leave_type, 'many'
-      = label :leave_type_many, 'Many Days'
+      = form.radio_button :leave_length, 'half'
+      = label :leave_length_half, 'Half Day'
+      = form.radio_button :leave_length, 'whole', :checked => true
+      = label :leave_length_whole, 'Whole Day'
+      = form.radio_button :leave_length, 'many'
+      = label :leave_length_many, 'Many Days'
 
     %p
       = form.label :begin_time, 'Start Day'

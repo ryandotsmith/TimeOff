@@ -36,4 +36,3 @@ end
 When /^I should see message "([^\"]*)"$/ do |alt|
   response.should have_tag("th[alt=#{alt}]")
 end
-

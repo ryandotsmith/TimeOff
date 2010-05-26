@@ -83,7 +83,7 @@ class Dayoff < ActiveRecord::Base
   end
  
   def whole?
-    type == 'whole'
+    leave_length == 'whole'
   end
 
   def pending?
@@ -159,12 +159,17 @@ class Dayoff < ActiveRecord::Base
     array
   end
 
-  def to_fullcalendar_json
+  def to_fullcalendar_format
     {
-      :title => self.description, 
+      :title => self.to_s, 
       :start => self.begin_time.iso8601, 
       :end => self.end_time.iso8601,
-      :allDay => true
+      :allDay => self.whole?
     }
   end
+
+  def to_s
+    user.name 
+  end
+
 end

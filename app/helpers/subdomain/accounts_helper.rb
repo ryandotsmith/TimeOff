@@ -14,6 +14,12 @@ module Subdomain::AccountsHelper
     message.body  = data
     messages << message
 
+    data = user.get_remaining_dayoff_time[:vacation]
+    message = NotificationMessage.new
+    message.title = "vacation days remaining"
+    message.body  = data
+    messages << message
+
     messages.each {|m| yield m }
   end
 
