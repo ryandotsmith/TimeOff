@@ -1,6 +1,5 @@
 class Dayoff < ActiveRecord::Base
 
-  has_event_calendar :start_at_field  => 'begin_time', :end_at_field => 'end_time'
   alias_attribute :name, :description
   # 0.1875 != 0.5 , nevertheless, these calculations were decided
   # to be accurate based upon our business logic. 
