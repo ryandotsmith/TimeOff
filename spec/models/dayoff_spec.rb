@@ -1,5 +1,22 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
+describe Dayoff do
+  describe "json representations" do
+    it "should accommodate fullcalendar format" do
+      date = DateTime.now
+      dayoff = Factory(:dayoff, :description => 'fullcal',:begin_time => date, :end_time => date +1.day)
+      json_string = "{\"title\":\"fullcal\",\"start\":\"2010-05-26T07:30:00Z\",\"end\":\"2010-05-27T17:00:00Z\"}"
+      dayoff.to_fullcalendar_json.should eql(json_string)
+    end
+  end
+end
+
+
+
+
+
+
+
 describe "trivial" do
   it "should build the user association" do
     user    = Factory(:user)
@@ -239,8 +256,7 @@ describe "adjust for half or whole days" do
 end #end describe
 
 describe "should return specific data sets" do
-
-    describe "get dayoffs statistics for all users" do
+  describe "get dayoffs statistics for all users" do
     before(:each) do      
       date = MONDAY_THIS_YEAR
       @user_one       = Factory(:user)
@@ -299,9 +315,6 @@ describe "should return specific data sets" do
       sum = 0
       @user_one.daysoff.each {|h| sum += h.included_dates().length }
       sum.should == ( 6.0 )
-    end
-    it "calculates available leave for all users" do
-    # this is handled by the user model.
     end
   end
 end

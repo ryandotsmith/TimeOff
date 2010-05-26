@@ -51,6 +51,18 @@ class Dayoff < ActiveRecord::Base
     ["etc","personal","vacation"]  
   end
 
+  def self.get_pending
+    Dayoff.find_all_by_state(0).to_a
+  end
+  
+  def self.update_calendar( dayoff_input, action )
+    dayoff = Dayoff.find( dayoff_input.id )
+    dayoff.push_to_calendar if
+      action.to_sym == :push
+    dayoff.delete_from_calendar if
+      action.to_sym == :delete
+  end
+
   def prohibit_time_travel
     errors.add_to_base "Time travel is strictly prohibited! Correct ending date." if
       !begin_time.nil? and end_time < begin_time
@@ -70,16 +82,8 @@ class Dayoff < ActiveRecord::Base
     self.description = Sanitize.clean( self.description )
   end
  
-  def self.get_pending
-    Dayoff.find_all_by_state(0).to_a
-  end
-  
-  def self.update_calendar( dayoff_input, action )
-    dayoff = Dayoff.find( dayoff_input.id )
-    dayoff.push_to_calendar if
-      action.to_sym == :push
-    dayoff.delete_from_calendar if
-      action.to_sym == :delete
+  def whole?
+    type == 'whole'
   end
 
   def pending?
@@ -155,4 +159,12 @@ class Dayoff < ActiveRecord::Base
     array
   end
 
+  def to_fullcalendar_json
+    {
+      :title => self.description, 
+      :start => self.begin_time.iso8601, 
+      :end => self.end_time.iso8601,
+      :allDay => true
+    }
+  end
 end

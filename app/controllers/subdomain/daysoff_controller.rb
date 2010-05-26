@@ -2,6 +2,14 @@ class Subdomain::DaysoffController < ApplicationController
   before_filter :load_account
   layout 'split', :only => [:new]
 
+  def index
+    @daysoff = @account.daysoff.approved  
+    respond_to do |wants|
+      @daysoff.map!(&:to_fullcalendar_json)
+      wants.js { render :text =>  @daysoff.to_json}
+    end
+  end
+
   def show
     @dayoff = Dayoff.find(params[:id])
     @user   = current_user
