@@ -4,6 +4,8 @@
 - content_for :right_head do
   %h2 Calendar
 
+- content_for :right_body do
+
 - content_for :left_body do
   - form_for @dayoff , :url => subdomain_user_daysoff_url(@account,@user) do |form|
 
