@@ -1,4 +1,5 @@
 class Account < ActiveRecord::Base
+  include DayoffUserMethods
   has_friendly_id :subdomain
   has_many :users
   has_many :daysoff
