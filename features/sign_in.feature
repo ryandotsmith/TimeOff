@@ -9,19 +9,18 @@ Feature: Signing in
 
   Scenario: Signing in with an account that has been provisioned for me
     Given I am on the account sign in page
-    When I fill in "email" with "ryan@aol.com"
-    And I fill in "password" with "password"
+    When I fill in "Email" with "ryan@aol.com"
+    And I fill in "Password" with "password"
     And I press "sign in"
     Then I should see "Welcome Back Ryan Smith"
     And I should see "wonderset"
 
-  @wip
   Scenario: Signing in to an account with a user that does not belong to the account
     Given an account exists with a subdomain of "tft"
     And an account has been provisioned with email "ryan@test.com" and password "password"
     When I navigate to the "wonderset" account signing page
-    And I fill in "email" with "ryan@test.com"
-    And I fill in "password" with "password"
+    And I fill in "Email" with "ryan@test.com"
+    And I fill in "Password" with "password"
     And I press "sign in"
     Then I should see "Welcome Back Ryan Smith"
     And I should see "tft"

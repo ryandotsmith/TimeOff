@@ -34,5 +34,5 @@ When /^I navigate to the "([^\"]*)" account signing page$/ do |subdomain|
 end
 
 When /^I should see message "([^\"]*)"$/ do |alt|
-  response.should have_tag("th[alt=#{alt}]")
+  page.should have_no_content(alt)
 end

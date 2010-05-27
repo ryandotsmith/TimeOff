@@ -10,21 +10,21 @@ Feature: Approving days off
     Scenario: Displaying pending requests on the dashboard
       Given There are two pending days off
       When I am on the dashboard
-      And I should see message "requests need approval 2"
+      And I should see message "2 requests need approval"
 
     Scenario: Displaying pending reqeusts for the current account on the dashboard
       Given There are two pending days off
       And There are two pending days off for another account
       When I am on the dashboard
-      And I should see message "requests need approval 2"
+      And I should see message "2 requests need approval"
 
     Scenario: Approving a dayoff request
       Given There is a user with 4 vacation days remaining
       And The user is asking for 2 days off
       When I go to the dashboard
-      Then I should see message "request needs approval 1"
+      Then I should see message "1 request needs approval"
       When I follow "approve"
       Then I should see "has 4.0 days remaining"
       When I press "approve"
       Then I should see "request updated" 
-      And I should see message "requests need approval 0"
+      And I should see message "0 requests need approval"
