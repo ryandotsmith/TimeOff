@@ -13,12 +13,14 @@ gem 'facets',             '2.5.0', :require => 'facets/dictionary'
 gem 'ruby-debug'
 gem 'hoptoad_notifier'
 
-group :test do
-  gem "factory_girl"
+group :test,:cucumber do
+  gem 'factory_girl'
   gem 'rspec',             '1.3.0' 
   gem 'rspec-rails',       '1.3.2' 
-  gem 'cucumber-rails',    '0.3.0' 
-  gem 'database_cleaner',  '0.5.0' 
-  gem 'webrat',            '0.7.0' 
+  gem 'cucumber'
+  gem 'cucumber-rails'
+  gem 'capybara'
+  gem 'culerity'
+  gem 'celerity', :require => nil # JRuby only. Make it available but don't require it in any environment.
 end
 

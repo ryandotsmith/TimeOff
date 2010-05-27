@@ -15,13 +15,14 @@ Feature: Signing in
     Then I should see "Welcome Back Ryan Smith"
     And I should see "wonderset"
 
+  @wip
   Scenario: Signing in to an account with a user that does not belong to the account
-    Given an account exists with a subdomain of "test"
+    Given an account exists with a subdomain of "tft"
     And an account has been provisioned with email "ryan@test.com" and password "password"
     When I navigate to the "wonderset" account signing page
     And I fill in "email" with "ryan@test.com"
     And I fill in "password" with "password"
     And I press "sign in"
     Then I should see "Welcome Back Ryan Smith"
-    And I should see "test"
-    And I should see "please bookmark test for future sign in"
+    And I should see "tft"
+    And I should see "please bookmark tft for future sign in"

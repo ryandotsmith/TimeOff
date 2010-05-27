@@ -9,7 +9,6 @@ Feature: Requesting Days Off
     Given I am on the dashboard
     When I follow "request days off"
 
-  @wip
   Scenario: Requesting a half day off
     Given I choose "dayoff_leave_length_half"
     And I select "December 25, 2008" as the "start day" date

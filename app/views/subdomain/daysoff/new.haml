@@ -21,7 +21,6 @@
       = label :leave_length_whole, 'Whole Day'
       = form.radio_button :leave_length, 'many'
       = label :leave_length_many, 'Many Days'
-
     %p
       = form.label :begin_time, 'Start Day'
       = form.date_select :begin_time
@@ -29,6 +28,14 @@
     %p
       = form.label :end_time, 'End Day'
       = form.date_select :end_time
+
+    %p
+      = form.radio_button :leave_type, 'vacation'
+      = label :leave_type_vacation, 'Vacation'
+      = form.radio_button :leave_type, 'personal', :checked => true
+      = label :leave_type_personal, 'Personal'
+      = form.radio_button :leave_type, 'etc'
+      = label :leave_type_etc, 'Other'
 
     %p
       = form.label :description, 'Message'
