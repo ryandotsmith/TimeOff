@@ -11,9 +11,9 @@ Feature: Requesting Days Off
 
   Scenario: Requesting a half day off
     Given I choose "dayoff_leave_length_half"
-    And I select "December 25, 2008" as the "start day" date
+    And I select "December 25, 2008" as the "dayoff_begin_time" date
     And I choose "dayoff_leave_type_vacation"
-    And I fill in "message" with "need a half day off"
+    And I fill in "Message" with "need a half day off"
     When I press "submit"
     Then I should see "Request submitted! Supervisors have been notified."
     And I should see message "request pending approval 1"
@@ -21,9 +21,9 @@ Feature: Requesting Days Off
 
   Scenario: Requesting a single day off
     Given I choose "dayoff_leave_length_whole"
-    And I select "December 25, 2008" as the "start day" date
+    And I select "December 25, 2008" as the "dayoff_begin_time" date
     And I choose "dayoff_leave_type_vacation"
-    And I fill in "message" with "need some time off"
+    And I fill in "Message" with "need some time off"
     When I press "submit"
     Then I should see "Request submitted! Supervisors have been notified."
     And I should see message "request pending approval 1"

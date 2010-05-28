@@ -8,8 +8,8 @@ Feature: Provisioning useres for accounts
     And I am signed in as the account owner
     When I go to the account edit page
     And I follow "add user"
-    And I fill in "email" with "this.ryansmith@gmail.com"
-    And I fill in "first name" with "Ryan"
-    And I fill in "last name" with "Smith"
+    And I fill in "Email" with "this.ryansmith@gmail.com"
+    And I fill in "First Name" with "Ryan"
+    And I fill in "Last Name" with "Smith"
     And I press "add"
     Then I should see "a new user was added to your account"
