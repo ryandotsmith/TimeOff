@@ -3,3 +3,5 @@
     = current_user.to_s
     |
     = link_to 'sign out', user_session_path, :method => :delete
+  - else
+    = link_to 'sign in', new_user_session_path

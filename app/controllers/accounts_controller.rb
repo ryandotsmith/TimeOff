@@ -19,7 +19,7 @@ class AccountsController < ApplicationController
     @account = Account.new( params[:account] )
     respond_to do |wants|
       if @account.save 
-        UserSession.create(@account.owner,true)
+        UserSession.create!(@account.owner,true)
         wants.html { redirect_to edit_account_url(@account)}
       else
         wants.html { render :action => 'new',:layout => 'split' }

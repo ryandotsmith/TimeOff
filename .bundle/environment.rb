@@ -174,9 +174,9 @@ end
 module Bundler
   ENV_LOADED   = true
   LOCKED_BY    = '0.9.25'
-  FINGERPRINT  = "ff502260ea8d5dbc71540ba8da027e9d63834fe3"
+  FINGERPRINT  = "b77d0e91257c314eeeef45a9fcd9bf0da7e42053"
   HOME         = '/Users/ryandotsmith/.bundle/ruby/1.8/bundler'
-  AUTOREQUIRES = {:test=>[["culerity", false], ["capybara", false], ["cucumber", false], ["cucumber-rails", false], ["launchy", false], ["rspec", false], ["rspec-rails", false], ["ruby-debug", false]], :default=>[["authlogic", false], ["facets/dictionary", true], ["factory_girl", false], ["formtastic", false], ["friendly_id", false], ["haml", false], ["hoptoad_notifier", false], ["pg", false], ["rails", false], ["sanitize", false]], :cucumber=>[["culerity", false], ["capybara", false], ["cucumber", false], ["cucumber-rails", false], ["launchy", false], ["rspec", false], ["rspec-rails", false], ["ruby-debug", false]]}
+  AUTOREQUIRES = {:test=>[["culerity", false], ["capybara", false], ["cucumber", false], ["cucumber-rails", false], ["factory_girl", false], ["launchy", false], ["rspec", false], ["rspec-rails", false], ["ruby-debug", false]], :default=>[["authlogic", false], ["facets/dictionary", true], ["formtastic", false], ["friendly_id", false], ["haml", false], ["hoptoad_notifier", false], ["pg", false], ["rails", false], ["sanitize", false]], :cucumber=>[["culerity", false], ["capybara", false], ["cucumber", false], ["cucumber-rails", false], ["factory_girl", false], ["launchy", false], ["rspec", false], ["rspec-rails", false], ["ruby-debug", false]], :development=>[["ruby-debug", false]]}
   SPECS        = [
         {:load_paths=>["/Users/ryandotsmith/.bundle/ruby/1.8/gems/rake-0.8.7/lib"], :loaded_from=>"/Users/ryandotsmith/.bundle/ruby/1.8/specifications/rake-0.8.7.gemspec", :name=>"rake"},
         {:load_paths=>["/Users/ryandotsmith/.bundle/ruby/1.8/gems/activesupport-2.3.8/lib"], :loaded_from=>"/Users/ryandotsmith/.bundle/ruby/1.8/specifications/activesupport-2.3.8.gemspec", :name=>"activesupport"},

@@ -9,7 +9,10 @@ gem 'friendly_id',        '>= 2.2.7'
 gem 'sanitize'
 gem 'facets',             '2.5.0', :require => 'facets/dictionary'
 gem 'hoptoad_notifier'
-gem "factory_girl"
+
+group :test,:cucumber,:development do
+  gem 'ruby-debug'
+end
 
 group :test,:cucumber do
   gem 'cucumber'
@@ -21,6 +24,5 @@ group :test,:cucumber do
   gem 'factory_girl'
   gem 'rspec',             '1.3.0' 
   gem 'rspec-rails',       '1.3.2' 
-  gem 'ruby-debug'
 end
 

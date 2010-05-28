@@ -31,36 +31,9 @@ class Dayoff < ActiveRecord::Base
              :conditions => ['user_id like ?', "%#{user.id}%"], :order => 'user_id'
   end
  
-  def self.get_leave_ratio
-    max   = User.get_total_dayoff_time()
-    taken = Dayoff.get_taken_leave()
-    max / taken
-  end
-
-  def self.get_taken_leave()
-    sum = 0.0
-    Dayoff.find(:all).each do |dayoff|
-      if dayoff.state == 1
-        sum += dayoff.get_length()
-      end
-    end
-    sum
-  end
-    
+   
   def self.get_dayoff_types
     ["etc","personal","vacation"]  
-  end
-
-  def self.get_pending
-    Dayoff.find_all_by_state(0).to_a
-  end
-  
-  def self.update_calendar( dayoff_input, action )
-    dayoff = Dayoff.find( dayoff_input.id )
-    dayoff.push_to_calendar if
-      action.to_sym == :push
-    dayoff.delete_from_calendar if
-      action.to_sym == :delete
   end
 
   def prohibit_time_travel

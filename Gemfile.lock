@@ -4,23 +4,24 @@ dependencies:
     group: 
     - :test
     - :cucumber
-    version: ">= 0"
-  pg: 
-    group: 
-    - :default
+    - :development
     version: ">= 0"
   rails: 
     group: 
     - :default
     version: ~> 2.3.5
-  haml: 
+  pg: 
     group: 
     - :default
-    version: ">= 2.2.17"
+    version: ">= 0"
   authlogic: 
     group: 
     - :default
     version: ">= 0"
+  haml: 
+    group: 
+    - :default
+    version: ">= 2.2.17"
   celerity: 
     group: 
     - :test
@@ -33,20 +34,15 @@ dependencies:
     - :test
     - :cucumber
     version: = 1.3.0
-  formtastic: 
-    group: 
-    - :default
-    version: ">= 0.9.7"
   rspec-rails: 
     group: 
     - :test
     - :cucumber
     version: = 1.3.2
-  cucumber-rails: 
+  formtastic: 
     group: 
-    - :test
-    - :cucumber
-    version: ">= 0"
+    - :default
+    version: ">= 0.9.7"
   factory_girl: 
     group: 
     - :test
@@ -56,7 +52,17 @@ dependencies:
     group: 
     - :default
     version: ">= 2.2.7"
+  cucumber-rails: 
+    group: 
+    - :test
+    - :cucumber
+    version: ">= 0"
   culerity: 
+    group: 
+    - :test
+    - :cucumber
+    version: ">= 0"
+  cucumber: 
     group: 
     - :test
     - :cucumber
@@ -65,16 +71,11 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
-  cucumber: 
-    group: 
-    - :test
-    - :cucumber
-    version: ">= 0"
   sanitize: 
     group: 
     - :default
     version: ">= 0"
-  launchy: 
+  capybara: 
     group: 
     - :test
     - :cucumber
@@ -85,7 +86,7 @@ dependencies:
     version: = 2.5.0
     require: 
     - facets/dictionary
-  capybara: 
+  launchy: 
     group: 
     - :test
     - :cucumber
@@ -173,7 +174,7 @@ specs:
     version: 0.10.3
 - sanitize: 
     version: 1.2.1
-hash: ff502260ea8d5dbc71540ba8da027e9d63834fe3
+hash: b77d0e91257c314eeeef45a9fcd9bf0da7e42053
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org

@@ -5,7 +5,7 @@ class DaysoffController < ApplicationController
   def index
     @daysoff = @account.daysoff.approved  
     respond_to do |wants|
-      @daysoff.map!(&:to_fullcalendar_json)
+      @daysoff.map!(&:to_fullcalendar_format)
       wants.js { render :text =>  @daysoff.to_json}
     end
   end

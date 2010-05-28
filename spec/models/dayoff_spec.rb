@@ -304,13 +304,6 @@ describe "should return specific data sets" do
       @user_two.save
     end
 
-    it "calculated used leave days for all users" do
-      # dayoff_one and holiday_two belong to same user, the begin and end dates 
-      # are the same for both dayoffs, therefore only two days get counted. 
-      #
-      # The other two days of leave come from dayoff_four which belongs to user_two
-      Dayoff.get_taken_leave.should eql( 9.0 )
-    end#it
     it "should calulate daysoff taken by single user" do
       sum = 0
       @user_one.daysoff.each {|h| sum += h.included_dates().length }

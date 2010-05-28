@@ -9,3 +9,4 @@ Feature: Signing Out
     When I am signed in
     And I am on account page
     When I follow "sign out"
+    Then I should see "Goodbye"

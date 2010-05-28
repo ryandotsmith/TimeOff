@@ -12,6 +12,8 @@
             .bheadl
             .bheadr
             %h2 Sign In
+            %ul
+              %li= link_to "&larr; main page", root_url
           .block_content
             = render :partial => 'shared/flash', :locals => {:flash => flash}
             = yield
