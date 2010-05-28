@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  include AccountMethods
 
   helper :all
   protect_from_forgery 
@@ -12,6 +11,10 @@ class ApplicationController < ActionController::Base
   
 
   private
+
+    def current_account
+      @account ||= Account.find_by_subdomain(params[:id])
+    end
 
     def load_account
       @account = current_user.account if current_user
@@ -31,7 +34,7 @@ class ApplicationController < ActionController::Base
       unless current_user
         store_location
         flash[:notice] = "You must be logged in to access this page"
-        redirect_to new_subdomain_user_session_url(current_account)
+        redirect_to new_user_session_url
         return false
       end
     end
@@ -40,11 +43,11 @@ class ApplicationController < ActionController::Base
       if current_user
         store_location
         flash[:notice] = "You must be logged out to access this page"
-        redirect_to subdomain_account_url(current_account,current_account)
+        redirect_to current_user.account
         return false
       end
     end
-    
+
     def store_location
       session[:return_to] = request.request_uri
     end

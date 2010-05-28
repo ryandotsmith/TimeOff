@@ -1,0 +1,27 @@
+- content_for :block_head do
+  %h2= @account.subdomain
+  %ul
+    %li= "Welcome Back #{current_user.name}"
+
+%table.messages
+  %tr
+    - account_messages(@account,current_user) do |message|
+      %th{:alt => message.alt, :class => message.intended_for}
+        = message.body
+  %tr
+    - account_messages(@account,current_user) do |message|
+      %td{:class => message.intended_for}
+        = message.title
+
+%br
+= link_to 'request days off', new_user_dayoff_url(current_user)
+
+
+
+%br
+%table.requests
+  - @account.daysoff.pending.each do |request|
+    %tr
+      %td= request.user.name
+      %td= request.get_length
+      %td= link_to 'approve',request

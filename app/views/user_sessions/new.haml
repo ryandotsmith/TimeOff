@@ -1,0 +1,11 @@
+- form_for @user_session, :url => user_session_url do |session|
+  %p
+    = session.label :email
+    %br
+    = session.text_field :email, :class => 'text'
+  %p
+    = session.label :password
+    %br
+    = session.password_field :password, :class => 'text'
+  %p
+    = session.submit 'sign in', :class => 'submit'

@@ -1,15 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
-  map.subdomain :www, :namespace => nil, :name => 'system' do |www|
-    www.root      :controller => 'pages', :action => 'show', :id => 'index'
-    www.resources :accounts, :only => [:new, :create]
-  end
+  map.root :controller => 'pages', :action => 'show', :id => 'index'
 
-  map.subdomain :model => :account, :name => 'subdomain' do |account|
-    account.root :controller => 'user_sessions', :action => 'new' 
-    account.resources :accounts, :only => [:show,:edit,:update], :as => 'account-details'
-    account.resources :users, :has_many => :daysoff
-    account.resource  :user_session, :only => [:new,:create,:destroy]
-    account.resources :pages, :controller => 'pages', :only => [:show]
-    account.calendar '/calendar/:year/:month', :controller => 'calendar', :action => 'index', :year => Time.zone.now.year, :month => Time.zone.now.month
+  map.resources :pages, :controller => 'pages', :only => [:show]
+  map.resource :user_session
+
+  map.resources :accounts, :shallow => true do |accounts|
+    accounts.resources :daysoff
+    accounts.resources :users, :has_many => :daysoff
+    accounts.calendar '/calendar/:year/:month', :controller => 'calendar', :action => 'index', :year => Time.zone.now.year, :month => Time.zone.now.month
   end
 end

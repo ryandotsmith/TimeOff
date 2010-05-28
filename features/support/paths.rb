@@ -9,15 +9,15 @@ module NavigationHelpers
     case page_name
     
     when /the home\s?page/
-      system_root_path
+      root_path
     when /the account sign in page/
-      new_subdomain_user_session_url(@account,@account)
+      new_user_session_url()
     when /the account edit page/
-      edit_subdomain_account_url(@account,@account)
+      edit_account_url(@account)
     when /the dashboard/
-      subdomain_account_url(@account,@account)
+      account_url(@account)
     when /account page/
-      subdomain_account_url(@account,@account)
+      account_url(@account)
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

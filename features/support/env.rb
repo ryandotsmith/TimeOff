@@ -59,4 +59,3 @@ end
 MONDAY_THIS_YEAR = Date.new(2010,1,4)#monday
 TUESDAY          = Date.new(2010,1,5)#monday
 FRIDAY           = Date.new(2010,1,8)#monday
-
