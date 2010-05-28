@@ -1,2 +1,0 @@
-module Subdomain::DaysoffHelper
-end

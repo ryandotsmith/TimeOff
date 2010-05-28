@@ -47,15 +47,15 @@ dependencies:
     - :test
     - :cucumber
     version: ">= 0"
-  friendly_id: 
-    group: 
-    - :default
-    version: ">= 2.2.7"
   factory_girl: 
     group: 
     - :test
     - :cucumber
     version: ">= 0"
+  friendly_id: 
+    group: 
+    - :default
+    version: ">= 2.2.7"
   culerity: 
     group: 
     - :test
@@ -74,10 +74,6 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
-  subdomain_routes: 
-    group: 
-    - :default
-    version: ">= 0.3.1"
   launchy: 
     group: 
     - :test
@@ -177,9 +173,7 @@ specs:
     version: 0.10.3
 - sanitize: 
     version: 1.2.1
-- subdomain_routes: 
-    version: 0.3.1
-hash: 9bfced9696307edeaa614835f5f448a566b2c1eb
+hash: ff502260ea8d5dbc71540ba8da027e9d63834fe3
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org

@@ -1,0 +1,11 @@
+- form_for [@account,@user] do |form|
+  = form.label :email
+  = form.text_field :email
+
+  = form.label :first_name, "First Name"
+  = form.text_field :first_name
+
+  = form.label :last_name, "Last Name"
+  = form.text_field :last_name
+
+  = form.submit "add"

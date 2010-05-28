@@ -2,4 +2,4 @@
   - if current_user
     = current_user.to_s
     |
-    = link_to 'sign out', subdomain_user_session_url(current_account), :method => :delete
+    = link_to 'sign out', user_session_path, :method => :delete

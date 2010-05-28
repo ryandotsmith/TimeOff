@@ -7,7 +7,8 @@ Feature: Creating a new account
   Scenario: Creating a new account and then updating company info
     Given I am on the home page
     When I follow "Sign Up" 
-    And I fill in "Company Name" with "wonderset"
+    Then I should see "3 reasons why you'll love Time Off"
+    When I fill in "Company Name" with "wonderset"
     And I fill in "Email" with "ryan@wonderset.com"
     And I fill in "Password" with "password"
     And I fill in "Password Confirmation" with "password"

@@ -174,9 +174,9 @@ end
 module Bundler
   ENV_LOADED   = true
   LOCKED_BY    = '0.9.25'
-  FINGERPRINT  = "9bfced9696307edeaa614835f5f448a566b2c1eb"
+  FINGERPRINT  = "ff502260ea8d5dbc71540ba8da027e9d63834fe3"
   HOME         = '/Users/ryandotsmith/.bundle/ruby/1.8/bundler'
-  AUTOREQUIRES = {:test=>[["culerity", false], ["capybara", false], ["cucumber", false], ["cucumber-rails", false], ["factory_girl", false], ["launchy", false], ["rspec", false], ["rspec-rails", false], ["ruby-debug", false]], :default=>[["authlogic", false], ["facets/dictionary", true], ["formtastic", false], ["friendly_id", false], ["haml", false], ["hoptoad_notifier", false], ["pg", false], ["rails", false], ["sanitize", false], ["subdomain_routes", false]], :cucumber=>[["culerity", false], ["capybara", false], ["cucumber", false], ["cucumber-rails", false], ["factory_girl", false], ["launchy", false], ["rspec", false], ["rspec-rails", false], ["ruby-debug", false]]}
+  AUTOREQUIRES = {:test=>[["culerity", false], ["capybara", false], ["cucumber", false], ["cucumber-rails", false], ["launchy", false], ["rspec", false], ["rspec-rails", false], ["ruby-debug", false]], :default=>[["authlogic", false], ["facets/dictionary", true], ["factory_girl", false], ["formtastic", false], ["friendly_id", false], ["haml", false], ["hoptoad_notifier", false], ["pg", false], ["rails", false], ["sanitize", false]], :cucumber=>[["culerity", false], ["capybara", false], ["cucumber", false], ["cucumber-rails", false], ["launchy", false], ["rspec", false], ["rspec-rails", false], ["ruby-debug", false]]}
   SPECS        = [
         {:load_paths=>["/Users/ryandotsmith/.bundle/ruby/1.8/gems/rake-0.8.7/lib"], :loaded_from=>"/Users/ryandotsmith/.bundle/ruby/1.8/specifications/rake-0.8.7.gemspec", :name=>"rake"},
         {:load_paths=>["/Users/ryandotsmith/.bundle/ruby/1.8/gems/activesupport-2.3.8/lib"], :loaded_from=>"/Users/ryandotsmith/.bundle/ruby/1.8/specifications/activesupport-2.3.8.gemspec", :name=>"activesupport"},
@@ -219,7 +219,6 @@ module Bundler
         {:load_paths=>["/Library/Ruby/Gems/1.8/gems/ruby-debug-base-0.10.3/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/ruby-debug-base-0.10.3.gemspec", :name=>"ruby-debug-base"},
         {:load_paths=>["/Library/Ruby/Gems/1.8/gems/ruby-debug-0.10.3/cli"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/ruby-debug-0.10.3.gemspec", :name=>"ruby-debug"},
         {:load_paths=>["/Users/ryandotsmith/.bundle/ruby/1.8/gems/sanitize-1.2.1/lib"], :loaded_from=>"/Users/ryandotsmith/.bundle/ruby/1.8/specifications/sanitize-1.2.1.gemspec", :name=>"sanitize"},
-        {:load_paths=>["/Library/Ruby/Gems/1.8/gems/subdomain_routes-0.3.1/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/subdomain_routes-0.3.1.gemspec", :name=>"subdomain_routes"},
       ].map do |hash|
     if hash[:virtual_spec]
       spec = eval(hash[:virtual_spec], TOPLEVEL_BINDING, "<virtual spec for '#{hash[:name]}'>")
