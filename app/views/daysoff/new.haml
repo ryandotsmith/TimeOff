@@ -1,8 +1,12 @@
 - content_for :left_head do
   %h2 New Day Off Request
+  %ul
+    %li= link_to "&larr; dashboard", :back
 
 - content_for :right_head do
   %h2 Calendar
+  %ul
+    %li= link_to "&larr; dashboard", :back
 
 - content_for :right_body do
   #mini_calendar

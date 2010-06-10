@@ -1,2 +1,2 @@
-default: --tags @wip:3 --wip features --format progress
+default: --tags @wip:5 --wip features --format progress --color  
 all: --format progress
