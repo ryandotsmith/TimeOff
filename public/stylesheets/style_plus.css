@@ -2,8 +2,7 @@
   float: left; }
 
 #right {
-  float: left;
-  margin: 0 0 0 50px; }
+  float: right; }
 
 .block .block_content table.messages {
   border-collapse: collapse; }

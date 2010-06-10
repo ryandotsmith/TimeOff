@@ -42,7 +42,7 @@
       %li= link_to 'list', '#list'
   #calendar.block_content.tab_content
     #calendar
-    = javascript_tag "var DAYSOFF_URL ='#{account_daysoff_url(current_user.account)}'"
+    = javascript_tag "var DAYSOFF_URL ='#{account_daysoff_path(current_user.account,:user_id => current_user.id)}'"
   #list.block_content.tab_content
     %table.daysoff
       %tr
@@ -51,7 +51,7 @@
         %th description
         %th status
       - current_user.this_years_daysoff.each do |dayoff|
-        %tr
+        %tr{:id => "dayoff_#{dayoff.id}"}
           %td= dayoff.created_at
           %td= dayoff.get_length
           %td= dayoff.description
