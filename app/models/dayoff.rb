@@ -56,6 +56,8 @@ class Dayoff < ActiveRecord::Base
  
   def status
     return 'approved' if approved?  
+    return 'denied'   if denied?  
+    return 'pending'  if pending?
   end
 
   def whole?
@@ -82,7 +84,7 @@ class Dayoff < ActiveRecord::Base
   end
 
   def deny( current_user )
-    self.reviewed_by = current_user.login
+    self.reviewed_by = current_user.name
     self.reviewed_on = DateTime.now
     self.state       = -1
     self.save!

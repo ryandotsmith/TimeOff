@@ -2,10 +2,19 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe Dayoff do
   describe "status" do
+    before(:each) {@dayoff = Factory(:dayoff,:leave_length => 'whole', :begin_time => Time.now)}
     it "should return approved if the dayoff has been approved" do
-      date   = Time.now
-      dayoff = Factory(:dayoff,:leave_length => 'whole', :begin_time => date,:state => 1)
-      dayoff.status.should eql('approved')
+      user = Factory(:user)
+      @dayoff.approve(user)
+      @dayoff.status.should eql('approved')
+    end
+    it "should return denied if the dayoff has been denied" do
+      user = Factory(:user)
+      @dayoff.deny(user)
+      @dayoff.status.should eql('denied')
+    end
+    it "should return pending if the dayoff has been created but not approved or denied" do
+      @dayoff.status.should eql('pending')
     end
   end
   describe "to string methods" do
