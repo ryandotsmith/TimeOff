@@ -1,6 +1,12 @@
+#left {
+  float: left; }
+
+#right {
+  float: left;
+  margin: 0 0 0 50px; }
+
 .block .block_content table.messages {
-  border-collapse: collapse;
-  margin: 0 auto; }
+  border-collapse: collapse; }
 
 .block .block_content table.messages tr {
   background-color: #fbfbfb; }

@@ -12,9 +12,9 @@
   - form_for @account do |form|
     = form.error_messages
     %p
-      = form.label :subdomain, "Company Name"
+      = form.label :company_name, "Company Name"
       %br
-      = form.text_field :subdomain, :class => 'text small'
+      = form.text_field :company_name, :class => 'text small'
 
     - form.fields_for :users do |user|
 

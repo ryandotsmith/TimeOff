@@ -14,7 +14,7 @@ Factory.define :user do |u|
 end
 
 Factory.define :account do |account|
-  account.subdomain        { "wonderset" }
+  account.company_name     { "wonderset" }
   account.users            { |users| [users.association(:user,:email => Factory.next(:email)) ]}
 end
 

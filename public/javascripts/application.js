@@ -7,5 +7,8 @@ $(document).ready(function() {
     },
     events: DAYSOFF_URL
   });
+  $('#calendar').fullCalendar({
+    events: DAYSOFF_URL
+  });
 });
 

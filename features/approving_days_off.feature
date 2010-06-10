@@ -4,7 +4,7 @@ Feature: Approving days off
   So that people will know if a day off is approved by managment
 
   Background:
-    Given an account exists with a subdomain of "wonderset"
+    Given an account exists with a company name of "wonderset"
     And I am signed in as the account owner
 
     Scenario: Displaying pending requests on the dashboard

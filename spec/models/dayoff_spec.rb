@@ -1,7 +1,14 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe Dayoff do
-  describe "full calendar formatting" do
+  describe "status" do
+    it "should return approved if the dayoff has been approved" do
+      date   = Time.now
+      dayoff = Factory(:dayoff,:leave_length => 'whole', :begin_time => date,:state => 1)
+      dayoff.status.should eql('approved')
+    end
+  end
+  describe "to string methods" do
     it "should return a hash of attributes required by the full calendar lib" do
       date = Time.now
       dayoff = Factory(:dayoff,:leave_length => 'whole', :begin_time => date)

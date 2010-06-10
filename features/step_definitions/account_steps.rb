@@ -1,10 +1,10 @@
-Given /^an account exists with a subdomain of "([^\"]*)"$/ do |subdomain|
-  @account = Factory(:account,:subdomain => subdomain)
+Given /^an account exists with a company name of "([^\"]*)"$/ do |company_name|
+  @account = Factory(:account,:company_name => company_name)
 end
 
 Given /^I am signed in as the account owner$/ do
   @user = @account.owner
-  visit new_user_session_url
+  visit new_user_session_path
   fill_in('user_session_email',    :with => @user.email)
   fill_in('user_session_password', :with => 'password' )
   click_button("sign in")
@@ -15,7 +15,7 @@ Given /^I am signed in as an employee of "([^\"]*)"$/ do |arg1|
   @account.users << @user
   @account.save
 
-  visit new_user_session_url
+  visit new_user_session_path
   fill_in('user_session_email',    :with => @user.email)
   fill_in('user_session_password', :with => 'password' )
   click_button("sign in")
@@ -27,7 +27,7 @@ Given /^I belong to the "([^\"]*)" account$/ do |arg1|
   @account.save
 end
 
-When /^I navigate to the "([^\"]*)" account signing page$/ do |subdomain|
+When /^I navigate to the "([^\"]*)" account signing page$/ do |company_name|
   visit new_user_session_url
 end
 

@@ -4,7 +4,7 @@ Feature: Requesting Days Off
   So that my requests are on record and can be approved by a manager
 
   Background:
-    Given an account exists with a subdomain of "wonderset"
+    Given an account exists with a company name of "wonderset"
     And I am signed in as an employee of "wonderset"
     Given I am on the dashboard
     When I follow "request days off"

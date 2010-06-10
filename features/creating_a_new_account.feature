@@ -16,7 +16,7 @@ Feature: Creating a new account
     And I should see "Account Administration"
 
   Scenario: Creating a new account with company name that is already in use
-    Given an account exists with a subdomain of "wonderset"
+    Given an account exists with a company name of "wonderset"
     And I am on the home page
     When I follow "Sign Up"
     And I fill in "Company Name" with "wonderset"

@@ -3,7 +3,7 @@ Given /^There are two pending days off$/ do
 end
 
 Given /^There are two pending days off for another account$/ do
-  account = Factory(:account,:subdomain => 'another')
+  account = Factory(:account,:company_name=> 'another')
   2.times { Factory(:dayoff, :account => account) }
 end
 

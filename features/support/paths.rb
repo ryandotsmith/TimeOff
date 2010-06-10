@@ -11,13 +11,14 @@ module NavigationHelpers
     when /the home\s?page/
       root_path
     when /the account sign in page/
-      new_user_session_url()
+      new_user_session_path()
     when /the account edit page/
-      edit_account_url(@account)
+      edit_account_path(@account)
     when /the dashboard/
-      account_url(@account)
+      account_path(@account)
     when /account page/
-      account_url(@account)
+      account_path(@account)
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

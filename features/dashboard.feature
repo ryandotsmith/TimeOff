@@ -4,7 +4,7 @@ Feature: A dashboard for users
   So that I can get a quick view of my account
 
   Scenario: Displaying this year's time off
-    Given an account exists with a subdomain of "wonderset"
+    Given an account exists with a company name of "wonderset"
     And I am signed in as an employee of "wonderset"
     And I have 1 unapproved vacation dayoff
     And I have 2 approved vacation daysoff

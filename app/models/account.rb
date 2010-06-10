@@ -1,13 +1,13 @@
 class Account < ActiveRecord::Base
   include DayoffUserMethods
-  has_friendly_id :subdomain
+  has_friendly_id :company_name
   has_many :users
   has_many :daysoff
   accepts_nested_attributes_for :users
 
-  validates_uniqueness_of :subdomain,
+  validates_uniqueness_of :company_name,
     :message => Proc.new { |account|
-      "^An account with name #{account.subdomain} already exists."
+      "^An account with name #{account.company_name} already exists."
     }
 
   after_create :set_owner!
@@ -22,11 +22,11 @@ class Account < ActiveRecord::Base
   end
 
   def to_param
-    subdomain
+    company_name 
   end
 
   def name
-    subdomain
+    company_name
   end
 
 end

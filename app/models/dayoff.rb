@@ -30,7 +30,6 @@ class Dayoff < ActiveRecord::Base
     paginate :per_page => 20, :page => page,
              :conditions => ['user_id like ?', "%#{user.id}%"], :order => 'user_id'
   end
- 
    
   def self.get_dayoff_types
     ["etc","personal","vacation"]  
@@ -55,6 +54,10 @@ class Dayoff < ActiveRecord::Base
     self.description = Sanitize.clean( self.description )
   end
  
+  def status
+    return 'approved' if approved?  
+  end
+
   def whole?
     leave_length == 'whole'
   end

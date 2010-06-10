@@ -4,7 +4,7 @@ Feature: Signing in
   So that I can ask for time off and such
 
   Background:
-    Given an account exists with a subdomain of "wonderset"
+    Given an account exists with a company name of "wonderset"
     And an account has been provisioned with email "ryan@aol.com" and password "password"
 
   Scenario: Signing in with an account that has been provisioned for me

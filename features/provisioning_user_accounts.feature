@@ -4,7 +4,7 @@ Feature: Provisioning useres for accounts
   I want to add users to my account
 
   Scenario: Adding users from the account page
-    Given an account exists with a subdomain of "wonderset"
+    Given an account exists with a company name of "wonderset"
     And I am signed in as the account owner
     When I go to the account edit page
     And I follow "add user"

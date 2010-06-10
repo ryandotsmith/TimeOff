@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   private
 
     def current_account
-      @account ||= Account.find_by_subdomain(params[:id])
+      @account ||= Account.find_by_company_name(params[:id])
     end
 
     def load_account

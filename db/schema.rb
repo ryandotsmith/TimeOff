@@ -9,10 +9,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100524214023) do
+ActiveRecord::Schema.define(:version => 20100529163700) do
 
   create_table "accounts", :force => true do |t|
-    t.string   "subdomain"
+    t.string   "company_name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "owner_id"
