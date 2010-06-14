@@ -1,6 +1,13 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe Dayoff do
+  describe "denying the dayoff" do
+    before(:each) {@dayoff = Factory(:dayoff,:leave_length => 'whole', :begin_time => Time.now)}
+    it "should create a delayed job" do
+      @dayoff.deny(Factory(:user))
+       
+    end
+  end
   describe "status" do
     before(:each) {@dayoff = Factory(:dayoff,:leave_length => 'whole', :begin_time => Time.now)}
     it "should return approved if the dayoff has been approved" do

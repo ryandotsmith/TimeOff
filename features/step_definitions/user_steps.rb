@@ -11,6 +11,13 @@ Given /^I am signed in$/ do
   click_button("sign in")
 end
 
+Given /^I sign in as someone else$/ do
+  visit new_user_session_path
+  fill_in('Email',    :with => @someone_else.email)
+  fill_in('Password', :with => @someone_else.password)
+  click_button("sign in")
+end
+
 Given /^There is a user with 4 vacation days remaining$/ do
   @user = Factory(:user, :max_vacation => 4)
 end

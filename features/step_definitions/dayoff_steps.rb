@@ -34,15 +34,15 @@ Given /^I have approved time off$/ do
 end
 
 Given /^Someone else has approved time off$/ do
-  another_user = Factory(:user)
-  @dayoff= Factory(:dayoff,:state => 1,:leave_type => 'vacation',:leave_length => 'whole',:user => another_user, :begin_time => DateTime.now + 4.days, :end_time => DateTime.now + 5.days)
+  @someone_else = Factory(:user)
+  @dayoff= Factory(:dayoff,:state => 1,:leave_type => 'vacation',:leave_length => 'whole',:user => @someone_else, :begin_time => DateTime.now + 4.days, :end_time => DateTime.now + 5.days)
   @account.daysoff << @dayoff
   @account.save
 end
 
 Given /^Someone else has pending time off$/ do
-  @another_user = Factory(:user)
-  @dayoff= Factory(:dayoff,:state => 0,:leave_type => 'vacation',:leave_length => 'whole',:user => @another_user, :begin_time => DateTime.now + 4.days, :end_time => DateTime.now + 5.days)
+  @account.users << @someone_else = Factory(:user)
+  @dayoff= Factory(:dayoff,:state => 0,:leave_type => 'vacation',:leave_length => 'whole',:user => @someone_else, :begin_time => DateTime.now + 4.days, :end_time => DateTime.now + 5.days)
   @account.daysoff << @dayoff
   @account.save
 end

@@ -8,8 +8,10 @@ gem 'friendly_id',        '>= 2.2.7'
 gem 'sanitize'
 gem 'facets',             '2.5.0', :require => 'facets/dictionary'
 gem 'hoptoad_notifier'
+gem 'delayed_job',                 :require => 'delayed_job'
 
 group :test,:cucumber,:development do
+  gem 'heroku'
   gem 'ruby-debug'
 end
 
@@ -24,4 +26,5 @@ group :test,:cucumber do
   gem 'factory_girl'
   gem 'rspec',             '1.3.0' 
   gem 'rspec-rails',       '1.3.2' 
+  gem 'email_spec'
 end
