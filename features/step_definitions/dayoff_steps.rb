@@ -40,6 +40,13 @@ Given /^Someone else has approved time off$/ do
   @account.save
 end
 
+Given /^Someone else has pending time off$/ do
+  @another_user = Factory(:user)
+  @dayoff= Factory(:dayoff,:state => 0,:leave_type => 'vacation',:leave_length => 'whole',:user => @another_user, :begin_time => DateTime.now + 4.days, :end_time => DateTime.now + 5.days)
+  @account.daysoff << @dayoff
+  @account.save
+end
+
 Then /^I should have created a dayoff$/ do
   Dayoff.count.should eql(1)
   @dayoff = Dayoff.first
@@ -55,5 +62,9 @@ end
 
 Then /^I should not see someone elses dayoff in the calendar$/ do
   Then %{I should not see "#{@dayoff.user.name}" within ".fc-day-content"}
+end
+
+Then /^I should see the request in the Pending Requests Queue$/ do
+  Then %{I should see "#{@dayoff.user.name}" within "td.name"}
 end
 

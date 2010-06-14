@@ -3,10 +3,8 @@ Feature: Calendar
   I want to have calendars
   So that I can see who has time off
 
-  Background:
-    Given an account exists with a company name of "wonderset"
-    And I am signed in as an employee of "wonderset"
-
   Scenario: Viewing a calendar on the day off request page
-    Given There is a dayoff approved for today
-    When I go to the new dayoff page
+    Given an account exists with a company name of "wonderset"
+    And I am signed in as the account owner
+    And Someone else has approved time off    
+    When I go to the account page

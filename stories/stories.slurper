@@ -1,0 +1,16 @@
+
+==
+story_type:
+  feature
+name:
+  Manager should deny time off request
+description:
+  In order to manage my team's effectiveness
+  As a manager on the requests popup 
+  I want to deny the request
+
+  - should send an email to the employee
+  - employee's account should reflect the denied request
+
+labels:
+  

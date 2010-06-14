@@ -1,12 +1,9 @@
 - content_for :block_head do
   %h2 Settings
   %ul
-    %li= link_to '&larr; back to dashboard', @account
+    %li= link_to '&larr; dashboard', @account
 
-- if current_user == @account.owner
-  %h3 Account Administration
-  = link_to 'add user', new_account_user_path(@account)
-
+= link_to 'add user', new_account_user_path(@account)
 %ul
   - @account.users.each do |user|
     %li= user.try(:to_s)

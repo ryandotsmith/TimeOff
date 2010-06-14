@@ -39,7 +39,7 @@ module DayoffUserMethods
   end
 
   def pending_requests
-    daysoff.pending
+    Dayoff.all(:conditions => {:user_id => self.id,:state => 0})
   end
 
 end

@@ -23,8 +23,8 @@ Feature: Approving days off
       And The user is asking for 2 days off
       When I go to the dashboard
       Then I should see message "1 request needs approval"
-      When I follow "approve"
+      When I follow "respond"
       Then I should see "has 4.0 days remaining"
       When I press "approve"
-      Then I should see "request updated" 
+      Then I should see "Request approved. An email has been sent to the employee." 
       And I should see message "0 requests need approval"

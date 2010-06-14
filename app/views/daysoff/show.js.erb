@@ -1,0 +1,21 @@
+<p>
+  <%= @dayoff.user.name %>
+  has
+  <%=@dayoff.user.get_remaining_dayoff_time[:vacation]%>
+  days remaining 
+</p>
+
+<p>
+  <% form_for @dayoff do |form| %>
+    <%= hidden_field_tag :approved,true %>
+    <p>
+      <%= form.submit 'approve', :class => 'submit small' %>
+    </p>
+  <% end %>
+  <% form_for @dayoff do |form| %>
+    <%= hidden_field_tag :denied,true %>
+    <p>
+      <%= form.submit 'deny', :class => 'submit small' %>
+    </p>
+  <% end %>
+</p>

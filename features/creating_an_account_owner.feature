@@ -8,4 +8,4 @@ Feature: Making the account creator the owner
     And I fill in "Password" with "password"
     And I fill in "Password Confirmation" with "password"
     And I press "submit"
-    Then I should see "Account Administration"
+    Then I should see "Settings"

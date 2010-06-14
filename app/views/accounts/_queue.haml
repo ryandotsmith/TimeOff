@@ -1,0 +1,32 @@
+.block
+  .block_head
+    .bheadl
+    .bheadr
+    %h2 Request Queue
+  .block_content
+    - if @account.daysoff.pending.count.zero?
+      %h3 No Pending Requests
+    -else
+      %table.request_queue
+        %tr
+          %th requested by
+          %th date requested
+          %th type
+          %th length
+          %th begin date
+          %th end date
+          %th description
+          %th approve
+        - @account.daysoff.pending.each do |dayoff|
+          %tr{:id => "dayoff_#{dayoff.id}"}
+            %td.name= dayoff.user.name
+            %td= dayoff.created_at
+            %td= dayoff.leave_type
+            %td= dayoff.get_length
+            %td= dayoff.begin_time
+            %td= dayoff.end_time
+            %td= dayoff.description
+            %td= link_to 'respond', dayoff, :rel => 'facebox'
+
+  .bendl
+  .bendr

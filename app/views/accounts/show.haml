@@ -23,40 +23,9 @@
   - if requests > 0
     %span= "#{requests} #{pluralize(requests,'request').split(" ").last} pending approval" 
 
+
 - if current_user.account_owner?
-  %br
-  %table.requests
-    - @account.daysoff.pending.each do |request|
-      %tr
-        %td= request.user.name
-        %td= request.get_length
-        %td= link_to 'approve',request
+  = render :partial => 'queue'
 
-.block
-  .block_head
-    .bheadl
-    .bheadr
-    %h2 History
-    %ul.tabs
-      %li= link_to 'calendar', '#calendar'
-      %li= link_to 'list', '#list'
-  #calendar.block_content.tab_content
-    #calendar
-    = javascript_tag "var DAYSOFF_URL ='#{account_daysoff_path(current_user.account,:user_id => current_user.id)}'"
-  #list.block_content.tab_content
-    %table.daysoff
-      %tr
-        %th date requested
-        %th time off requested
-        %th description
-        %th status
-      - current_user.this_years_daysoff.each do |dayoff|
-        %tr{:id => "dayoff_#{dayoff.id}"}
-          %td= dayoff.created_at
-          %td= dayoff.get_length
-          %td= dayoff.description
-          %td= dayoff.status
+= render :partial => 'history'
 
-
-  .bendl
-  .bendr
