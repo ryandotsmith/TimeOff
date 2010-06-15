@@ -12,6 +12,8 @@ class ActivationsController < ApplicationController
     @user = User.find(params[:id])
     raise Exception if @user.active?
     if @user.activate!
+      @user.update_attributes(params[:user])
+      UserSession.create!(@user,true)
       redirect_to @user.account
     else
       render :action => :new
