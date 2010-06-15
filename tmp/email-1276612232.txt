@@ -1,0 +1,41 @@
+Date: Tue, 15 Jun 2010 09:30:32 -0500
+From: Time Off System <noreply@timeoffhq.com>
+To: this.ryansmith@gmail.com
+Subject: Activate your Time Off Account
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4c178e88e9ad0_7259800e092c290
+
+
+--mimepart_4c178e88e9ad0_7259800e092c290
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> =
+
+<html>  =
+
+
+  <head>  =
+
+    <meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Ty=
+pe"  />  =
+
+  </head>  =
+
+
+  <body>  =
+
+    <p><a href=3D'http://localhost:3000/register/niaySsaGYHFP_eJLmzcw'>ac=
+tivate account</a></p>
+  </body> =
+
+
+</html> =
+
+
+
+--mimepart_4c178e88e9ad0_7259800e092c290--
+
+================================================================================

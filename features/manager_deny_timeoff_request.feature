@@ -21,7 +21,6 @@ Feature: Manager should deny time off request
     And I press "deny"
     Then the employee should receive an email
 
-  @wip
   Scenario: Reflect denial in employee's account page
     Given I am on the account page
     When I follow "respond"

@@ -1,0 +1,20 @@
+- content_for :right_head do
+  %h2 Help
+- content_for :right_body do
+  %p You are activating your account. This is what will happen:
+
+- content_for :left_head do
+  %h2 Confirm Your Account
+
+- content_for :left_body do
+  - form_for @user, :url => activate_path(@user.id) do |form|
+    %p
+      = form.label :password, "Password"
+      %br
+      = form.password_field :password , :class => 'text small'
+    %p
+      = form.label :password_confirmation, "Password Confirmation"
+      %br
+      = form.password_field :password_confirmation, :class => 'text small'
+    %p
+      = form.submit "submit", :class => 'submit small'

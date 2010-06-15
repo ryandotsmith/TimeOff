@@ -11,6 +11,7 @@ Factory.define :user do |u|
   u.max_vacation          { 10.0                 }
   u.max_personal          { 10.0                 }
   u.max_etc               { 10.0                 }
+  u.active                { true                 }
 end
 
 Factory.define :account do |account|

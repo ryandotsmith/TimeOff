@@ -8,6 +8,8 @@ Feature: Creating a new account
     When I follow "Sign Up" 
     Then I should see "3 reasons why you'll love Time Off"
     When I fill in "Company Name" with "wonderset"
+    And I fill in "First Name" with "Ryan"
+    And I fill in "Last Name" with "Smith"
     And I fill in "Email" with "ryan@wonderset.com"
     And I fill in "Password" with "password"
     And I fill in "Password Confirmation" with "password"

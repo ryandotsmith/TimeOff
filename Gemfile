@@ -12,6 +12,7 @@ gem 'delayed_job',                 :require => 'delayed_job'
 
 group :test,:cucumber,:development do
   gem 'heroku'
+  gem 'taps'
   gem 'ruby-debug'
 end
 

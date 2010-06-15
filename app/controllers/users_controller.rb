@@ -12,7 +12,8 @@ class UsersController < ApplicationController
     @user = @account.users.build( params[:user] )
     @user.generate_one_time_password!
     if @user.save
-      flash[:notice] = "a new user was added to your account"
+      @user.deliver_activation_link
+      flash[:notice] = "The new user will receieve an activation email."
       redirect_to edit_account_url(@account)
     else
       render :action => :new

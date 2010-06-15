@@ -174,9 +174,9 @@ end
 module Bundler
   ENV_LOADED   = true
   LOCKED_BY    = '0.9.25'
-  FINGERPRINT  = "9af17175d3aa8d0d59d5f36140462ad8714df09e"
+  FINGERPRINT  = "c670e95860ecacc449909c949ac7c2530f835697"
   HOME         = '/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/bundler'
-  AUTOREQUIRES = {:development=>[["heroku", false], ["ruby-debug", false]], :test=>[["culerity", false], ["capybara", false], ["cucumber", false], ["cucumber-rails", false], ["database_cleaner", false], ["email_spec", false], ["factory_girl", false], ["launchy", false], ["heroku", false], ["rspec", false], ["rspec-rails", false], ["ruby-debug", false]], :default=>[["authlogic", false], ["delayed_job", true], ["facets/dictionary", true], ["friendly_id", false], ["haml", false], ["hoptoad_notifier", false], ["pg", false], ["rails", false], ["sanitize", false]], :cucumber=>[["culerity", false], ["capybara", false], ["cucumber", false], ["cucumber-rails", false], ["database_cleaner", false], ["email_spec", false], ["factory_girl", false], ["launchy", false], ["heroku", false], ["rspec", false], ["rspec-rails", false], ["ruby-debug", false]]}
+  AUTOREQUIRES = {:development=>[["heroku", false], ["ruby-debug", false], ["taps", false]], :test=>[["culerity", false], ["capybara", false], ["cucumber", false], ["cucumber-rails", false], ["database_cleaner", false], ["email_spec", false], ["factory_girl", false], ["launchy", false], ["heroku", false], ["rspec", false], ["rspec-rails", false], ["ruby-debug", false], ["taps", false]], :default=>[["authlogic", false], ["delayed_job", true], ["facets/dictionary", true], ["friendly_id", false], ["haml", false], ["hoptoad_notifier", false], ["pg", false], ["rails", false], ["sanitize", false]], :cucumber=>[["culerity", false], ["capybara", false], ["cucumber", false], ["cucumber-rails", false], ["database_cleaner", false], ["email_spec", false], ["factory_girl", false], ["launchy", false], ["heroku", false], ["rspec", false], ["rspec-rails", false], ["ruby-debug", false], ["taps", false]]}
   SPECS        = [
         {:load_paths=>["/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@global/gems/rake-0.8.7/lib"], :loaded_from=>"/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@global/specifications/rake-0.8.7.gemspec", :name=>"rake"},
         {:load_paths=>["/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/gems/activesupport-2.3.8/lib"], :loaded_from=>"/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/specifications/activesupport-2.3.8.gemspec", :name=>"activesupport"},
@@ -224,6 +224,10 @@ module Bundler
         {:load_paths=>["/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/gems/ruby-debug-base-0.10.3/lib"], :loaded_from=>"/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/specifications/ruby-debug-base-0.10.3.gemspec", :name=>"ruby-debug-base"},
         {:load_paths=>["/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/gems/ruby-debug-0.10.3/cli"], :loaded_from=>"/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/specifications/ruby-debug-0.10.3.gemspec", :name=>"ruby-debug"},
         {:load_paths=>["/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/gems/sanitize-1.2.1/lib"], :loaded_from=>"/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/specifications/sanitize-1.2.1.gemspec", :name=>"sanitize"},
+        {:load_paths=>["/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/gems/sequel-3.12.1/lib"], :loaded_from=>"/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/specifications/sequel-3.12.1.gemspec", :name=>"sequel"},
+        {:load_paths=>["/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/gems/sinatra-1.0/lib"], :loaded_from=>"/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/specifications/sinatra-1.0.gemspec", :name=>"sinatra"},
+        {:load_paths=>["/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/gems/sqlite3-ruby-1.2.5/lib", "/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/gems/sqlite3-ruby-1.2.5/ext"], :loaded_from=>"/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/specifications/sqlite3-ruby-1.2.5.gemspec", :name=>"sqlite3-ruby"},
+        {:load_paths=>["/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/gems/taps-0.3.9/lib"], :loaded_from=>"/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/specifications/taps-0.3.9.gemspec", :name=>"taps"},
       ].map do |hash|
     if hash[:virtual_spec]
       spec = eval(hash[:virtual_spec], TOPLEVEL_BINDING, "<virtual spec for '#{hash[:name]}'>")

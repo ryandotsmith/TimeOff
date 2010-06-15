@@ -19,6 +19,7 @@ class AccountsController < ApplicationController
     @account = Account.new( params[:account] )
     respond_to do |wants|
       if @account.save 
+        @account.owner.activate!
         UserSession.create!(@account.owner,true)
         wants.html { redirect_to edit_account_url(@account)}
       else
