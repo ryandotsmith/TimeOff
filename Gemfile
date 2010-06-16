@@ -1,5 +1,6 @@
 source :gemcutter
 
+gem 'bundler'
 gem "rails", "~> 2.3.5"
 gem "pg"
 gem 'haml',               '>=2.2.17'
@@ -11,6 +12,7 @@ gem 'hoptoad_notifier'
 gem 'delayed_job',                 :require => 'delayed_job'
 
 group :test,:cucumber,:development do
+  gem 'mongrel'
   gem 'heroku'
   gem 'taps'
   gem 'ruby-debug'
