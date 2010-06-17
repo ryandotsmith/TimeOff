@@ -1,4 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
+
   map.root :controller => 'pages', :action => 'show', :id => 'index'
 
   map.resources :pages, :controller => 'pages', :only => [:show]
@@ -12,4 +13,5 @@ ActionController::Routing::Routes.draw do |map|
     accounts.resources :users, :has_many => :daysoff
     accounts.calendar '/calendar/:year/:month', :controller => 'calendar', :action => 'index', :year => Time.zone.now.year, :month => Time.zone.now.month
   end
+  HighVoltage::Routes.draw(map)
 end

@@ -29,3 +29,7 @@
 
 = render :partial => 'history'
 
+- if current_user.account_owner?
+  = render :partial => 'archive'
+
+
