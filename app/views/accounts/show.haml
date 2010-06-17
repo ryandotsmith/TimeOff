@@ -23,13 +23,18 @@
   - if requests > 0
     %span= "#{requests} #{pluralize(requests,'request').split(" ").last} pending approval" 
 
+#menu
+  %a{:href => "#queue"}   Show Queue
+  %a{:href => "#archive"} Show Archive
+  %a{:href => "#history"} Show History
 
 - if current_user.account_owner?
-  = render :partial => 'queue'
+  #queue
+    = render :partial => 'queue'
+  #archive
+    = render :partial => 'archive'
 
-= render :partial => 'history'
-
-- if current_user.account_owner?
-  = render :partial => 'archive'
+#history
+  = render :partial => 'history'
 
 

@@ -4,6 +4,11 @@
 #right {
   float: right; }
 
+#menu {
+  width: 300px;
+  clear: both;
+  margin: 10px auto 10px auto; }
+
 .block .block_content table.messages {
   border-collapse: collapse; }
 
