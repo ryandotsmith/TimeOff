@@ -1,14 +1,13 @@
 class Account < ActiveRecord::Base
+
   include DayoffUserMethods
+
   has_friendly_id :company_name
+
   has_many :users
   has_many :daysoff
-  accepts_nested_attributes_for :users
 
-  validates_uniqueness_of :company_name,
-    :message => Proc.new { |account|
-      "^An account with name #{account.company_name} already exists."
-    }
+  accepts_nested_attributes_for :users
 
   after_create :set_owner!
 

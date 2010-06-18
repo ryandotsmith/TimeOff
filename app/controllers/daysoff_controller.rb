@@ -60,4 +60,10 @@ class DaysoffController < ApplicationController
     end
   end
 
+  def destroy
+    @dayoff = Dayoff.find(params[:id])
+    DayoffMailer.deliver_deleted_message(@dayoff) if @dayoff.delete
+    redirect_to @account
+  end
+
 end

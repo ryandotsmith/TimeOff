@@ -3,7 +3,6 @@ Feature: Provisioning useres for accounts
   As an account owner
   I want to add users to my account
 
-  @wip
   Scenario: Adding users from the account page
     Given an account exists with a company name of "wonderset"
     And I am signed in as the account owner

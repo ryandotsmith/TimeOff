@@ -68,3 +68,7 @@ Then /^I should see the request in the Pending Requests Queue$/ do
   Then %{I should see "#{@dayoff.user.name}" within "td.name"}
 end
 
+When /^I follow "([^"]*)" within the dayoff row$/ do |link|
+  When %{I follow "#{link}" within "tr#dayoff_#{@dayoff.id}"}
+end
+
