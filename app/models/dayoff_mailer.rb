@@ -1,5 +1,13 @@
 class DayoffMailer < ActionMailer::Base
   
+  def approved_message(dayoff)
+    recipients dayoff.user.email
+    from "Time Off System <donotreply@timeoffhq.com>"
+    subject "Time Off Request Approved"
+    sent_on Time.now
+    body :dayoff => dayoff
+  end
+
   def denied_message(dayoff)
     recipients dayoff.user.email
     from "Time Off System <donotreply@timeoffhq.com>"
