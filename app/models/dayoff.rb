@@ -80,7 +80,7 @@ class Dayoff < ActiveRecord::Base
     self.reviewed_by = current_user.name
     self.reviewed_on = DateTime.now
     self.state       = 1
-    Delayed::Job.enqueue(DeniedDayoffMailJob.new(self.id))
+    Delayed::Job.enqueue(ApprovedDayoffMailJob.new(self.id))
     self.save!
   end
 
