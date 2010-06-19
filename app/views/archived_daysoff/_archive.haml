@@ -18,6 +18,6 @@
       %tfoot
         %tr
           %td{:id => 'place_for_more_link'}
-            = more_paginate daysoff, :path_prefix => account_archived_daysoff_path(current_user.account) 
+            = more_paginate daysoff,:content => "<span> &darr; more &darr;</span>", :path_prefix => account_archived_daysoff_path(current_user.account) 
   .bendl
   .bendr

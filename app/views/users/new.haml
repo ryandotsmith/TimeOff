@@ -1,5 +1,8 @@
 - content_for :right_head do
   %h2 Help
+  %ul
+    %li= link_to "&larr; settings", :back
+
 - content_for :right_body do
   %p You are adding a new user to you account. This is what will happen:
   %ul
@@ -10,6 +13,9 @@
 
 - content_for :left_head do
   %h2 add a new user
+  %ul
+    %li= link_to "&larr; settings", :back
+
 
 - content_for :left_body do
   - form_for [@account,@user] do |form|

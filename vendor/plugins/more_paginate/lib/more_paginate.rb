@@ -232,7 +232,7 @@ module MorePaginate
         if block_given?
           link_to concat(capture(&block)), url, options
         else
-          link_to escape_content(content), url, options
+          link_to content, url, options
         end
       end
 

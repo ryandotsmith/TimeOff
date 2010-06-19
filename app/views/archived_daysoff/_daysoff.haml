@@ -7,4 +7,4 @@
     %td= dayoff.status
     %td= link_to 'delete', dayoff, :method => 'delete'
 
-= javascript_tag "var moreLink = '#{ more_paginate daysoff, :path_prefix => account_archived_daysoff_path(current_user.account) }'"
+= javascript_tag "var moreLink = '#{ more_paginate daysoff, :content => '<span> &darr; more &darr;</span>',:path_prefix => account_archived_daysoff_path(current_user.account) }'"
