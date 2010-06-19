@@ -1,4 +1,7 @@
 - form_for @user_session, :url => user_session_url do |session|
+
+  %p= session.error_messages :class => 'message errormsg'
+
   %p
     = session.label :email
     %br

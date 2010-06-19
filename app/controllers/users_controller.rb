@@ -4,9 +4,9 @@ class UsersController < ApplicationController
   
   layout 'split', :only => [:new]
 
-  def show; @user = @current_user;        end
-  def new;  @user = @account.users.build; end
-  def edit; @user = @current_user;        end
+  def show; @user = @current_user;           end
+  def new;  @user = @account.users.build;    end
+  def edit; @user = User.find(params[:id]);  end
   
   def create
     @user = @account.users.build( params[:user] )

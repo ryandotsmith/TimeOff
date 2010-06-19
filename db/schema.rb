@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100619035510) do
+ActiveRecord::Schema.define(:version => 20100619142530) do
 
   create_table "accounts", :force => true do |t|
     t.string   "company_name"
@@ -49,6 +49,18 @@ ActiveRecord::Schema.define(:version => 20100619035510) do
 
   add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
 
+  create_table "slugs", :force => true do |t|
+    t.string   "name"
+    t.integer  "sluggable_id"
+    t.integer  "sequence",                     :default => 1, :null => false
+    t.string   "sluggable_type", :limit => 40
+    t.string   "scope"
+    t.datetime "created_at"
+  end
+
+  add_index "slugs", ["name", "sluggable_type", "sequence", "scope"], :name => "index_slugs_on_n_s_s_and_s", :unique => true
+  add_index "slugs", ["sluggable_id"], :name => "index_slugs_on_sluggable_id"
+
   create_table "users", :force => true do |t|
     t.integer  "account_id"
     t.string   "first_name"
@@ -72,7 +84,7 @@ ActiveRecord::Schema.define(:version => 20100619035510) do
     t.integer  "max_personal",        :default => 10
     t.integer  "max_vacation",        :default => 10
     t.boolean  "active"
-    t.datetime "date_of_hire"
+    t.date     "date_of_hire"
   end
 
 end

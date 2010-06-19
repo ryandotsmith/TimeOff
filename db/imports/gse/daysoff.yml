@@ -1,0 +1,2337 @@
+--- 
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-01-09 19:49:33
+    created_at: 2009-01-09 19:06:28
+    end_time: 2009-01-02 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/n42r2qu56t25hm9g4cvkqit5ik
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:15:45
+    leave_length: 
+    begin_time: 2009-01-02 07:30:00
+    id: "7"
+    leave_type: vacation
+    user_id: "6"
+    description: for wedding
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-01-27 15:22:11
+    created_at: 2009-01-26 22:41:00
+    end_time: 2009-04-10 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/ctbhj73gvmk94trfdvbngtpgno
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:15:48
+    leave_length: 
+    begin_time: 2009-04-10 07:30:00
+    id: "11"
+    leave_type: personal
+    user_id: "11"
+    description: Royals home opener
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-01-27 15:22:12
+    created_at: 2009-01-26 22:41:52
+    end_time: 2009-03-20 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/9mja33rvdju1382tsstr2p2ogo
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:15:51
+    leave_length: 
+    begin_time: 2009-03-20 07:30:00
+    id: "12"
+    leave_type: personal
+    user_id: "11"
+    description: |-
+      Special 
+      
+      
+      
+      
+      Special O Hays trip
+      
+      
+      
+      o
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-01-29 15:04:59
+    created_at: 2009-01-28 14:11:24
+    end_time: 2009-01-30 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/a48t06p55jgf730d8q4aalog34
+    action_notes: 
+    reviewed_by: csmith
+    updated_at: 2010-01-30 21:15:54
+    leave_length: 
+    begin_time: 2009-01-30 07:30:00
+    id: "14"
+    leave_type: vacation
+    user_id: "5"
+    description: personal
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-02-20 16:52:19
+    created_at: 2009-02-19 20:04:19
+    end_time: 2009-07-14 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/oqm55siqnm86u0tjse2svlb76s
+    action_notes: 
+    reviewed_by: gsmith
+    updated_at: 2010-01-30 21:15:58
+    leave_length: 
+    begin_time: 2009-07-14 07:30:00
+    id: "24"
+    leave_type: personal
+    user_id: "12"
+    description: Requesting 1/2 day in the morning to take our exchange student to KCI Airport. Her plane leaves at 9:05am. I should return shortly after noon to finish the second half of the day.
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-02-20 16:52:32
+    created_at: 2009-02-20 16:46:00
+    end_time: 2009-07-24 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/ir9kqmaes104tb231sd0o79abo
+    action_notes: 
+    reviewed_by: gsmith
+    updated_at: 2010-01-30 21:16:01
+    leave_length: 
+    begin_time: 2009-07-20 07:30:00
+    id: "25"
+    leave_type: vacation
+    user_id: "12"
+    description: Family vacation July 20 through and including July 24th
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-02-22 04:08:44
+    created_at: 2009-02-20 17:24:43
+    end_time: 2009-03-13 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/fkm8ub51ut0msvbro3shjlbcr8
+    action_notes: 
+    reviewed_by: rsmith
+    updated_at: 2010-01-30 21:16:04
+    leave_length: 
+    begin_time: 2009-03-13 07:30:00
+    id: "26"
+    leave_type: vacation
+    user_id: "14"
+    description: vacation and  bussiness
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-02-25 20:26:04
+    created_at: 2009-02-25 20:13:08
+    end_time: 2009-02-27 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/7grq0b3516upcol71c57invg70
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:16:07
+    leave_length: 
+    begin_time: 2009-02-27 07:30:00
+    id: "27"
+    leave_type: personal
+    user_id: "8"
+    description: need to leave 2pm on Friday 2/27/09
+    state: "-1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-02-25 20:17:02
+    created_at: 2009-02-25 20:14:29
+    end_time: 2009-03-20 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/j9i76oe5vo14kvbsn747sjcqsk
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:16:10
+    leave_length: 
+    begin_time: 2009-03-20 07:30:00
+    id: "28"
+    leave_type: vacation
+    user_id: "8"
+    description: would like March 20th off for 10 year anniversary
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-03-01 01:09:12
+    created_at: 2009-02-25 20:16:04
+    end_time: 2009-02-25 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/gsdgk9sjtjcklpg1po3kqvkgdk
+    action_notes: 
+    reviewed_by: rsmith
+    updated_at: 2010-01-30 21:16:12
+    leave_length: 
+    begin_time: 2009-02-25 07:30:00
+    id: "29"
+    leave_type: personal
+    user_id: "2"
+    description: half day off to take care of sick wife
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-03-03 16:17:21
+    created_at: 2009-03-03 13:05:49
+    end_time: 2009-03-02 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/47a5ebnu95lkm8voajcad8lp7c
+    action_notes: 
+    reviewed_by: csmith
+    updated_at: 2010-01-30 21:16:15
+    leave_length: 
+    begin_time: 2009-03-02 07:30:00
+    id: "30"
+    leave_type: personal
+    user_id: "5"
+    description: Sick day
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-03-03 20:26:04
+    created_at: 2009-03-03 20:07:13
+    end_time: 2009-02-26 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/bb3iggd4rrvgv3a38p4ohpf9l0
+    action_notes: 
+    reviewed_by: csmith
+    updated_at: 2010-01-30 21:16:18
+    leave_length: 
+    begin_time: 2009-02-26 07:30:00
+    id: "31"
+    leave_type: personal
+    user_id: "2"
+    description: sick
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-03-12 12:38:34
+    created_at: 2009-03-12 12:19:19
+    end_time: 2009-04-08 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/33poqvook5av4vvm1t3mt4qaa8
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:16:21
+    leave_length: 
+    begin_time: 2009-04-06 07:30:00
+    id: "32"
+    leave_type: vacation
+    user_id: "6"
+    description: Phoenix trip
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-03-23 18:10:51
+    created_at: 2009-03-23 17:56:25
+    end_time: 2009-03-27 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/6oinu2a7rv2ia655h6rjcvegb4
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:16:24
+    leave_length: 
+    begin_time: 2009-03-27 07:30:00
+    id: "33"
+    leave_type: personal
+    user_id: "13"
+    description: Just taking a three day weekend. Time for a break.
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-03-24 20:18:17
+    created_at: 2009-03-24 19:59:24
+    end_time: 2009-03-24 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/jm4mcchk8hrhkvuhdgbu69hgas
+    action_notes: 
+    reviewed_by: rsmith
+    updated_at: 2010-01-30 21:16:27
+    leave_length: 
+    begin_time: 2009-03-24 07:30:00
+    id: "35"
+    leave_type: personal
+    user_id: "2"
+    description: wife&#39;s surgury (edit, originally requested whole day).
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-03-24 20:08:25
+    created_at: 2009-03-24 20:01:46
+    end_time: 2009-03-18 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/afmvc0tqo7pn64di01qd5s873o
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:16:30
+    leave_length: 
+    begin_time: 2009-03-18 07:30:00
+    id: "36"
+    leave_type: personal
+    user_id: "11"
+    description: Ben&#39;s surgery
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-04-03 17:17:37
+    created_at: 2009-03-30 17:29:27
+    end_time: 2009-04-24 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/j94aglctml3ari27jlfuiel1ks
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:16:33
+    leave_length: 
+    begin_time: 2009-04-24 07:30:00
+    id: "38"
+    leave_type: personal
+    user_id: "13"
+    description: Parents Coming in Town from Alburquerque
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-04-09 13:09:30
+    created_at: 2009-04-03 19:15:27
+    end_time: 2009-07-24 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/ofd837flmv6m18tmt9ppiit74o
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:16:36
+    leave_length: 
+    begin_time: 2009-07-20 07:30:00
+    id: "40"
+    leave_type: vacation
+    user_id: "15"
+    description: Family vacation
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-04-09 13:09:37
+    created_at: 2009-04-09 12:52:13
+    end_time: 2009-04-17 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/o94me438bul7buq472v23k7h3o
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:16:39
+    leave_length: 
+    begin_time: 2009-04-17 07:30:00
+    id: "41"
+    leave_type: personal
+    user_id: "8"
+    description: "need to come in about noon on Friday April 17th -- closing "
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-04-17 14:41:02
+    created_at: 2009-04-09 17:00:25
+    end_time: 2009-04-17 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/gh57s3u09i8rlahfnp6e00jiro
+    action_notes: 
+    reviewed_by: csmith
+    updated_at: 2010-01-30 21:16:42
+    leave_length: 
+    begin_time: 2009-04-17 07:30:00
+    id: "42"
+    leave_type: personal
+    user_id: "5"
+    description: Closing on property
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-04-28 21:14:14
+    created_at: 2009-04-23 21:23:04
+    end_time: 2009-06-05 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/jlao4r39dnrbo5dju6v8883abg
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:16:45
+    leave_length: 
+    begin_time: 2009-06-05 07:30:00
+    id: "47"
+    leave_type: vacation
+    user_id: "13"
+    description: Weekend Branson Trip
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-04-28 21:36:09
+    created_at: 2009-04-28 21:27:16
+    end_time: 2009-07-09 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/apru6p0dq0u7l0aflnkps94p1c
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:16:48
+    leave_length: 
+    begin_time: 2009-07-09 07:30:00
+    id: "50"
+    leave_type: personal
+    user_id: "12"
+    description: Picking up our exchange student from Belguim. She is landing at KCI and I should spend the entire day with her and Teresa.
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-05-01 19:57:44
+    created_at: 2009-04-30 21:44:05
+    end_time: 2009-10-09 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/vn12ui5a10jalbucl4pbkniv58
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:16:51
+    leave_length: 
+    begin_time: 2009-10-05 07:30:00
+    id: "51"
+    leave_type: personal
+    user_id: "6"
+    description: California and Colorado visits
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-05-01 19:57:44
+    created_at: 2009-05-01 19:47:06
+    end_time: 2009-10-02 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/nha580dpqrhfik77gjquffqo5k
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:16:54
+    leave_length: 
+    begin_time: 2009-10-01 07:30:00
+    id: "52"
+    leave_type: vacation
+    user_id: "11"
+    description: Dayoff with Jon to Chicago
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-05-01 21:02:14
+    created_at: 2009-05-01 20:58:50
+    end_time: 2009-05-21 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/5ndactaobuftij5b7fri9rp7ns
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:16:57
+    leave_length: 
+    begin_time: 2009-05-21 07:30:00
+    id: "55"
+    leave_type: personal
+    user_id: "8"
+    description: Kindergarten graduation
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-05-06 14:40:32
+    created_at: 2009-05-06 14:40:16
+    end_time: 2009-05-06 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/2mu94v58j7tbrdmdf43qd3491k
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:17:00
+    leave_length: 
+    begin_time: 2009-05-06 07:30:00
+    id: "58"
+    leave_type: personal
+    user_id: "8"
+    description: need to leave at 11am today.  need to watch our children so my wife can do a field trip in which our children are not allowed to go with her.
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-05-07 13:18:08
+    created_at: 2009-05-06 22:09:30
+    end_time: 2009-05-19 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/2qdtiuu4gv6f0ttc3el3h39ogk
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:17:03
+    leave_length: 
+    begin_time: 2009-05-19 07:30:00
+    id: "60"
+    leave_type: personal
+    user_id: "11"
+    description: Field trip with Ben
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-05-11 21:39:15
+    created_at: 2009-05-11 21:29:17
+    end_time: 2009-08-07 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/8vukldhu2bjm9uspleh4at5ous
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:17:06
+    leave_length: whole
+    begin_time: 2009-08-07 07:30:00
+    id: "64"
+    leave_type: personal
+    user_id: "13"
+    description: 15 Year Anniversary Weekend
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-05-18 00:26:50
+    created_at: 2009-05-11 21:31:28
+    end_time: 2009-09-11 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/hfuqhl3vrfg0icuc9n4483vhcc
+    action_notes: 
+    reviewed_by: rsmith
+    updated_at: 2010-01-30 21:17:09
+    leave_length: whole
+    begin_time: 2009-09-11 07:30:00
+    id: "65"
+    leave_type: vacation
+    user_id: "13"
+    description: Trip to Williamsburg VA
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-05-11 21:39:19
+    created_at: 2009-05-11 21:37:01
+    end_time: 2009-09-18 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/uk5bmebv5kb5fuqmrc7g7p3mgo
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:17:12
+    leave_length: many
+    begin_time: 2009-09-14 07:30:00
+    id: "66"
+    leave_type: vacation
+    user_id: "13"
+    description: Trip to Williamsburg VA
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-05-12 15:33:01
+    created_at: 2009-05-12 12:33:42
+    end_time: 2009-05-11 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/702fmhn91dgmbg1hihhl10ckdg
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:17:15
+    leave_length: whole
+    begin_time: 2009-05-11 07:30:00
+    id: "67"
+    leave_type: personal
+    user_id: "5"
+    description: personal
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-05-18 13:28:58
+    created_at: 2009-05-13 20:44:17
+    end_time: 2009-09-25 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/fjo2ercsftsmgo4nks5ebdemd0
+    action_notes: 
+    reviewed_by: csmith
+    updated_at: 2010-01-30 21:17:18
+    leave_length: many
+    begin_time: 2009-09-21 07:30:00
+    id: "69"
+    leave_type: vacation
+    user_id: "2"
+    description: Family vacation - would like to squeeze in a visit to Robert Wagner @ Dole as well....not sure yet if I will have time
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-05-18 13:29:00
+    created_at: 2009-05-14 20:27:41
+    end_time: 2009-06-12 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/smc79dbbrjbvdt4i3t6vp1mtfk
+    action_notes: change from etc. to vacation
+    reviewed_by: csmith
+    updated_at: 2010-01-30 21:17:21
+    leave_length: many
+    begin_time: 2009-06-08 07:30:00
+    id: "70"
+    leave_type: vacation
+    user_id: "5"
+    description: vacation
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-05-18 13:42:01
+    created_at: 2009-05-18 13:41:50
+    end_time: 2009-06-25 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/odli2sm6fv5ii28oqv89knchl0
+    action_notes: ""
+    reviewed_by: csmith
+    updated_at: 2010-01-30 21:17:24
+    leave_length: many
+    begin_time: 2009-06-23 07:30:00
+    id: "72"
+    leave_type: vacation
+    user_id: "3"
+    description: Greg and I will be gone
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-05-22 14:09:10
+    created_at: 2009-05-22 14:05:26
+    end_time: 2009-08-17 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/p97e6a0p15qvm57s4cedsnb4do
+    action_notes: was also gone on 8/14
+    reviewed_by: rsmith
+    updated_at: 2010-01-30 21:17:28
+    leave_length: whole
+    begin_time: 2009-08-17 07:30:00
+    id: "73"
+    leave_type: vacation
+    user_id: "2"
+    description: "Going to WI for a wedding on the 16th.  "
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-06-01 20:32:51
+    created_at: 2009-05-25 15:53:30
+    end_time: 2009-08-24 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/pvc71o431ttejniknedjrboq3g
+    action_notes: 
+    reviewed_by: gsmith
+    updated_at: 2010-01-30 21:17:32
+    leave_length: many
+    begin_time: 2009-08-20 07:30:00
+    id: "74"
+    leave_type: personal
+    user_id: "15"
+    description: going to Bristol Nascar race in Bristol, Tn
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-06-01 20:32:48
+    created_at: 2009-05-27 14:14:27
+    end_time: 2009-09-18 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/bt1d39419qv9snsuf21qeuo73g
+    action_notes: 
+    reviewed_by: gsmith
+    updated_at: 2010-01-30 21:17:34
+    leave_length: half
+    begin_time: 2009-09-18 07:30:00
+    id: "75"
+    leave_type: etc
+    user_id: "2"
+    description: I would like to take an additional day either before my vacation or after (9/18/2009 or 9/28/2009), whatever works best to go visit Robert Wagner @Dole in Los Angeles.  Requesting one of these days to be considered NOT vacation/personal days.  Scott will be out of the office on 9/18 as well.  Either day could work with our schedule.
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-05-27 19:28:01
+    created_at: 2009-05-27 19:24:53
+    end_time: 2009-06-02 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/7c0eho5e214oc8h4fcvfaaheco
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:17:37
+    leave_length: half
+    begin_time: 2009-06-02 07:30:00
+    id: "76"
+    leave_type: vacation
+    user_id: "14"
+    description: KC Peterbilt day
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-05-27 19:28:03
+    created_at: 2009-05-27 19:25:32
+    end_time: 2009-06-25 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/m9r14i84qs5jnbfmh36p6ns2co
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:17:41
+    leave_length: many
+    begin_time: 2009-06-22 07:30:00
+    id: "77"
+    leave_type: vacation
+    user_id: "14"
+    description: Personal time
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-06-01 20:32:47
+    created_at: 2009-06-01 18:37:13
+    end_time: 2009-06-04 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/5i4lgidncptrq5haunsgtf036g
+    action_notes: 
+    reviewed_by: gsmith
+    updated_at: 2010-01-30 21:17:44
+    leave_length: half
+    begin_time: 2009-06-04 07:30:00
+    id: "78"
+    leave_type: personal
+    user_id: "13"
+    description: Would like to leave early for Branson Trip assuming no business conflicts
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-06-19 13:41:34
+    created_at: 2009-06-19 13:27:07
+    end_time: 2009-07-10 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/712sh7r8qdp0fqi85qki43cr1g
+    action_notes: Vaction time approved. changed from etc. to vacation
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:17:50
+    leave_length: many
+    begin_time: 2009-07-07 07:30:00
+    id: "81"
+    leave_type: vacation
+    user_id: "8"
+    description: going to Branson, MO &amp;
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-06-29 16:30:13
+    created_at: 2009-06-29 15:16:06
+    end_time: 2009-09-28 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/mlb23mls64fvil0allsgh8hmpo
+    action_notes: "i hope this is allright! "
+    reviewed_by: rsmith
+    updated_at: 2010-01-30 21:17:53
+    leave_length: whole
+    begin_time: 2009-09-28 07:30:00
+    id: "82"
+    leave_type: vacation
+    user_id: "2"
+    description: flying back from CA with family.
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-07-20 17:47:50
+    created_at: 2009-07-16 18:04:03
+    end_time: 2009-07-15 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/mm968sq99vijks3shni7dhg988
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:17:56
+    leave_length: whole
+    begin_time: 2009-07-15 07:30:00
+    id: "88"
+    leave_type: etc
+    user_id: "5"
+    description: spider bite
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-07-20 17:47:54
+    created_at: 2009-07-20 17:25:13
+    end_time: 2009-07-14 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/pbe6so2n86knlie1tu2hv3v0js
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:17:59
+    leave_length: half
+    begin_time: 2009-07-14 07:30:00
+    id: "89"
+    leave_type: vacation
+    user_id: "6"
+    description: Piano tune
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-07-20 17:47:55
+    created_at: 2009-07-20 17:26:05
+    end_time: 2009-08-14 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/asreod3skof83p1sud8lmfkr9k
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:18:01
+    leave_length: half
+    begin_time: 2009-08-14 07:30:00
+    id: "90"
+    leave_type: vacation
+    user_id: "6"
+    description: Brother John in town
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-08-05 18:54:30
+    created_at: 2009-08-05 17:52:50
+    end_time: 2009-08-10 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/cpe93t2edjeqb1pmlnhd4csu74
+    action_notes: no problem
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:18:07
+    leave_length: half
+    begin_time: 2009-08-10 07:30:00
+    id: "92"
+    leave_type: personal
+    user_id: "12"
+    description: "Would like to take 1/2 day off on Monday August 10th. We are having friends from Hutchinson up for the entire weekend and they are not leaving until Monday late morning. "
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-08-28 19:17:06
+    created_at: 2009-08-27 04:07:50
+    end_time: 2009-08-10 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/sktt64ov3sdbm2l0bcjeg5vepc
+    action_notes: time to be reviewed ~mission trip to Africa
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:18:10
+    leave_length: whole
+    begin_time: 2009-08-10 07:30:00
+    id: "95"
+    leave_type: personal
+    user_id: "13"
+    description: Eldora IA Hail Storm
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-08-28 19:17:36
+    created_at: 2009-08-28 18:55:48
+    end_time: 2009-11-21 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/ebp2vkrn99nat60iehdd5jcatk
+    action_notes: mission trip to africa ~ need to review time
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:18:13
+    leave_length: many
+    begin_time: 2009-11-10 07:30:00
+    id: "96"
+    leave_type: vacation
+    user_id: "13"
+    description: Sudan
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-09-10 18:26:50
+    created_at: 2009-09-02 02:38:47
+    end_time: 2009-12-17 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/vfsln6o46otul22a30ugjod738
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:18:16
+    leave_length: whole
+    begin_time: 2009-12-17 07:30:00
+    id: "97"
+    leave_type: personal
+    user_id: "11"
+    description: Annual Christmas shopping day
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-09-10 18:26:57
+    created_at: 2009-09-03 19:35:41
+    end_time: 2009-09-11 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/4ip447c6aqfr8uh8dqd43g8l0k
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:18:19
+    leave_length: whole
+    begin_time: 2009-09-11 07:30:00
+    id: "98"
+    leave_type: personal
+    user_id: "5"
+    description: Adams surgery
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-10-07 02:10:54
+    created_at: 2009-09-23 21:57:07
+    end_time: 2009-10-02 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/8ethmpmik65gufv76m5734qr9o
+    action_notes: ok
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:18:21
+    leave_length: half
+    begin_time: 2009-10-02 07:30:00
+    id: "100"
+    leave_type: personal
+    user_id: "6"
+    description: need to get to the airport earlier than initially anticipated to go to California
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-09-29 21:13:55
+    created_at: 2009-09-24 01:16:27
+    end_time: 2009-10-16 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/jhj6s5mdqke082bojhuqrkebvc
+    action_notes: ok - dmp
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:18:24
+    leave_length: many
+    begin_time: 2009-10-15 07:30:00
+    id: "101"
+    leave_type: personal
+    user_id: "8"
+    description: "I need 2 days off Oct 15th &amp; 16th off. Going to Iowa. "
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-10-15 20:10:46
+    created_at: 2009-10-07 01:05:08
+    end_time: 2009-11-08 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/8gbc7iqq4ef8mgd3kvqdbjl8og
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:18:27
+    leave_length: many
+    begin_time: 2009-11-05 07:30:00
+    id: "105"
+    leave_type: personal
+    user_id: "15"
+    description: going to North Dakota to visit family
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-10-07 02:36:28
+    created_at: 2009-10-07 02:20:52
+    end_time: 2009-12-31 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/qpqeuhqr2r8m3ka8qpaqbsvr98
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:18:30
+    leave_length: many
+    begin_time: 2009-12-28 07:30:00
+    id: "106"
+    leave_type: vacation
+    user_id: "8"
+    description: going to Iowa for Christmas
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-10-07 02:36:39
+    created_at: 2009-10-07 02:21:48
+    end_time: 2010-01-03 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/n26ji29e1gpcq2tugcmvgoeqac
+    action_notes: entered as etc.
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:18:33
+    leave_length: many
+    begin_time: 2010-01-01 07:30:00
+    id: "107"
+    leave_type: vacation
+    user_id: "8"
+    description: Christmas plans in Iowa &amp; S Missouri
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-10-27 19:07:22
+    created_at: 2009-10-15 20:39:38
+    end_time: 2009-10-23 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/iio6914o956dh4gmun5dorm78c
+    action_notes: ""
+    reviewed_by: csmith
+    updated_at: 2010-01-30 21:18:36
+    leave_length: many
+    begin_time: 2009-10-22 07:30:00
+    id: "108"
+    leave_type: vacation
+    user_id: "5"
+    description: Vacation
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-10-20 21:48:54
+    created_at: 2009-10-20 21:46:30
+    end_time: 2009-11-13 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/gj97oor4bkkmnmmdv0tbio8hto
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:18:39
+    leave_length: half
+    begin_time: 2009-11-13 07:30:00
+    id: "109"
+    leave_type: personal
+    user_id: "12"
+    description: "Going pheasant hunting with buddies from Topeka. I am requesting 1/2 day personal on Friday Nov. 13th so I can meet them in Topeka at 2:00pm to arrive in Stockton, KS aprox 6pm. I would like to leave at 12 noon. "
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-10-27 19:07:33
+    created_at: 2009-10-26 18:50:43
+    end_time: 2009-11-27 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/6q2g0f23ln3djb33scug1ankl8
+    action_notes: 
+    reviewed_by: csmith
+    updated_at: 2010-01-30 21:18:42
+    leave_length: whole
+    begin_time: 2009-11-27 07:30:00
+    id: "110"
+    leave_type: vacation
+    user_id: "5"
+    description: Going to Texas for Thanksgiving
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-10-27 19:07:25
+    created_at: 2009-10-26 23:24:02
+    end_time: 2009-12-07 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/o1ceqjkegt6362m0jgaku0ck90
+    action_notes: 
+    reviewed_by: csmith
+    updated_at: 2010-01-30 21:18:45
+    leave_length: whole
+    begin_time: 2009-12-07 07:30:00
+    id: "111"
+    leave_type: vacation
+    user_id: "2"
+    description: Day off with family
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-10-31 18:56:32
+    created_at: 2009-10-27 18:26:28
+    end_time: 2009-10-28 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/cdppjai0el5gh8rgo1tes8lkuo
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:18:48
+    leave_length: whole
+    begin_time: 2009-10-28 07:30:00
+    id: "112"
+    leave_type: personal
+    user_id: "8"
+    description: Need Wednesday Oct. 28th off -- daughter has H1N1 flu &amp; my wife has an all day work thing that she can not miss
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-11-10 02:20:57
+    created_at: 2009-11-10 00:22:31
+    end_time: 2009-11-06 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/l8f9e197arlrm6447odoi7ueu4
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:18:51
+    leave_length: many
+    begin_time: 2009-11-04 07:30:00
+    id: "114"
+    leave_type: personal
+    user_id: "5"
+    description: sick
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-11-10 02:20:58
+    created_at: 2009-11-10 00:29:54
+    end_time: 2009-11-02 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/ks3ic2dvuantpnq4u7hjjiovuo
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:18:53
+    leave_length: whole
+    begin_time: 2009-11-02 07:30:00
+    id: "115"
+    leave_type: personal
+    user_id: "5"
+    description: Sick day
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-12-03 03:53:26
+    created_at: 2009-11-24 19:41:10
+    end_time: 2009-12-14 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/f1iu0boo874fgv9si6d6teuvlk
+    action_notes: youre fine
+    reviewed_by: rsmith
+    updated_at: 2010-01-30 21:18:56
+    leave_length: whole
+    begin_time: 2009-12-14 07:30:00
+    id: "116"
+    leave_type: personal
+    user_id: "2"
+    description: day off
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-11-25 19:49:28
+    created_at: 2009-11-25 02:42:31
+    end_time: 2009-11-27 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/eqehur0mfnbgod6o9osn5762uk
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:18:59
+    leave_length: half
+    begin_time: 2009-11-27 07:30:00
+    id: "119"
+    leave_type: etc
+    user_id: "15"
+    description: would like to leave at noon on Friday
+    state: "-1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-11-28 00:32:43
+    created_at: 2009-11-25 03:35:14
+    end_time: 2009-11-27 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/sg61c3m7gof205bu8ikmjtno0c
+    action_notes: ""
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:19:02
+    leave_length: half
+    begin_time: 2009-11-27 07:30:00
+    id: "120"
+    leave_type: personal
+    user_id: "11"
+    description: Just half day
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-11-30 21:13:14
+    created_at: 2009-11-30 21:11:40
+    end_time: 2009-12-31 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/tuk3th957ruop6g4kie9igilh0
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:19:05
+    leave_length: whole
+    begin_time: 2009-12-31 07:30:00
+    id: "121"
+    leave_type: personal
+    user_id: "11"
+    description: USAFA Bowl Game
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-12-02 20:44:40
+    created_at: 2009-12-02 04:00:20
+    end_time: 2009-12-10 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/9ec3vir97tm18hsuo8n7r2qgo4
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:19:08
+    leave_length: half
+    begin_time: 2009-12-10 07:30:00
+    id: "123"
+    leave_type: personal
+    user_id: "8"
+    description: need to take the afternoon off
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-12-02 20:44:40
+    created_at: 2009-12-02 04:01:23
+    end_time: 2009-12-16 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/839not0vkhldgkf7kulc6fksok
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:19:11
+    leave_length: whole
+    begin_time: 2009-12-16 07:30:00
+    id: "124"
+    leave_type: personal
+    user_id: "8"
+    description: need to take the day off - my wife has a field trip &amp; she can not take our son on the trip
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-12-03 02:28:52
+    created_at: 2009-12-02 04:32:39
+    end_time: 2009-12-04 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/taf15ufhf9dllr59nlr2c20jsc
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:19:14
+    leave_length: half
+    begin_time: 2009-12-04 07:30:00
+    id: "125"
+    leave_type: personal
+    user_id: "2"
+    description: leave at noon, weekend w/ family/using accrued time off.
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-12-03 02:26:38
+    created_at: 2009-12-03 02:19:38
+    end_time: 2009-12-18 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/gjmeqqn1dnors8hjk6cjsmfqnk
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:19:16
+    leave_length: whole
+    begin_time: 2009-12-18 07:30:00
+    id: "126"
+    leave_type: personal
+    user_id: "12"
+    description: "Mom&#39;s birthday. She is coming to KC for the weekend "
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-12-03 02:26:41
+    created_at: 2009-12-03 02:21:00
+    end_time: 2009-12-24 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/r4kp6gppqni5jlsjbdti0r3710
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:19:20
+    leave_length: whole
+    begin_time: 2009-12-24 07:30:00
+    id: "127"
+    leave_type: personal
+    user_id: "12"
+    description: Leave for Wichita for Christmas with Family
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-12-03 03:53:42
+    created_at: 2009-12-03 02:25:02
+    end_time: 2009-12-21 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/l86s952g3ni63b6unn3keap4jk
+    action_notes: youre fine
+    reviewed_by: rsmith
+    updated_at: 2010-01-30 21:19:22
+    leave_length: whole
+    begin_time: 2009-12-21 07:30:00
+    id: "128"
+    leave_type: personal
+    user_id: "2"
+    description: replacing 12/21 with 12/28 day off because Mike is also requesting 12/28 and Josh is already off.
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-12-03 03:44:44
+    created_at: 2009-12-03 02:56:18
+    end_time: 2009-12-11 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/064a3rt795m4klnp17qcil5thk
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:19:25
+    leave_length: whole
+    begin_time: 2009-12-11 07:30:00
+    id: "130"
+    leave_type: personal
+    user_id: "12"
+    description: Christmas Shopping Day
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-12-10 03:42:23
+    created_at: 2009-12-03 03:04:39
+    end_time: 2009-12-14 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/u5v7on6jndr8v9bubsm0aumifo
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:19:28
+    leave_length: whole
+    begin_time: 2009-12-14 07:30:00
+    id: "131"
+    leave_type: personal
+    user_id: "6"
+    description: Christmas shopping
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-12-08 23:07:11
+    created_at: 2009-12-08 20:49:34
+    end_time: 2009-12-07 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/tv50kd6u0sqe0fnrc80lkh6hn0
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:19:31
+    leave_length: half
+    begin_time: 2009-12-07 07:30:00
+    id: "132"
+    leave_type: personal
+    user_id: "12"
+    description: "Left work at 1:00pm to go home and wait on the hot water heater repairman from Sears. "
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-12-16 01:05:13
+    created_at: 2009-12-15 22:24:27
+    end_time: 2009-12-17 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/75g0i30bnmt52c0fe2osf4l3jg
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:19:34
+    leave_length: half
+    begin_time: 2009-12-17 07:30:00
+    id: "133"
+    leave_type: vacation
+    user_id: "8"
+    description: Leave at noon
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-12-16 01:05:14
+    created_at: 2009-12-15 22:24:44
+    end_time: 2009-12-22 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/17k9dd598k95p2m9kieoki2alo
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:19:37
+    leave_length: half
+    begin_time: 2009-12-22 07:30:00
+    id: "134"
+    leave_type: vacation
+    user_id: "8"
+    description: leave at noon
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2009-12-18 19:44:44
+    created_at: 2009-12-18 19:36:08
+    end_time: 2009-12-18 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/7ctrsi2vca1nq4ja0qlqc6dvgk
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:19:40
+    leave_length: half
+    begin_time: 2009-12-18 07:30:00
+    id: "135"
+    leave_type: personal
+    user_id: "17"
+    description: Going to Topeka to get title.
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-01-06 17:47:25
+    created_at: 2010-01-04 14:00:18
+    end_time: 2010-01-08 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/e3cafgdr02em24nt070bj2p0o0
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:19:43
+    leave_length: whole
+    begin_time: 2010-01-08 07:30:00
+    id: "136"
+    leave_type: personal
+    user_id: "2"
+    description: mini-getaway with wife for 10yr. anniversary
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-01-06 17:47:26
+    created_at: 2010-01-06 16:50:40
+    end_time: 2010-01-28 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/p4s7hbl1c0ds5r9i3im6iippfs
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:19:45
+    leave_length: whole
+    begin_time: 2010-01-28 07:30:00
+    id: "137"
+    leave_type: vacation
+    user_id: "8"
+    description: need this day off for a school function -- W.A.T.C.H. Dogs day
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-01-06 17:47:25
+    created_at: 2010-01-06 16:50:59
+    end_time: 2010-05-06 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/khbnrvfor9e85ee1435446e1m4
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:19:48
+    leave_length: whole
+    begin_time: 2010-05-06 07:30:00
+    id: "138"
+    leave_type: personal
+    user_id: "8"
+    description: need this day off for a school function -- W.A.T.C.H. Dogs day
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-01-06 17:47:27
+    created_at: 2010-01-06 16:51:39
+    end_time: 2010-03-19 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/if865dvv81hkqcm1a79cv8agj0
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:19:52
+    leave_length: whole
+    begin_time: 2010-03-19 07:30:00
+    id: "139"
+    leave_type: vacation
+    user_id: "8"
+    description: Anniversary Trip
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-01-14 17:10:13
+    created_at: 2010-01-11 20:54:57
+    end_time: 2010-03-19 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/ctn91dmgbn5v42rhmqvgpp7agk
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:19:55
+    leave_length: whole
+    begin_time: 2010-03-19 07:30:00
+    id: "140"
+    leave_type: personal
+    user_id: "11"
+    description: Special O basketball in Hays,Ks
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-01-14 17:10:16
+    created_at: 2010-01-11 20:59:42
+    end_time: 2010-10-08 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/67p10c78ab2cshrkiittl3b16c
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:19:58
+    leave_length: many
+    begin_time: 2010-10-04 07:30:00
+    id: "141"
+    leave_type: vacation
+    user_id: "11"
+    description: Cape Cod vacation,i hope
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-01-25 19:42:36
+    created_at: 2010-01-11 21:07:04
+    end_time: 2010-05-21 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/43euu59tf42m03htnt5fua6qa8
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:20:01
+    leave_length: many
+    begin_time: 2010-05-14 07:30:00
+    id: "142"
+    leave_type: vacation
+    user_id: "17"
+    description: Wedding planning and honey moon
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-01-25 19:42:40
+    created_at: 2010-01-18 17:57:08
+    end_time: 2010-01-22 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/3ti6lte6lar5lvsofiou2mvefs
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:20:04
+    leave_length: half
+    begin_time: 2010-01-22 07:30:00
+    id: "143"
+    leave_type: personal
+    user_id: "13"
+    description: Wife out of town. Taking care of Hudson for the weekend.
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-01-25 19:42:42
+    created_at: 2010-01-18 18:34:10
+    end_time: 2010-02-05 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/povmb5usio7k56ea4ruiufi2tc
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:20:06
+    leave_length: half
+    begin_time: 2010-02-05 07:30:00
+    id: "144"
+    leave_type: personal
+    user_id: "13"
+    description: Leaving early to go to Dallas for a 95th Birthday for my Wife&#39;s Grandfather
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-01-25 19:42:47
+    created_at: 2010-01-25 19:36:07
+    end_time: 2010-05-21 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/qvg499gop8h6frvv4ki427mjeg
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:20:12
+    leave_length: many
+    begin_time: 2010-05-19 07:30:00
+    id: "148"
+    leave_type: personal
+    user_id: "3"
+    description: wedding
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-01-25 19:42:48
+    created_at: 2010-01-25 19:40:12
+    end_time: 2010-03-19 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/19cohtiaa4ondj21auehhek1u0
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:20:15
+    leave_length: many
+    begin_time: 2010-03-15 07:30:00
+    id: "149"
+    leave_type: vacation
+    user_id: "3"
+    description: |
+      vacation
+
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-01-25 19:42:48
+    created_at: 2010-01-25 19:40:39
+    end_time: 2010-03-19 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/d47eh6ta75fdttgbtnsdmbrdnc
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:20:18
+    leave_length: many
+    begin_time: 2010-03-15 07:30:00
+    id: "150"
+    leave_type: vacation
+    user_id: "14"
+    description: vacation
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-01-25 19:42:49
+    created_at: 2010-01-25 19:41:11
+    end_time: 2010-05-21 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/o04duffi7f655e6qeocnkr488c
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-01-30 21:20:21
+    leave_length: half
+    begin_time: 2010-05-21 07:30:00
+    id: "151"
+    leave_type: personal
+    user_id: "14"
+    description: wedding
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-02-03 14:48:28
+    created_at: 2010-02-03 14:48:19
+    end_time: 2010-07-30 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/af8f6hrr3b4jq8kpbeo66s0r1o
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-02-03 14:48:32
+    leave_length: many
+    begin_time: 2010-07-26 07:30:00
+    id: "160"
+    leave_type: vacation
+    user_id: "12"
+    description: Estes Park, CO Vacation
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-02-16 15:41:01
+    created_at: 2010-02-05 13:57:20
+    end_time: 2010-08-20 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/30ifd1b8df04fm6a7dj4okiajk
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-02-16 15:41:04
+    leave_length: many
+    begin_time: 2010-08-16 07:30:00
+    id: "161"
+    leave_type: vacation
+    user_id: "15"
+    description: family vacation to Wisconsin
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-02-10 15:29:00
+    created_at: 2010-02-09 19:47:41
+    end_time: 2010-02-12 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/2i46btd7pafmmvt8s383g5s3qo
+    action_notes: 
+    reviewed_by: csmith
+    updated_at: 2010-02-10 15:29:06
+    leave_length: many
+    begin_time: 2010-02-11 07:30:00
+    id: "162"
+    leave_type: vacation
+    user_id: "5"
+    description: Florida
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-02-16 15:40:11
+    created_at: 2010-02-16 14:54:05
+    end_time: 2010-02-16 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/dkrhapaa5leo84j92dithut4f0
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-02-16 15:40:15
+    leave_length: half
+    begin_time: 2010-02-16 07:30:00
+    id: "163"
+    leave_type: personal
+    user_id: "6"
+    description: Doctors&#39; apt.
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-03-09 16:41:11
+    created_at: 2010-02-19 14:09:39
+    end_time: 2010-05-28 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/b5u1u40v51j7l8n522s38utfis
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-03-09 16:41:18
+    leave_length: many
+    begin_time: 2010-05-24 07:30:00
+    id: "164"
+    leave_type: vacation
+    user_id: "6"
+    description: vacation with the kids
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-03-01 13:59:27
+    created_at: 2010-02-23 19:47:55
+    end_time: 2010-02-26 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/l47lt6nbf03vdj4uvr2n1d5pfs
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-03-01 13:59:32
+    leave_length: whole
+    begin_time: 2010-02-26 07:30:00
+    id: "165"
+    leave_type: personal
+    user_id: "11"
+    description: Funeral for Donn&#39;s closest cousin in Memphis,Mo
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-03-01 13:59:29
+    created_at: 2010-03-01 13:56:04
+    end_time: 2010-03-02 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/b3tfd28v81ht3da5ape2peg400
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-03-01 13:59:34
+    leave_length: half
+    begin_time: 2010-03-02 07:30:00
+    id: "166"
+    leave_type: personal
+    user_id: "8"
+    description: Need to leave at 1230pm on Tuesday March 2nd.  My daughter has a musical program at 1pm.
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-03-08 18:22:31
+    created_at: 2010-03-08 15:10:31
+    end_time: 2010-04-05 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/vcs89gte79e6s6nukbsk3bfiso
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-03-08 18:22:38
+    leave_length: half
+    begin_time: 2010-04-05 07:30:00
+    id: "167"
+    leave_type: personal
+    user_id: "11"
+    description: Royals home opener 3:10/Leave at noon
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-03-09 16:41:12
+    created_at: 2010-03-08 23:04:36
+    end_time: 2010-03-05 12:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/59ukfrvee6vl8h37gbnhpemeoc
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-03-09 16:41:25
+    leave_length: half
+    begin_time: 2010-03-05 07:30:00
+    id: "168"
+    leave_type: personal
+    user_id: "13"
+    description: Took half day to go to Dallas Tx to pick up vehicle
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-03-09 16:41:15
+    created_at: 2010-03-09 14:32:21
+    end_time: 2010-05-14 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/hda4fadna76uus9khsclqt5td0
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-03-09 16:41:28
+    leave_length: many
+    begin_time: 2010-05-10 07:30:00
+    id: "169"
+    leave_type: vacation
+    user_id: "13"
+    description: Revised dates on vacation to Florida. Able to cut one day off because we decided to fly.
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-04-06 13:55:54
+    created_at: 2010-03-29 20:14:29
+    end_time: 2010-05-07 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/jkm9117lum52follojnd7573c4
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-04-09 04:51:36
+    leave_length: many
+    begin_time: 2010-05-03 07:30:00
+    id: "170"
+    leave_type: vacation
+    user_id: "2"
+    description: family vacation
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-03-30 17:42:56
+    created_at: 2010-03-30 12:45:09
+    end_time: 2010-06-17 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/k3gth713dn9n32t902p0d02ar0
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-04-09 04:51:52
+    leave_length: whole
+    begin_time: 2010-06-17 07:30:00
+    id: "171"
+    leave_type: personal
+    user_id: "12"
+    description: Get my Mom&#39;s house in Wichita ready to sell.
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-03-30 17:42:58
+    created_at: 2010-03-30 12:46:14
+    end_time: 2010-06-18 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/bvfreu14k1qsflggu80h8nmfvc
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-04-09 04:51:43
+    leave_length: whole
+    begin_time: 2010-06-18 07:30:00
+    id: "172"
+    leave_type: personal
+    user_id: "12"
+    description: Get my Mom&#39;s house in Wichita ready to sell.
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-03-30 17:43:01
+    created_at: 2010-03-30 15:14:06
+    end_time: 2010-03-26 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/nhc2rnvk7jrrjbc50aoomfk56c
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-04-09 04:52:08
+    leave_length: whole
+    begin_time: 2010-03-26 07:30:00
+    id: "173"
+    leave_type: vacation
+    user_id: "5"
+    description: |-
+      personal 
+      (RV weekend)
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-04-06 13:55:57
+    created_at: 2010-04-05 12:49:21
+    end_time: 2010-04-02 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/jvq37v1kq2o2gvpf4g3fbehddo
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-04-09 04:51:59
+    leave_length: whole
+    begin_time: 2010-04-02 07:30:00
+    id: "175"
+    leave_type: personal
+    user_id: "5"
+    description: Sick
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-04-13 18:22:50
+    created_at: 2010-04-07 17:44:44
+    end_time: 2010-06-04 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/s69ef9p65r9nenmg2dim3sbcs4
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-04-13 18:22:54
+    leave_length: whole
+    begin_time: 2010-06-04 07:30:00
+    id: "181"
+    leave_type: personal
+    user_id: "11"
+    description: Special Olympic summer games
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-04-13 18:23:04
+    created_at: 2010-04-08 19:24:41
+    end_time: 2010-04-16 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/mf7e8k1e5vqbjgvmhvlsqc9tj0
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-04-13 18:23:12
+    leave_length: many
+    begin_time: 2010-04-15 07:30:00
+    id: "182"
+    leave_type: personal
+    user_id: "5"
+    description: Moms surgery
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-04-29 18:46:41
+    created_at: 2010-04-12 12:58:11
+    end_time: 2010-05-10 17:00:00
+    event_id: 
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-04-29 18:46:41
+    leave_length: whole
+    begin_time: 2010-05-10 07:30:00
+    id: "183"
+    leave_type: vacation
+    user_id: "2"
+    description: travel day / return to kc
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-04-13 18:22:43
+    created_at: 2010-04-12 20:20:13
+    end_time: 2010-08-13 17:00:00
+    event_id: http://www.google.com/calendar/feeds/m3udqi47d6gpoga7fgif72bnvc%40group.calendar.google.com/private/full/0s3lko9299bqgtacbigqju60to
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-04-13 18:22:50
+    leave_length: many
+    begin_time: 2010-08-09 07:30:00
+    id: "184"
+    leave_type: vacation
+    user_id: "12"
+    description: Run Andy Lee&#39;s truck while he is in Sturgis
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-04-29 21:17:36
+    created_at: 2010-04-19 18:29:33
+    end_time: 2010-04-22 12:00:00
+    event_id: 
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-04-29 21:17:36
+    leave_length: half
+    begin_time: 2010-04-22 07:30:00
+    id: "185"
+    leave_type: personal
+    user_id: "15"
+    description: doctor appt for my daughter and going to MVR to get my KS license
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-04-29 18:46:43
+    created_at: 2010-04-29 18:44:20
+    end_time: 2010-05-07 12:00:00
+    event_id: 
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-04-29 18:46:43
+    leave_length: half
+    begin_time: 2010-05-07 07:30:00
+    id: "188"
+    leave_type: personal
+    user_id: "14"
+    description: ryans grad
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-04-29 18:46:42
+    created_at: 2010-04-29 18:44:55
+    end_time: 2010-06-01 12:00:00
+    event_id: 
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-04-29 18:46:42
+    leave_length: half
+    begin_time: 2010-06-01 07:30:00
+    id: "189"
+    leave_type: personal
+    user_id: "14"
+    description: personel
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-04-29 19:06:30
+    created_at: 2010-04-29 19:02:16
+    end_time: 2010-04-30 17:00:00
+    event_id: 
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-04-29 19:06:30
+    leave_length: whole
+    begin_time: 2010-04-30 07:30:00
+    id: "190"
+    leave_type: personal
+    user_id: "15"
+    description: personal day
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-05-10 16:48:24
+    created_at: 2010-05-10 16:45:59
+    end_time: 2010-07-02 17:00:00
+    event_id: 
+    action_notes: 
+    reviewed_by: csmith
+    updated_at: 2010-05-10 16:48:24
+    leave_length: many
+    begin_time: 2010-07-01 07:30:00
+    id: "191"
+    leave_type: vacation
+    user_id: "5"
+    description: vacation
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-05-10 16:48:26
+    created_at: 2010-05-10 16:47:01
+    end_time: 2010-07-05 17:00:00
+    event_id: 
+    action_notes: 
+    reviewed_by: csmith
+    updated_at: 2010-05-10 16:48:26
+    leave_length: whole
+    begin_time: 2010-07-05 07:30:00
+    id: "192"
+    leave_type: etc
+    user_id: "5"
+    description: Dayoff Pay (4th of July)
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-05-14 13:24:48
+    created_at: 2010-05-12 12:21:07
+    end_time: 2010-07-08 12:00:00
+    event_id: 
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-05-14 13:24:48
+    leave_length: half
+    begin_time: 2010-07-08 07:30:00
+    id: "193"
+    leave_type: personal
+    user_id: "12"
+    description: Go to Walcott, IA for the &quot;Big Rig Truck Show&quot;
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-05-14 13:24:49
+    created_at: 2010-05-12 12:21:32
+    end_time: 2010-07-09 17:00:00
+    event_id: 
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-05-14 13:24:49
+    leave_length: whole
+    begin_time: 2010-07-09 07:30:00
+    id: "194"
+    leave_type: personal
+    user_id: "12"
+    description: Walcott, IA for the &quot;Big Rig Truck Show&quot;
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-05-14 13:24:49
+    created_at: 2010-05-14 13:02:08
+    end_time: 2010-05-14 12:00:00
+    event_id: 
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-05-14 13:24:49
+    leave_length: half
+    begin_time: 2010-05-14 07:30:00
+    id: "195"
+    leave_type: personal
+    user_id: "6"
+    description: kids graduation
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-05-14 13:24:50
+    created_at: 2010-05-14 13:20:17
+    end_time: 2010-05-28 17:00:00
+    event_id: 
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-05-14 13:24:50
+    leave_length: many
+    begin_time: 2010-05-25 07:30:00
+    id: "196"
+    leave_type: vacation
+    user_id: "15"
+    description: going to ND to visit family-replaces previous vacation request of 05/26 thru 05/31/10
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-06-04 21:13:28
+    created_at: 2010-05-19 18:20:39
+    end_time: 2010-07-30 17:00:00
+    event_id: 
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-06-04 21:13:28
+    leave_length: whole
+    begin_time: 2010-07-30 07:30:00
+    id: "198"
+    leave_type: personal
+    user_id: "2"
+    description: family reunion (replaced previous request).
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-05-25 22:13:34
+    created_at: 2010-05-24 21:49:09
+    end_time: 2010-05-18 17:00:00
+    event_id: 
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-05-25 22:13:34
+    leave_length: whole
+    begin_time: 2010-05-18 07:30:00
+    id: "199"
+    leave_type: personal
+    user_id: "15"
+    description: 1 day sick leave - replaces previous request for 1/2 day
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-06-04 17:09:27
+    created_at: 2010-05-25 17:50:39
+    end_time: 2010-06-02 12:00:00
+    event_id: 
+    action_notes: 
+    reviewed_by: csmith
+    updated_at: 2010-06-04 17:09:27
+    leave_length: half
+    begin_time: 2010-06-02 07:30:00
+    id: "200"
+    leave_type: personal
+    user_id: "14"
+    description: personal
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-06-04 21:13:28
+    created_at: 2010-06-01 16:41:35
+    end_time: 2010-07-30 17:00:00
+    event_id: 
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-06-04 21:13:28
+    leave_length: many
+    begin_time: 2010-07-29 07:30:00
+    id: "201"
+    leave_type: personal
+    user_id: "13"
+    description: Annual Family Retreat to Pine Lake Camp in Iowa
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-06-04 21:13:28
+    created_at: 2010-06-01 18:55:38
+    end_time: 2010-06-09 12:00:00
+    event_id: 
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-06-04 21:13:28
+    leave_length: half
+    begin_time: 2010-06-09 07:30:00
+    id: "202"
+    leave_type: personal
+    user_id: "15"
+    description: dental surgery
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-06-04 17:09:24
+    created_at: 2010-06-04 16:39:20
+    end_time: 2011-01-14 17:00:00
+    event_id: 
+    action_notes: ""
+    reviewed_by: csmith
+    updated_at: 2010-06-04 17:09:24
+    leave_length: many
+    begin_time: 2011-01-10 07:30:00
+    id: "203"
+    leave_type: vacation
+    user_id: "5"
+    description: "vacation - Hawaii "
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 2010-06-18 02:23:12
+    created_at: 2010-06-18 02:13:14
+    end_time: 2010-07-06 17:00:00
+    event_id: 
+    action_notes: 
+    reviewed_by: dpanjada
+    updated_at: 2010-06-18 02:23:12
+    leave_length: whole
+    begin_time: 2010-07-06 07:30:00
+    id: "204"
+    leave_type: personal
+    user_id: "11"
+    description: wife day
+    state: "1"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 
+    created_at: 2010-06-18 03:00:44
+    end_time: 2010-11-30 17:00:00
+    event_id: 
+    action_notes: 
+    reviewed_by: 
+    updated_at: 2010-06-18 03:00:44
+    leave_length: many
+    begin_time: 2010-11-26 07:30:00
+    id: "205"
+    leave_type: vacation
+    user_id: "2"
+    description: Having a Baby (around this time....)
+    state: "0"
+  attributes_cache: {}
+
+- !ruby/object:Dayoff 
+  attributes: 
+    reviewed_on: 
+    created_at: 2010-06-18 03:01:50
+    end_time: 2010-12-03 17:00:00
+    event_id: 
+    action_notes: 
+    reviewed_by: 
+    updated_at: 2010-06-18 03:01:50
+    leave_length: many
+    begin_time: 2010-12-02 07:30:00
+    id: "206"
+    leave_type: vacation
+    user_id: "2"
+    description: New baby time
+    state: "0"
+  attributes_cache: {}
+

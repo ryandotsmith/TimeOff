@@ -2,7 +2,7 @@ class Account < ActiveRecord::Base
 
   include DayoffUserMethods
 
-  has_friendly_id :company_name
+  has_friendly_id :company_name, :use_slug => true
 
   has_many :users
   has_many :daysoff
@@ -18,10 +18,6 @@ class Account < ActiveRecord::Base
 
   def owner
     User.find(self.owner_id) 
-  end
-
-  def to_param
-    company_name 
   end
 
   def name
