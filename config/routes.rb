@@ -10,6 +10,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :accounts, :shallow => true do |accounts|
     accounts.resources :daysoff
+    accounts.resources :archived_daysoff
     accounts.resources :users, :has_many => :daysoff
     accounts.calendar '/calendar/:year/:month', :controller => 'calendar', :action => 'index', :year => Time.zone.now.year, :month => Time.zone.now.month
   end

@@ -30,9 +30,9 @@
 
 - if current_user.account_owner?
   #queue
-    = render :partial => 'queue'
+    = render :partial => 'queue',   :locals => {:daysoff => @requested_daysoff }
   #archive
-    = render :partial => 'archive'
+    = render :partial => 'archived_daysoff/archive', :locals => {:daysoff => @archived_daysoff  }
 
 #history
   = render :partial => 'history'

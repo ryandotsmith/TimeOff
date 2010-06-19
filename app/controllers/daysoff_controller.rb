@@ -18,9 +18,6 @@ class DaysoffController < ApplicationController
   def show
     @dayoff = Dayoff.find(params[:id])
     @user   = current_user
-    #respond_to do |format|
-      #format.js { render :action => 'show', :layout => false}
-    #end
   end
 
   def new

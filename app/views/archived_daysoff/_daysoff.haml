@@ -1,0 +1,10 @@
+- daysoff.each do |dayoff|
+  %tr{:id => "dayoff_#{dayoff.id}"}
+    %td= dayoff.user.name
+    %td= dayoff.created_at
+    %td= dayoff.get_length
+    %td= dayoff.description
+    %td= dayoff.status
+    %td= link_to 'delete', dayoff, :method => 'delete'
+
+= javascript_tag "var moreLink = '#{ more_paginate daysoff, :path_prefix => account_archived_daysoff_path(current_user.account) }'"

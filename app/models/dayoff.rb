@@ -22,6 +22,16 @@ class Dayoff < ActiveRecord::Base
     sanitize_input!
   end
 
+  def self.paginate_by_creation_date(params)
+    paginate :all,
+      :sort_key   => params[:sort_key]   || "created_at",
+      :sort_value => params[:sort_value],
+      :sort_id    => params[:sort_id],
+      :sort_order => "desc",
+      :limit      => 5,
+      :include    => :user
+  end
+
   # i expect search to only be called in code when the search parameter 
   # is built. I am not ready to have the search parameter be user input.
   def self.search(search, page)

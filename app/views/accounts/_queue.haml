@@ -4,7 +4,7 @@
     .bheadr
     %h2 Request Queue
   .block_content
-    - if @account.daysoff.pending.count.zero?
+    - if daysoff.count.zero?
       %h3 No Pending Requests
     -else
       %table.request_queue
@@ -17,7 +17,7 @@
           %th end date
           %th description
           %th approve
-        - @account.daysoff.pending.each do |dayoff|
+        - daysoff.each do |dayoff|
           %tr{:id => "dayoff_#{dayoff.id}"}
             %td.name= dayoff.user.name
             %td= dayoff.created_at

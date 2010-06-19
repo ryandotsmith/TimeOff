@@ -1,0 +1,23 @@
+.block
+  .block_head
+    .bheadl
+    .bheadr
+    %h2 Archive
+  .block_content
+    %table.archive
+      %thead
+        %tr
+          %th requested by
+          %th date requested
+          %th time off requested
+          %th description
+          %th status
+          %th delete
+      %tbody{:id => 'archive-table-body'}
+        = render :partial => 'archived_daysoff/daysoff', :locals => {:daysoff => daysoff}
+      %tfoot
+        %tr
+          %td{:id => 'place_for_more_link'}
+            = more_paginate daysoff, :path_prefix => account_archived_daysoff_path(current_user.account) 
+  .bendl
+  .bendr
