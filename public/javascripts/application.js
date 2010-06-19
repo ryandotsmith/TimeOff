@@ -14,6 +14,7 @@ $(document).ready(function() {
 
   $("#menu > a").click(function(){
     var iD = $(this).attr('href');
+    $(this).toggleClass('active');
     $(iD).slideToggle();
     return false;
   });

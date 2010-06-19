@@ -23,18 +23,20 @@ class DaysoffController < ApplicationController
   def new
     @user   = current_user
     @dayoff = @user.daysoff.build
+    respond_to do |format|
+      format.html 
+    end
   end
 
   def create
     @user   = current_user
     @dayoff = @user.daysoff.build(params[:dayoff]) 
-    respond_to do |wants|
+    respond_to do |format|
       @dayoff.account = @account
       if @dayoff.save
-        wants.html { redirect_to @account,:notice => 'Request submitted! Supervisors have been notified.'  }
+        format.html { redirect_to @account,:notice => 'Request submitted! Supervisors have been notified.'  }
       else
-        flash[:alert]  =  'something went wrong'
-        wants.html { render :action => 'new' }
+        format.html { render :action => 'new', :layout => 'split' }
       end
     end
   end

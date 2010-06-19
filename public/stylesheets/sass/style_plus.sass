@@ -6,9 +6,26 @@
 #right
   :float right
 #menu
-  :width 300px
+  :width 330px
   :clear both
   :margin 10px auto 10px auto
+  a
+    :float left
+    :margin 0 3px 0 3px
+  a span
+    :font-family "Titillium800", "Trebuchet MS", Arial, sans-serif
+    :color white
+    :display block
+    :text-align center
+    :background url('/images/theme/btns.gif')
+    :background-repeat no-repeat 
+    :width 85px
+    :height 40px
+
+  a.active span
+    :color !grey_text
+    :background url('/images/theme/btns_fade.gif')
+    :background-repeat no-repeat 
 
 .block .block_content table.messages 
   :border-collapse collapse
