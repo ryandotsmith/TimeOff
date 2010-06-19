@@ -1,0 +1,27 @@
+.block
+  .block_head
+    .bheadl
+    .bheadr
+    %h2 Employees 
+    %ul
+      %li= link_to 'add user', new_account_user_path(account)
+  .block_content
+    %table.employees
+      %tr
+        %th first name
+        %th last name
+        %th email
+        %th date of hire
+        %th edit
+        %th delete
+      - account.users.each do |user|
+        %tr{:id => "user_#{user.id}"}
+          %td= user.first_name
+          %td= user.last_name
+          %td= user.email
+          %td= user.email
+          %td= link_to 'edit',   edit_user_path(user), :rel => 'facebox'
+          %td= link_to 'delete', user, :method => 'delete'
+
+  .bendl
+  .bendr

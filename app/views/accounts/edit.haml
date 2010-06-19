@@ -3,7 +3,4 @@
   %ul
     %li= link_to '&larr; dashboard', @account
 
-= link_to 'add user', new_account_user_path(@account)
-%ul
-  - @account.users.each do |user|
-    %li= user.try(:to_s)
+= render :partial => 'users', :locals => {:account => @account}

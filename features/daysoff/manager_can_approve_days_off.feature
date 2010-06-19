@@ -29,7 +29,6 @@ Feature: Approving days off
       Then I should see "Request approved. An email has been sent to the employee." 
       And I should see message "0 requests need approval"
 
-    @wip
     Scenario: Sending an email to the user who requested time off
       Given Someone else has pending time off 
       When I go to the account page
