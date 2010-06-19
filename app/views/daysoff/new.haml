@@ -17,34 +17,39 @@
 
     %p
       = form.error_messages :class => 'message errormsg'
-
-    %p
-      = form.radio_button :leave_length, 'half'
-      = label :leave_length_half, 'Half Day'
-      = form.radio_button :leave_length, 'whole', :checked => true
-      = label :leave_length_whole, 'Whole Day'
-      = form.radio_button :leave_length, 'many'
-      = label :leave_length_many, 'Many Days'
+    %table
+      %tr
+        %td
+          = form.radio_button :leave_type, 'vacation'
+          = label :leave_type_vacation, 'Vacation'
+        %td
+          = form.radio_button :leave_type, 'personal', :checked => true
+          = label :leave_type_personal, 'Personal'
+        %td
+          = form.radio_button :leave_type, 'etc'
+          = label :leave_type_etc, 'Other'
+      %tr
+        %td
+          = form.radio_button :leave_length, 'half'
+          = label :leave_length_half, 'Half Day'
+        %td
+          = form.radio_button :leave_length, 'whole', :checked => true
+          = label :leave_length_whole, 'Whole Day'
+        %td
+          = form.radio_button :leave_length, 'many'
+          = label :leave_length_many, 'Many Days'
     %p
       = form.label :begin_time, 'Start Day'
+      %br
       = form.date_select :begin_time
 
-    %p
+    %p#end_time{:style => 'display:none;'}
       = form.label :end_time, 'End Day'
+      %br
       = form.date_select :end_time
-
-    %p
-      = form.radio_button :leave_type, 'vacation'
-      = label :leave_type_vacation, 'Vacation'
-      = form.radio_button :leave_type, 'personal', :checked => true
-      = label :leave_type_personal, 'Personal'
-      = form.radio_button :leave_type, 'etc'
-      = label :leave_type_etc, 'Other'
-
     %p
       = form.label :description, 'Message'
       = form.text_area :description, :class => 'text'
-
     %p
       = form.submit 'submit', :class => 'submit small'
       \-
