@@ -7,7 +7,6 @@ Feature: Manager can edit employee details
     Given an account exists with a company name of "wonderset"
     And I am signed in as the account owner
 
-    @wip
     Scenario: Updating text fields on an employee
       Given an user exists 
       And I am on the settings page

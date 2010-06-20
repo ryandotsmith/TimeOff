@@ -21,3 +21,16 @@
 
   %p
     = form.submit 'submit', :class => 'submit small'
+
+%hr
+%h2 Reset Password
+%p 
+  This button will send 
+  = @user.first_name
+  an email. In the email will be a link that will allow
+  = @user.first_name
+  to reset the password.
+
+- form_tag password_resets_path do
+  = hidden_field_tag :email, @user.email
+  = submit_tag "reset password", :class => 'submit large'

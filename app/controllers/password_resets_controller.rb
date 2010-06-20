@@ -1,6 +1,5 @@
 class PasswordResetsController < ApplicationController
  # Method from: http://github.com/binarylogic/authlogic_example/blob/master/app/controllers/application_controller.rb
-  before_filter :require_no_user
   before_filter :load_user_using_perishable_token, :only => [ :edit, :update ]
 
   def new
@@ -11,7 +10,7 @@ class PasswordResetsController < ApplicationController
     @user = User.find_by_email(params[:email])
     if @user
       @user.deliver_password_reset_instructions!
-      redirect_to root_path, :notice  => "Instructions to reset your password have been emailed to you" 
+      redirect_to :back, :notice  => "Instructions to reset your password have been emailed" 
     else
       flash[:error] = "No user was found with email address #{params[:email]}"
       render :action => :new, :layout => 'split'

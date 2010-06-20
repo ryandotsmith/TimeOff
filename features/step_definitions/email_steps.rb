@@ -41,6 +41,11 @@ Then /^the employee should receive an email$/ do
   Then %{"#{@dayoff.user.email}" should receive an email}
 end
 
+Then /^the user should receive an email$/ do
+  Then %{"#{@user.email}" should receive an email}
+end
+
+
 #
 # Reset the e-mail queue within a scenario.
 # This is done automatically before each scenario.
