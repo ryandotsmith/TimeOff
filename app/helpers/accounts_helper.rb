@@ -1,7 +1,7 @@
 module AccountsHelper
   def account_messages(account,user)
     messages = []
-    [:vacation, :personal, :etc].each do |type|
+    [:vacation, :personal].each do |type|
       data = user.get_remaining_dayoff_time[type]
       message = NotificationMessage.new
       message.title = "#{type} days remaining"
