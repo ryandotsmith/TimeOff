@@ -8,6 +8,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :password_resets, :only => [ :new, :create, :edit, :update ]
   map.register '/register/:activation_code',  :controller => 'activations', :action => 'new'
   map.activate '/activate/:id',               :controller => 'activations', :action => 'create'
+  map.sign_in  '/signin',                     :controller => 'user_sessions', :action => 'new' 
 
   map.resources :accounts, :shallow => true do |accounts|
     accounts.resources :daysoff
