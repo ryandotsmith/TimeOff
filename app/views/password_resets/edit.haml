@@ -1,6 +1,14 @@
-%p Please enter the new password below and then press "Update Password".
+%p Please enter the new password below and then press "Update".
 - form_tag password_reset_path, :method => :put do
-  = password_field_tag :password
-  = submit_tag "Update Password"
+  %p
+    = label :password, "Choose a new password"
+    %br
+    = password_field_tag :password, nil, :class => 'text large'
+  %p
+    = label :password, "Confirm password"
+    %br
+    = password_field_tag :password_confirmation, nil, :class => 'text large'
+  %p
+    = submit_tag "Update", :class => 'submit large'
       
   

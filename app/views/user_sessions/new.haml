@@ -12,6 +12,11 @@
     = session.password_field :password, :class => 'text'
   %p
     = session.submit 'sign in', :class => 'submit'
+%hr
+%h4 Forgot Your Passowrd?
+%h5
+  = link_to "reset", new_password_reset_path
+  your password. 
 
 %hr
 %h4 Don't Have An Account?

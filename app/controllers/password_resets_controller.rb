@@ -3,7 +3,9 @@ class PasswordResetsController < ApplicationController
   before_filter :require_no_user
   before_filter :load_user_using_perishable_token, :only => [ :edit, :update ]
 
-  def new; end
+  def new
+    render :action => 'new', :layout => 'split'
+  end
 
   def create
     @user = User.find_by_email(params[:email])
@@ -12,20 +14,22 @@ class PasswordResetsController < ApplicationController
       redirect_to root_path, :notice  => "Instructions to reset your password have been emailed to you" 
     else
       flash[:error] = "No user was found with email address #{params[:email]}"
-      render :action => :new
+      render :action => :new, :layout => 'split'
     end
   end
 
   def edit
+    render :action => 'edit', :layout => 'user_sessions'
   end
 
   def update
-    @user.password = params[:password]
+    @user.password              = params[:password]
+    @user.password_confirmation = params[:password_confirmation]
     if @user.save
       flash[:success] = "Your password was successfully updated"
-      redirect_to @user
+      redirect_to @user.account
     else
-      render :action => :edit
+      render :action => :edit, :layout => 'user_sessions'
     end
   end
 
