@@ -23,14 +23,15 @@
   - if requests > 0
     %span= "#{requests} #{pluralize(requests,'request').split(" ").last} pending approval" 
 
-#menu
-  %a{:href => "#queue"} 
-    %span Queue
-  %a{:href => "#archive"} 
-    %span Archive 
-  %a{:href => "#history"}
-    %span History
-.clear
+- if current_user.account_owner?
+  #menu
+    %a{:href => "#queue"} 
+      %span Queue
+    %a{:href => "#archive"} 
+      %span Archive 
+    %a{:href => "#history"}
+      %span History
+  .clear
 
 - if current_user.account_owner?
   #queue
