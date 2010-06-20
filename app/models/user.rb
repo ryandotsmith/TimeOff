@@ -13,6 +13,11 @@ class User < ActiveRecord::Base
     UserMailer.deliver_activation_link(self)
   end
 
+  def deliver_password_reset_instructions!
+    reset_perishable_token!
+    UserMailer.deliver_password_reset_instructions(self)
+  end
+
   def active?
     active
   end
