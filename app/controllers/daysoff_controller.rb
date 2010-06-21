@@ -45,11 +45,11 @@ class DaysoffController < ApplicationController
     @dayoff = Dayoff.find(params[:id])    
     respond_to do |wants|
       if @dayoff.update_attributes(params[:dayoff])
-        if params[:approved] == 'true'
-          @dayoff.approve(current_user) if params[:approved] == 'true'
+        if params[:commit] == 'approve'
+          @dayoff.approve(current_user)
           flash[:notice] = "Request approved. An email has been sent to the employee."
-        elsif params[:denied] == 'true'
-          @dayoff.deny(current_user)    if params[:denied]   == 'true'
+        elsif params[:commit] == 'deny'
+          @dayoff.deny(current_user)
           flash[:notice] = "Request denied. An email has been sent to the employee."
         end
         wants.html { redirect_to @account }

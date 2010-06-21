@@ -6,7 +6,23 @@
   </head>  
 
   <body>  
-    <h1>Congratulation, your request has been approved by: <%=h @dayoff.reviewed_by%></h1>  
+
+    <h1>Request Approved!</h1>
+    <table>
+      <tr>
+        <td>Time Off:</td>
+        <td><%= @dayoff.begin_time.to_s + @dayoff.end_time.to_s%></td>
+      </tr>
+      <tr>
+        <td>Approved By:</td>
+        <td><%= @dayoff.reviewed_by %></td>
+      </tr>
+      <tr>
+        <td>Notes:</td>
+        <td><%= @dayoff.action_notes %></td>
+      </tr>
+    </table>
+
   </body> 
 
 </html> 

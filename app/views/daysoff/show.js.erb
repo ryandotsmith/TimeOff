@@ -7,14 +7,13 @@
 
 <p>
   <% form_for @dayoff do |form| %>
-    <%= hidden_field_tag :approved,true %>
+    <p>
+      <%= form.label :action_notes, "Notes:" %>
+      <br />
+      <%= form.text_area :action_notes, :size => '30x10', :class => 'text small' %>
+    </p>
     <p>
       <%= form.submit 'approve', :class => 'submit small' %>
-    </p>
-  <% end %>
-  <% form_for @dayoff do |form| %>
-    <%= hidden_field_tag :denied,true %>
-    <p>
       <%= form.submit 'deny', :class => 'submit small' %>
     </p>
   <% end %>
