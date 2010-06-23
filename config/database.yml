@@ -1,6 +1,14 @@
 # SQLite version 3.x
 #   gem install sqlite3-ruby (not necessary on OS X Leopard)
 
+production:
+  adapter: postgresql 
+  username: ryandotsmith
+  database: timeoff_production
+  pool: 5
+  timeout: 5000
+
+
 development:
   adapter: postgresql 
   username: ryandotsmith

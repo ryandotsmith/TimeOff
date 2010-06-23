@@ -1,8 +1,41 @@
-- content_for :block_head do
-  %h2 Simplify tracking of Time Off
-%h3 We are now accepting beta users.
+#signup
+  %h3 Use Time Off for Time Off Requests, use your filling cabinet for something else.
+  = link_to image_tag("sign up now"), new_account_path
 
-%p= link_to "Sign Up", new_account_path
+#screenshots
+
+#customers
+  %h3 Customer Spotlight
+  %strong GS Enterprises inc.
+  %ul
+    %li 13 employees
+    %li 0 HR staff
+    %li 1 year using Time Off
+
+#features
+
+  .feature
+    %strong Online Request Form
+    %p
+      Have your team submit requests online. With an easy to use form and a company calendar right 
+      next to the form, your team will make better descisions regarding time off requests.
+
+  .feature
+    %strong Builtin Calendar
+    %p 
+      All of your organization's time off is displayed in an easy to view calendar. 
+      Quickly view your staff's availability.
+
+  .feature
+    %strong Email updates 
+    %p 
+      Time Off alerts the manager when new requests are created.
+
+  .feature
+    %strong Archived Data
+    %p 
+      Eliminate descrepnency with Archived Data. Time Off keeps record of all transactions.  
+
 
 :plain
   <script type="text/javascript">

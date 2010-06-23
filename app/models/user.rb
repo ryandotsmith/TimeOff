@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
 
   def deliver_password_reset_instructions!
     reset_perishable_token!
-    UserMailer.deliver_password_reset_instructions(self)
+    Delayed::Job.enqueue(::PasswordResetMailJob.new(self.id))
   end
 
   def active?
