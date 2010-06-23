@@ -17,4 +17,7 @@ ActionController::Routing::Routes.draw do |map|
     accounts.calendar '/calendar/:year/:month', :controller => 'calendar', :action => 'index', :year => Time.zone.now.year, :month => Time.zone.now.month
   end
   HighVoltage::Routes.draw(map)
+  map.namespace :root do |root|
+    root.resources :accounts
+  end
 end

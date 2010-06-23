@@ -1,0 +1,26 @@
+- content_for :block_head do
+  %h2 root
+
+- @accounts.each do |account|
+  %h2= account.company_name
+  %table
+    %thead
+      %tr
+        %th name
+        %th email
+        %th login count
+        %th failed login count
+        %th last login at
+        %th created at
+        %th active
+        %th daysoff
+    - account.users.each do |user|
+      %tr
+        %td= user.name 
+        %td= user.email 
+        %td= user.login_count
+        %td= user.failed_login_count
+        %td= user.last_login_at
+        %td= user.created_at
+        %td= user.active
+        %td= user.daysoff.count
