@@ -10,7 +10,7 @@ Feature: Manager can edit employee details
     Scenario: Updating text fields on an employee
       Given an user exists 
       And I am on the settings page
-      When I follow "edit" withing the user row
+      When I follow "edit" within the user row
       And I fill in "First Name" with "Not Another Like It"
       And I fill in "Last Name" with "Still None Like It"
       And I select "December 25, 2008" as the "user_date_of_hire" date

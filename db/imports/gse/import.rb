@@ -12,24 +12,37 @@ end
 module GSE
   class Import
     def self.load_users
-      @root = User.new(:first_name => 'system', :last_name => 'root', :email => 'this.ryansmith@gmail.com')
-      @root.generate_one_time_password!
-      @root.activate!
-      @root.save!
+      #@root = User.new(:first_name => 'system', :last_name => 'root', :email => 'this.ryansmith@gmail.com')
+      #@root.generate_one_time_password!
+      #@root.activate!
+      #@root.save!
 
-      @account = ::Account.new(:company_name => "GS Enterprises Inc.")
-      @account.users << @root
-      @account.save
+      #@account = ::Account.new(:company_name => "GS Enterprises Inc.")
+      #@account.users << @root
+      #@account.save
+      @account = Account.find(1)
 
       users = YAML::load_file(File.expand_path(File.dirname(__FILE__) + '/old_users.yml'))
       users.each do |user|
         new_user = @account.users.build
         attrs    = user.ivars['attributes']
+
+        current_user = User.find_by_id(attrs['id'])
+        if current_user
+         current_user.date_of_hire           = Date.parse(attrs['date_of_hire']).to_datetime if attrs['date_of_hire']
+         current_user.max_vacation           = attrs['max_vacation']
+         current_user.max_personal           = attrs['max_personal']
+         current_user.save
+        end
+        next unless current_user.nil?
+
         new_user.id                     = attrs['id']
         new_user.first_name             = attrs['name'].split.first
         new_user.last_name              = attrs['name'].split.last
         new_user.email                  = attrs['email']
         new_user.date_of_hire           = Date.parse(attrs['date_of_hire']).to_datetime if attrs['date_of_hire']
+        new_user.max_vacation           = attrs['max_vacation']
+        new_user.max_personal           = attrs['max_personal']
         new_user.password               = 'Gs*123*truck'
         new_user.password_confirmation  = 'Gs*123*truck'
         new_user.activate!
@@ -43,7 +56,10 @@ module GSE
       daysoff.each do |dayoff|
         attrs = dayoff.ivars['attributes']
         user = User.find_by_id(attrs['user_id'])
-        next if user.nil?
+
+        next if     user.nil?
+        next unless Dayoff.find_by_id(attrs['id'].to_i).nil?
+
         new_dayoff            = user.daysoff.build
         new_dayoff.id         = attrs['id'].to_i
         new_dayoff.account_id = user.account.id

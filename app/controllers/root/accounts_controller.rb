@@ -7,6 +7,6 @@ class Root::AccountsController < ApplicationController
   end
   private
   def authenticate
-    redirect_to root_url unless current_user.email == "this.ryansmith@gmail.com"
+    redirect_to root_url unless current_user.root?
   end
 end

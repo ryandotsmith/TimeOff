@@ -26,7 +26,7 @@ Given /^There is a user with 4 vacation days remaining$/ do
   @user = Factory(:user, :max_vacation => 4)
 end
 
-When /^I follow "([^"]*)" withing the user row$/ do |link|
+When /^I follow "([^"]*)" within the user row$/ do |link|
   When %{I follow "#{link}" within "tr#user_#{@user.id}"}
 end
 

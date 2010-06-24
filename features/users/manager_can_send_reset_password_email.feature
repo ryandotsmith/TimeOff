@@ -10,7 +10,7 @@ Feature: Manager can send a reset password email to user
     Scenario: Sending the email
       Given an user exists 
       And I am on the settings page
-      When I follow "edit" withing the user row
+      When I follow "edit" within the user row
       And I press "reset password"
       Then the user should receive an email
       When they open the email

@@ -1,4 +1,4 @@
 %ul#nav
-  - if @account and current_user and current_user == @account.owner
+  - if @account and current_user and current_user.account_owner?
     %li= link_to 'dashboard', @account
     %li= link_to 'settings', edit_account_url(@account)

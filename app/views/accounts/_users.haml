@@ -12,6 +12,8 @@
         %th last name
         %th email
         %th date of hire
+        %th max vacation
+        %th max personal
         %th edit
         %th delete
       - account.users.each do |user|
@@ -20,6 +22,8 @@
           %td= user.last_name
           %td= user.email
           %td= user.date_of_hire
+          %td= user.max_vacation
+          %td= user.max_personal
           %td= link_to 'edit',   edit_user_path(user), :rel => 'facebox'
           %td= link_to 'delete', user, :method => 'delete'
 

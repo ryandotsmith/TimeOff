@@ -41,7 +41,7 @@
     max_etc: "0"
     max_personal: "6"
     login: mgillett
-    email: 
+    email: mgillett@gsenterprises.com
   attributes_cache: {}
 
 - !ruby/object:OldUser 
@@ -161,6 +161,6 @@
     max_etc: "0"
     max_personal: "2"
     login: apanjada
-    email: 
+    email: apanjada@gsenterprises.com
   attributes_cache: {}
 

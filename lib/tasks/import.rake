@@ -9,4 +9,10 @@ namespace :import do
     require File.expand_path("db/imports/#{_module.downcase}/import.rb")
     eval("#{_module}::Import.load_#{_class}")
   end
+  desc "delete company timeoff"
+  task :delete, :account_id do |t,args|
+    account = Account.find(args[:account_id])
+    puts "deleteing timeoff for #{account.company_name}"
+    account.daysoff.map(&:delete)
+  end
 end
