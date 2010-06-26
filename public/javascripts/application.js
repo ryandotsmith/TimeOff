@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  $("a[rel=screenshots]").fancybox();
+
   $("#more_link").morePaginate({ container: "#archive-table-body" });
 
   $('#mini_calendar').fullCalendar({
