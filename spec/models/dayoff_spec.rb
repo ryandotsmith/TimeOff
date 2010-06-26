@@ -5,7 +5,7 @@ describe Dayoff do
     before(:each) {@dayoff = Factory(:dayoff,:leave_length => 'whole', :begin_time => Time.now)}
     it "should create a delayed job" do
       @dayoff.deny(Factory(:user))
-       
+
     end
   end
   describe "status" do

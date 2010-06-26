@@ -1,12 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe Account do
-  describe "validations" do
-    it "should not allow duplicate company names" do
-      Factory(:account)
-      Factory.build(:account).should_not be_valid
-    end
-  end
   describe "associations" do
     context "with daysoff" do
       it "should scope queries to daysoff which belong to an account" do

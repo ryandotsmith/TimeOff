@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
 
-  attr_accessible   :email, :first_name, :last_name,:password, 
-                    :password_confirmation, :openid_identifier, :max_vacation, :max_personal
+  attr_accessible   :email, :first_name, :last_name,:password,
+                    :password_confirmation, :openid_identifier,
+                    :max_vacation, :max_personal
 
   include DayoffUserMethods
   acts_as_authentic
@@ -10,7 +11,7 @@ class User < ActiveRecord::Base
   has_many :daysoff
 
   def deliver_activation_link
-    reset_perishable_token!  
+    reset_perishable_token!
     UserMailer.deliver_activation_link(self)
   end
 
@@ -27,14 +28,14 @@ class User < ActiveRecord::Base
     self.active = true
     save
   end
- 
+
   def generate_one_time_password!
     self.password = 'onetime'
     self.password_confirmation = 'onetime'
   end
 
   def name
-    name = first_name + " " + last_name
+    first_name + " " + last_name
   end
 
   def to_s

@@ -1,19 +1,52 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe DayoffUserMethods do
+  before(:each) { @user   = Factory(:user) }
+
   describe "returns statistical data" do
     it "should return pending requests" do
-      user   = Factory(:user)
-      dayoff = Factory(:dayoff,:user => user)
-      user.daysoff << dayoff
-      user.save
+      dayoff = Factory(:dayoff,:user => @user)
+      @user.daysoff << dayoff
+      @user.save
 
-      user.pending_requests.should eql([dayoff])
+      @user.pending_requests.should eql([dayoff])
     end
   end
+
+  describe "querying daysoff" do
+    context "for this year" do
+      it "should not include last years" do
+        dayoff = Factory(:dayoff,:user => @user)
+        dayoff.begin_time = DateTime.now - 1.year
+        dayoff.end_time   = (DateTime.now - 1.year) + 1.day
+
+        @user.daysoff << dayoff
+        @user.save
+
+        @user.this_years_daysoff.should_not include dayoff
+        @user.daysoff.should include dayoff
+      end
+      it "should not inlcude next years" do
+        dayoff = Factory(:dayoff,:user => @user)
+        dayoff.begin_time = DateTime.now + 1.year
+        dayoff.end_time   = (DateTime.now + 1.year) + 1.day
+
+        @user.daysoff << dayoff
+        @user.save
+
+        @user.this_years_daysoff.should_not include dayoff
+        @user.daysoff.should include dayoff
+      end
+    end
+  end
+
+
+
+
+
   context 'legacy specs' do
     describe "Provide valuable statistics on dayoff data" do
-     
+
       before(:each) do
         date_time = MONDAY_THIS_YEAR
         @user = Factory( :user )

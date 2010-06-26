@@ -1,7 +1,7 @@
 module DayoffUserMethods
 
   def get_total_dayoff_time
-    this_years_daysoff.inject(0) {|sum,h| sum += h.get_length}
+    this_years_daysoff.sum(&:get_length)
   end
 
   def get_taken_dayoff_time
@@ -35,7 +35,7 @@ module DayoffUserMethods
   end
 
   def this_years_daysoff
-    daysoff.select {|h| h.begin_time.year >= Date.today.year}
+    selection = daysoff.select {|h| h.begin_time.year == Date.today.year}
   end
 
   def pending_requests

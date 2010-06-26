@@ -32,30 +32,21 @@ class Dayoff < ActiveRecord::Base
       :include    => :user
   end
 
-  # i expect search to only be called in code when the search parameter 
-  # is built. I am not ready to have the search parameter be user input.
-  def self.search(search, page)
-    user = User.find_by_login(search)
-    return paginate( :per_page => 20, :page => page,:order => "created_at DESC" ) if user.nil?
-    paginate :per_page => 20, :page => page,
-             :conditions => ['user_id like ?', "%#{user.id}%"], :order => 'user_id'
-  end
-   
   def self.get_dayoff_types
-    ["etc","personal","vacation"]  
+    ["etc","personal","vacation"]
   end
 
   def prohibit_time_travel
     errors.add_to_base "Time travel is strictly prohibited! Correct ending date." if
       !begin_time.nil? and end_time < begin_time
   end
- 
+
   def not_nice_twice
     if !begin_time.nil? and in_range_of_existing
       errors.add_to_base "This request contains a day that already belongs to one of your holidays."
-    end 
+    end
   end
- 
+
   def in_range_of_existing
     (self.user.get_list_of_dates & self.included_dates) != []
   end
@@ -63,10 +54,10 @@ class Dayoff < ActiveRecord::Base
   def sanitize_input!
     self.description = Sanitize.clean( self.description )
   end
- 
+
   def status
-    return 'approved' if approved?  
-    return 'denied'   if denied?  
+    return 'approved' if approved?
+    return 'denied'   if denied?
     return 'pending'  if pending?
   end
 
@@ -77,13 +68,13 @@ class Dayoff < ActiveRecord::Base
   def pending?
     state == 0
   end
-  
+
   def approved?
     state == 1
   end
 
   def denied?
-    state == -1 
+    state == -1
   end
 
   def approve( current_user )
@@ -101,7 +92,7 @@ class Dayoff < ActiveRecord::Base
     Delayed::Job.enqueue(DeniedDayoffMailJob.new(self.id))
     self.save!
   end
- 
+
   ####################
   # get_length should get called any time that you need
   # to display the length of a holiday. Since the DB only 
@@ -113,12 +104,12 @@ class Dayoff < ActiveRecord::Base
   def get_length()
     length      = 0.0
     difference  = ( self.end_time.to_datetime - self.begin_time.to_datetime).to_f
-    # approx is a monkey patch ( look out ). it uses the concept of epsilon math. 
+    # approx is a monkey patch ( look out ). it uses the concept of epsilon math.
     if difference.approx( HALF_DAY, 0.01)
       length = 0.5
     elsif difference.approx( WHOLE_DAY, 0.01)
       length = 1.0
-    else 
+    else
       self.included_dates.each {|date| length += 1.0 if date.working_day? }
     end
     length
@@ -151,15 +142,15 @@ class Dayoff < ActiveRecord::Base
 
   def to_fullcalendar_format
     {
-      :title => self.to_s, 
-      :start => self.begin_time.iso8601, 
+      :title => self.to_s,
+      :start => self.begin_time.iso8601,
       :end => self.end_time.iso8601,
       :allDay => self.whole?
     }
   end
 
   def to_s
-    user.name 
+    user.name
   end
 
 end
