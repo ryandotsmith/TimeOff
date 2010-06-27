@@ -1,13 +1,21 @@
 class UsersController < ApplicationController
   before_filter :load_account
   before_filter :require_user, :only => [:show, :edit, :update]
-  
+
   layout 'split', :only => [:new]
 
-  def show; @user = @current_user;           end
-  def new;  @user = @account.users.build;    end
-  def edit; @user = User.find(params[:id]);  end
-  
+  def new
+    @user = @account.users.build
+  end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def show
+    @user = User.find(params[:id])
+  end
+
   def create
     @user = @account.users.build( params[:user] )
     @user.generate_one_time_password!
@@ -19,7 +27,7 @@ class UsersController < ApplicationController
       render :action => :new
     end
   end
- 
+
   def update
     @user = User.find(params[:id])# makes our views "cleaner" and more consistent
     if @user.update_attributes(params[:user])
@@ -28,5 +36,5 @@ class UsersController < ApplicationController
       render :action => :edit
     end
   end
-  
+
 end

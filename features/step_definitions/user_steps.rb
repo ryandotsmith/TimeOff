@@ -34,3 +34,16 @@ Then /^I should see "([^"]*)" within the user row$/ do |content|
   Then %{I should see "#{content}" within "tr#user_#{@user.id}"}
 end
 
+Given /^the following employee record$/ do |table|
+  table.hashes.each do |hash|
+    @employee = Factory(:user, hash)
+  end
+end
+
+Given /^the employee has a pending request for "([^"]*)" days$/ do |arg1|
+  begin_time = DateTime.now
+  end_time   = begin_time + arg1.to_i.days
+  @pending_request = Factory(:dayoff, :begin_time => begin_time, :end_time => end_time, :user => @employee, :account => @account)
+  @employee.daysoff << @pending_request
+  @employee.save
+end

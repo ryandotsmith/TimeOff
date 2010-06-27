@@ -1,0 +1,28 @@
+%h1= @user.name
+%hr
+- pending_requests = @user.daysoff.pending.count
+%p= "#{pluralize(pending_requests,'requests')} pending approval"
+
+- vacation_time_remaining = @user.get_remaining_dayoff_time[:vacation]
+- vacation_time_taken     = @user.get_taken_dayoff_time[:vacation]
+
+- personal_time_remaining  = @user.get_remaining_dayoff_time[:personal]
+- personal_time_taken      = @user.get_taken_dayoff_time[:personal]
+%table{:style => 'width:100%'}
+  %thead
+    %tr
+      %th type
+      %th taken
+      %th remaining
+      %th max available
+  %tbody
+    %tr.vacation
+      %td vacation
+      %td.taken= pluralize(vacation_time_taken ,   'day')
+      %td.remaining= pluralize(vacation_time_remaining,'day')
+      %td.max= pluralize(@user.max_vacation,     'day')
+    %tr.personal
+      %td personal
+      %td.taken= pluralize(personal_time_taken ,   'day')
+      %td.remaining= pluralize(personal_time_remaining,'day')
+      %td.max= pluralize(@user.max_personal,     'day')

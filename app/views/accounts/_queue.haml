@@ -19,7 +19,7 @@
           %th approve
         - daysoff.each do |dayoff|
           %tr{:id => "dayoff_#{dayoff.id}"}
-            %td.name= dayoff.user.name
+            %td.name= link_to dayoff.user.name, dayoff.user, :rel => 'facebox'
             %td= dayoff.created_at
             %td= dayoff.leave_type
             %td= dayoff.get_length

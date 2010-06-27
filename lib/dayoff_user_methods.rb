@@ -9,7 +9,7 @@ module DayoffUserMethods
     Dayoff.get_dayoff_types.each {|t| results[t.to_sym] = 0.0 }
     this_years_daysoff.each do |dayoff|
       if dayoff.state == 1 and dayoff.begin_time.year >= Date.today.year
-        results[dayoff.leave_type.to_sym] += dayoff.get_length 
+        results[dayoff.leave_type.to_sym] += dayoff.get_length
       end
     end
     results
