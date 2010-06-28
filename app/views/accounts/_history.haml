@@ -8,7 +8,7 @@
       %li= link_to 'list', '#list'
   #calendar.block_content.tab_content
     #calendar
-    - current_user.account_owner? ? opts ={} : opts = {:user_id => current_user.id}
+    - current_user.manager? ? opts ={} : opts = {:user_id => current_user.id}
     = javascript_tag "var DAYSOFF_URL ='#{account_daysoff_path(current_user.account,opts)}'"
   #list.block_content.tab_content
     %table.daysoff

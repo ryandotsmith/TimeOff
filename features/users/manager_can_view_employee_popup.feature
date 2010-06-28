@@ -1,4 +1,3 @@
-@wip
 Feature: Mnager can see employee snapshot in a popup
   In order to quickly determine an employees timeoff status
   As a manager on any page with an employees name

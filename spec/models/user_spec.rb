@@ -5,8 +5,8 @@ describe User do
     before(:each) {@u = Factory(:user)}
     context "string attributes" do
       it "should return account owner status in to_s" do
-        @u.should_receive(:account_owner?).and_return(true)
-        @u.to_s.should eql('Ryan Smith (account owner)')
+        @u.should_receive(:manager?).and_return(true)
+        @u.to_s.should eql('Ryan Smith (manager)')
       end
     end
   end

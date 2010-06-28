@@ -3,7 +3,7 @@ class AccountsController < ApplicationController
 
   def show
     @account = Account.find(params[:id])
-    if current_user.account_owner?
+    if current_user.manager?
       @archived_daysoff   = @account.daysoff.paginate_by_creation_date(params.dup)
       @requested_daysoff  = @account.daysoff.pending(:include => :user)
     end

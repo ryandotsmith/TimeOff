@@ -19,21 +19,21 @@
 #right
   = link_to image_tag('buttons/request_time_off.gif',:alt => 'request time off'), new_user_dayoff_path(current_user), :class => 'link_button'
   %br
-  - requests = current_user.pending_requests.length 
+  - requests = current_user.pending_requests.length
   - if requests > 0
     %span= "#{requests} #{pluralize(requests,'request').split(" ").last} pending approval" 
 
-- if current_user.account_owner?
+- if current_user.manager?
   #menu
-    %a{:href => "#queue"} 
+    %a{:href => "#queue"}
       %span Queue
-    %a{:href => "#archive"} 
-      %span Archive 
+    %a{:href => "#archive"}
+      %span Archive
     %a{:href => "#history"}
       %span History
   .clear
 
-- if current_user.account_owner?
+- if current_user.manager?
   #queue
     = render :partial => 'queue',   :locals => {:daysoff => @requested_daysoff }
   #archive

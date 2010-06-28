@@ -8,7 +8,7 @@ Feature: Manager can edit employee details
     And I am signed in as the account owner
 
     Scenario: Updating text fields on an employee
-      Given an user exists 
+      Given an user exists
       And I am on the settings page
       When I follow "edit" within the user row
       And I fill in "First Name" with "Not Another Like It"

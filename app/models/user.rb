@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 
   attr_accessible   :email, :first_name, :last_name,:password,
                     :password_confirmation, :openid_identifier,
-                    :max_vacation, :max_personal
+                    :max_vacation, :max_personal, :manager
 
   include DayoffUserMethods
   acts_as_authentic
@@ -39,12 +39,16 @@ class User < ActiveRecord::Base
   end
 
   def to_s
-    return name + " (account owner)" if account_owner? 
+    return name + " (manager)" if manager?
     name
   end
 
   def account_owner?
     !Account.find_by_owner_id(self.id).nil? or self.root?
+  end
+
+  def manager?
+    root? || account_owner? || manager
   end
 
   def root?

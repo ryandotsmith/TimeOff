@@ -3,15 +3,15 @@ Given /^an account exists with a company name of "([^\"]*)"$/ do |company_name|
 end
 
 Given /^I am signed in as the account owner$/ do
-  @user = @account.owner
+  @account_owner = @account.owner
   visit new_user_session_path
-  fill_in('user_session_email',    :with => @user.email)
+  fill_in('user_session_email',    :with => @account_owner.email)
   fill_in('user_session_password', :with => 'password' )
   click_button("sign in")
 end
 
 Given /^I am signed in as an employee of "([^\"]*)"$/ do |arg1|
-  @user = Factory(:user) 
+  @user ||= Factory(:user) 
   @account.users << @user
   @account.save
 

@@ -1,4 +1,16 @@
-%h2 Update Employee
+%h2 
+  Update Employee
+  - if @user.manager?
+    %span (manager)
+%hr
+- form_for @user do |form|
+  %p
+    = form.label :manager, "Management Status"
+    %br
+    = form.check_box :manager, {}, true, false
+  %p
+    = form.submit 'promote'
+%hr
 - form_for @user do |form|
   %p
     = form.label :first_name,"First Name"

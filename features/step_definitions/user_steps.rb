@@ -1,5 +1,5 @@
 Given /^an user exists$/ do
- @account.users << @user = Factory(:user) if User.count.zero?
+ @account.users << @user ||= Factory(:user)
 end
 
 Given /^an account has been provisioned with email "([^\"]*)" and password "([^\"]*)"$/ do |email, password|
@@ -46,4 +46,9 @@ Given /^the employee has a pending request for "([^"]*)" days$/ do |arg1|
   @pending_request = Factory(:dayoff, :begin_time => begin_time, :end_time => end_time, :user => @employee, :account => @account)
   @employee.daysoff << @pending_request
   @employee.save
+end
+
+Then /^I should not see manager features$/ do
+  Then %{I should not see "Request Queue"}
+  And %{I should not see "Archive"}
 end
