@@ -1,6 +1,6 @@
 - daysoff.each do |dayoff|
   %tr{:id => "dayoff_#{dayoff.id}"}
-    %td= dayoff.user.name
+    %td= link_to dayoff.user.name, dayoff.user, :rel => 'facebox'
     %td= dayoff.created_at
     %td= dayoff.get_length
     %td= dayoff.description

@@ -29,7 +29,7 @@ describe Dayoff do
       date = Time.now
       dayoff = Factory(:dayoff,:leave_length => 'whole', :begin_time => date)
       hash = {:title=>"Ryan Smith", :start=>dayoff.begin_time.iso8601, :end=>dayoff.end_time.iso8601, :allDay=>true}
-      dayoff.to_fullcalendar_format.should eql(hash)
+      dayoff.to_fullcalendar_format.should include hash
     end
   end
 end

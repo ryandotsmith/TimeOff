@@ -11,7 +11,11 @@ $(document).ready(function() {
 
   $('#calendar').fullCalendar({
     height: 500,
-    events: DAYSOFF_URL
+    events: DAYSOFF_URL,
+    eventClick: function(event){
+      var url = '/users/' + event.user_id
+      $.facebox({ ajax: url });
+    }
   });
 
   $("#menu > a").click(function(){
