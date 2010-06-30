@@ -30,8 +30,6 @@ $(function () {
 	$('.wysiwyg').wysiwyg({css: "css/wysiwyg.css"});
 	
 	
-	// Modal boxes - to all links with rel="facebox"
-	$('a[rel*=facebox]').facebox()
 	
 	
 	// Messages

@@ -1,5 +1,12 @@
 $(document).ready(function() {
-  $("a[rel=screenshots]").fancybox();
+  $("a[rel=screenshots]").livequery(function(){
+    $(this).fancybox();
+  });
+
+  $("a[rel=facebox]").livequery(function(){
+    $(this).facebox();
+  });
+
 
   $("#more_link").morePaginate({ container: "#archive-table-body" });
 
