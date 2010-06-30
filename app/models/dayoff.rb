@@ -17,6 +17,8 @@ class Dayoff < ActiveRecord::Base
   named_scope :pending,  :conditions => {:state => 0 }
   named_scope :denied,   :conditions => {:state => -1}
 
+  default_scope :order => 'created_at DESC'
+
   def before_validation
     adjust_time!( self.leave_length )
     sanitize_input!

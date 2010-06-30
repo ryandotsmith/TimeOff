@@ -20,7 +20,7 @@ $(document).ready(function() {
     height: 500,
     events: DAYSOFF_URL,
     eventClick: function(event){
-      var url = '/users/' + event.user_id
+      var url = '/users/' + event.user_id + '.js'
       $.facebox({ ajax: url });
     }
   });

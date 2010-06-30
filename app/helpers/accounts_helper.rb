@@ -3,8 +3,9 @@ module AccountsHelper
     messages = []
     [:vacation, :personal].each do |type|
       data = user.get_remaining_dayoff_time[type]
+      max  = user.send("max_#{type}")
       message = NotificationMessage.new
-      message.title = "#{type} days remaining"
+      message.title = "#{type} days remaining <br /> out of <span>#{max}</span>"
       message.body  = data
       messages << message
     end

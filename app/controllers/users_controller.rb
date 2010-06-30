@@ -2,18 +2,26 @@ class UsersController < ApplicationController
   before_filter :load_account
   before_filter :require_user, :only => [:show, :edit, :update]
 
-  layout 'split', :only => [:new]
-
   def new
     @user = @account.users.build
+    respond_to do |format|
+      format.html { render :layout => 'split' }
+    end
   end
 
   def edit
     @user = User.find(params[:id])
+    respond_to do |format|
+      format.js { render :layout => false }
+    end
   end
 
   def show
     @user = User.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.js   { render :action => 'show.js',  :layout => false }
+    end
   end
 
   def create

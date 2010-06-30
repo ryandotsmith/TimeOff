@@ -1,5 +1,7 @@
-%h1= @user.name
-%hr
+%h1
+  = @user.name
+  %span= link_to 'employee history &rarr;', @user
+
 - pending_requests = @user.daysoff.pending.count
 %p= "#{pluralize(pending_requests,'requests')} pending approval"
 

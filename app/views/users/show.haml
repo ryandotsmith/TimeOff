@@ -1,0 +1,27 @@
+- content_for :block_head do
+  %h2 Employee Profile
+  %ul
+    %li= link_to '&larr; dashboard', @account
+
+#left
+  %h2= @user.name
+  %span hired on:
+  %strong= @user.date_of_hire.to_s
+  %br
+  %span email:
+  %strong
+    %a{:href => "mailto:#{@user.email}"}= @user.email
+#right
+  %table.messages
+    %tr
+      - account_messages(@account,@user) do |message|
+        - next if message.intended_for == 'admin' and current_user != @account.owner
+        %th{:alt => message.alt, :class => message.intended_for}
+          = message.body
+    %tr
+      - account_messages(@account,@user) do |message|
+        - next if message.intended_for == 'admin' and current_user != @account.owner
+        %td{:class => message.intended_for}
+          = message.title
+
+= render :partial => 'daysoff'
