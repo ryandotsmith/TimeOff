@@ -17,7 +17,7 @@ class Account < ActiveRecord::Base
   end
 
   def owner
-    User.find(self.owner_id) 
+    User.find(self.owner_id)
   end
 
   def name

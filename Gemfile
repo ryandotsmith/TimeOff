@@ -4,10 +4,12 @@ gem 'bundler', '0.9.26'
 gem "rails", "~> 2.3.5"
 gem "pg"
 gem 'haml',               '>=2.2.17'
+
 gem 'authlogic'
 gem 'friendly_id',        '>= 2.2.7'
 gem 'sanitize'
 gem 'facets',             '2.5.0', :require => 'facets/dictionary'
+
 gem 'hoptoad_notifier'
 gem 'delayed_job',                 :require => 'delayed_job'
 gem 'logworm_client'

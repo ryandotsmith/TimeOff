@@ -15,6 +15,7 @@ development:
   database: timeoff_development
   pool: 5
   timeout: 5000
+  min_messages: warning
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -25,6 +26,7 @@ test: &TEST
   database: timeoff_test
   pool: 5
   timeout: 5000
+  min_messages: warning
 
 cucumber:
   <<: *TEST

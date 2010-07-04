@@ -8,13 +8,27 @@
  * Date: Sun Feb 21 20:30:11 2010 -0800
  *
  */
+.approved,
+.fc-agenda .holiday .fc-event-time,
+.approveda {
+  border-style: solid; 
+  border-color: #36c;     /* default BORDER color (probably the same as background-color) */
+  background-color: #36c; /* default BACKGROUND color */
+  color: #fff;            /* default TEXT color */
+}
 
-
+.pending,
+.fc-agenda .holiday .fc-event-time,
+.pending a {
+  background-color: green; /* background color */
+  border-color: green;     /* border color */
+  color: yellow;           /* text color */
+}
 .fc,
 .fc .fc-header,
 .fc .fc-content {
-	font-size: 1em;
-	}
+  font-size: 1em;
+}
 	
 .fc {
 	direction: ltr;
@@ -234,28 +248,6 @@ table.fc-header {
 	
 /* Global Event Styles
 ------------------------------------------------------------------------*/
-
-.fc-event,
-.fc-agenda .fc-event-time,
-.fc-event a {
-	border-style: solid; 
-	border-color: #36c;     /* default BORDER color (probably the same as background-color) */
-	background-color: #36c; /* default BACKGROUND color */
-	color: #fff;            /* default TEXT color */
-	}
-	
-	/* Use the 'className' CalEvent property and the following
-	 * example CSS to change event color on a per-event basis:
-	 *
-	 * .myclass,
-	 * .fc-agenda .myclass .fc-event-time,
-	 * .myclass a {
-	 *     background-color: black;
-	 *     border-color: black;
-	 *     color: red;
-	 *     }
-	 */
-	 
 .fc-event {
 	text-align: left;
 	}

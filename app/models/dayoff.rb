@@ -148,7 +148,8 @@ class Dayoff < ActiveRecord::Base
       :start => self.begin_time.iso8601,
       :end => self.end_time.iso8601,
       :user_id => self.user.id,
-      :allDay => self.whole?
+      :allDay => self.whole?,
+      :className => self.status
     }
   end
 
