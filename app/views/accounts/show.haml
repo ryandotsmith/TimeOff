@@ -24,13 +24,14 @@
     %span= "#{requests} #{pluralize(requests,'request').split(" ").last} pending approval" 
 
 - if current_user.manager?
+  .clear
   #menu
     %a{:href => "#queue"}
       %span Queue
     %a{:href => "#archive"}
       %span Archive
-    %a{:href => "#history"}
-      %span History
+    %a{:href => "#calendar"}
+      %span Calendar
   .clear
 
 - if current_user.manager?
@@ -39,7 +40,7 @@
   #archive
     = render :partial => 'archived_daysoff/archive', :locals => {:daysoff => @archived_daysoff  }
 
-#history
-  = render :partial => 'history'
+#calendar
+  = render :partial => 'calendar'
 
 

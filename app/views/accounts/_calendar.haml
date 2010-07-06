@@ -2,12 +2,16 @@
   .block_head
     .bheadl
     .bheadr
-    %h2 History
-    %ul.tabs
-      %li= link_to 'calendar', '#calendar'
-      %li= link_to 'list', '#list'
-  #calendar.block_content.tab_content
-    #calendar
+    - if current_user.manager?
+      %h2 Team Calendar
+      = image_tag('calendar_key.png') if current_user.manager?
+    - else
+      %h2 Your Calendar
+      %ul.tabs
+        %li= link_to 'calendar', '#calendar'
+        %li= link_to 'list view', '#list'
+  #fullcalendar.block_content.tab_content
+    #fullcalendar
     - current_user.manager? ? opts ={} : opts = {:user_id => current_user.id}
     = javascript_tag "var DAYSOFF_URL ='#{account_daysoff_path(current_user.account,opts)}'"
   #list.block_content.tab_content

@@ -142,14 +142,14 @@ class Dayoff < ActiveRecord::Base
     array
   end
 
-  def to_fullcalendar_format
+  def to_fullcalendar_format(user)
     {
       :title => self.to_s,
       :start => self.begin_time.iso8601,
       :end => self.end_time.iso8601,
       :user_id => self.user.id,
       :allDay => self.whole?,
-      :className => self.status
+      :className => (self.user == user ? 'yours' : self.status)
     }
   end
 

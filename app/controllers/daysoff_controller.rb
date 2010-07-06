@@ -10,7 +10,7 @@ class DaysoffController < ApplicationController
       @daysoff = @account.daysoff
     end
     respond_to do |wants|
-      @daysoff.map!(&:to_fullcalendar_format)
+      @daysoff.map! {|d| d.to_fullcalendar_format(current_user) }
       wants.js { render :text =>  @daysoff.to_json}
     end
   end

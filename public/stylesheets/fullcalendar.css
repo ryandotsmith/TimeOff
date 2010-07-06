@@ -10,20 +10,28 @@
  */
 .approved,
 .fc-agenda .holiday .fc-event-time,
-.approveda {
+.approved a{
   border-style: solid; 
   border-color: #36c;     /* default BORDER color (probably the same as background-color) */
   background-color: #36c; /* default BACKGROUND color */
-  color: #fff;            /* default TEXT color */
+  color: #ffffff;            /* default TEXT color */
 }
 
 .pending,
 .fc-agenda .holiday .fc-event-time,
 .pending a {
-  background-color: green; /* background color */
+  background-color:green ; /* background color */
   border-color: green;     /* border color */
-  color: yellow;           /* text color */
+  color: #fff;           /* text color */
 }
+.yours,
+.fc-agenda .holiday .fc-event-time,
+.yours a {
+  background-color:#ff9900 ; /* background color */
+  border-color: #ff9900;     /* border color */
+  color: #000;           /* text color */
+}
+
 .fc,
 .fc .fc-header,
 .fc .fc-content {

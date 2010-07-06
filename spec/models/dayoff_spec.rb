@@ -26,10 +26,11 @@ describe Dayoff do
   end
   describe "to string methods" do
     it "should return a hash of attributes required by the full calendar lib" do
+      user = Factory(:user)
       date = Time.now
       dayoff = Factory(:dayoff,:leave_length => 'whole', :begin_time => date)
       hash = {:title=>"Ryan Smith", :start=>dayoff.begin_time.iso8601, :end=>dayoff.end_time.iso8601, :allDay=>true}
-      dayoff.to_fullcalendar_format.should include hash
+      dayoff.to_fullcalendar_format(user).should include hash
     end
   end
 end

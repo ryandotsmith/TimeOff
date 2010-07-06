@@ -16,8 +16,12 @@ $(document).ready(function() {
     events: DAYSOFF_URL
   });
 
-  $('#calendar').fullCalendar({
+  $('#fullcalendar').fullCalendar({
     height: 500,
+    buttonText: {
+      prev: '&larr;',
+      next: '&rarr;'
+    },
     events: DAYSOFF_URL,
     eventClick: function(event){
       var url = '/users/' + event.user_id + '.js'
