@@ -4,11 +4,12 @@
     .bheadr
     - if current_user.manager?
       %h2 Team Calendar
-      = image_tag('calendar_key.png') if current_user.manager?
+      = image_tag('calendar_key.png')
     - else
       %h2 Your Calendar
+      = image_tag('employee_calendar_key.png')
       %ul.tabs
-        %li= link_to 'calendar', '#calendar'
+        %li= link_to 'calendar', '#fullcalendar'
         %li= link_to 'list view', '#list'
   #fullcalendar.block_content.tab_content
     #fullcalendar

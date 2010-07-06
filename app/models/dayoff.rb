@@ -149,8 +149,12 @@ class Dayoff < ActiveRecord::Base
       :end => self.end_time.iso8601,
       :user_id => self.user.id,
       :allDay => self.whole?,
-      :className => (self.user == user ? 'yours' : self.status)
+      :className => (css_class(user))
     }
+  end
+
+  def css_class(user)
+    (self.user == user and !self.pending?) ? 'yours' : self.status
   end
 
   def to_s
