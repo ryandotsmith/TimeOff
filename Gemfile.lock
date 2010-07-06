@@ -82,10 +82,6 @@ dependencies:
     - :cucumber
     - :development
     version: ">= 0"
-  bundler: 
-    group: 
-    - :default
-    version: = 0.9.26
   culerity: 
     group: 
     - :test
@@ -148,8 +144,6 @@ specs:
     version: 2.1.5
 - builder: 
     version: 2.1.2
-- bundler: 
-    version: 0.9.26
 - culerity: 
     version: 0.2.10
 - mime-types: 
@@ -252,7 +246,7 @@ specs:
     version: 1.2.5
 - taps: 
     version: 0.3.10
-hash: 07303a93b250030fb31de6cc0d5447d5a3146165
+hash: c23428f97760acdfe368d5e5d3f48526af333875
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
