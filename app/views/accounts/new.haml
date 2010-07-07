@@ -1,15 +1,17 @@
 - content_for :left_head do
-  %h2 Sign Up for a FREE Account
+  %h2 Sign Up for a free beta Account
 
 - content_for :right_head do
-  %h3 3 reasons why you'll love Time Off
+  %h3 Pricing
 
 - content_for :right_body do
+  .message.success
+    TimeOff is beta. So, in exchange for your feedback we will give you free access.
+    No Credit Card is needed to sign up. We expect to start charging September 2010.
   %ul
-    %li All time off is displayed on an easy to read calendar.
-    %li Eliminate descrepencies with a record of your employee's Time Off.
-    %li A beautiful interface that is accessable from anywhere.
-
+    %li Free for first 30-days
+    %li $25 per month. unlimited data + unlimited users
+    %li $250 per year. Save $50 when you pay in advance.
 - content_for :left_body do
   - form_for @account do |form|
     = form.error_messages
