@@ -3,7 +3,6 @@ Feature: Manager can view employee details
   As a manager on the employee popup
   I want to click thru to see the details of the employee
 
-  @wip
   Scenario: Cliking details on the employee popup
     Given an account exists with a company name of "wonderset"
     And I am signed in as the account owner

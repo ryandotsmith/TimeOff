@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html>  
+
+  <head>  
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"  />  
+  </head>  
+
+  <body>  
+
+    <h1>New Request</h1>
+    <table>
+      <tr>
+        <td>Requested By:</td>
+        <td><%= @dayoff.user.name%></td>
+      </tr>
+      <tr>
+        <td>Time Off:</td>
+        <td><%= @dayoff.begin_time.to_s + @dayoff.end_time.to_s%></td>
+      </tr>
+      <tr>
+        <td>Notes:</td>
+        <td><%= @dayoff.description%></td>
+      </tr>
+    </table>
+
+    <h3><a href=<%="http://www.timeoffhq.com/accounts/#{@accounts.to_param}"%>>Respond</a></h3>
+  </body>
+
+</html>

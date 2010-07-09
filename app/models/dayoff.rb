@@ -13,6 +13,8 @@ class Dayoff < ActiveRecord::Base
   validates_presence_of :begin_time,  :message => "please specify beginning time"
   validates_presence_of :description, :message => "please add a descirption"
 
+  after_create :deliver_request_message_to_manager
+
   named_scope :approved, :conditions => {:state => 1 }
   named_scope :pending,  :conditions => {:state => 0 }
   named_scope :denied,   :conditions => {:state => -1}
@@ -159,6 +161,10 @@ class Dayoff < ActiveRecord::Base
 
   def to_s
     user.name
+  end
+
+  def deliver_request_message_to_manager
+    Delayed::Job.enqueue(NewDayoffMailJob.new(self.id))
   end
 
 end

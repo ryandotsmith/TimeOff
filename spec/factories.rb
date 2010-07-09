@@ -14,6 +14,10 @@ Factory.define :user do |u|
   u.active                { true                 }
 end
 
+Factory.define :manager, :parent => :user  do |manager|
+  manager.manager { true }
+end
+
 Factory.define :account do |account|
   account.company_name     { "wonderset" }
   account.users            { |users| [users.association(:user,:email => Factory.next(:email)) ]}

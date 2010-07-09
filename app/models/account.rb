@@ -24,4 +24,8 @@ class Account < ActiveRecord::Base
     company_name
   end
 
+  def managers
+    users.select {|u| u.manager?}
+  end
+
 end

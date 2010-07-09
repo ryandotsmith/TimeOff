@@ -1,16 +1,24 @@
 class DayoffMailer < ActionMailer::Base
-  
+
   def approved_message(dayoff)
     recipients dayoff.user.email
-    from "Time Off System <donotreply@timeoffhq.com>"
+    from "Time Off <donotreply@timeoffhq.com>"
     subject "Time Off Request Approved"
+    sent_on Time.now
+    body :dayoff => dayoff
+  end
+
+  def new_request_message_for_manager(dayoff)
+    recipients dayoff.account.managers.map(&:email)
+    from "Time Off <donotreply@timeoffhq.com>"
+    subject "New Time Off Request"
     sent_on Time.now
     body :dayoff => dayoff
   end
 
   def denied_message(dayoff)
     recipients dayoff.user.email
-    from "Time Off System <donotreply@timeoffhq.com>"
+    from "Time Off <donotreply@timeoffhq.com>"
     subject "Time Off Request Denied"
     sent_on Time.now
     body :dayoff => dayoff
@@ -18,7 +26,7 @@ class DayoffMailer < ActionMailer::Base
 
   def deleted_message(dayoff)
     recipients dayoff.user.email
-    from "Time Off System <donotreply@timeoffhq.com>"
+    from "Time Off <donotreply@timeoffhq.com>"
     subject "Time Off Deleted"
     sent_on Time.now
     body :dayoff => dayoff

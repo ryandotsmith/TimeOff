@@ -1,3 +1,4 @@
+})(jQuery);
 $(function () {
 	
 	// Preload images
@@ -129,4 +130,5 @@ $(function () {
 	// IE6 PNG fix
 	$(document).pngFix();
 		
+
 });

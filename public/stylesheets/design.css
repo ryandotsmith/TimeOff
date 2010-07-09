@@ -1,0 +1,279 @@
+/*                         CSS RESET
+**************************************************************/
+
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	list-style: none;
+	font-size: 100.01%;
+	font-style: normal;
+	font-weight: normal;
+	font-family: inherit;
+	text-decoration: none;
+}
+body	{
+	font: 62.5% Arial, Helvetica, sans-serif;
+	background: #cbcbcb url(/images/design/bg_body.png) repeat-x 0px 0px;
+}
+
+/*                        PAGE LAYOUT
+**************************************************************/
+
+div.wrap	{
+	width: 920px;
+	margin: 0 auto;
+}
+#header	{
+	height: 330px;
+	padding-top: 30px;
+	background: url(/images/design/bg_header.jpg) no-repeat center top;
+}
+#features	{
+	padding: 30px 0;
+	background: url(/images/design/bg_site.jpg) repeat-x 0px 0px;
+}
+#featvid	{
+	height: 295px;
+	background: url(/images/design/bg_site.jpg) repeat-x 0px -274px;
+}
+#footer	{
+	height: 95px;
+	background: url(/images/design/bg_site.jpg) repeat-x 0px -570px;
+}
+
+/*                       TYPOGRAPHY STYLES
+**************************************************************/
+
+h1	{
+	font-size: 2.4em;
+	line-height: 1.5;
+}
+h2	{
+	font-size: 1.7em;
+	line-height: 1.5;
+}
+h3	{
+	font-size: 1.5em;
+	line-height: 1.5;
+}
+h4	{
+	font-size: 1.3em;
+	line-height: 1.5;
+}
+p	{
+	font-size: 1.3em;
+	line-height: 1.6;
+}
+li	{
+	font-size: 1.3em;
+	line-height: 1.6;
+}
+strong	{
+	font-weight: bold;
+}
+cite, em	{
+	font-style: italic;
+}
+
+/*                         LINK STYLES
+**************************************************************/
+
+a, a:visited	{
+	color: #2569d7;
+}
+a:hover	{
+	text-decoration: underline;
+}
+
+/*                        GLOBAL STYLES
+**************************************************************/
+
+a, a:visited, a *, a:visited *, button	{
+	cursor: pointer;
+}
+.clear	{
+	height: 0;
+	clear: both;
+	display: block;
+	overflow: hidden;
+}
+.bg	{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+/*                        HEADER STYLES
+**************************************************************/
+
+#header h1	{
+	float: left;
+	height: 50px;
+	width: 130px;
+}
+#header h1 a, #header h1 a:visited	{
+	height: 50px;
+	display: block;
+	overflow: hidden;
+	text-indent: -9000px;
+	background: url(/images/design/bg_logo.png) no-repeat 0px 0px;
+}
+#header p	{
+	z-index: 2;
+	float: right;
+	color: #fffefe;
+	font-size: 1.4em;
+	position: relative;
+}
+#header p a, #header p a:visited	{
+	color: #fff;
+	margin-left: 10px;
+}
+#signup	{
+	clear: both;
+	height: 280px;
+}
+#signup img	{
+	float: right;
+	display: block;
+	margin: 0 0 0 -100px;
+}
+#signup p	{
+	color: #000;
+	float: left;
+}
+#signup p.slogan	{
+	float: none;
+	width: 400px;
+	height: 160px;
+	overflow: hidden;
+	margin-bottom: 25px;
+}
+#signup p.button	{
+	float: left;
+	width: 196px;
+	height: 42px;
+	padding: 5px;
+	display: block;
+	margin-right: 15px;
+	background: url(/images/design/bg_button_signup.png) no-repeat 0px 0px;
+}
+#signup p.button.hv	{
+	background: url(/images/design/bg_button_signup.png) no-repeat 0px -52px;
+}
+#signup p.button.cl	{
+	background: url(/images/design/bg_button_signup.png) no-repeat 0px -104px;
+}
+#signup p.button a, #signup p.button a:visited	{
+	margin: 0;
+	width: 196px;
+	height: 42px;
+	display: block;
+	overflow: hidden;
+	text-indent: -9000px;
+}
+#signup p.trial	{
+	padding-top: 16px;
+}
+
+/*                        FEATURES STYLES
+**************************************************************/
+
+div.feature	{
+	float: left;
+	width: 200px;
+	padding-right: 40px;
+}
+#archiv	{
+	padding-right: 0;
+}
+#features span.icon	{
+	float: left;
+	width: 70px;
+	height: 67px;
+	display: block;
+	margin-right: 10px
+}
+#features span.icon a, #features span.icon a:visited	{
+	width: 20px;
+	height: 20px;
+	float: right;
+	display: block;
+}
+#online span.icon	{
+	background: url(/images/design/bg_features_icons.png) no-repeat 0px 0px;
+}
+#calen span.icon	{
+	background: url(/images/design/bg_features_icons.png) no-repeat -70px 0px;
+}
+#email span.icon	{
+	background: url(/images/design/bg_features_icons.png) no-repeat -140px 0px;
+}
+#archiv span.icon	{
+	background: url(/images/design/bg_features_icons.png) no-repeat -210px 0px;
+}
+#features h2	{
+	height: 67px;
+	font-size: 1.7em;
+	padding-top: 17px;
+	line-height: 20px;
+}
+#features p	{
+	color: #454545;
+}
+#features *	{
+	text-shadow: 1px 1px 2px #fff;
+}
+
+/*                        FEATVID STYLES
+**************************************************************/
+
+#featvid div.feature	{
+	float: right;
+	padding-right: 20px;
+}
+#featvid h2	{
+	height: 40px;
+	font-size: 2em;
+	padding-top: 35px;
+	line-height: 25px;
+}
+#featvid p	{
+	color: #454545;
+}
+#vid	{
+	float: left;
+	width: 460px;
+}
+#vid img	{
+	display: block;
+}
+#spot	{
+	padding-right: 0;
+}
+#featvid *	{
+	text-shadow: 1px 1px 2px #fff;
+}
+
+/*                        FOOTER STYLES
+**************************************************************/
+
+#footer ul	{
+	float: right;
+	padding-top: 35px;
+}
+#footer li	{
+	float: left;
+	font-size: 1.1em;
+	padding-left: 20px;
+}
+#footer li a, #footer li a:visited	{
+	color: #454545;
+}
+#footer *	{
+	text-shadow: 1px 1px 2px #fff;
+}

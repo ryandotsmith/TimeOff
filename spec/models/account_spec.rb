@@ -20,12 +20,23 @@ describe Account do
       end
     end
   end
-  describe "ownership" do
-    before(:each){ @account = Factory(:account) }
-    it "should be added to the creator" do
-      user = Factory(:user)
-      User.should_receive(:find).and_return(user)
-      @account.owner.should eql(user) 
+  describe "managers" do
+    it "should return a list of managers" do
+      account = Factory(:account)
+      manager = Factory(:manager)
+      account.users << manager << Factory(:user)
+
+      account.users.count.should eql(3)
+      account.managers.count.should eql(2)
+      account.managers.should include manager
+    end
+    context "ownership" do
+      before(:each){ @account = Factory(:account) }
+      it "should be added to the creator" do
+        user = Factory(:user)
+        User.should_receive(:find).and_return(user)
+        @account.owner.should eql(user) 
+      end
     end
   end
 end
