@@ -15,19 +15,20 @@
     #fullcalendar
     - current_user.manager? ? opts ={} : opts = {:user_id => current_user.id}
     = javascript_tag "var DAYSOFF_URL ='#{account_daysoff_path(current_user.account,opts)}'"
-  #list.block_content.tab_content
-    %table.daysoff
-      %tr
-        %th date requested
-        %th time off requested
-        %th description
-        %th status
-      - current_user.this_years_daysoff.each do |dayoff|
-        %tr{:id => "dayoff_#{dayoff.id}"}
-          %td= dayoff.created_at
-          %td= dayoff.get_length
-          %td= dayoff.description
-          %td= dayoff.status
+  - unless current_user.manager?
+    #list.block_content.tab_content
+      %table.daysoff
+        %tr
+          %th date requested
+          %th time off requested
+          %th description
+          %th status
+        - current_user.this_years_daysoff.each do |dayoff|
+          %tr{:id => "dayoff_#{dayoff.id}"}
+            %td= dayoff.created_at
+            %td= dayoff.get_length
+            %td= dayoff.description
+            %td= dayoff.status
 
 
   .bendl
