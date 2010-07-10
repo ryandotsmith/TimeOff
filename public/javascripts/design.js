@@ -13,6 +13,21 @@ Cufon.replace(slogan_b,{ fontFamily: 'Titillium_999', color: '-linear-gradient(0
 $(function(){
   $('#signup p.button').signup();
   $("a[rel=screenshots]").fancybox();
+  $("#video-tour").click(function() {
+    $.fancybox({
+      'padding'             : 0,
+      'autoScale'           : false,
+      'transitionIn'        : 'none',
+      'transitionOut'       : 'none',
+      'title'               : this.title,
+      'width'               : 680,
+      'height'              : 495,
+      'href'                : this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
+      'type'                : 'swf',
+      'swf'                 : {'allowfullscreen':'true'}
+    });
+    return false;
+  });
 });
 
 (function($) {
