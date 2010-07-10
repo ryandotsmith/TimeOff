@@ -1,4 +1,5 @@
 class Dayoff < ActiveRecord::Base
+
   # 0.1875 != 0.5 , nevertheless, these calculations were decided
   # to be accurate based upon our business logic. 
   HALF_DAY  = 0.1875
