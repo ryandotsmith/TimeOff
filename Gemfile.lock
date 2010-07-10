@@ -12,15 +12,11 @@ dependencies:
     - :cucumber
     - :development
     version: ">= 0"
-  pg: 
-    group: 
-    - :default
-    version: ">= 0"
   rails: 
     group: 
     - :default
     version: ~> 2.3.5
-  authlogic: 
+  pg: 
     group: 
     - :default
     version: ">= 0"
@@ -28,6 +24,10 @@ dependencies:
     group: 
     - :default
     version: ">= 2.2.17"
+  authlogic: 
+    group: 
+    - :default
+    version: ">= 0"
   celerity: 
     group: 
     - :test
@@ -97,6 +97,10 @@ dependencies:
     - :test
     - :cucumber
     version: ">= 0"
+  hoptoad_notifier: 
+    group: 
+    - :default
+    version: = 2.3.1
   sanitize: 
     group: 
     - :default
@@ -202,6 +206,8 @@ specs:
     version: 1.4.2
 - heroku: 
     version: 1.9.11
+- hoptoad_notifier: 
+    version: 2.3.1
 - hpricot: 
     version: 0.8.2
 - json: 
@@ -240,7 +246,7 @@ specs:
     version: 1.2.5
 - taps: 
     version: 0.3.10
-hash: 42390d436f8217566c4eb4a5df346255a56a801b
+hash: ed89310592e19558fbd943fd0e44d83575b6123f
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
