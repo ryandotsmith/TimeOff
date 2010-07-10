@@ -147,12 +147,17 @@ a, a:visited, a *, a:visited *, button	{
 	float: left;
 }
 #signup p.slogan	{
+	color: #fff;
 	float: none;
-	width: 400px;
-	height: 160px;
-	overflow: hidden;
+	width: 410px;
+	height: 125px;
+	font-size: 3.4em;
+	padding-top: 35px;
+	line-height: 35px;
 	margin-bottom: 25px;
+	letter-spacing: -1px;
 }
+
 #signup p.button	{
 	float: left;
 	width: 196px;

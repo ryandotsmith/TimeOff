@@ -1,10 +1,14 @@
 var tut500 = '#featvid h2';
 var tut750 = '#signup p.trial';
 var tut999 = '#featvid h2 strong';
+var slogan   = '#signup p.slogan';
+var slogan_b = '#signup p strong';
 
-Cufon.replace(tut500,		{ fontFamily: 'Titillium_500', textShadow: '#fff 1px 1px, #fff 2px 2px' });
-Cufon.replace(tut750,		{ fontFamily: 'Titillium_750' });
-Cufon.replace(tut999,		{ fontFamily: 'Titillium_999', textShadow: '#fff 1px 1px, #fff 2px 2px' });
+Cufon.replace(tut500,  { fontFamily: 'Titillium_500', textShadow: '#fff 1px 1px, #fff 2px 2px' });
+Cufon.replace(tut750,  { fontFamily: 'Titillium_750' });
+Cufon.replace(tut999,  { fontFamily: 'Titillium_999', textShadow: '#fff 1px 1px, #fff 2px 2px' });
+Cufon.replace(slogan,  { fontFamily: 'Titillium_500', color: '-linear-gradient(0=#fff, 1=#cfcfcf)', textShadow: '#111 1px 1px, #111 1px 1px' });
+Cufon.replace(slogan_b,{ fontFamily: 'Titillium_999', color: '-linear-gradient(0=#fff, 1=#cfcfcf)', textShadow: '#111 1px 1px, #111 1px 1px' });
 
 $(function(){
   $('#signup p.button').signup();

@@ -25,10 +25,9 @@
             %strong Sign in
         #signup
           %img{:alt => "", :height => "280", :src => "/images/design/img_screenshot.jpg", :width => "480"}/
+          - slogans = [ "Time Off <strong>eliminates</strong> the chaos surrounding <br /> paid time off.","Spend less time with HR &amp;<br /> <strong>More</strong> time making money." ]
           %p.slogan
-            Use
-            %strong Time Off
-            To eliminate the chaos surrounding Paid Time Off.
+            = slogans.at(rand(2))
           %p.button
             %a{:href => new_account_url, :title => "Sign Up Now"} Sign up &amp; Pricing
           %p.trial 30-day free trial
@@ -81,9 +80,8 @@
     #featvid
       .wrap
         #vid
-          %h2
-            %strong Time Off
-            will save you from the kaos.
+          %h2 Watch this 1:00 minute video.
+            
           %img{:alt => "", :height => "220", :src => "/images/design/img_vid.jpg", :width => "440"}/
         .feature
           %h2 Twitter
