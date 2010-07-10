@@ -84,23 +84,27 @@
           %a{:href => 'http://www.youtube.com/watch?v=uLTIowBF0kE',:id => 'video-tour'}
             %img{:alt => "", :height => "220", :src => "/images/design/img_vid.jpg", :width => "440"}/
         .feature
-          %h2 Twitter
-          %p Donec et felis dolor. Donec consequat ligula sit amet sem volutpat eu congue nisi dapibus.
-          %p Nullam nunc mauris, malesuada nec tincidunt id, sodales eu arcu.
+          %h2 Contact
+          %p (602) 456-9778
+          %p 
+            %a{:href => 'mailto:timeoff@wonderset.com'}timeoff@wonderset.com
         #spot.feature
           %h2 Customer Spotlight
-          %p Donec et felis dolor. Donec consequat ligula sit amet sem volutpat eu congue nisi dapibus.
-          %p Nullam nunc mauris, malesuada nec tincidunt id, sodales eu arcu.
+          %p= link_to "GS Enterprises Inc", 'http://www.gsenterprises.com'
+          %p
+            %i 13 employees
+            %br
+            "I spend less time dealing 
+            %br
+            with HR since we started using Time Off.
+            Money well spent." 
+            %hr
+            David Panjada
+            %br
+            Business Manager.
+
+
+
     #footer
-      .wrap
-        %ul
-          %li
-            %a{:href => "#", :title => "Follow us on Twitter"} Follow us on Twitter
-          %li
-            %a{:href => "#", :title => "Terms of Use"} Terms of Use
-          %li
-            %a{:href => "#", :title => "Privacy Policy"} Privacy Policy
-          %li
-            %a{:href => "#", :title => "Contact Us"} Contact Us
     :javascript
       Cufon.now(); 
