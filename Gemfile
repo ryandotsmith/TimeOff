@@ -9,7 +9,7 @@ gem 'friendly_id',        '>= 2.2.7'
 gem 'sanitize'
 gem 'facets',             '2.5.0', :require => 'facets/dictionary'
 
-gem 'hoptoad_notifier', '2.3.1'
+gem 'hoptoad_notifier', '2.2.6'
 gem 'delayed_job',                 :require => 'delayed_job'
 gem 'logworm_client'
 

@@ -174,7 +174,7 @@ end
 module Bundler
   ENV_LOADED   = true
   LOCKED_BY    = '0.9.26'
-  FINGERPRINT  = "ed89310592e19558fbd943fd0e44d83575b6123f"
+  FINGERPRINT  = "72b17e2676eeffba24e02207b50cd8d0f878eb0d"
   HOME         = '/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/bundler'
   AUTOREQUIRES = {:development=>[["heroku", false], ["mongrel", false], ["ruby-debug", false], ["taps", false]], :test=>[["culerity", false], ["capybara", false], ["cucumber", false], ["cucumber-rails", false], ["database_cleaner", false], ["email_spec", false], ["factory_girl", false], ["launchy", false], ["heroku", false], ["mongrel", false], ["rspec", false], ["rspec-rails", false], ["ruby-debug", false], ["taps", false]], :default=>[["authlogic", false], ["delayed_job", true], ["facets/dictionary", true], ["friendly_id", false], ["haml", false], ["hoptoad_notifier", false], ["logworm_client", false], ["pg", false], ["rails", false], ["sanitize", false]], :cucumber=>[["culerity", false], ["capybara", false], ["cucumber", false], ["cucumber-rails", false], ["database_cleaner", false], ["email_spec", false], ["factory_girl", false], ["launchy", false], ["heroku", false], ["mongrel", false], ["rspec", false], ["rspec-rails", false], ["ruby-debug", false], ["taps", false]]}
   SPECS        = [
@@ -218,7 +218,7 @@ module Bundler
         {:load_paths=>["/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/gems/launchy-0.3.5/lib"], :loaded_from=>"/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/specifications/launchy-0.3.5.gemspec", :name=>"launchy"},
         {:load_paths=>["/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/gems/rest-client-1.4.2/lib"], :loaded_from=>"/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/specifications/rest-client-1.4.2.gemspec", :name=>"rest-client"},
         {:load_paths=>["/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/gems/heroku-1.9.11/lib"], :loaded_from=>"/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/specifications/heroku-1.9.11.gemspec", :name=>"heroku"},
-        {:load_paths=>["/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/gems/hoptoad_notifier-2.3.1/lib"], :loaded_from=>"/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/specifications/hoptoad_notifier-2.3.1.gemspec", :name=>"hoptoad_notifier"},
+        {:load_paths=>["/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/gems/hoptoad_notifier-2.2.6/lib"], :loaded_from=>"/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/specifications/hoptoad_notifier-2.2.6.gemspec", :name=>"hoptoad_notifier"},
         {:load_paths=>["/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/gems/hpricot-0.8.2/lib"], :loaded_from=>"/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/specifications/hpricot-0.8.2.gemspec", :name=>"hpricot"},
         {:load_paths=>["/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/gems/json-1.4.3/ext/json/ext", "/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/gems/json-1.4.3/ext", "/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/gems/json-1.4.3/lib"], :loaded_from=>"/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/specifications/json-1.4.3.gemspec", :name=>"json"},
         {:load_paths=>["/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/gems/linecache-0.43/lib"], :loaded_from=>"/Users/ryandotsmith/.rvm/gems/ree-1.8.7-2010.01@timeoff/specifications/linecache-0.43.gemspec", :name=>"linecache"},
