@@ -151,6 +151,7 @@ class Dayoff < ActiveRecord::Base
       :start => self.begin_time.iso8601,
       :end => self.end_time.iso8601,
       :user_id => self.user.id,
+      :current_user_is_manager => user.manager?,
       :allDay => self.whole?,
       :className => (css_class(user))
     }

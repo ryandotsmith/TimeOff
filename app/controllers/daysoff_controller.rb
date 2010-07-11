@@ -5,7 +5,9 @@ class DaysoffController < ApplicationController
   def index
     user = User.find_by_id(params[:user_id])
     if user
-      @daysoff = user.daysoff
+      @daysoff =  user.daysoff.pending
+      @daysoff << user.daysoff.approved
+      @daysoff.flatten!
     else
       @daysoff = @account.daysoff
     end

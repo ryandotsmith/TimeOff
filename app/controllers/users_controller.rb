@@ -37,7 +37,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = User.find(params[:id])# makes our views "cleaner" and more consistent
+    @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
       redirect_to edit_account_url(current_user.account), :notice => "employee has been updated"
     else

@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   $("a[rel=facebox]").livequery(function(){
     $(this).facebox();
   });
@@ -20,8 +21,10 @@ $(document).ready(function() {
     },
     events: DAYSOFF_URL,
     eventClick: function(event){
-      var url = '/users/' + event.user_id + '.js'
-      $.facebox({ ajax: url });
+      if (event.current_user_is_manager == true){
+        var url = '/users/' + event.user_id + '.js'
+        $.facebox({ ajax: url });
+      };
     }
   });
 
