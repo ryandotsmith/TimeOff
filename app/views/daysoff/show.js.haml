@@ -1,0 +1,14 @@
+%p
+  = @dayoff.user.name
+  has
+  = @dayoff.user.get_remaining_dayoff_time[:vacation]
+  days remaining
+
+- form_for @dayoff do |form|
+  %p
+    = form.label :action_notes, "Notes:"
+    %br/
+    = form.text_area :action_notes, :size => '30x10', :class => 'text small'
+  %p
+    = form.submit 'approve',  :class => 'submit small'
+    = form.submit 'deny',     :class => 'submit small'

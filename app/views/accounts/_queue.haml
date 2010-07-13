@@ -26,7 +26,6 @@
             %td= dayoff.begin_time
             %td= dayoff.end_time
             %td= dayoff.description
-            %td= link_to 'respond', dayoff, :rel => 'facebox'
-
+            %td= link_to 'respond', dayoff_url(dayoff,:format => 'js'), :rel => 'facebox'
   .bendl
   .bendr

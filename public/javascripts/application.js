@@ -4,6 +4,7 @@ $(document).ready(function() {
     $(this).facebox();
   });
 
+ $("a[rel=fancybox]").fancybox();
 
   $("#more_link").morePaginate({ container: "#archive-table-body" });
 
