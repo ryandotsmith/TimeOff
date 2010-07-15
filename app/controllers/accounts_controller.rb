@@ -39,4 +39,14 @@ class AccountsController < ApplicationController
     end
   end
 
+  def update
+    @account = Account.find(params[:id])
+    if @account.update_attributes(params[:account])
+      respond_to do |format|
+        format.html
+        format.js {render :layout => false}
+      end
+    end
+  end
+
 end

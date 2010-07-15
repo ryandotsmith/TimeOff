@@ -9,13 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100628044704) do
+ActiveRecord::Schema.define(:version => 20100714173032) do
 
   create_table "accounts", :force => true do |t|
     t.string   "company_name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "owner_id"
+    t.integer  "customer_id"
+    t.integer  "subscription_id"
+    t.string   "product_handle"
   end
 
   create_table "daysoff", :force => true do |t|

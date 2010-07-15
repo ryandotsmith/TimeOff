@@ -1,10 +1,10 @@
 require File.dirname(__FILE__) + '/acceptance_helper'
 
-feature "Feature name", %q{
+feature "Creating a subscription", %q{
 
   In order to get continued service
   As a customer on the account edit page
-  I want to add my credit card
+  I want to create a subscription
 
 } do
 
@@ -14,16 +14,15 @@ feature "Feature name", %q{
     sign_in_as(owner)
   end
 
-  scenario "Adding a valid credit card" do
-    click_link "settings"
-    click_link "credit card"
+  scenario "Adding a valid credit card", :js => true do
+    click_link "billing"
+    click_button "0-4"
     fill_in "Name on Card", :with => "Ryan Smith"
     fill_in "Card Number", :with => "1"
     fill_in "Expiration Date", :with => "12/2020"
     fill_in "Security Code", :with => "123"
     click_button "submit"
-    Account.first.credit_card.number.should eql(1)
-    page.should have_css(".notice", :text => "Credit Card was successfully added")
+    page.should have_css(".message", :text => "Account Subscription Successfully Updated")
   end
 
 end

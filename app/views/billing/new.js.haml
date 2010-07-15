@@ -1,0 +1,15 @@
+- form_for :credit_card, :url => edit_account_credit_card_url do |form|
+
+  = form.label :name, "Name on Card"
+  = form.text_field :name
+
+  = form.label :number, "Card Number"
+  = form.text_field :number
+
+  = form.label :expiration_date, "Expiration Date"
+  = form.text_field :expiration_date
+
+  = form.label :cvv, "Security Code"
+  = form.text_field :cvv
+
+  = form.submit 'submit'

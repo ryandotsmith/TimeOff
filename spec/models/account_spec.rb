@@ -1,6 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe Account do
+
   describe "associations" do
     context "with daysoff" do
       it "should scope queries to daysoff which belong to an account" do
@@ -11,6 +12,7 @@ describe Account do
       end
     end
   end
+
   describe "callbacks" do
     context "after create" do
       it "should set owner" do
@@ -20,6 +22,7 @@ describe Account do
       end
     end
   end
+
   describe "managers" do
     it "should return a list of managers" do
       account = Factory(:account)
@@ -39,4 +42,14 @@ describe Account do
       end
     end
   end
+
+  describe "subscriptions" do
+    before(:each){@account = Factory(:account)}
+    it "should create a subscription if one can not be found by account id"
+    describe "credit cards" do
+      it "should return the masked credit card if the account has a subscription"
+    end
+  end
+
+
 end

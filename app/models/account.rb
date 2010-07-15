@@ -1,6 +1,8 @@
 class Account < ActiveRecord::Base
 
   include DayoffUserMethods
+  include SubscriptionHelper::InstanceMethods
+  extend  SubscriptionHelper::ClassMethods
 
   has_friendly_id :company_name, :use_slug => true
 

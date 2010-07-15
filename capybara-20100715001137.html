@@ -1,0 +1,121 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Action Controller: Exception caught</title>
+  <style>
+    body { background-color: #fff; color: #333; }
+
+    body, p, ol, ul, td {
+      font-family: verdana, arial, helvetica, sans-serif;
+      font-size:   13px;
+      line-height: 18px;
+    }
+
+    pre {
+      background-color: #eee;
+      padding: 10px;
+      font-size: 11px;
+    }
+
+    a { color: #000; }
+    a:visited { color: #666; }
+    a:hover { color: #fff; background-color:#000; }
+  </style>
+</head>
+<body>
+
+<h1>Template is missing</h1>
+<p>Missing template accounts/update.erb in view path app/views:vendor/plugins/high_voltage/app/views</p>
+
+
+</body>
+</html><script type="text/javascript">
+var Hoptoad = {
+  host    : "hoptoadapp.com",
+  api_key : "85bca0f789c030e340b294906287b8e1",
+  notice  : {"component":"accounts","environment_name":"production","line_number":"74","file":"[GEM_ROOT]/gems/actionpack-2.3.8/lib/action_view/paths.rb","error_class":"ActionView::MissingTemplate","action":"update"},
+  message : 'This error exists in production!',
+
+  initialize: function() {
+    if (this.initialized) {
+      return;
+    } else {
+      this.initialized = true;
+    }
+
+    var data = [];
+
+    for (var key in this.notice) {
+      data[data.length] = 'notice[' + key + ']=' + this.notice[key];
+    }
+
+    data[data.length] = 'notice[api_key]=' + this.api_key;
+    data[data.length] = 'callback=Hoptoad.onSuccess';
+    data[data.length] = '_=' + (new Date()).getTime();
+
+    var head = document.getElementsByTagName('head')[0];
+    var done = false;
+
+    var
+    script = document.createElement('script');
+    script.src  = 'http://' + this.host + '/Users/ryandotsmith/Code/projects/TimeOff/public/notices_api/v1/notices/exist?' +
+                  data.join('&');
+    script.type = 'text/javascript';
+    script.onload = script.onreadystatechange = function(){
+      if (!done && (!this.readyState ||
+          this.readyState == 'loaded' || this.readyState == 'complete')) {
+
+        done = true;
+
+        // Handle memory leak in IE. (via jQuery)
+        script.onload = script.onreadystatechange = null;
+        head.removeChild(script);
+      }
+    };
+
+    head.appendChild(script);
+  },
+
+  onSuccess: function(error) {
+    var body    = document.getElementsByTagName('body')[0];
+    var text    = document.createTextNode(this.message);
+    var element = document.createElement('a');
+
+    element.id   = 'hoptoad';
+    element.href = 'http://' + error.subdomain + '.' + this.host +
+                   '/Users/ryandotsmith/Code/projects/TimeOff/public/projects/' + error.project_id + '/Users/ryandotsmith/Code/projects/TimeOff/public/errors/' + error.id;
+    element.appendChild(text);
+
+    body.insertBefore(element, body.firstChild);
+
+    var h1      = document.getElementsByTagName('h1')[0];
+    var pre     = document.getElementsByTagName('pre')[0];
+    var wrapper = document.createElement('div');
+
+    wrapper.id = 'wrapper';
+    wrapper.appendChild(h1);
+    wrapper.appendChild(pre);
+
+    body.insertBefore(wrapper, body.children[1]);
+  }
+};
+
+window.onload = function() {
+  Hoptoad.initialize.apply(Hoptoad);
+};
+</script>
+
+<style type="text/css">
+#hoptoad {
+  background: #FFF url(http://hoptoadapp.com/images/fell-off-the-toad.gif) no-repeat top right;
+  color: #F00;
+  padding: 45px 101px 45px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  float: right;
+}
+
+#wrapper {
+  padding-right: 360px;
+}
+</style>
