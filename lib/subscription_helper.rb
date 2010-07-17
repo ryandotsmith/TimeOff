@@ -8,6 +8,7 @@ module SubscriptionHelper
 
   module InstanceMethods
     def create_subscription(credit_card)
+      return update_subscription(credit_card) if subscription
       Account.transaction do
         subscription = Chargify::Subscription.new(subscription_params(credit_card))
         if subscription.save
@@ -20,8 +21,12 @@ module SubscriptionHelper
       end
     end
 
+    def update_subscription(credit_card)
+      debugger
+    end
+
     def subscription
-      Chargify::Subscription.find(subscription_id)
+      @subscription ||= Chargify::Subscription.find(subscription_id)
     end
 
     def credit_card

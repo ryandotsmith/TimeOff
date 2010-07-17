@@ -4,7 +4,7 @@ gem "rails", "~> 2.3.5"
 gem "pg"
 gem 'haml',               '>=2.2.17'
 
-gem 'chargify_api_ares'
+gem 'chargify'
 gem 'authlogic'
 gem 'friendly_id',        '>= 2.2.7'
 gem 'sanitize'

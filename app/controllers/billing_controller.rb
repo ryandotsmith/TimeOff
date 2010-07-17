@@ -18,7 +18,7 @@ class BillingController < ApplicationController
         flash[:notice] = "Account Subscription Successfully Updated"
         format.html { redirect_to edit_account_billing_url(@account) }
       else
-        flash[:error] = "Account Subscription Failed!"
+        flash[:error] = @account.errors.full_messages.join("<br />")
         format.html { redirect_to edit_account_billing_url(@account) }
       end
     end

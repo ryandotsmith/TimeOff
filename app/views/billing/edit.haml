@@ -11,8 +11,11 @@
   = form.label :number, "Card Number"
   = form.text_field :number
 
-  = form.label :expiration_date, "Expiration Date"
-  = form.text_field :expiration_date
+  = form.label :expiration_month, "Expiration Month"
+  = form.select :expiration_month, (1..12).to_a
+
+  = form.label :expiration_year, "Expiration Year"
+  = form.select :expiration_year, (2010..2012).to_a
 
   = form.label :cvv, "Security Code"
   = form.text_field :cvv
