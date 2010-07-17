@@ -2,7 +2,7 @@ module SubscriptionHelper
 
   module ClassMethods
     def available_products
-      Chargify::Product.find(:all)
+      SubscriptionManager.client.list_products
     end
   end
 
@@ -10,11 +10,11 @@ module SubscriptionHelper
     def create_subscription(credit_card)
       return update_subscription(credit_card) if subscription
       Account.transaction do
-        subscription = Chargify::Subscription.new(subscription_params(credit_card))
-        if subscription.save
+        subscription = SubscriptionManager.client.create_subscription(build_params(credit_card))
+        if subscription.errors.nil?
           self.update_attributes(:customer_id => subscription.customer.id, :subscription_id => subscription.id)
         else
-          subscription.errors.full_messages.each{|err| errors.add_to_base(err)}
+          subscription.errors.each {|err| errors.add_to_base(err)}
           false
           raise ActiveRecord::Rollback
         end
@@ -26,15 +26,27 @@ module SubscriptionHelper
     end
 
     def subscription
-      @subscription ||= Chargify::Subscription.find(subscription_id)
+      @subscription ||= SubscriptionManager.client.subscription(subscription_id)
     end
 
     def credit_card
-      subscription.credit_card
+      subscription.credit_card if subscription
+    end
+
+    def credit_card_number
+      credit_card.masked_card_number if credit_card
     end
 
     def customer
-      Chargify::Customer.find(customer_id)
+      SubscriptionManager.client.customer(customer_id)
+    end
+
+    def build_params(credit_card)
+      if customer.success?
+        subscription_params(credit_card).merge(:customer_id => customer_id)
+      else
+        subscription_params(credit_card).merge(:customer_attributes => customer_params)
+      end
     end
 
     def customer_params
@@ -50,7 +62,6 @@ module SubscriptionHelper
     def subscription_params(credit_card)
       {
         :product_handle      => product_handle,
-        :customer_attributes => customer_params,
         :credit_card_attributes => {
           :full_number      => credit_card.number,
           :cvv              => credit_card.cvv,

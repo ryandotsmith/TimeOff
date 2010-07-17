@@ -6,10 +6,10 @@
 - form_for :credit_card, :url => account_billing_url(@account), :html => {:method => 'put'}  do |form|
 
   = form.label :name, "Name on Card"
-  = form.text_field :name
+  = form.text_field :name, :value => @account.owner.first_name + " " +@account.owner.last_name
 
   = form.label :number, "Card Number"
-  = form.text_field :number
+  = form.text_field :number, :value => @account.credit_card_number
 
   = form.label :expiration_month, "Expiration Month"
   = form.select :expiration_month, (1..12).to_a
