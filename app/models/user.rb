@@ -44,7 +44,7 @@ class User < ActiveRecord::Base
   end
 
   def account_owner?
-    !Account.find_by_owner_id(self.id).nil? or self.root?
+    self.account.owner == self
   end
 
   def manager?

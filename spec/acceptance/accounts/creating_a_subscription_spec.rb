@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/acceptance_helper'
+require File.dirname(__FILE__) + '/../acceptance_helper'
 
 feature "Creating a subscription", %q{
 
@@ -9,9 +9,8 @@ feature "Creating a subscription", %q{
 } do
 
   background do
-    account = Factory(:account, :company_name => "Wonder Set")
-    owner   = account.owner
-    sign_in_as(owner)
+    stub_trial_account
+    sign_in_as(@account.owner)
   end
 
   scenario "Adding a valid credit card", :js => true do

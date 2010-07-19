@@ -14,7 +14,7 @@ ActionController::Routing::Routes.draw do |map|
     accounts.resources :daysoff
     accounts.resources :archived_daysoff
     accounts.resources :users, :has_many => :daysoff
-    accounts.resource  :billing, :controller => 'billing'
+    accounts.resource  :billing, :controller => 'billing', :member => {:request_activation => :get}
     accounts.calendar '/calendar/:year/:month', :controller => 'calendar', :action => 'index', :year => Time.zone.now.year, :month => Time.zone.now.month
   end
   HighVoltage::Routes.draw(map)

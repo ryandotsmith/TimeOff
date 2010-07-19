@@ -12,6 +12,7 @@ Factory.define :user do |u|
   u.max_personal          { 10.0                 }
   u.max_etc               { 10.0                 }
   u.active                { true                 }
+  u.association           :account
 end
 
 Factory.define :manager, :parent => :user  do |manager|
@@ -19,8 +20,8 @@ Factory.define :manager, :parent => :user  do |manager|
 end
 
 Factory.define :account do |account|
-  account.company_name     { "wonderset" }
-  account.users            { |users| [users.association(:user,:email => Factory.next(:email)) ]}
+  account.company_name     { "wonderset"      }
+  account.after_create     {|a| a.owner = Factory(:manager, :account => a)}
 end
 
 Factory.define :dayoff do |h|

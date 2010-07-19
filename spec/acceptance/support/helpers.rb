@@ -12,6 +12,12 @@ module HelperMethods
     account.stub!(:create_subscription).and_return(true)
   end
 
+  def stub_trial_account
+    @account = Factory(:account)
+    Account.stub!(:find).and_return(@account)
+    @account.stub!(:has_active_subscription?).and_return(true)
+  end
+
 end
 
 Spec::Runner.configuration.include(HelperMethods)

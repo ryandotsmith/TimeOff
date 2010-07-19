@@ -8,7 +8,7 @@ namespace :spec do
     t.spec_opts = ['--options', "\"#{RAILS_ROOT}/spec/spec.opts\""]
     t.spec_files = FileList["spec/acceptance/**/*_spec.rb"]
   end
-  
+
   # Setup stats to include acceptance specs
   task :statsetup do
     require 'code_statistics'

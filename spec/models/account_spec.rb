@@ -11,23 +11,25 @@ describe Account do
         account.daysoff.should eql([dayoff])
       end
     end
+    context "with users" do
+      it "should accept a user id for owner relation" do
+        account = Factory(:account)
+        owner   = Factory(:manager, :account => account)
+        account.owner = owner
+        account.owner.should eql(owner)
+      end
+    end
   end
 
   describe "callbacks" do
-    context "after create" do
-      it "should set owner" do
-        account = Factory.build(:account)
-        account.save
-        account.owner_id.should eql(account.users.first.id)
-      end
-    end
   end
 
   describe "managers" do
     it "should return a list of managers" do
       account = Factory(:account)
-      manager = Factory(:manager)
-      account.users << manager << Factory(:user)
+      account.owner = Factory(:manager, :account => account)
+      manager = Factory(:manager, :account => account)
+      account.users << manager << Factory(:user, :account => account)
 
       account.users.count.should eql(3)
       account.managers.count.should eql(2)

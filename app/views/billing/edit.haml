@@ -3,21 +3,27 @@
     = form.hidden_field :product_handle, :value => product.handle
     = form.submit product.name
 
-- form_for :credit_card, :url => account_billing_url(@account), :html => {:method => 'put'}  do |form|
+- if @account.has_active_subscription?
+  %p Enjoy!
+- elsif @account.expired_subscription?
+  %p Your trial has expired.
 
-  = form.label :name, "Name on Card"
-  = form.text_field :name, :value => @account.owner.first_name + " " +@account.owner.last_name
+#update-credit-card
+  - form_for :credit_card, :url => account_billing_url(@account), :html => {:method => 'put'}  do |form|
 
-  = form.label :number, "Card Number"
-  = form.text_field :number, :value => @account.credit_card_number
+    = form.label :name, "Name on Card"
+    = form.text_field :name, :value => @account.owner.first_name + " " +@account.owner.last_name
 
-  = form.label :expiration_month, "Expiration Month"
-  = form.select :expiration_month, (1..12).to_a
+    = form.label :number, "Card Number"
+    = form.text_field :number, :value => @account.credit_card_number
 
-  = form.label :expiration_year, "Expiration Year"
-  = form.select :expiration_year, (2010..2012).to_a
+    = form.label :expiration_month, "Expiration Month"
+    = form.select :expiration_month, (1..12).to_a
 
-  = form.label :cvv, "Security Code"
-  = form.text_field :cvv
+    = form.label :expiration_year, "Expiration Year"
+    = form.select :expiration_year, (2010..2012).to_a
 
-  = form.submit 'submit'
+    = form.label :cvv, "Security Code"
+    = form.text_field :cvv
+
+    = form.submit 'submit'

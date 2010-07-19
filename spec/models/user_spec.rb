@@ -13,7 +13,7 @@ describe User do
   describe "interacting with accounts" do
     it "should be able to deterimine if a user owns an account" do
       @account = Factory(:account)
-      @user    = Factory(:user)
+      @user    = Factory(:user, :account => @account)
       @account.owner_id = @user.id
       @account.save
       @user.account_owner?.should be_true

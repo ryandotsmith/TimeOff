@@ -24,4 +24,8 @@ class BillingController < ApplicationController
     end
   end
 
+  def request_activation
+    @account = Account.find(params[:account_id])
+  end
+
 end

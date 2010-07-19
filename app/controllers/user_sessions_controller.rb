@@ -6,17 +6,26 @@ class UserSessionsController < ApplicationController
   def new
     @user_session = UserSession.new
   end
-  
+
   def create
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
-      @account = User.find_by_email(@user_session.email).account
-      redirect_to @account
+      user    = @user_session.user
+      @account = Account.find(user.account_id)
+      if @account.has_active_subscription?
+        redirect_to @account
+      else
+        if user.account_owner?
+          redirect_to edit_account_billing_path(@account)
+        else
+          redirect_to request_activation_account_billing_path(@account)
+        end
+      end
     else
       render :action => :new
     end
   end
-  
+
   def destroy
     current_user_session.destroy
     redirect_to new_user_session_url, :notice => 'Goodbye'

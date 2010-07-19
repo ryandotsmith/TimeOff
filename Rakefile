@@ -9,3 +9,6 @@ require 'rake/rdoctask'
 
 require 'tasks/rails'
 require 'delayed/tasks'
+
+desc "Run acceptance -> cucumber -> spec"
+task :default => [:acceptance, :cucumber, :spec]

@@ -25,8 +25,23 @@ module SubscriptionHelper
       debugger
     end
 
+    def update_product
+      SubscriptionManager.client.update_subscription(subscription_id,{:product_handle => product_handle})
+    end
+
     def subscription
       @subscription ||= SubscriptionManager.client.subscription(subscription_id)
+    end
+
+    def has_active_subscription?
+      ! expired_subscription?
+    end
+
+    def expired_subscription?
+      state = subscription.state
+      state == "expired" ||
+      state == "cancled" ||
+      state == "suspended"
     end
 
     def credit_card
