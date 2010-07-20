@@ -165,8 +165,10 @@ specs:
     version: 0.6.3
 - json_pure: 
     version: 1.4.3
+- rubyzip: 
+    version: 0.9.4
 - selenium-webdriver: 
-    version: 0.0.24
+    version: 0.0.26
 - capybara: 
     version: 0.3.9
 - celerity: 
@@ -190,7 +192,7 @@ specs:
 - trollop: 
     version: 1.16.2
 - gherkin: 
-    version: 2.1.4
+    version: 2.1.5
 - term-ansicolor: 
     version: 1.0.5
 - cucumber: 
@@ -218,7 +220,7 @@ specs:
 - haml: 
     version: 3.0.13
 - launchy: 
-    version: 0.3.5
+    version: 0.3.7
 - rest-client: 
     version: 1.4.2
 - heroku: 
