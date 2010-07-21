@@ -6,21 +6,21 @@ dependencies:
     - :cucumber
     - :development
     version: ">= 0"
-  rails: 
-    group: 
-    - :default
-    version: ~> 2.3.5
-  pg: 
-    group: 
-    - :default
-    version: ">= 0"
   mongrel: 
     group: 
     - :test
     - :cucumber
     - :development
     version: ">= 0"
-  authlogic: 
+  pg: 
+    group: 
+    - :default
+    version: ">= 0"
+  rails: 
+    group: 
+    - :default
+    version: ~> 2.3.5
+  chargify: 
     group: 
     - :default
     version: ">= 0"
@@ -28,7 +28,7 @@ dependencies:
     group: 
     - :default
     version: ">= 2.2.17"
-  chargify: 
+  authlogic: 
     group: 
     - :default
     version: ">= 0"
@@ -60,16 +60,16 @@ dependencies:
     - :test
     - :cucumber
     version: = 1.3.2
+  friendly_id: 
+    group: 
+    - :default
+    version: ">= 2.2.7"
   heroku: 
     group: 
     - :test
     - :cucumber
     - :development
     version: ">= 0"
-  friendly_id: 
-    group: 
-    - :default
-    version: ">= 2.2.7"
   cucumber-rails: 
     group: 
     - :test
@@ -85,11 +85,6 @@ dependencies:
     - :test
     - :cucumber
     - :development
-    version: ">= 0"
-  steak: 
-    group: 
-    - :test
-    - :cucumber
     version: ">= 0"
   culerity: 
     group: 
@@ -124,16 +119,16 @@ dependencies:
     - :test
     - :cucumber
     version: ">= 0"
-  logworm_client: 
-    group: 
-    - :default
-    version: ">= 0"
   facets: 
     group: 
     - :default
     version: = 2.5.0
     require: 
     - facets/dictionary
+  logworm_client: 
+    group: 
+    - :default
+    version: ">= 0"
 specs: 
 - rake: 
     version: 0.8.7
@@ -165,8 +160,10 @@ specs:
     version: 0.6.3
 - json_pure: 
     version: 1.4.3
+- rubyzip: 
+    version: 0.9.4
 - selenium-webdriver: 
-    version: 0.0.24
+    version: 0.0.26
 - capybara: 
     version: 0.3.9
 - celerity: 
@@ -190,7 +187,7 @@ specs:
 - trollop: 
     version: 1.16.2
 - gherkin: 
-    version: 2.1.4
+    version: 2.1.5
 - term-ansicolor: 
     version: 1.0.5
 - cucumber: 
@@ -218,7 +215,7 @@ specs:
 - haml: 
     version: 3.0.13
 - launchy: 
-    version: 0.3.5
+    version: 0.3.7
 - rest-client: 
     version: 1.4.2
 - heroku: 
@@ -261,11 +258,9 @@ specs:
     version: "1.0"
 - sqlite3-ruby: 
     version: 1.3.1
-- steak: 
-    version: 0.3.8
 - taps: 
     version: 0.3.11
-hash: 2e3423a6d10310b81c8bebff412e6bd0b3b47e14
+hash: c656460eca132d73a2b8fae752dd618fce1bb894
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org

@@ -22,7 +22,6 @@ group :test,:cucumber,:development do
 end
 
 group :test,:cucumber do
-  gem 'steak'
   gem 'cucumber'
   gem 'cucumber-rails'
   gem 'capybara'
