@@ -14,6 +14,8 @@ require 'cucumber/rails/active_record'
 require 'cucumber/web/tableish'
 
 require 'email_spec/cucumber'
+require 'spec/mocks'
+
 
 require 'capybara/rails'
 require 'capybara/cucumber'
@@ -24,8 +26,6 @@ require 'cucumber/rails/capybara_javascript_emulation' # Lets you click links wi
 # prefer to use XPath just remove this line and adjust any selectors in your
 # steps to use the XPath syntax.
 Capybara.default_selector = :css
-
-Capybara.default_driver = :selenium
 
 # If you set this to false, any error raised from within your app will bubble 
 # up to your step definition and out to cucumber unless you catch it somewhere
@@ -57,3 +57,4 @@ DatabaseCleaner.strategy = :truncation
 MONDAY_THIS_YEAR = Date.new(2010,1,4)#monday
 TUESDAY          = Date.new(2010,1,5)#monday
 FRIDAY           = Date.new(2010,1,8)#monday
+

@@ -1,6 +1,8 @@
-Factory.sequence :email do |n| 
+Factory.sequence :email do |n|
   "person#{n}@example.com"
 end
+
+Factory.sequence(:subscription_id) {|n| n}
 
 Factory.define :user do |u|
   u.email                 { Factory.next(:email) }
@@ -20,6 +22,8 @@ end
 
 Factory.define :account do |account|
   account.company_name     { "wonderset" }
+  account.subscription_id  { 1           }
+  account.product_handle   { '0-5'       }
   account.users            { |users| [users.association(:user,:email => Factory.next(:email)) ]}
 end
 

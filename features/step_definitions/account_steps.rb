@@ -1,6 +1,13 @@
 Given /^an account exists with a company name of "([^\"]*)"$/ do |company_name|
   @account = Factory(:account,:company_name => company_name)
+  SubscriptionHelper::TestMethods.stub_active_subscription(@account.subscription_id)
 end
+
+Given /^an expired account exists with a company name of "([^\"]*)"$/ do |company_name|
+  @account = Factory(:account,:company_name => company_name)
+  SubscriptionHelper::TestMethods.stub_expired_subscription(@account.subscription_id)
+end
+
 
 Given /^I am signed in as the account owner$/ do
   @account_owner = @account.owner

@@ -1,266 +1,180 @@
---- 
-dependencies: 
-  ruby-debug: 
-    group: 
-    - :test
-    - :cucumber
-    - :development
-    version: ">= 0"
-  mongrel: 
-    group: 
-    - :test
-    - :cucumber
-    - :development
-    version: ">= 0"
-  pg: 
-    group: 
-    - :default
-    version: ">= 0"
-  rails: 
-    group: 
-    - :default
-    version: ~> 2.3.5
-  chargify: 
-    group: 
-    - :default
-    version: ">= 0"
-  haml: 
-    group: 
-    - :default
-    version: ">= 2.2.17"
-  authlogic: 
-    group: 
-    - :default
-    version: ">= 0"
-  celerity: 
-    group: 
-    - :test
-    - :cucumber
-    version: ">= 0"
-    require: []
+GIT
+  remote: git://github.com/bmabey/email-spec.git
+  revision: 66356ee
+  specs:
+    email_spec (0.6.2)
 
-  rspec: 
-    group: 
-    - :test
-    - :cucumber
-    version: = 1.3.0
-  delayed_job: 
-    group: 
-    - :default
-    version: ">= 0"
-    require: 
-    - delayed_job
-  database_cleaner: 
-    group: 
-    - :test
-    - :cucumber
-    version: ">= 0"
-  rspec-rails: 
-    group: 
-    - :test
-    - :cucumber
-    version: = 1.3.2
-  friendly_id: 
-    group: 
-    - :default
-    version: ">= 2.2.7"
-  heroku: 
-    group: 
-    - :test
-    - :cucumber
-    - :development
-    version: ">= 0"
-  cucumber-rails: 
-    group: 
-    - :test
-    - :cucumber
-    version: ">= 0"
-  factory_girl: 
-    group: 
-    - :test
-    - :cucumber
-    version: ">= 0"
-  taps: 
-    group: 
-    - :test
-    - :cucumber
-    - :development
-    version: ">= 0"
-  culerity: 
-    group: 
-    - :test
-    - :cucumber
-    version: ">= 0"
-  email_spec: 
-    group: 
-    - :test
-    - :cucumber
-    version: ">= 0"
-  cucumber: 
-    group: 
-    - :test
-    - :cucumber
-    version: ">= 0"
-  hoptoad_notifier: 
-    group: 
-    - :default
-    version: = 2.2.6
-  sanitize: 
-    group: 
-    - :default
-    version: ">= 0"
-  launchy: 
-    group: 
-    - :test
-    - :cucumber
-    version: ">= 0"
-  capybara: 
-    group: 
-    - :test
-    - :cucumber
-    version: ">= 0"
-  facets: 
-    group: 
-    - :default
-    version: = 2.5.0
-    require: 
-    - facets/dictionary
-  logworm_client: 
-    group: 
-    - :default
-    version: ">= 0"
-specs: 
-- rake: 
-    version: 0.8.7
-- activesupport: 
-    version: 2.3.8
-- rack: 
-    version: 1.1.0
-- actionpack: 
-    version: 2.3.8
-- actionmailer: 
-    version: 2.3.8
-- activerecord: 
-    version: 2.3.8
-- activeresource: 
-    version: 2.3.8
-- authlogic: 
-    version: 2.1.5
-- builder: 
-    version: 2.1.2
-- culerity: 
-    version: 0.2.10
-- mime-types: 
-    version: "1.16"
-- nokogiri: 
-    version: 1.4.2
-- rack-test: 
-    version: 0.5.4
-- ffi: 
-    version: 0.6.3
-- json_pure: 
-    version: 1.4.3
-- rubyzip: 
-    version: 0.9.4
-- selenium-webdriver: 
-    version: 0.0.26
-- capybara: 
-    version: 0.3.9
-- celerity: 
-    version: 0.7.9
-- cgi_multipart_eof_fix: 
-    version: 2.5.0
-- hashie: 
-    version: 0.1.8
-- crack: 
-    version: 0.1.6
-- httparty: 
-    version: 0.5.2
-- chargify: 
-    version: 0.2.6
-- columnize: 
-    version: 0.3.1
-- configuration: 
-    version: 1.1.0
-- diff-lcs: 
-    version: 1.1.2
-- trollop: 
-    version: 1.16.2
-- gherkin: 
-    version: 2.1.5
-- term-ansicolor: 
-    version: 1.0.5
-- cucumber: 
-    version: 0.8.5
-- cucumber-rails: 
-    version: 0.3.2
-- daemons: 
-    version: 1.1.0
-- database_cleaner: 
-    version: 0.5.2
-- delayed_job: 
-    version: 2.0.3
-- email_spec: 
-    version: 0.6.2
-- facets: 
-    version: 2.5.0
-- factory_girl: 
-    version: 1.3.1
-- fastthread: 
-    version: 1.0.7
-- friendly_id: 
-    version: 3.0.6
-- gem_plugin: 
-    version: 0.2.3
-- haml: 
-    version: 3.0.13
-- launchy: 
-    version: 0.3.7
-- rest-client: 
-    version: 1.4.2
-- heroku: 
-    version: 1.9.11
-- hoptoad_notifier: 
-    version: 2.2.6
-- hpricot: 
-    version: 0.8.2
-- json: 
-    version: 1.4.3
-- linecache: 
-    version: "0.43"
-- memcache-client: 
-    version: 1.8.5
-- oauth: 
-    version: 0.4.1
-- logworm: 
-    version: 0.7.91
-- logworm_client: 
-    version: 0.7.3
-- mongrel: 
-    version: 1.1.5
-- pg: 
-    version: 0.9.0
-- rails: 
-    version: 2.3.8
-- rspec: 
-    version: 1.3.0
-- rspec-rails: 
-    version: 1.3.2
-- ruby-debug-base: 
-    version: 0.10.3
-- ruby-debug: 
-    version: 0.10.3
-- sanitize: 
-    version: 1.2.1
-- sequel: 
-    version: 3.13.0
-- sinatra: 
-    version: "1.0"
-- sqlite3-ruby: 
-    version: 1.3.1
-- taps: 
-    version: 0.3.11
-hash: c656460eca132d73a2b8fae752dd618fce1bb894
-sources: 
-- Rubygems: 
-    uri: http://gemcutter.org
+GEM
+  remote: http://rubygems.org/
+  specs:
+    actionmailer (2.3.8)
+      actionpack (= 2.3.8)
+    actionpack (2.3.8)
+      activesupport (= 2.3.8)
+      rack (~> 1.1.0)
+    activerecord (2.3.8)
+      activesupport (= 2.3.8)
+    activeresource (2.3.8)
+      activesupport (= 2.3.8)
+    activesupport (2.3.8)
+    authlogic (2.1.5)
+      activesupport
+    autotest (4.3.2)
+    autotest-fsevent (0.2.2)
+      autotest (>= 4.2.4)
+      sys-uname
+    autotest-growl (0.2.4)
+      autotest (>= 4.2.4)
+    babosa (0.1.0)
+    builder (2.1.2)
+    capybara (0.3.8)
+      culerity (>= 0.2.4)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.2)
+      selenium-webdriver (>= 0.0.3)
+    cgi_multipart_eof_fix (2.5.0)
+    chargify (0.2.6)
+      hashie (~> 0.1.3)
+      httparty (~> 0.5.2)
+    columnize (0.3.1)
+    configuration (1.1.0)
+    crack (0.1.6)
+    cucumber (0.8.5)
+      builder (~> 2.1.2)
+      diff-lcs (~> 1.1.2)
+      gherkin (~> 2.1.4)
+      json_pure (~> 1.4.3)
+      term-ansicolor (~> 1.0.4)
+    cucumber-rails (0.3.2)
+      cucumber (>= 0.8.0)
+    culerity (0.2.10)
+    daemons (1.1.0)
+    database_cleaner (0.5.2)
+    delayed_job (2.0.3)
+      daemons
+    diff-lcs (1.1.2)
+    facets (2.5.0)
+    factory_girl (1.3.1)
+    fakeweb (1.2.8)
+    fastthread (1.0.7)
+    ffi (0.6.3)
+      rake (>= 0.8.7)
+    friendly_id (3.1.0.pre)
+      activerecord (>= 2.3)
+      babosa (>= 0.1.0)
+    gem_plugin (0.2.3)
+    gherkin (2.1.5)
+      trollop (~> 1.16.2)
+    haml (3.0.13)
+    hashie (0.1.8)
+    heroku (1.9.12)
+      json_pure (>= 1.2.0, < 1.5.0)
+      launchy (~> 0.3.2)
+      rest-client (~> 1.4.0)
+    hoptoad_notifier (2.2.6)
+      activesupport
+    hpricot (0.8.2)
+    httparty (0.5.2)
+      crack (= 0.1.6)
+    json (1.4.3)
+    json_pure (1.4.3)
+    launchy (0.3.7)
+      configuration (>= 0.0.5)
+      rake (>= 0.8.1)
+    linecache (0.43)
+    logworm (0.7.7)
+      heroku
+      hpricot
+      memcache-client
+      oauth
+    logworm_client (0.7.2)
+      json
+      logworm (>= 0.7.7)
+    memcache-client (1.8.5)
+    mime-types (1.16)
+    mongrel (1.1.5)
+      cgi_multipart_eof_fix (>= 2.4)
+      daemons (>= 1.0.3)
+      fastthread (>= 1.0.1)
+      gem_plugin (>= 0.2.3)
+    nokogiri (1.4.2)
+    oauth (0.4.1)
+    pg (0.9.0)
+    rack (1.1.0)
+    rack-test (0.5.4)
+      rack (>= 1.0)
+    rails (2.3.8)
+      actionmailer (= 2.3.8)
+      actionpack (= 2.3.8)
+      activerecord (= 2.3.8)
+      activeresource (= 2.3.8)
+      activesupport (= 2.3.8)
+      rake (>= 0.8.3)
+    rake (0.8.7)
+    rest-client (1.4.2)
+      mime-types (>= 1.16)
+    rspec (1.3.0)
+    rspec-rails (1.3.2)
+      rack (>= 1.0.0)
+      rspec (>= 1.3.0)
+    ruby-debug (0.10.3)
+      columnize (>= 0.1)
+      ruby-debug-base (~> 0.10.3.0)
+    ruby-debug-base (0.10.3)
+      linecache (>= 0.3)
+    rubyzip (0.9.4)
+    sanitize (1.2.1)
+      nokogiri (~> 1.4.1)
+    selenium-webdriver (0.0.27)
+      ffi (>= 0.6.1)
+      json_pure
+      rubyzip
+    sequel (3.13.0)
+    sinatra (1.0)
+      rack (>= 1.0)
+    sqlite3-ruby (1.3.1)
+    sys-uname (0.8.4)
+    taps (0.3.11)
+      json_pure (>= 1.2.0, < 1.5.0)
+      rack (>= 1.0.1)
+      rest-client (~> 1.4.0)
+      sequel (~> 3.13.0)
+      sinatra (~> 1.0.0)
+      sqlite3-ruby (~> 1.2)
+    term-ansicolor (1.0.5)
+    trollop (1.16.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  authlogic
+  autotest-fsevent
+  autotest-growl
+  bundler
+  capybara
+  chargify
+  cucumber
+  cucumber-rails
+  database_cleaner
+  delayed_job
+  email_spec!
+  facets (= 2.5.0)
+  factory_girl
+  fakeweb
+  friendly_id (= 3.1.0.pre)
+  haml (>= 2.2.17)
+  heroku
+  hoptoad_notifier (= 2.2.6)
+  launchy
+  logworm_client
+  mongrel
+  pg
+  rails (~> 2.3.5)
+  rspec (= 1.3.0)
+  rspec-rails (= 1.3.2)
+  ruby-debug
+  sanitize
+  taps

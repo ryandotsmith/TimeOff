@@ -3,7 +3,7 @@ class BillingController < ApplicationController
   def edit
     @account     = Account.find(params[:account_id])
     @credit_card = CreditCard.new
-    @products    = Account.available_products
+    @products    =[]# Account.available_products
     respond_to do |format|
       format.html
       format.js   { render :action => 'new.js.haml', :layout => false }

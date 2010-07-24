@@ -38,14 +38,14 @@ Feature: Requesting Days Off
     Then I should have created a dayoff
     And I should see the dayoff in the table
 
-  @3856722
+  @javascript @3856722
   Scenario: Viewing the new request in my calendar
     Given I have approved time off
     And I am on the account page
     When I follow "calendar" 
     Then I should have my dayoff on the calendar
 
-  @3856722
+  @javascript @3856722
   Scenario: Not Viewing someone elses new request in my calendar
     Given Someone else has approved time off
     And I am on the account page
