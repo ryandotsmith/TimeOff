@@ -30,8 +30,11 @@ class AccountsController < ApplicationController
     @account = Account.new( params[:account] )
     respond_to do |wants|
       if @account.save
+
         @account.owner.activate!
+        @account.create_subscription!
         UserSession.create!(@account.owner,true)
+
         wants.html { redirect_to edit_account_url(@account)}
       else
         wants.html { render :action => 'new',:layout => 'split' }
@@ -40,8 +43,9 @@ class AccountsController < ApplicationController
   end
 
   def update
-    @account = Account.find(params[:id])
+    @account = Account.find(params[:id],:readonly => false)
     if @account.update_attributes(params[:account])
+       @account.update_subscription(:credit_card => params[:credit_card])
       respond_to do |format|
         format.html
         format.js {render :layout => false}

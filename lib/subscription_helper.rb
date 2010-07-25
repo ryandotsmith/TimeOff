@@ -28,7 +28,10 @@ module SubscriptionHelper
       stub_get "subscriptions/#{id}.json", "expired_subscription.json"
     end
 
-    #stub_get "products.json", "products.json"
+    def self.stub_products
+      stub_get "products.json", "products.json"
+    end
+
   end
 
 
@@ -45,12 +48,16 @@ module SubscriptionHelper
   end
 
   module InstanceMethods
-    def create_subscription(credit_card)
-      return update_subscription(credit_card) if subscription
+
+    def create_subscription
       Account.transaction do
-        subscription = SubscriptionManager.create_subscription(build_params(credit_card))
+        subscription = SubscriptionManager.create_subscription(
+          build_params(credit_card)
+        )
         if subscription.errors.nil?
-          self.update_attributes(:customer_id => subscription.customer.id, :subscription_id => subscription.id)
+          self.update_attributes(
+            :customer_id => subscription.customer.id,
+            :subscription_id => subscription.id)
         else
           subscription.errors.each {|err| errors.add_to_base(err)}
           false
@@ -59,11 +66,17 @@ module SubscriptionHelper
       end
     end
 
-    def update_subscription(credit_card)
-      debugger
+    def update_subscription(opts={})
+      new_credit_card  = opts[:credit_card]
+      update_credit_card(new_credit_card) if new_credit_card
+      update_subscription_product(self.product_handle)
     end
 
-    def update_product
+    def update_credit_card(credit_card)
+      SubscriptionManager.update_subscription(subscription_id,{:credit_card_attributes => credit_card.to_param })
+    end
+
+    def update_subscription_product(product_handle)
       SubscriptionManager.update_subscription(subscription_id,{:product_handle => product_handle})
     end
 
@@ -72,6 +85,7 @@ module SubscriptionHelper
     end
 
     def state
+      return "trialing" if RAILS_ENV == 'development'
       subscription.state
     end
 
@@ -117,13 +131,8 @@ module SubscriptionHelper
 
     def subscription_params(credit_card)
       {
-        :product_handle      => product_handle,
-        :credit_card_attributes => {
-          :full_number      => credit_card.number,
-          :cvv              => credit_card.cvv,
-          :expiration_month => credit_card.expiration_month,
-          :expiration_year  => credit_card.expiration_year
-        }
+        :product_handle         => product_handle,
+        :credit_card_attributes => (credit_card.to_param if credit_card)
       }
     end
 

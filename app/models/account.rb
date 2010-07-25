@@ -11,11 +11,14 @@ class Account < ActiveRecord::Base
 
   accepts_nested_attributes_for :users
 
-  after_create :set_owner!
+  after_create :set_owner!, :set_product_handle!
 
   def set_owner!
-    self.owner_id = self.users.first.id  
-    self.save
+    update_attributes(:owner_id => users.first.id)
+  end
+
+  def set_product_handle!
+    update_attributes(:product_handle => '0-5')
   end
 
   def owner

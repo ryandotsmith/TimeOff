@@ -1,23 +1,25 @@
-- @products.each do |product|
-  - form_for @account, :html => {:class => 'ajax-form'} do |form|
-    = form.hidden_field :product_handle, :value => product.handle
-    = form.submit product.name
+#product-selection
+  - @products.each do |product|
+    - form_for @account, :html => {:class => 'ajax-form'} do |form|
+      = form.hidden_field :product_handle, :value => product.handle
+      = form.submit product.name
 
-- form_for :credit_card, :url => account_billing_url(@account), :html => {:method => 'put'}  do |form|
+#credit-card
+  - form_for :credit_card, :url => account_billing_url(@account), :html => {:method => 'put'}  do |form|
 
-  = form.label :name, "Name on Card"
-  = form.text_field :name, :value => @account.owner.first_name + " " +@account.owner.last_name
+    = form.label :name, "Name on Card"
+    = form.text_field :name, :value => @account.owner.first_name + " " +@account.owner.last_name
 
-  = form.label :number, "Card Number"
-  = form.text_field :number, :value => @account.credit_card_number
+    = form.label :number, "Card Number"
+    = form.text_field :number, :value => @account.credit_card_number
 
-  = form.label :expiration_month, "Expiration Month"
-  = form.select :expiration_month, (1..12).to_a
+    = form.label :expiration_month, "Expiration Month"
+    = form.select :expiration_month, (1..12).to_a
 
-  = form.label :expiration_year, "Expiration Year"
-  = form.select :expiration_year, (2010..2012).to_a
+    = form.label :expiration_year, "Expiration Year"
+    = form.select :expiration_year, (2010..2012).to_a
 
-  = form.label :cvv, "Security Code"
-  = form.text_field :cvv
+    = form.label :cvv, "Security Code"
+    = form.text_field :cvv
 
-  = form.submit 'submit'
+    = form.submit 'submit'

@@ -164,7 +164,7 @@ DEPENDENCIES
   facets (= 2.5.0)
   factory_girl
   fakeweb
-  friendly_id (= 3.1.0.pre)
+  friendly_id
   haml (>= 2.2.17)
   heroku
   hoptoad_notifier (= 2.2.6)
