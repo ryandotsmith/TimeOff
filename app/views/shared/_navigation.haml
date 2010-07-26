@@ -1,7 +1,7 @@
 %ul#nav
   - if @account and current_user and current_user.manager?
     %li= link_to 'dashboard', @account
-    %li= link_to 'settings', edit_account_url(@account)
+    %li= link_to 'employees', edit_account_url(@account)
     %li= link_to 'billing',  edit_account_billing_url(@account)
     - if  current_user.root?
       %li= link_to 'etc', root_accounts_path

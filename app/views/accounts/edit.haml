@@ -1,6 +1,31 @@
 - content_for :block_head do
-  %h2 Settings
+  %h2 Employees
   %ul
     %li= link_to '&larr; dashboard', @account
 
-= render :partial => 'users', :locals => {:account => @account}
+
+%a.button{:href => "#{new_account_user_path(@account)}", :style => 'float:right'}
+  %span New Employee
+
+%table.employees
+  %tr
+    %th first name
+    %th last name
+    %th email
+    %th date of hire
+    %th max vacation
+    %th max personal
+    %th edit
+    %th delete
+  - @account.users.each do |user|
+    %tr{:id => "user_#{user.id}"}
+      %td= user.first_name
+      %td= user.last_name
+      %td= user.email
+      %td= user.date_of_hire
+      %td= user.max_vacation
+      %td= user.max_personal
+      %td= link_to 'edit',   edit_user_path(user), :rel => 'facebox'
+      %td= link_to 'delete', user, :method => 'delete'
+
+

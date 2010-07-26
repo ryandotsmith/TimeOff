@@ -1,3 +1,6 @@
+- content_for :block_head do
+  %h2 Billing
+
 #product-selection
 .block
   .block_head
@@ -23,6 +26,10 @@
     .block_content
       - form_for :credit_card, :url => account_billing_url(@account), :html => {:method => 'put'}  do |form|
 
+        %p
+          = form.label :first_name, "First Name"
+          %br
+          = form.text_field :first_name, :class => 'text small',  :value => @account.owner.first_name
         %p
           = form.label :name, "Name on Card"
           %br

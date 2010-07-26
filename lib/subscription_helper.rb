@@ -66,7 +66,15 @@ module SubscriptionHelper
 
     def update_subscription!(opts={})
       new_credit_card  = opts[:credit_card]
-      update_credit_card(new_credit_card) if new_credit_card
+      if new_credit_card
+        subscription = update_credit_card(new_credit_card) 
+        if subscription.success?
+          return true
+        else
+          subscription.errors.each {|err| errors.add_to_base(err)}
+          return false
+        end
+      end
       update_subscription_product(self.product_handle)
     end
 
