@@ -18,7 +18,7 @@ class Account < ActiveRecord::Base
   end
 
   def set_product_handle!
-    update_attributes(:product_handle => '0-5')
+    update_attributes(:product_handle => '0-5-users')
   end
 
   def owner

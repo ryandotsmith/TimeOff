@@ -45,7 +45,7 @@ class AccountsController < ApplicationController
   def update
     @account = Account.find(params[:id],:readonly => false)
     if @account.update_attributes(params[:account])
-       @account.update_subscription(:credit_card => params[:credit_card])
+       @account.update_subscription!
       respond_to do |format|
         format.html
         format.js {render :layout => false}

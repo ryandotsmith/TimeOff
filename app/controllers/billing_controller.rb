@@ -14,7 +14,7 @@ class BillingController < ApplicationController
     @account     = Account.find(params[:account_id],:readonly => false)
     @credit_card = CreditCard.new(params[:credit_card])
     respond_to do |format|
-      if @account.create_subscription(@credit_card)
+      if @account.update_subscription!(:credit_card => @credit_card)
         flash[:notice] = "Account Subscription Successfully Updated"
         format.html { redirect_to edit_account_billing_url(@account) }
       else

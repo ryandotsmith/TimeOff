@@ -49,11 +49,9 @@ module SubscriptionHelper
 
   module InstanceMethods
 
-    def create_subscription
+    def create_subscription!
       Account.transaction do
-        subscription = SubscriptionManager.create_subscription(
-          build_params(credit_card)
-        )
+        subscription = SubscriptionManager.create_subscription(create_subscription_params)
         if subscription.errors.nil?
           self.update_attributes(
             :customer_id => subscription.customer.id,
@@ -66,7 +64,7 @@ module SubscriptionHelper
       end
     end
 
-    def update_subscription(opts={})
+    def update_subscription!(opts={})
       new_credit_card  = opts[:credit_card]
       update_credit_card(new_credit_card) if new_credit_card
       update_subscription_product(self.product_handle)
@@ -117,6 +115,19 @@ module SubscriptionHelper
       else
         subscription_params(credit_card).merge(:customer_attributes => customer_params)
       end
+    end
+
+    def create_subscription_params
+      {
+        :product_handle => "0-5-users",
+        :customer_attributes => {
+          :first_name   => owner.first_name,
+          :last_name    => owner.last_name,
+          :email        => owner.email,
+          :reference    => id,
+          :organization => company_name,
+        }
+      }
     end
 
     def customer_params
