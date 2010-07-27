@@ -31,7 +31,6 @@ module SubscriptionHelper
     def self.stub_products
       stub_get "products.json", "products.json"
     end
-
   end
 
 
@@ -64,26 +63,22 @@ module SubscriptionHelper
       end
     end
 
-    def update_subscription!(opts={})
-      new_credit_card  = opts[:credit_card]
-      if new_credit_card
-        subscription = update_credit_card(new_credit_card) 
-        if subscription.success?
-          return true
-        else
-          subscription.errors.each {|err| errors.add_to_base(err)}
-          return false
-        end
+    def update_subscription_product!
+      SubscriptionManager.update_subscription(
+        subscription_id,{:product_handle => product_handle}
+      )
+    end
+
+    def update_credit_card!(new_credit_card)
+      subscription = SubscriptionManager.update_subscription(
+        subscription_id,{:credit_card_attributes => new_credit_card.to_param }
+      )
+      if subscription.success?
+        true
+      else
+        subscription.errors.each {|err| errors.add_to_base(err)}
+        false
       end
-      update_subscription_product(self.product_handle)
-    end
-
-    def update_credit_card(credit_card)
-      SubscriptionManager.update_subscription(subscription_id,{:credit_card_attributes => credit_card.to_param })
-    end
-
-    def update_subscription_product(product_handle)
-      SubscriptionManager.update_subscription(subscription_id,{:product_handle => product_handle})
     end
 
     def subscription
@@ -91,7 +86,6 @@ module SubscriptionHelper
     end
 
     def state
-      return "trialing" if RAILS_ENV == 'development'
       subscription.state
     end
 
@@ -99,10 +93,18 @@ module SubscriptionHelper
       ! expired_subscription?
     end
 
+    def trial_subscription?
+      state == "trialing"
+    end
+
     def expired_subscription?
       state == "expired" ||
       state == "cancled" ||
       state == "suspended"
+    end
+
+    def days_remaining_in_trial
+      Date.parse(subscription.trial_ended_at) - Date.today
     end
 
     def credit_card
@@ -117,17 +119,9 @@ module SubscriptionHelper
       SubscriptionManager.customer(customer_id)
     end
 
-    def build_params(credit_card)
-      if customer.success?
-        subscription_params(credit_card).merge(:customer_id => customer_id)
-      else
-        subscription_params(credit_card).merge(:customer_attributes => customer_params)
-      end
-    end
-
     def create_subscription_params
       {
-        :product_handle => "0-5-users",
+        :product_handle => Account::DEFAULT_PRODUCT,
         :customer_attributes => {
           :first_name   => owner.first_name,
           :last_name    => owner.last_name,
@@ -137,23 +131,5 @@ module SubscriptionHelper
         }
       }
     end
-
-    def customer_params
-      {
-        :first_name   => owner.first_name,
-        :last_name    => owner.last_name,
-        :email        => owner.email,
-        :reference    => id,
-        :organization => company_name,
-      }
-    end
-
-    def subscription_params(credit_card)
-      {
-        :product_handle         => product_handle,
-        :credit_card_attributes => (credit_card.to_param if credit_card)
-      }
-    end
-
   end
 end

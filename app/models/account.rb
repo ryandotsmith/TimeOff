@@ -1,5 +1,7 @@
 class Account < ActiveRecord::Base
 
+  DEFAULT_PRODUCT = '0-5-users'
+
   include DayoffUserMethods
   include SubscriptionHelper::InstanceMethods
   extend  SubscriptionHelper::ClassMethods
@@ -18,7 +20,7 @@ class Account < ActiveRecord::Base
   end
 
   def set_product_handle!
-    update_attributes(:product_handle => '0-5-users')
+    update_attributes(:product_handle => DEFAULT_PRODUCT)
   end
 
   def owner

@@ -1,6 +1,12 @@
 - content_for :block_head do
   %h2 Billing
 
+- if @account.trial_subscription?
+  %p
+    Your trial account will expire in
+    = @account.days_remaining_in_trial
+    days.
+
 #product-selection
 .block
   .block_head
@@ -31,32 +37,26 @@
           %br
           = form.text_field :first_name, :class => 'text small',  :value => @account.owner.first_name
         %p
-          = form.label :name, "Name on Card"
+          = form.label :last_name, "Last Name"
           %br
-          = form.text_field :name, :class => 'text small',  :value => @account.owner.first_name + " " +@account.owner.last_name
-
+          = form.text_field :last_name, :class => 'text small',  :value => @account.owner.last_name
         %p
           = form.label :number, "Card Number"
           %br
           = form.text_field :number, :class => 'text small', :value => @account.credit_card_number
-
         %p
           = form.label :expiration_month, "Expiration Month"
           %br
           = form.select :expiration_month, (1..12).to_a
-
         %p
           = form.label :expiration_year, "Expiration Year"
           %br
-          = form.select :expiration_year, (2010..2012).to_a, :class => 'select'
-
+          = form.select :expiration_year, (2010..2021).to_a, :class => 'select'
         %p
           = form.label :cvv, "Security Code"
           %br
           = form.text_field :cvv, :size => 3, :class => 'text'
-
         %p
           = form.submit 'submit'
   .bendl
   .bendr
-
