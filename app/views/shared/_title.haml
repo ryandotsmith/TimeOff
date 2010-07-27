@@ -1,0 +1,4 @@
+- if Rails.env == "production"
+  %h1= link_to 'Time Off', root_url
+- else
+  %h1= link_to 'Staging Server', root_url, :style => 'color:orange;'
