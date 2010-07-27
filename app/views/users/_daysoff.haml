@@ -8,16 +8,22 @@
     %table
       %thead
         %tr
-          %th submitted on
-          %th time off requested
-          %th notes
+          %th submitted
+          %th type
+          %th length
+          %th start date
+          %th end date
+          %th description
           %th status
           %th delete
       %tbody
         - @user.daysoff.each do |dayoff|
           %tr
-            %td= dayoff.created_at 
+            %td= dayoff.created_at
+            %td= dayoff.leave_type
             %td= dayoff.get_length
+            %td= dayoff.begin_time
+            %td= dayoff.end_time
             %td= dayoff.description
             %td= dayoff.status
             %td= link_to 'delete', dayoff, :method => 'delete'
