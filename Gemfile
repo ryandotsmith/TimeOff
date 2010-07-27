@@ -1,6 +1,5 @@
 source :gemcutter
 
-gem 'bundler'
 gem "rails", "~> 2.3.5"
 gem "pg"
 gem 'haml', '>=2.2.17'
@@ -33,6 +32,6 @@ group :test,:cucumber do
   gem 'factory_girl'
   gem 'rspec',             '1.3.0' 
   gem 'rspec-rails',       '1.3.2' 
-  gem 'email_spec', :git => 'git://github.com/bmabey/email-spec.git'
+  gem 'email_spec'
   gem 'fakeweb'
 end
