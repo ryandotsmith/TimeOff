@@ -1,5 +1,7 @@
 class SubscriptionManager
 
+  Rails.env == "production" ? CHARGIFY_DOMAIN = "timeoffhq" : CHARGIFY_DOMAIN = "wonderset"
+
   def self.update_subscription(subscription_id,opts)
     client.update_subscription(subscription_id,opts)
   end
@@ -23,7 +25,7 @@ class SubscriptionManager
   private
 
     def self.client
-      Chargify::Client.new('ra8u5PSLurINVOgIYqFd', 'wonderset')
+      Chargify::Client.new('ra8u5PSLurINVOgIYqFd', CHARGIFY_DOMAIN)
     end
 
 end

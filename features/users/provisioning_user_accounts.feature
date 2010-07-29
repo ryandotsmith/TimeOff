@@ -7,7 +7,7 @@ Feature: Provisioning useres for accounts
     Given an account exists with a company name of "wonderset"
     And I am signed in as the account owner
     When I go to the account edit page
-    And I follow "add user"
+    And I follow "new employee"
     And I fill in "Email" with "this.ryansmith@gmail.com"
     And I fill in "First Name" with "Ryan"
     And I fill in "Last Name" with "Smith"

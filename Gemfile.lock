@@ -170,7 +170,7 @@ specs:
 - friendly_id: 
     version: 3.0.6
 - haml: 
-    version: 3.0.14
+    version: 3.0.15
 - hoptoad_notifier: 
     version: 2.2.6
 - launchy: 

@@ -35,4 +35,17 @@ class Account < ActiveRecord::Base
     users.select {|u| u.manager?}
   end
 
+  def can_add_more_users?
+    users.count < max_users
+  end
+
+  def max_users
+    case product_handle
+    when "0-5-users"
+      5
+    when "6-25-users"
+      25
+    end
+  end
+
 end
