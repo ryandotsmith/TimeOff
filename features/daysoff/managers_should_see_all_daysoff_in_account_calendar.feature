@@ -3,6 +3,7 @@ Feature: Manager should see all days off in account calendar
   As a manager on the account page
   I want to see all days off on the calendar
 
+  @javascript
   Scenario: Viewing days off for all users in account
     Given an account exists with a company name of "wonderset"
     And I am signed in as the account owner

@@ -1,6 +1,10 @@
 class Account < ActiveRecord::Base
 
+  DEFAULT_PRODUCT = '0-5-users'
+
   include DayoffUserMethods
+  include SubscriptionHelper::InstanceMethods
+  extend  SubscriptionHelper::ClassMethods
 
   has_friendly_id :company_name, :use_slug => true
 
@@ -9,11 +13,14 @@ class Account < ActiveRecord::Base
 
   accepts_nested_attributes_for :users
 
-  after_create :set_owner!
+  after_create :set_owner!, :set_product_handle!
 
   def set_owner!
-    self.owner_id = self.users.first.id  
-    self.save
+    update_attributes(:owner_id => users.first.id)
+  end
+
+  def set_product_handle!
+    update_attributes(:product_handle => DEFAULT_PRODUCT)
   end
 
   def owner
@@ -26,6 +33,19 @@ class Account < ActiveRecord::Base
 
   def managers
     users.select {|u| u.manager?}
+  end
+
+  def can_add_more_users?
+    users.count < max_users
+  end
+
+  def max_users
+    case product_handle
+    when "0-5-users"
+      5
+    when "6-25-users"
+      25
+    end
   end
 
 end

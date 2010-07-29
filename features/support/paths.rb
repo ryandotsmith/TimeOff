@@ -16,6 +16,8 @@ module NavigationHelpers
       edit_account_path(@account)
     when /the settings page/
       edit_account_path(@account)
+    when /the new user page/
+      new_account_user_path(@account)
     when /the dashboard/
       account_path(@account)
     when /account page/

@@ -1,186 +1,191 @@
---- 
-dependencies: 
-  pg: 
-    group: 
-    - :default
-    version: ">= 0"
-  rails: 
-    group: 
-    - :default
-    version: ~> 2.3.5
-  authlogic: 
-    group: 
-    - :default
-    version: ">= 0"
-  haml: 
-    group: 
-    - :default
-    version: ">= 2.2.17"
-  celerity: 
-    group: 
+---
+dependencies:
+  fakeweb:
+    group:
     - :test
     - :cucumber
     version: ">= 0"
-    require: []
-
-  rspec: 
-    group: 
+  pg:
+    group:
+    - :default
+    version: ">= 0"
+  rails:
+    group:
+    - :default
+    version: ~> 2.3.5
+  chargify:
+    group:
+    - :default
+    version: ">= 0"
+  haml:
+    group:
+    - :default
+    version: ">= 2.2.17"
+  authlogic:
+    group:
+    - :default
+    version: ">= 0"
+  delayed_job:
+    group:
+    - :default
+    version: ">= 0"
+    require:
+    - delayed_job
+  rspec:
+    group:
     - :test
     - :cucumber
     version: = 1.3.0
-  delayed_job: 
-    group: 
-    - :default
-    version: ">= 0"
-    require: 
-    - delayed_job
-  database_cleaner: 
-    group: 
-    - :test
-    - :cucumber
-    version: ">= 0"
-  rspec-rails: 
-    group: 
+  rspec-rails:
+    group:
     - :test
     - :cucumber
     version: = 1.3.2
-  friendly_id: 
-    group: 
+  database_cleaner:
+    group:
+    - :test
+    - :cucumber
+    version: ">= 0"
+  factory_girl:
+    group:
+    - :test
+    - :cucumber
+    version: ">= 0"
+  cucumber-rails:
+    group:
+    - :test
+    - :cucumber
+    version: ">= 0"
+  friendly_id:
+    group:
     - :default
-    version: ">= 2.2.7"
-  cucumber-rails: 
-    group: 
-    - :test
-    - :cucumber
     version: ">= 0"
-  factory_girl: 
-    group: 
-    - :test
-    - :cucumber
-    version: ">= 0"
-  culerity: 
-    group: 
-    - :test
-    - :cucumber
-    version: ">= 0"
-  email_spec: 
-    group: 
-    - :test
-    - :cucumber
-    version: ">= 0"
-  cucumber: 
-    group: 
-    - :test
-    - :cucumber
-    version: ">= 0"
-  hoptoad_notifier: 
-    group: 
+  hoptoad_notifier:
+    group:
     - :default
     version: = 2.2.6
-  sanitize: 
-    group: 
+  cucumber:
+    group:
+    - :test
+    - :cucumber
+    version: ">= 0"
+  email_spec:
+    group:
+    - :test
+    - :cucumber
+    version: ">= 0"
+  sanitize:
+    group:
     - :default
     version: ">= 0"
-  launchy: 
-    group: 
-    - :test
-    - :cucumber
-    version: ">= 0"
-  capybara: 
-    group: 
-    - :test
-    - :cucumber
-    version: ">= 0"
-  facets: 
-    group: 
+  facets:
+    group:
     - :default
     version: = 2.5.0
-    require: 
+    require:
     - facets/dictionary
-specs: 
-- rake: 
+  capybara:
+    group:
+    - :test
+    - :cucumber
+    version: ">= 0"
+  launchy:
+    group:
+    - :test
+    - :cucumber
+    version: ">= 0"
+specs:
+- rake:
     version: 0.8.7
-- activesupport: 
+- activesupport:
     version: 2.3.8
-- rack: 
+- rack:
     version: 1.1.0
-- actionpack: 
+- actionpack:
     version: 2.3.8
-- actionmailer: 
+- actionmailer:
     version: 2.3.8
-- activerecord: 
+- activerecord:
     version: 2.3.8
-- activeresource: 
+- activeresource:
     version: 2.3.8
-- authlogic: 
+- authlogic:
     version: 2.1.5
-- builder: 
+- builder:
     version: 2.1.2
-- culerity: 
+- culerity:
     version: 0.2.10
-- mime-types: 
+- mime-types:
     version: "1.16"
-- nokogiri: 
+- nokogiri:
     version: 1.4.2
-- rack-test: 
+- rack-test:
     version: 0.5.4
-- ffi: 
+- ffi:
     version: 0.6.3
-- json_pure: 
+- json_pure:
     version: 1.4.3
-- rubyzip: 
+- rubyzip:
     version: 0.9.4
-- selenium-webdriver: 
+- selenium-webdriver:
     version: 0.0.27
-- capybara: 
+- capybara:
     version: 0.3.9
-- celerity: 
-    version: 0.7.9
-- configuration: 
-    version: 1.1.0
-- diff-lcs: 
-    version: 1.1.2
-- trollop: 
-    version: 1.16.2
-- gherkin: 
-    version: 2.1.5
-- term-ansicolor: 
-    version: 1.0.5
-- cucumber: 
-    version: 0.8.5
-- cucumber-rails: 
-    version: 0.3.2
-- daemons: 
-    version: 1.1.0
-- database_cleaner: 
+- hashie:
+    version: 0.1.8
+- crack:
+    version: 0.1.6
+- httparty:
     version: 0.5.2
-- delayed_job: 
+- chargify:
+    version: 0.2.6
+- configuration:
+    version: 1.1.0
+- diff-lcs:
+    version: 1.1.2
+- trollop:
+    version: 1.16.2
+- gherkin:
+    version: 2.1.5
+- term-ansicolor:
+    version: 1.0.5
+- cucumber:
+    version: 0.8.5
+- cucumber-rails:
+    version: 0.3.2
+- daemons:
+    version: 1.1.0
+- database_cleaner:
+    version: 0.5.2
+- delayed_job:
     version: 2.0.3
-- email_spec: 
+- email_spec:
     version: 0.6.2
-- facets: 
+- facets:
     version: 2.5.0
-- factory_girl: 
+- factory_girl:
     version: 1.3.1
-- friendly_id: 
+- fakeweb:
+    version: 1.2.8
+- friendly_id:
     version: 3.0.6
-- haml: 
-    version: 3.0.14
-- hoptoad_notifier: 
+- haml:
+    version: 3.0.15
+- hoptoad_notifier:
     version: 2.2.6
-- launchy: 
+- launchy:
     version: 0.3.7
-- pg: 
+- pg:
     version: 0.9.0
-- rails: 
+- rails:
     version: 2.3.8
-- rspec: 
+- rspec:
     version: 1.3.0
-- rspec-rails: 
+- rspec-rails:
     version: 1.3.2
-- sanitize: 
+- sanitize:
     version: 1.2.1
-hash: 4c193a42ea65e8425b275505460e58d945bfaef5
-sources: 
-- Rubygems: 
+hash: db7e9b2bbff9530bf9e8cb7052008693d6a78658
+sources:
+- Rubygems:
     uri: http://gemcutter.org

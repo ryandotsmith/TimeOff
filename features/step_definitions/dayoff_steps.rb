@@ -72,3 +72,4 @@ When /^I follow "([^"]*)" within the dayoff row$/ do |link|
   When %{I follow "#{link}" within "tr#dayoff_#{@dayoff.id}"}
 end
 
+
