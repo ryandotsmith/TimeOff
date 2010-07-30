@@ -15,12 +15,12 @@ gem 'hoptoad_notifier', '2.2.6'
 gem 'delayed_job', :require => 'delayed_job'
 
 group :test,:cucumber,:development do
-  gem 'mongrel'
-  gem 'heroku'
-  gem 'taps'
-  gem 'ruby-debug'
-  gem 'autotest-fsevent'
-  gem 'autotest-growl'
+  #gem 'mongrel'
+  #gem 'heroku'
+  #gem 'taps'
+  #gem 'ruby-debug'
+  #gem 'autotest-fsevent'
+  #gem 'autotest-growl'
 end
 
 group :test,:cucumber do
