@@ -5,12 +5,6 @@ dependencies:
     - :test
     - :cucumber
     version: ">= 0"
-  ruby-debug: 
-    group: 
-    - :test
-    - :cucumber
-    - :development
-    version: ">= 0"
   rails: 
     group: 
     - :default
@@ -18,12 +12,6 @@ dependencies:
   pg: 
     group: 
     - :default
-    version: ">= 0"
-  mongrel: 
-    group: 
-    - :test
-    - :cucumber
-    - :development
     version: ">= 0"
   authlogic: 
     group: 
@@ -36,18 +24,6 @@ dependencies:
   chargify: 
     group: 
     - :default
-    version: ">= 0"
-  autotest-fsevent: 
-    group: 
-    - :test
-    - :cucumber
-    - :development
-    version: ">= 0"
-  autotest-growl: 
-    group: 
-    - :test
-    - :cucumber
-    - :development
     version: ">= 0"
   delayed_job: 
     group: 
@@ -80,12 +56,6 @@ dependencies:
     - :test
     - :cucumber
     version: ">= 0"
-  heroku: 
-    group: 
-    - :test
-    - :cucumber
-    - :development
-    version: ">= 0"
   friendly_id: 
     group: 
     - :default
@@ -93,12 +63,6 @@ dependencies:
   icalendar: 
     group: 
     - :default
-    version: ">= 0"
-  taps: 
-    group: 
-    - :test
-    - :cucumber
-    - :development
     version: ">= 0"
   hoptoad_notifier: 
     group: 
@@ -151,14 +115,6 @@ specs:
     version: 2.3.8
 - authlogic: 
     version: 2.1.5
-- autotest: 
-    version: 4.3.2
-- sys-uname: 
-    version: 0.8.4
-- autotest-fsevent: 
-    version: 0.2.2
-- autotest-growl: 
-    version: 0.2.4
 - babosa: 
     version: 0.1.0
 - builder: 
@@ -181,8 +137,6 @@ specs:
     version: 0.0.27
 - capybara: 
     version: 0.3.9
-- cgi_multipart_eof_fix: 
-    version: 2.5.0
 - hashie: 
     version: 0.1.8
 - crack: 
@@ -191,8 +145,6 @@ specs:
     version: 0.5.2
 - chargify: 
     version: 0.2.6
-- columnize: 
-    version: 0.3.1
 - configuration: 
     version: 1.1.0
 - diff-lcs: 
@@ -221,28 +173,16 @@ specs:
     version: 1.3.1
 - fakeweb: 
     version: 1.2.8
-- fastthread: 
-    version: 1.0.7
 - friendly_id: 
     version: 3.1.0
-- gem_plugin: 
-    version: 0.2.3
 - haml: 
     version: 3.0.15
-- launchy: 
-    version: 0.3.7
-- rest-client: 
-    version: 1.4.2
-- heroku: 
-    version: 1.9.13
 - hoptoad_notifier: 
     version: 2.2.6
 - icalendar: 
     version: 1.1.5
-- linecache: 
-    version: "0.43"
-- mongrel: 
-    version: 1.1.5
+- launchy: 
+    version: 0.3.7
 - pg: 
     version: 0.9.0
 - rails: 
@@ -251,21 +191,9 @@ specs:
     version: 1.3.0
 - rspec-rails: 
     version: 1.3.2
-- ruby-debug-base: 
-    version: 0.10.3
-- ruby-debug: 
-    version: 0.10.3
 - sanitize: 
     version: 1.2.1
-- sequel: 
-    version: 3.13.0
-- sinatra: 
-    version: "1.0"
-- sqlite3-ruby: 
-    version: 1.3.1
-- taps: 
-    version: 0.3.11
-hash: 0b8690b5d3c2b91ebae97a6758c87c2b4dee96a9
+hash: 8a88f28b54368598e5929e679586cf37e7a4cf15
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
