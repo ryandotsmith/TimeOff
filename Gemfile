@@ -9,18 +9,19 @@ gem 'authlogic'
 gem 'friendly_id'
 gem 'sanitize'
 gem 'facets','2.5.0', :require => 'facets/dictionary'
+gem 'icalendar'
 
 gem 'hoptoad_notifier', '2.2.6'
 gem 'delayed_job', :require => 'delayed_job'
 
-#group :test,:cucumber,:development do
-  #gem 'mongrel'
-  #gem 'heroku'
-  #gem 'taps'
-  #gem 'ruby-debug'
-  #gem 'autotest-fsevent'
-  #gem 'autotest-growl'
-#end
+group :test,:cucumber,:development do
+  gem 'mongrel'
+  gem 'heroku'
+  gem 'taps'
+  gem 'ruby-debug'
+  gem 'autotest-fsevent'
+  gem 'autotest-growl'
+end
 
 group :test,:cucumber do
   gem 'cucumber'
@@ -29,8 +30,8 @@ group :test,:cucumber do
   gem 'database_cleaner'
   gem 'launchy'
   gem 'factory_girl'
-  gem 'rspec',             '1.3.0' 
-  gem 'rspec-rails',       '1.3.2' 
+  gem 'rspec',             '1.3.0'
+  gem 'rspec-rails',       '1.3.2'
   gem 'email_spec'
   gem 'fakeweb'
 end

@@ -38,16 +38,19 @@ describe Account do
       it "should be added to the creator" do
         user = Factory(:user)
         User.should_receive(:find).and_return(user)
-        @account.owner.should eql(user) 
+        @account.owner.should eql(user)
       end
     end
   end
 
-  describe "subscriptions" do
-    before(:each){@account = Factory(:account)}
-    it "should create a subscription if one can not be found by account id"
-    describe "credit cards" do
-      it "should return the masked credit card if the account has a subscription"
+  describe "i_cal" do
+    it "should generatea random token for the account" do
+      @account = Factory(:account)
+      @account.generate_i_cal_token!
+      one_token = @account.i_cal_token
+      @account.generate_i_cal_token!
+      another_token = @account.i_cal_token
+      one_token.should_not eql(another_token)
     end
   end
 

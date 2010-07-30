@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100714173032) do
+ActiveRecord::Schema.define(:version => 20100730024603) do
 
   create_table "accounts", :force => true do |t|
     t.string   "company_name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20100714173032) do
     t.integer  "customer_id"
     t.integer  "subscription_id"
     t.string   "product_handle"
+    t.string   "i_cal_token"
   end
 
   create_table "daysoff", :force => true do |t|

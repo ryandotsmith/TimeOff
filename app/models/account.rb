@@ -13,7 +13,7 @@ class Account < ActiveRecord::Base
 
   accepts_nested_attributes_for :users
 
-  after_create :set_owner!, :set_product_handle!
+  after_create :set_owner!, :set_product_handle!, :generate_i_cal_token!
 
   def set_owner!
     update_attributes(:owner_id => users.first.id)
@@ -46,6 +46,10 @@ class Account < ActiveRecord::Base
     when "6-25-users"
       25
     end
+  end
+
+  def generate_i_cal_token!
+    self.update_attributes(:i_cal_token => Authlogic::Random.friendly_token)
   end
 
 end
