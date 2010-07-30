@@ -9,6 +9,7 @@
 
 %table.employees
   %tr
+    %th show
     %th first name
     %th last name
     %th email
@@ -19,6 +20,7 @@
     %th delete
   - @account.users.each do |user|
     %tr{:id => "user_#{user.id}"}
+      %td= link_to 'show', user
       %td= user.first_name
       %td= user.last_name
       %td= user.email
