@@ -1,4 +1,8 @@
 class ICalController < ApplicationController
+
+  def index
+  end
+
   def show
     @account = Account.find_by_i_cal_token(params[:id], :include => :daysoff)
     @cal     = Icalendar::Calendar.new

@@ -6,7 +6,7 @@
       %h2 Team Calendar
       = image_tag('calendar_key.png')
       %ul
-        %li= link_to "ical", i_cal_path(:id => @account.i_cal_token)
+        %li= link_to "ical", i_cal_url(:id => @account.i_cal_token, :protocol => 'webcal')
     - else
       %h2 Your Calendar
       = image_tag('employee_calendar_key.png')
