@@ -19,6 +19,7 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.resource :i_cal, :controller => 'i_cal', :only => :show
+  map.email_listner '/email_listener', :controller => 'email_listener', :action => 'create'
 
   HighVoltage::Routes.draw(map)
   map.namespace :root do |root|
