@@ -19,8 +19,6 @@ group :test,:cucumber,:development do
   gem 'heroku'
   gem 'taps'
   gem 'ruby-debug'
-  gem 'autotest-fsevent'
-  gem 'autotest-growl'
 end
 
 group :test,:cucumber do

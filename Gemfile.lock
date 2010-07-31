@@ -37,23 +37,11 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
-  autotest-fsevent: 
-    group: 
-    - :test
-    - :cucumber
-    - :development
-    version: ">= 0"
   rspec: 
     group: 
     - :test
     - :cucumber
     version: = 1.3.0
-  autotest-growl: 
-    group: 
-    - :test
-    - :cucumber
-    - :development
-    version: ">= 0"
   delayed_job: 
     group: 
     - :default
@@ -147,14 +135,6 @@ specs:
     version: 2.3.8
 - authlogic: 
     version: 2.1.5
-- autotest: 
-    version: 4.3.2
-- sys-uname: 
-    version: 0.8.4
-- autotest-fsevent: 
-    version: 0.2.2
-- autotest-growl: 
-    version: 0.2.4
 - babosa: 
     version: 0.1.0
 - builder: 
@@ -259,7 +239,7 @@ specs:
     version: 1.3.1
 - taps: 
     version: 0.3.11
-hash: 6fb4cfbb7f474093d9963583669a0b722bd9b2c4
+hash: 04abe448fbd2107f7574db13bbabbdbc5de474c2
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
