@@ -174,7 +174,7 @@ end
 module Bundler
   ENV_LOADED   = true
   LOCKED_BY    = '0.9.26'
-  FINGERPRINT  = "743d84502ac208b82cdbfc197f6d96c808c7066a"
+  FINGERPRINT  = "6fb4cfbb7f474093d9963583669a0b722bd9b2c4"
   HOME         = '/Users/ryandotsmith/.rvm/gems/ruby-1.8.7-p173@timeoff/bundler'
   AUTOREQUIRES = {:test=>[["autotest-fsevent", false], ["autotest-growl", false], ["capybara", false], ["cucumber", false], ["cucumber-rails", false], ["database_cleaner", false], ["email_spec", false], ["factory_girl", false], ["fakeweb", false], ["launchy", false], ["heroku", false], ["mongrel", false], ["rspec", false], ["rspec-rails", false], ["ruby-debug", false], ["taps", false]], :default=>[["authlogic", false], ["chargify", false], ["delayed_job", true], ["facets/dictionary", true], ["friendly_id", false], ["haml", false], ["hoptoad_notifier", false], ["pg", false], ["rails", false], ["sanitize", false]], :cucumber=>[["autotest-fsevent", false], ["autotest-growl", false], ["capybara", false], ["cucumber", false], ["cucumber-rails", false], ["database_cleaner", false], ["email_spec", false], ["factory_girl", false], ["fakeweb", false], ["launchy", false], ["heroku", false], ["mongrel", false], ["rspec", false], ["rspec-rails", false], ["ruby-debug", false], ["taps", false]], :development=>[["autotest-fsevent", false], ["autotest-growl", false], ["heroku", false], ["mongrel", false], ["ruby-debug", false], ["taps", false]]}
   SPECS        = [
