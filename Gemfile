@@ -9,6 +9,7 @@ gem 'authlogic'
 gem 'friendly_id'
 gem 'sanitize'
 gem 'facets','2.5.0', :require => 'facets/dictionary'
+gem 'icalendar'
 
 gem 'hoptoad_notifier', '2.2.6'
 gem 'delayed_job', :require => 'delayed_job'
