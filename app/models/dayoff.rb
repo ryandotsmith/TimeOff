@@ -1,7 +1,7 @@
 class Dayoff < ActiveRecord::Base
 
   # 0.1875 != 0.5 , nevertheless, these calculations were decided
-  # to be accurate based upon our business logic. 
+  # to be accurate based upon our business logic.
   HALF_DAY  = 0.1875
   WHOLE_DAY = 0.3958
 
@@ -100,9 +100,9 @@ class Dayoff < ActiveRecord::Base
 
   ####################
   # get_length should get called any time that you need
-  # to display the length of a holiday. Since the DB only 
-  # holds a begin and end DateTime, you can add methods similar to this one 
-  # to represent holiday length in a view. 
+  # to display the length of a holiday. Since the DB only
+  # holds a begin and end DateTime, you can add methods similar to this one
+  # to represent holiday length in a view.
   #
   # This particular method will subtract the dates (which will yield the diff in sec)
   # and then convert the difference to a float.
@@ -135,7 +135,7 @@ class Dayoff < ActiveRecord::Base
     end
   end
 
-  # returns a list of dates that are 
+  # returns a list of dates that are
   # the days between and including the begin_time and end_time
   def included_dates
     array = []
@@ -155,6 +155,16 @@ class Dayoff < ActiveRecord::Base
       :allDay => self.whole?,
       :className => (css_class(user))
     }
+  end
+
+  def to_icalendar_format(cal)
+    dayoff = self
+    cal.event do
+      dtstart     dayoff.begin_time.to_date
+      dtend       dayoff.end_time.to_date
+      summary     dayoff.to_s
+      description dayoff.description
+    end
   end
 
   def css_class(user)
