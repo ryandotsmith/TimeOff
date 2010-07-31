@@ -1,6 +1,5 @@
 source :gemcutter
 
-gem 'bundler'
 gem "rails", "~> 2.3.5"
 gem "pg"
 gem 'haml', '>=2.2.17'
