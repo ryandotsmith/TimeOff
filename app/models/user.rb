@@ -48,11 +48,15 @@ class User < ActiveRecord::Base
   end
 
   def manager?
-    root? || account_owner? || manager
+    root? or account_owner? or manager
   end
 
   def root?
     email == "this.ryansmith@gmail.com"
+  end
+
+  def manages(another_user)
+    manager? and account.users.include?(another_user)
   end
 
 end

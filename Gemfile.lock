@@ -1,191 +1,271 @@
----
-dependencies:
-  fakeweb:
-    group:
+--- 
+dependencies: 
+  fakeweb: 
+    group: 
     - :test
     - :cucumber
     version: ">= 0"
-  pg:
-    group:
+  ruby-debug: 
+    group: 
+    - :test
+    - :cucumber
+    - :development
+    version: ">= 0"
+  pg: 
+    group: 
     - :default
     version: ">= 0"
-  rails:
-    group:
+  rails: 
+    group: 
     - :default
     version: ~> 2.3.5
-  chargify:
-    group:
+  mongrel: 
+    group: 
+    - :test
+    - :cucumber
+    - :development
+    version: ">= 0"
+  chargify: 
+    group: 
     - :default
     version: ">= 0"
-  haml:
-    group:
+  haml: 
+    group: 
     - :default
     version: ">= 2.2.17"
-  authlogic:
-    group:
+  authlogic: 
+    group: 
     - :default
     version: ">= 0"
-  delayed_job:
-    group:
-    - :default
+  autotest-fsevent: 
+    group: 
+    - :test
+    - :cucumber
+    - :development
     version: ">= 0"
-    require:
-    - delayed_job
-  rspec:
-    group:
+  rspec: 
+    group: 
     - :test
     - :cucumber
     version: = 1.3.0
-  rspec-rails:
-    group:
+  autotest-growl: 
+    group: 
+    - :test
+    - :cucumber
+    - :development
+    version: ">= 0"
+  delayed_job: 
+    group: 
+    - :default
+    version: ">= 0"
+    require: 
+    - delayed_job
+  database_cleaner: 
+    group: 
+    - :test
+    - :cucumber
+    version: ">= 0"
+  rspec-rails: 
+    group: 
     - :test
     - :cucumber
     version: = 1.3.2
-  database_cleaner:
-    group:
+  heroku: 
+    group: 
     - :test
     - :cucumber
+    - :development
     version: ">= 0"
-  factory_girl:
-    group:
-    - :test
-    - :cucumber
-    version: ">= 0"
-  cucumber-rails:
-    group:
-    - :test
-    - :cucumber
-    version: ">= 0"
-  friendly_id:
-    group:
+  friendly_id: 
+    group: 
     - :default
     version: ">= 0"
-  hoptoad_notifier:
-    group:
+  cucumber-rails: 
+    group: 
+    - :test
+    - :cucumber
+    version: ">= 0"
+  factory_girl: 
+    group: 
+    - :test
+    - :cucumber
+    version: ">= 0"
+  bundler: 
+    group: 
+    - :default
+    version: ">= 0"
+  taps: 
+    group: 
+    - :test
+    - :cucumber
+    - :development
+    version: ">= 0"
+  cucumber: 
+    group: 
+    - :test
+    - :cucumber
+    version: ">= 0"
+  hoptoad_notifier: 
+    group: 
     - :default
     version: = 2.2.6
-  cucumber:
-    group:
+  email_spec: 
+    group: 
     - :test
     - :cucumber
-    version: ">= 0"
-  email_spec:
-    group:
-    - :test
-    - :cucumber
-    version: ">= 0"
-  sanitize:
-    group:
+    version: = 0.6.3
+  sanitize: 
+    group: 
     - :default
     version: ">= 0"
-  facets:
-    group:
+  launchy: 
+    group: 
+    - :test
+    - :cucumber
+    version: ">= 0"
+  capybara: 
+    group: 
+    - :test
+    - :cucumber
+    version: ">= 0"
+  facets: 
+    group: 
     - :default
     version: = 2.5.0
-    require:
+    require: 
     - facets/dictionary
-  capybara:
-    group:
-    - :test
-    - :cucumber
-    version: ">= 0"
-  launchy:
-    group:
-    - :test
-    - :cucumber
-    version: ">= 0"
-specs:
-- rake:
+specs: 
+- rake: 
     version: 0.8.7
-- activesupport:
+- activesupport: 
     version: 2.3.8
-- rack:
+- rack: 
     version: 1.1.0
-- actionpack:
+- actionpack: 
     version: 2.3.8
-- actionmailer:
+- actionmailer: 
     version: 2.3.8
-- activerecord:
+- activerecord: 
     version: 2.3.8
-- activeresource:
+- activeresource: 
     version: 2.3.8
-- authlogic:
+- authlogic: 
     version: 2.1.5
-- builder:
+- autotest: 
+    version: 4.3.2
+- sys-uname: 
+    version: 0.8.4
+- autotest-fsevent: 
+    version: 0.2.2
+- autotest-growl: 
+    version: 0.2.4
+- babosa: 
+    version: 0.1.0
+- builder: 
     version: 2.1.2
-- culerity:
+- bundler: 
+    version: 0.9.26
+- culerity: 
     version: 0.2.10
-- mime-types:
+- mime-types: 
     version: "1.16"
-- nokogiri:
-    version: 1.4.2
-- rack-test:
+- nokogiri: 
+    version: 1.4.3.1
+- rack-test: 
     version: 0.5.4
-- ffi:
+- ffi: 
     version: 0.6.3
-- json_pure:
+- json_pure: 
     version: 1.4.3
-- rubyzip:
+- rubyzip: 
     version: 0.9.4
-- selenium-webdriver:
+- selenium-webdriver: 
     version: 0.0.27
-- capybara:
+- capybara: 
     version: 0.3.9
-- hashie:
-    version: 0.1.8
-- crack:
-    version: 0.1.6
-- httparty:
-    version: 0.5.2
-- chargify:
-    version: 0.2.6
-- configuration:
-    version: 1.1.0
-- diff-lcs:
-    version: 1.1.2
-- trollop:
-    version: 1.16.2
-- gherkin:
-    version: 2.1.5
-- term-ansicolor:
-    version: 1.0.5
-- cucumber:
-    version: 0.8.5
-- cucumber-rails:
-    version: 0.3.2
-- daemons:
-    version: 1.1.0
-- database_cleaner:
-    version: 0.5.2
-- delayed_job:
-    version: 2.0.3
-- email_spec:
-    version: 0.6.2
-- facets:
+- cgi_multipart_eof_fix: 
     version: 2.5.0
-- factory_girl:
+- hashie: 
+    version: 0.1.8
+- crack: 
+    version: 0.1.6
+- httparty: 
+    version: 0.5.2
+- chargify: 
+    version: 0.2.6
+- columnize: 
+    version: 0.3.1
+- configuration: 
+    version: 1.1.0
+- diff-lcs: 
+    version: 1.1.2
+- trollop: 
+    version: 1.16.2
+- gherkin: 
+    version: 2.1.5
+- term-ansicolor: 
+    version: 1.0.5
+- cucumber: 
+    version: 0.8.5
+- cucumber-rails: 
+    version: 0.3.2
+- daemons: 
+    version: 1.1.0
+- database_cleaner: 
+    version: 0.5.2
+- delayed_job: 
+    version: 2.0.3
+- email_spec: 
+    version: 0.6.3
+- facets: 
+    version: 2.5.0
+- factory_girl: 
     version: 1.3.1
-- fakeweb:
+- fakeweb: 
     version: 1.2.8
-- friendly_id:
-    version: 3.0.6
-- haml:
+- fastthread: 
+    version: 1.0.7
+- friendly_id: 
+    version: 3.1.1.1
+- gem_plugin: 
+    version: 0.2.3
+- haml: 
     version: 3.0.15
-- hoptoad_notifier:
-    version: 2.2.6
-- launchy:
+- launchy: 
     version: 0.3.7
-- pg:
+- rest-client: 
+    version: 1.4.2
+- heroku: 
+    version: 1.9.13
+- hoptoad_notifier: 
+    version: 2.2.6
+- linecache: 
+    version: "0.43"
+- mongrel: 
+    version: 1.1.5
+- pg: 
     version: 0.9.0
-- rails:
+- rails: 
     version: 2.3.8
-- rspec:
+- rspec: 
     version: 1.3.0
-- rspec-rails:
+- rspec-rails: 
     version: 1.3.2
-- sanitize:
+- ruby-debug-base: 
+    version: 0.10.3
+- ruby-debug: 
+    version: 0.10.3
+- sanitize: 
     version: 1.2.1
-hash: db7e9b2bbff9530bf9e8cb7052008693d6a78658
-sources:
-- Rubygems:
+- sequel: 
+    version: 3.13.0
+- sinatra: 
+    version: "1.0"
+- sqlite3-ruby: 
+    version: 1.3.1
+- taps: 
+    version: 0.3.11
+hash: b968b72de4a1a14948705aceb24d5e9adc8c0fd8
+sources: 
+- Rubygems: 
     uri: http://gemcutter.org

@@ -19,4 +19,20 @@ describe User do
       @user.account_owner?.should be_true
     end
   end
+  describe "managers" do
+
+    before(:each) do
+      @account = Factory(:account)
+      @manager = @account.owner
+      @account.users << @user = Factory(:user)
+    end
+
+    it "should report when asked if they manager a given user" do
+      @manager.manages(@user).should be_true
+    end
+    it "should report false if asked when the user is not a manager" do
+      @user.manages(@manager).should be_false
+    end
+
+  end
 end

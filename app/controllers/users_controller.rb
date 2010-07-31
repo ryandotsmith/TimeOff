@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_filter :load_account
   before_filter :require_user, :only => [:show, :edit, :update]
+  before_filter :ensure_correct_manager, :only => [:show]
 
   def new
     @user = @account.users.build
@@ -47,6 +48,16 @@ class UsersController < ApplicationController
       redirect_to edit_account_url(current_user.account), :notice => "employee has been updated"
     else
       render :action => :edit
+    end
+  end
+
+  private
+
+  def ensure_correct_manager
+    @user = User.find(params[:id])
+    unless current_user.manages(@user)
+      flash[:notice] = "This user does not belong to your account"
+      redirect_to @account
     end
   end
 

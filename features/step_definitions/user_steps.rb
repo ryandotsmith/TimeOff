@@ -9,7 +9,7 @@ Given /^I have a manager$/ do
 end
 
 Given /^an account has been provisioned with email "([^\"]*)" and password "([^\"]*)"$/ do |email, password|
-  @account.users << @user = Factory(:user, :email => email, :password_confirmation => password, :password => password) 
+  @account.users << @user = Factory(:user, :email => email, :password_confirmation => password, :password => password)
 end
 
 Given /^I am signed in$/ do
@@ -42,7 +42,7 @@ end
 
 Given /^the following employee record$/ do |table|
   table.hashes.each do |hash|
-    @employee = Factory(:user, hash)
+    @employee = Factory(:user, hash.merge(:account_id => @account.id ))
   end
 end
 
