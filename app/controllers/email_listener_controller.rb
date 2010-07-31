@@ -1,4 +1,4 @@
-class EmailListnerController < ApplicationController
+class EmailListenerController < ApplicationController
   def listen
     email = {
       :from => params[:from],
