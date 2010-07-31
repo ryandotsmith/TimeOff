@@ -1,4 +1,7 @@
 class EmailListenerController < ApplicationController
+
+  skip_before_filter :verify_authenticity_token
+
   def listen
     email = {
       :from => params[:from],
