@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 
   attr_accessible   :email, :first_name, :last_name,:password,
                     :password_confirmation, :openid_identifier,
-                    :max_vacation, :max_personal, :manager
+                    :max_vacation, :max_personal, :manager, :date_of_hire
 
   include DayoffUserMethods
   acts_as_authentic

@@ -27,14 +27,15 @@ class Dayoff < ActiveRecord::Base
     sanitize_input!
   end
 
-  def self.paginate_by_creation_date(params)
+  def self.paginate_by_creation_date(account,params)
     paginate :all,
       :sort_key   => params[:sort_key]   || "created_at",
       :sort_value => params[:sort_value],
       :sort_id    => params[:sort_id],
       :sort_order => "desc",
       :limit      => 5,
-      :include    => :user
+      :include    => :user,
+      :conditions => ["account_id = ?",account.id]
   end
 
   def self.get_dayoff_types

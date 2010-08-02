@@ -12,4 +12,5 @@ class EmailListenerController < ApplicationController
     user.last_name  = email[:body]
     user.save!
   end
+
 end
