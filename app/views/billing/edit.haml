@@ -12,15 +12,27 @@
   .block_head
     .bheadl
     .bheadr
-    %h2 Plan &amp; Pricing
+    %h2 Plans &amp; Pricing
   .block_content
-    - @products.each do |product|
-      - form_for @account, :html => {:class => 'ajax-form'} do |form|
-        = form.hidden_field :product_handle, :value => product.handle
-        - if product.handle == @account.product_handle
-          = form.submit product.name + " selected"
-        - else
-          = form.submit product.name
+    #subscription_plan_form_message
+    - form_for @account, :url => account_subscription_plan_path(@account), :html => { :class => 'ajax-form' }  do |form|
+      %table{:id => 'price-menu'}
+        %tr
+          %td= form.radio_button :product_handle, "0-5-users"
+          %td= form.radio_button :product_handle, "6-25-users"
+          %td= form.radio_button :product_handle, "26-50-users"
+        %tr
+          %td 0 to 5 employees
+          %td 6 to 25 employees
+          %td 26 to 50 employees
+        %tr
+          %th free
+          %th $24
+          %th $49
+        %tr
+          %td
+          %td= form.submit "update", :class => 'submit small'
+          %td
   .bendl
   .bendr
 #credit-card
@@ -57,6 +69,6 @@
           %br
           = form.text_field :cvv, :size => 3, :class => 'text'
         %p
-          = form.submit 'submit'
+          = form.submit 'submit', :class => 'submit small'
   .bendl
   .bendr

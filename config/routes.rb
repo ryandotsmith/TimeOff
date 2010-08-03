@@ -15,6 +15,7 @@ ActionController::Routing::Routes.draw do |map|
     accounts.resources :archived_daysoff
     accounts.resources :users, :has_many => :daysoff
     accounts.resource  :billing, :controller => 'billing'
+    accounts.resource  :subscription_plan, :controller => 'subscription_plan'
     accounts.calendar '/calendar/:year/:month', :controller => 'calendar', :action => 'index', :year => Time.zone.now.year, :month => Time.zone.now.month
   end
 

@@ -50,6 +50,17 @@ a.more_link span {
   width: 85px;
   height: 40px; }
 
+#subscription_plan_form_message {
+  text-align: center; }
+
+#price-menu {
+  width: 600px;
+  margin: 0 auto 0 auto; }
+  #price-menu td {
+    text-align: center; }
+  #price-menu th {
+    text-align: center; }
+
 .block .block_content table.messages {
   border-collapse: collapse; }
 

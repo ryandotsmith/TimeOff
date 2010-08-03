@@ -1,10 +1,13 @@
-jQuery.ajaxSetup({ 
+jQuery.ajaxSetup({
   'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
 })
 
 jQuery.fn.submitWithAjax = function() {
   this.submit(function() {
-    $.post(this.action, $(this).serialize(), null, "script");
+    var button      = $(this).find("input[type=submit]");
+    var origanlText = button.val();
+    button.val("loading...");
+    $.post(this.action, $(this).serialize(), function(){button.val(origanlText)}, "script");
     return false;
   })
   return this;
@@ -12,7 +15,9 @@ jQuery.fn.submitWithAjax = function() {
 
 $(document).ready(function() {
 
-  $(".ajax-form").submitWithAjax();
+  $(".ajax-form").livequery(function() {
+    $(this).submitWithAjax();
+  });
 
   $("a[rel=facebox]").livequery(function(){
     $(this).facebox();

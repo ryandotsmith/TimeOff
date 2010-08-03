@@ -1,0 +1,2 @@
+module SubscriptionPlanHelper
+end
