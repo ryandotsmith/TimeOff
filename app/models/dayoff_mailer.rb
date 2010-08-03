@@ -10,7 +10,7 @@ class DayoffMailer < ActionMailer::Base
 
   def new_request_message_for_manager(dayoff)
     recipients dayoff.account.managers.map(&:email)
-    from "Time Off <donotreply@timeoffhq.com>"
+    from "Time Off <#{dayoff.id}@timeoffhq.com>"
     subject "New Time Off Request"
     sent_on Time.now
     body :dayoff => dayoff
