@@ -3,14 +3,18 @@ class EmailListenerController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
   def listen
-    email = {
-      :from => params[:from],
-      :body => params[:text]
-    }
-    user = User.find_by_email("this.ryansmith@gmail.com")
-    user.first_name = "Miles"
-    user.last_name  = email[:body]
-    user.save!
+    email = Email.new(
+      :to       => params[:to],
+      :from     => params[:from],
+      :subject  => params[:subject],
+      :body     => params[:text]
+    )
+
+    if email.approved?
+      dayoff.approve(manager)
+    elsif email.denied?
+      dayoff.deny(manager)
+    end
   end
 
 end
