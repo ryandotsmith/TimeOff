@@ -32,4 +32,12 @@ class Email
     body.include?("deny")
   end
 
+  def act!
+    if approved?
+      dayoff.approve(manager)
+    else
+      dayoff.deny(manager)
+    end
+  end
+
 end
