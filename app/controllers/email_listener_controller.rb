@@ -11,9 +11,9 @@ class EmailListenerController < ApplicationController
     )
 
     if email.approved?
-      dayoff.approve(manager)
+      email.dayoff.approve(manager)
     elsif email.denied?
-      dayoff.deny(manager)
+      email.dayoff.deny(manager)
     end
   end
 
