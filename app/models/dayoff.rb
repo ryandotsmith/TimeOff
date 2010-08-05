@@ -1,9 +1,12 @@
 class Dayoff < ActiveRecord::Base
-
   # 0.1875 != 0.5 , nevertheless, these calculations were decided
   # to be accurate based upon our business logic.
   HALF_DAY  = 0.1875
   WHOLE_DAY = 0.3958
+
+  require 'state_machine'
+  extend StateMachine::ClassMethods
+  include StateMachine::InstanceMethods
 
   belongs_to :account
   belongs_to :user
@@ -44,7 +47,7 @@ class Dayoff < ActiveRecord::Base
 
   def prohibit_time_travel
     errors.add_to_base "Time travel is strictly prohibited! Correct ending date." if
-      !begin_time.nil? and end_time < begin_time
+    !begin_time.nil? and end_time < begin_time
   end
 
   def not_nice_twice
@@ -61,29 +64,11 @@ class Dayoff < ActiveRecord::Base
     self.description = Sanitize.clean( self.description )
   end
 
-  def status
-    return 'approved' if approved?
-    return 'denied'   if denied?
-    return 'pending'  if pending?
-  end
-
   def whole?
     leave_length == 'whole'
   end
 
-  def pending?
-    state == 0
-  end
-
-  def approved?
-    state == 1
-  end
-
-  def denied?
-    state == -1
-  end
-
-  def approve( current_user )
+  def approve(current_user)
     self.reviewed_by = current_user.name
     self.reviewed_on = DateTime.now
     self.state       = 1
@@ -91,7 +76,7 @@ class Dayoff < ActiveRecord::Base
     self.save!
   end
 
-  def deny( current_user )
+  def deny(current_user)
     self.reviewed_by = current_user.name
     self.reviewed_on = DateTime.now
     self.state       = -1
