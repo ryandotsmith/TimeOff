@@ -11,21 +11,25 @@ dependencies:
     - :cucumber
     - :development
     version: ">= 0"
-  pg: 
-    group: 
-    - :default
-    version: ">= 0"
   rails: 
     group: 
     - :default
     version: ~> 2.3.5
+  pg: 
+    group: 
+    - :default
+    version: ">= 0"
+  logworm: 
+    group: 
+    - :default
+    version: = 0.7.7
   mongrel: 
     group: 
     - :test
     - :cucumber
     - :development
     version: ">= 0"
-  chargify: 
+  authlogic: 
     group: 
     - :default
     version: ">= 0"
@@ -33,7 +37,7 @@ dependencies:
     group: 
     - :default
     version: ">= 2.2.17"
-  authlogic: 
+  chargify: 
     group: 
     - :default
     version: ">= 0"
@@ -142,7 +146,7 @@ specs:
 - activeresource: 
     version: 2.3.8
 - authlogic: 
-    version: 2.1.5
+    version: 2.1.6
 - babosa: 
     version: 0.1.0
 - builder: 
@@ -234,9 +238,9 @@ specs:
 - oauth: 
     version: 0.4.1
 - logworm: 
-    version: 0.7.91
+    version: 0.7.7
 - logworm_client: 
-    version: 0.7.3
+    version: 0.7.2
 - mongrel: 
     version: 1.1.5
 - pg: 
@@ -261,7 +265,7 @@ specs:
     version: 1.3.1
 - taps: 
     version: 0.3.11
-hash: 4ce6d5891146fe916fb16546ba54bd9f5ed60602
+hash: da0f34c4928a12895baa7264d488abdb8bf3cca9
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
