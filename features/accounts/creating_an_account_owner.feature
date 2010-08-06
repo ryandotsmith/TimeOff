@@ -1,5 +1,6 @@
 Feature: Making the account creator the owner
 
+  @javascript
   Scenario: Creating an account and registering the user as the owner of the account
     Given I am on the home page
     When I follow "Sign Up"
