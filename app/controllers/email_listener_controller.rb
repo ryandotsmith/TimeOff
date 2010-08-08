@@ -9,7 +9,7 @@ class EmailListenerController < ApplicationController
       :subject  => params[:subject],
       :body     => params[:text]
     ).act!
-    render :head => :created
+    render :nothing => true, :status => :ok
   end
 
 end
