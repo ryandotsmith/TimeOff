@@ -13,7 +13,7 @@ class DayoffMailer < ActionMailer::Base
     from "Time Off <#{dayoff.id}@listen.timeoffhq.com>"
     subject "New Time Off Request"
     sent_on Time.now
-    body :dayoff => dayoff
+    body :dayoff => dayoff, :account => dayoff.account
   end
 
   def denied_message(dayoff)
