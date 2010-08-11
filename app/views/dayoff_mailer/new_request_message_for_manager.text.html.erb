@@ -27,7 +27,14 @@
         <td><%=@dayoff.description%></td>
       </tr>
     </table>
+
     <hr />
+
+    <p><strong><%= @dayoff.user.name %>has <%= @dayoff.user.remaining(:vacation)%> <em>vacation</em> days remaining.</strong></p>
+    <p><strong><%= @dayoff.user.name %>has <%= @dayoff.user.remaining(:personal)%> <em>personal</em> days remaining.</strong></p>
+
+    <hr />
+
     <p><strong><%= @dayoff.user.name %>'s Last 3 daysoff</strong></p>
     <table style='width:350px;'>
       <tr>
@@ -38,7 +45,7 @@
         <th>end date</th>
         <th>description</th>
       </tr>
-      <% @dayoff.user.daysoff[0..2].each do |dayoff| %>
+      <% @dayoff.user.daysoff.approved[0..2].each do |dayoff| %>
         <tr>
           <td><%= dayoff.created_at.to_s %></td>
           <td><%= dayoff.leave_type%></td>
@@ -49,7 +56,9 @@
         </tr>
       <% end %>
     </table>
+
     <hr />
+
     <p><strong>There are 2 ways to respond to this request.</strong></p>
     <ol>
       <li>Using the <a href=<%="http://www.timeoffhq.com/accounts/#{@account.to_param}"%>>request queue</a> in your browser.</li>

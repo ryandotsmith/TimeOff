@@ -34,6 +34,13 @@ module DayoffUserMethods
     results
   end
 
+  def remaining(type)
+    daysoff           = this_years_daysoff.select {|dayoff| dayoff.leave_type == type.to_s}
+    approved_daysoff  = daysoff.select(&:approved?)
+    taken             = approved_daysoff.sum(&:get_length)
+    (self.send("max_#{type}").to_f - taken)
+  end
+
   def this_years_daysoff
     selection = daysoff.select {|h| h.begin_time.year == Date.today.year}
   end
