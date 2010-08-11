@@ -4,11 +4,15 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"  />
   </head>
   <body>
-    <h2>New Request</h2>
+    <h4>New Request:</h4>
     <table>
       <tr>
         <td>Employee:</td>
         <td><%= @dayoff.user.name%></td>
+      </tr>
+      <tr>
+        <td>Type:</td>
+        <td><%= @dayoff.leave_type%></td>
       </tr>
       <tr>
         <td>Start Date:</td>
@@ -20,11 +24,12 @@
       </tr>
       <tr>
         <td>Description:</td>
-        <td><%= @dayoff.description%></td>
+        <td><%=@dayoff.description%></td>
       </tr>
     </table>
-    <p><%= @dayoff.user.name %>'s Last 3 daysoff</p>
-    <table>
+    <hr />
+    <p><strong><%= @dayoff.user.name %>'s Last 3 daysoff</strong></p>
+    <table style='width:350px;'>
       <tr>
         <th>submitted</th>
         <th>type</th>
