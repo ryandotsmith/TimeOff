@@ -1,29 +1,55 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-
   <head>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"  />
   </head>
-
   <body>
-
-    <h1>New Request</h1>
+    <h2>New Request</h2>
     <table>
       <tr>
-        <td>Requested By:</td>
+        <td>Employee:</td>
         <td><%= @dayoff.user.name%></td>
       </tr>
       <tr>
-        <td>Time Off:</td>
-        <td><%= @dayoff.begin_time.to_s + @dayoff.end_time.to_s%></td>
+        <td>Start Date:</td>
+        <td><%= @dayoff.begin_time.to_s %></td>
       </tr>
       <tr>
-        <td>Notes:</td>
+        <td>End Date:</td>
+        <td><%= @dayoff.begin_time.to_s %></td>
+      </tr>
+      <tr>
+        <td>Description:</td>
         <td><%= @dayoff.description%></td>
       </tr>
     </table>
-
-    <h3><a href=<%="http://www.timeoffhq.com/accounts/#{@account.to_param}"%>>Respond</a></h3>
+    <p><%= @dayoff.user.name %>'s Last 3 daysoff</p>
+    <table>
+      <tr>
+        <th>submitted</th>
+        <th>type</th>
+        <th>length</th>
+        <th>start date</th>
+        <th>end date</th>
+        <th>description</th>
+      </tr>
+      <% @dayoff.user.daysoff[0..2].each do |dayoff| %>
+        <tr>
+          <td><%= dayoff.created_at.to_s %></td>
+          <td><%= dayoff.leave_type%></td>
+          <td><%= dayoff.get_length %></td>
+          <td><%= dayoff.begin_time.to_s %></td>
+          <td><%= dayoff.end_time.to_s %></td>
+          <td><%= dayoff.description%></td>
+        </tr>
+      <% end %>
+    </table>
+    <hr />
+    <p><strong>There are 2 ways to respond to this request.</strong></p>
+    <ol>
+      <li>Using the <a href=<%="http://www.timeoffhq.com/accounts/#{@account.to_param}"%>>request queue</a> in your browser.</li>
+      <li>Reply to this email. See instructions below.</li>
+    </ol>
+    <p>To respond via email to this request, click the reply button in your email program and include "approve" or "deny" in the body of the reply message.</p>
   </body>
-
 </html>
