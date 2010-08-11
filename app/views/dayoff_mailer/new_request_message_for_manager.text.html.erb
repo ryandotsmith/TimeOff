@@ -30,8 +30,8 @@
 
     <hr />
 
-    <p><strong><%= @dayoff.user.name %>has <%= @dayoff.user.remaining(:vacation)%> <em>vacation</em> days remaining.</strong></p>
-    <p><strong><%= @dayoff.user.name %>has <%= @dayoff.user.remaining(:personal)%> <em>personal</em> days remaining.</strong></p>
+    <p><%= @dayoff.user.name %> has <%= @dayoff.user.remaining(:vacation)%> <em>vacation</em> days remaining.</p>
+    <p><%= @dayoff.user.name %> has <%= @dayoff.user.remaining(:personal)%> <em>personal</em> days remaining.</p>
 
     <hr />
 
