@@ -19,7 +19,7 @@ Feature: Requesting Days Off
     Then I should see "Request submitted! Supervisors have been notified."
     And I should see message "request pending approval 1"
 
-  @wip @4162223
+  @4162223
   Scenario: Requesting a single day off
     Given I choose "dayoff_leave_length_whole"
     And I select "December 25, 2008" as the "dayoff_begin_time" date

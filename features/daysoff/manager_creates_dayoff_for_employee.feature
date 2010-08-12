@@ -10,7 +10,7 @@ Feature: Manager creates dayoff for employee
 
   @javascript
   Scenario: Adding TimeOff
-    Given I have 1 users in my account
+    Given I have a user in my account
     When I follow "employees"
     And I follow "add timeoff"
     And I choose "dayoff_leave_length_half"
@@ -19,4 +19,3 @@ Feature: Manager creates dayoff for employee
     And I fill in "Message" with "Jon needs a half day off"
     When I press "submit"
     Then the user should receive an email
-

@@ -19,6 +19,7 @@
 
 - content_for :left_body do
   - form_for [@account,@user] do |form|
+    %p= form.error_messages :class => 'message errormsg'
     %p
       = form.label :email
       %br

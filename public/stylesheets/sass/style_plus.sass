@@ -1,94 +1,96 @@
 @import _color.sass
+
 h1
   span
-    :font-size 10px
-    :float right
+    font-size: 10px
+    float: right
+
 #left
-  :float left
+  float: left
 
 #right
-  :float right
+  float: right
 
 a.button span
-  :font-family "Titillium800", "Trebuchet MS", Arial, sans-serif
-  :color white
-  :display block
-  :text-align center
-  :background url('/images/theme/btns.gif')
-  :background-repeat no-repeat
-  :width 85px
-  :height 40px
-
+  font-family: "Titillium800", "Trebuchet MS", Arial, sans-serif
+  color: white
+  display: block
+  text-align: center
+  background: url("/images/theme/btns.gif")
+  background-repeat: no-repeat
+  width: 85px
+  height: 40px
 
 #menu
-  :clear both
-  :float right
-  :margin -40px 0 0 0
+  clear: both
+  float: right
+  margin: -40px 0 0 0
   a
-    :float left
-    :margin 0 3px 0 3px
+    float: left
+    margin: 0 3px 0 3px
   a span
-    :font-family "Titillium800", "Trebuchet MS", Arial, sans-serif
-    :color white
-    :display block
-    :text-align center
-    :background url('/images/theme/btns.gif')
-    :background-repeat no-repeat
-    :width 85px
-    :height 40px
-
+    font-family: "Titillium800", "Trebuchet MS", Arial, sans-serif
+    color: white
+    display: block
+    text-align: center
+    background: url("/images/theme/btns.gif")
+    background-repeat: no-repeat
+    width: 85px
+    height: 40px
   a.active span
-    :color !grey_text
-    :background url('/images/theme/btns_fade.gif')
-    :background-repeat no-repeat
+    color: $grey_text
+    background: url("/images/theme/btns_fade.gif")
+    background-repeat: no-repeat
+
 a.more_link
   span
-    :font-size 13px
-    :font-family "Titillium800", "Trebuchet MS", Arial, sans-serif
-    :color white
-    :display block
-    :text-align center
-    :background url('/images/theme/btns.gif')
-    :background-repeat no-repeat
-    :width 85px
-    :height 40px
+    font-size: 13px
+    font-family: "Titillium800", "Trebuchet MS", Arial, sans-serif
+    color: white
+    display: block
+    text-align: center
+    background: url("/images/theme/btns.gif")
+    background-repeat: no-repeat
+    width: 85px
+    height: 40px
+
 #subscription_plan_form_message
-  :text-align center
+  text-align: center
+
 #price-menu
-  :width 600px
-  :margin 0 auto 0 auto
+  width: 600px
+  margin: 0 auto 0 auto
   td
-    :text-align center
+    text-align: center
   th
-    :text-align center
+    text-align: center
 
 .block .block_content table.messages
-  :border-collapse collapse
+  border-collapse: collapse
 
 .block .block_content table.messages tr
-  :background-color = !box_background
+  background-color: $box_background
 
 .block .block_content table.messages th.admin
-  :border-top = '0.5px' 'solid' !oragne
-  :border-left = '0.5px' 'solid' !oragne
-  :border-right = '0.5px' 'solid' !oragne
+  border-top: unquote("0.5px") solid $oragne
+  border-left: unquote("0.5px") solid $oragne
+  border-right: unquote("0.5px") solid $oragne
 
 .block .block_content table.messages td.admin
-  :border-bottom = '0.5px' 'solid' !oragne
-  :border-left = '0.5px' 'solid' !oragne
-  :border-right = '0.5px' 'solid' !oragne
+  border-bottom: unquote("0.5px") solid $oragne
+  border-left: unquote("0.5px") solid $oragne
+  border-right: unquote("0.5px") solid $oragne
 
 .block .block_content table.messages th
-  :text-align center
-  :color = !blue
-  :font-size 3em
-  :border-bottom none
-  :border-top 1px solid #DDDDDD
-  :border-left 1px solid #DDDDDD
-  :border-right 1px solid #DDDDDD
+  text-align: center
+  color: $blue
+  font-size: 3em
+  border-bottom: none
+  border-top: 1px solid #dddddd
+  border-left: 1px solid #dddddd
+  border-right: 1px solid #dddddd
+
 .block .block_content table.messages td
-  :font-size 0.9em
-  :border-left 1px solid #DDDDDD
-  :border-right 1px solid #DDDDDD
-
-
+  font-size: 0.9em
+  border-left: 1px solid #dddddd
+  border-right: 1px solid #dddddd

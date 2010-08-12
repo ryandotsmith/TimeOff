@@ -17,7 +17,7 @@ class Dayoff < ActiveRecord::Base
   validates_presence_of :begin_time,  :message => "please specify beginning time"
   validates_presence_of :description, :message => "please add a descirption"
 
-  after_create :deliver_request_message_to_manager
+  after_create :deliver_new_dayoff_message
 
   named_scope :approved, :conditions => {:state => 1 }
   named_scope :pending,  :conditions => {:state => 0 }
@@ -46,13 +46,14 @@ class Dayoff < ActiveRecord::Base
   end
 
   def prohibit_time_travel
-    errors.add_to_base "Time travel is strictly prohibited! Correct ending date." if
-    !begin_time.nil? and end_time < begin_time
+    if begin_time and end_time < begin_time
+      errors.add_to_base "Your start date occurs before your end date."
+    end
   end
 
   def not_nice_twice
     if !begin_time.nil? and in_range_of_existing
-      errors.add_to_base "This request contains a day that already belongs to one of your holidays."
+      errors.add_to_base "This request contains a day that belongs to another approved request."
     end
   end
 
@@ -161,10 +162,10 @@ class Dayoff < ActiveRecord::Base
     user.name
   end
 
-  def deliver_request_message_to_manager
-    if pending?
+  def deliver_new_dayoff_message
+    if self.pending?
       Delayed::Job.enqueue(NewDayoffMailJob.new(self.id))
-    elsif approved?
+    elsif self.approved?
       Delayed::Job.enqueue(NewApprovedDayoffMailJob.new(self.id))
     end
   end

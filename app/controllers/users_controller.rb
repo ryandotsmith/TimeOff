@@ -38,7 +38,7 @@ class UsersController < ApplicationController
       flash[:notice] = "The new user will receieve an activation email."
       redirect_to edit_account_url(@account)
     else
-      render :action => :new
+      render :action => :new, :layout => 'split'
     end
   end
 
@@ -49,6 +49,13 @@ class UsersController < ApplicationController
     else
       render :action => :edit
     end
+  end
+
+  def destroy
+    @user    = User.find(params[:id])
+    @account = @user.account
+    @user.destroy
+    redirect_to edit_account_path(@account), :notice => "employee was deleted!"
   end
 
   private
