@@ -1,5 +1,7 @@
 - form_for [@user, @dayoff] do |form|
-  = form.hidden_field :state, :value => StateMachine::APPROVED
+  = form.hidden_field :state,       :value => StateMachine::APPROVED
+  = form.hidden_field :reviewed_by, :value => current_user.id
+  = form.hidden_field :reviewed_on, :value => Date.today
   %p
     = form.error_messages :class => 'message errormsg'
   %table
