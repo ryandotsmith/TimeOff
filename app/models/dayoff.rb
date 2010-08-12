@@ -163,11 +163,11 @@ class Dayoff < ActiveRecord::Base
   end
 
   def deliver_new_dayoff_message
-    if self.pending?
-      Delayed::Job.enqueue(NewDayoffMailJob.new(self.id))
-    elsif self.approved?
+    #if self.pending?
+      #Delayed::Job.enqueue(NewDayoffMailJob.new(self.id))
+    #elsif self.approved?
       Delayed::Job.enqueue(NewApprovedDayoffMailJob.new(self.id))
-    end
+    #end
   end
 
 end
