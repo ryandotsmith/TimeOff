@@ -27,20 +27,22 @@ class DaysoffController < ApplicationController
   end
 
   def new
-    @user   = current_user
+    @user   = User.find(params[:user_id])
     @dayoff = @user.daysoff.build
     respond_to do |format|
-      format.html 
+      format.html
+      format.js { render :action => 'new.js.haml', :layout => false}
     end
   end
 
   def create
-    @user   = current_user
-    @dayoff = @user.daysoff.build(params[:dayoff]) 
+    @user   = User.find(params[:user_id])
+    @dayoff = @user.daysoff.build(params[:dayoff])
     respond_to do |format|
       @dayoff.account = @account
       if @dayoff.save
         format.html { redirect_to @account,:notice => 'Request submitted! Supervisors have been notified.'  }
+        format.js   { render :action => 'create.js.erb', :layout => false }
       else
         format.html { render :action => 'new', :layout => 'split' }
       end
@@ -48,7 +50,7 @@ class DaysoffController < ApplicationController
   end
 
   def update
-    @dayoff = Dayoff.find(params[:id])    
+    @dayoff = Dayoff.find(params[:id])
     respond_to do |wants|
       if @dayoff.update_attributes(params[:dayoff])
         if params[:commit] == 'approve'
@@ -67,8 +69,9 @@ class DaysoffController < ApplicationController
 
   def destroy
     @dayoff = Dayoff.find(params[:id])
+    @user   = @dayoff.user
     DayoffMailer.deliver_deleted_message(@dayoff) if @dayoff.delete
-    redirect_to @account
+    redirect_to @user, :notice => "Deleted!"
   end
 
 end

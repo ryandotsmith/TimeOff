@@ -24,15 +24,15 @@ module StateMachine
     end
 
     def deny!
-      state = DENIED
+      self.state = DENIED
     end
 
     def approve!
-      state = APPROVED
+      self.state = APPROVED
     end
 
     def pend!
-      state = PENDING
+      self.state = PENDING
     end
 
     def status

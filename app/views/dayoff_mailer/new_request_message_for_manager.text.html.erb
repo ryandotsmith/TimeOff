@@ -15,6 +15,10 @@
         <td><%= @dayoff.leave_type%></td>
       </tr>
       <tr>
+        <td>Length:</td>
+        <td><%= @dayoff.get_length%></td>
+      </tr>
+      <tr>
         <td>Start Date:</td>
         <td><%= @dayoff.begin_time.to_s %></td>
       </tr>

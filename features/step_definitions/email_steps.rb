@@ -44,7 +44,8 @@ end
 Then /^the user should receive an email$/ do
   Then %{"#{@user.email}" should receive an email}
 end
-Then /^I my manager should have received an email$/ do
+
+Then /^my manager should have received an email$/ do
   Then %{"#{@manager.email}" should receive an email}
 end
 

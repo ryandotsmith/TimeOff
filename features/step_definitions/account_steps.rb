@@ -20,7 +20,7 @@ end
 
 Given /^I have (\d+) users in my account$/ do |arg1|
   until @account.users.count == 5 do
-    @account.users << Factory(:user)
+    @account.users << @user = Factory(:user)
   end
 end
 

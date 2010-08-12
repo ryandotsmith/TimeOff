@@ -9,6 +9,7 @@
 
 %table.employees
   %tr
+    %th add timeoff
     %th show
     %th first name
     %th last name
@@ -20,6 +21,7 @@
     %th delete
   - @account.users.each do |user|
     %tr{:id => "user_#{user.id}"}
+      %td= link_to 'add timeoff', new_user_dayoff_url(user), :rel => 'facebox'
       %td= link_to 'show', user
       %td= user.first_name
       %td= user.last_name

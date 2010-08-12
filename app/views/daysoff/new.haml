@@ -13,7 +13,7 @@
   = javascript_tag "var DAYSOFF_URL ='#{account_daysoff_path(@account)}'"
 
 - content_for :left_body do
-  - form_for [current_user, @dayoff] do |form|
+  - form_for [@user, @dayoff] do |form|
 
     %p
       = form.error_messages :class => 'message errormsg'
