@@ -1,6 +1,6 @@
 - form_for [@user, @dayoff] do |form|
   = form.hidden_field :state,       :value => StateMachine::APPROVED
-  = form.hidden_field :reviewed_by, :value => current_user.id
+  = form.hidden_field :reviewed_by, :value => current_user.name
   = form.hidden_field :reviewed_on, :value => Date.today
   %p
     = form.error_messages :class => 'message errormsg'
@@ -41,7 +41,6 @@
     = form.submit 'submit', :class => 'submit small'
 
 :javascript
-  $("#new_dayoff").submitWithAjax();
   $("input[name='dayoff[leave_length]']").livequery(function(){
     $(this).click( function() {
       if ($("input[name='dayoff[leave_length]']:checked").val() == 'many')
