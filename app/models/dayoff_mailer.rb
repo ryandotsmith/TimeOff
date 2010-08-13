@@ -1,7 +1,7 @@
 class DayoffMailer < ActionMailer::Base
 
   def approved_message(dayoff)
-    recipients "ryan@wonderset.com" #dayoff.user.email
+    recipients "jon@wonderset.com" #dayoff.user.email
     from "Time Off <donotreply@timeoffhq.com>"
     subject "Time Off Request Approved"
     sent_on Time.now
