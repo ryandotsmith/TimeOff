@@ -1,4 +1,4 @@
-- form_for [@user, @dayoff] do |form|
+- form_for [@user, @dayoff], :url => account_manage_daysoff_path(@account,@user) do |form|
   = form.hidden_field :state,       :value => StateMachine::APPROVED
   = form.hidden_field :reviewed_by, :value => current_user.name
   = form.hidden_field :reviewed_on, :value => Date.today

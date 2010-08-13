@@ -17,8 +17,6 @@ class Dayoff < ActiveRecord::Base
   validates_presence_of :begin_time,  :message => "please specify beginning time"
   validates_presence_of :description, :message => "please add a descirption"
 
-  after_create :deliver_new_dayoff_message
-
   named_scope :approved, :conditions => {:state => 1 }
   named_scope :pending,  :conditions => {:state => 0 }
   named_scope :denied,   :conditions => {:state => -1}
@@ -160,14 +158,6 @@ class Dayoff < ActiveRecord::Base
 
   def to_s
     user.name
-  end
-
-  def deliver_new_dayoff_message
-    if self.pending?
-      Delayed::Job.enqueue(NewDayoffMailJob.new(self.id))
-    elsif self.approved?
-      Delayed::Job.enqueue(NewApprovedDayoffMailJob.new(self.id))
-    end
   end
 
 end

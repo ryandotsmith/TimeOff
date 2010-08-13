@@ -17,6 +17,7 @@ ActionController::Routing::Routes.draw do |map|
     accounts.resource  :billing, :controller => 'billing'
     accounts.resource  :subscription_plan, :controller => 'subscription_plan'
     accounts.calendar '/calendar/:year/:month', :controller => 'calendar', :action => 'index', :year => Time.zone.now.year, :month => Time.zone.now.month
+    accounts.manage_daysoff 'user/:user_id/manager/daysoff',:controller => 'manager/daysoff', :action => 'create'
   end
 
   map.resource :i_cal, :controller => 'i_cal', :only => :show

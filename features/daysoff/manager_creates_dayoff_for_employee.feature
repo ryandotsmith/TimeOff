@@ -18,4 +18,5 @@ Feature: Manager creates dayoff for employee
     And I choose "dayoff_leave_type_vacation"
     And I fill in "Message" with "Jon needs a half day off"
     When I press "submit"
+    Then I should see "TimeOff was added for the employee."
     Then the user should receive an email

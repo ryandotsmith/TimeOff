@@ -41,8 +41,8 @@ class DaysoffController < ApplicationController
     respond_to do |format|
       @dayoff.account = @account
       if @dayoff.save
+        Delayed::Job.enqueue(NewDayoffMailJob.new(@dayoff.id))
         format.html { redirect_to @account,:notice => 'Request submitted! Supervisors have been notified.'  }
-        format.js   { render :action => 'create.js.erb', :layout => false }
       else
         format.html { render :action => 'new', :layout => 'split' }
       end
