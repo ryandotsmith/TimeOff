@@ -15,6 +15,7 @@ gem 'hoptoad_notifier', '2.2.6'
 gem 'delayed_job', :require => 'delayed_job'
 gem 'logworm', '0.7.7'
 gem 'logworm_client'
+gem 'right_aws'
 
 group :test,:cucumber,:development do
   gem 'mongrel'

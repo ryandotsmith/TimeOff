@@ -11,25 +11,25 @@ dependencies:
     - :cucumber
     - :development
     version: ">= 0"
-  rails: 
-    group: 
-    - :default
-    version: ~> 2.3.5
-  pg: 
-    group: 
-    - :default
-    version: ">= 0"
   logworm: 
     group: 
     - :default
     version: = 0.7.7
+  pg: 
+    group: 
+    - :default
+    version: ">= 0"
+  rails: 
+    group: 
+    - :default
+    version: ~> 2.3.5
   mongrel: 
     group: 
     - :test
     - :cucumber
     - :development
     version: ">= 0"
-  authlogic: 
+  chargify: 
     group: 
     - :default
     version: ">= 0"
@@ -37,7 +37,7 @@ dependencies:
     group: 
     - :default
     version: ">= 2.2.17"
-  chargify: 
+  authlogic: 
     group: 
     - :default
     version: ">= 0"
@@ -67,6 +67,10 @@ dependencies:
     - :test
     - :cucumber
     - :development
+    version: ">= 0"
+  right_aws: 
+    group: 
+    - :default
     version: ">= 0"
   friendly_id: 
     group: 
@@ -120,16 +124,16 @@ dependencies:
     - :test
     - :cucumber
     version: ">= 0"
-  logworm_client: 
-    group: 
-    - :default
-    version: ">= 0"
   facets: 
     group: 
     - :default
     version: = 2.5.0
     require: 
     - facets/dictionary
+  logworm_client: 
+    group: 
+    - :default
+    version: ">= 0"
 specs: 
 - rake: 
     version: 0.8.7
@@ -148,11 +152,11 @@ specs:
 - authlogic: 
     version: 2.1.6
 - babosa: 
-    version: 0.1.0
+    version: 0.1.1
 - builder: 
     version: 2.1.2
 - culerity: 
-    version: 0.2.10
+    version: 0.2.12
 - mime-types: 
     version: "1.16"
 - nokogiri: 
@@ -162,7 +166,7 @@ specs:
 - ffi: 
     version: 0.6.3
 - json_pure: 
-    version: 1.4.3
+    version: 1.4.6
 - rubyzip: 
     version: 0.9.4
 - selenium-webdriver: 
@@ -212,11 +216,11 @@ specs:
 - fastthread: 
     version: 1.0.7
 - friendly_id: 
-    version: 3.1.1.1
+    version: 3.1.3
 - gem_plugin: 
     version: 0.2.3
 - haml: 
-    version: 3.0.15
+    version: 3.0.17
 - launchy: 
     version: 0.3.7
 - rest-client: 
@@ -230,13 +234,13 @@ specs:
 - icalendar: 
     version: 1.1.5
 - json: 
-    version: 1.4.3
+    version: 1.4.6
 - linecache: 
     version: "0.43"
 - memcache-client: 
     version: 1.8.5
 - oauth: 
-    version: 0.4.1
+    version: 0.4.2
 - logworm: 
     version: 0.7.7
 - logworm_client: 
@@ -247,6 +251,10 @@ specs:
     version: 0.9.0
 - rails: 
     version: 2.3.8
+- right_http_connection: 
+    version: 1.2.4
+- right_aws: 
+    version: 2.0.0
 - rspec: 
     version: 1.3.0
 - rspec-rails: 
@@ -265,7 +273,7 @@ specs:
     version: 1.3.1
 - taps: 
     version: 0.3.11
-hash: da0f34c4928a12895baa7264d488abdb8bf3cca9
+hash: 23f2d390754e33b91bec13f6922e28e38644847c
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
