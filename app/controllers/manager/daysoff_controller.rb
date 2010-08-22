@@ -8,8 +8,7 @@ class Manager::DaysoffController < ApplicationController
     respond_to do |format|
       @dayoff.account = @account
       if @dayoff.save
-        DayoffMailer.deliver_approved_message(@dayoff)
-        #Delayed::Job.enqueue(NewApprovedDayoffMailJob.new(@dayoff.id))
+        Delayed::Job.enqueue(NewApprovedDayoffMailJob.new(@dayoff.id))
         format.html { redirect_to edit_account_path(@account),:notice => 'TimeOff was added for the employee.' }
       else
         format.html { render :action => 'edit', :controller => 'accounts', :layout => 'split' }
