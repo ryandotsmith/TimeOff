@@ -25,11 +25,11 @@ class Email
   end
 
   def approved?
-    body.include?("approve")
+    body[0..14].include?("approve")
   end
 
   def denied?
-    body.include?("deny")
+    body[0..14].include?("deny")
   end
 
   def act!
