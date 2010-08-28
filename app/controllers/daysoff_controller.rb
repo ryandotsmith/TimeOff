@@ -1,5 +1,6 @@
 class DaysoffController < ApplicationController
   before_filter :load_account
+  before_filter :redirect_if_user_not_in_account, :only => [:new,:create]
   layout 'split', :only => [:new]
 
   def index
@@ -72,6 +73,14 @@ class DaysoffController < ApplicationController
     @user   = @dayoff.user
     DayoffMailer.deliver_deleted_message(@dayoff) if @dayoff.delete
     redirect_to @user, :notice => "Deleted!"
+  end
+
+  private
+  def redirect_if_user_not_in_account
+    unless @account.users.include?(User.find(params[:user_id]))
+      flash[:notice] = "User is not in your account"
+      redirect_to new_user_dayoff_path(current_user)
+    end
   end
 
 end
