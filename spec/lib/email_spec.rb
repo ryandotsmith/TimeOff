@@ -7,6 +7,10 @@ describe Email do
         email = Email.new(:from=>"Time Off <224@listen.timeoffhq.com>\n")
         email.filtered_email_address.should eql("224@listen.timeoffhq.com")
       end
+      it "should return email address" do
+        email = Email.new(:from=>"224@listen.timeoffhq.com")
+        email.filtered_email_address.should eql("224@listen.timeoffhq.com")
+      end
     end
     context "to" do
       it "should return an id" do

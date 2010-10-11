@@ -17,6 +17,7 @@ class Email
   end
 
   def filtered_email_address
+    return from if from.scan(/\<|\>/).empty?
     from.match(%r{<.*.>})[0].sub("<","").sub(">","")
   end
 
