@@ -4,8 +4,7 @@ class DaysoffController < ApplicationController
   layout 'split', :only => [:new]
 
   def index
-    user = User.find_by_id(params[:user_id])
-    if user
+    if user = User.find_by_id(params[:user_id])
       @daysoff =  user.daysoff.pending
       @daysoff << user.daysoff.approved
       @daysoff.flatten!

@@ -1,4 +1,3 @@
-@wip
 Feature: Manager creates dayoff for employee
   In order to help my employees keep accurate information
   As a manager on the employee show page

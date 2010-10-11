@@ -35,12 +35,6 @@ describe Dayoff do
   end
   describe "sending mail after create" do
     context "when dayoff is in pending state" do
-      it "should send a message to the manager" do
-        dayoff = Factory.build(:dayoff, :id => 99)
-        dayoff.approve!
-        Delayed::Job.should_receive(:enqueue).with(NewApprovedDayoffMailJob.new(99))
-        dayoff.save
-      end
     end
   end
 end
@@ -385,4 +379,3 @@ describe "removing weekends from dayoff range" do
     @dayoff.get_length.should == 3.0
   end
 end
-
