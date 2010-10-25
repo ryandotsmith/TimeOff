@@ -12,15 +12,7 @@ class UserSessionsController < ApplicationController
     if @user_session.save
       user    = @user_session.user
       @account = Account.find(user.account_id)
-      if @account.has_active_subscription?
-        redirect_to @account
-      else
-        if user.account_owner?
-          redirect_to edit_account_billing_path(@account)
-        else
-          redirect_to request_activation_account_billing_path(@account)
-        end
-      end
+      redirect_to @account
     else
       render :action => :new
     end

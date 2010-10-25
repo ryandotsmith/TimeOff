@@ -12,13 +12,10 @@
 - content_for :right_body do
   .message.success
     TimeOff is beta. So in exchange for your feedback we will give you free access.
-    No Credit Card is needed to sign up. We expect to start charging September 2010.
+    No Credit Card is needed to sign up.
     email <a href='mailto:this.ryansmith@gmail.com'>this.ryansmith@gmail.com</a> 
     with any questions.
-  %ul
-    %li Free for first 30-days
-    %li $24 per month.
-    %li $275 per year. Save $25 when you pay in advance.
+
 - content_for :left_body do
   - form_for @account do |form|
     = form.error_messages

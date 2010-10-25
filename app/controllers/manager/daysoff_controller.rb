@@ -11,7 +11,8 @@ class Manager::DaysoffController < ApplicationController
         Delayed::Job.enqueue(NewApprovedDayoffMailJob.new(@dayoff.id))
         format.html { redirect_to edit_account_path(@account),:notice => 'TimeOff was added for the employee.' }
       else
-        format.html { render :action => 'edit', :controller => 'accounts', :layout => 'split' }
+        flash[:error] = 'Unable to add timeoff for his employee' 
+        format.html { redirect_to edit_account_path(@account) }
       end
     end
   end

@@ -3,8 +3,6 @@ class Account < ActiveRecord::Base
   DEFAULT_PRODUCT = '0-5-users'
 
   include DayoffUserMethods
-  include SubscriptionHelper::InstanceMethods
-  extend  SubscriptionHelper::ClassMethods
 
   has_friendly_id :company_name, :use_slug => true
 

@@ -6,12 +6,7 @@ class UsersController < ApplicationController
   def new
     @user = @account.users.build
     respond_to do |format|
-      if @account.can_add_more_users?
-        format.html { render :layout => 'split' }
-      else
-        flash[:notice] = "You can only have 5 users on your plan. Please upgrade to add more users."
-        format.html { redirect_to edit_account_path(@account) }
-      end
+      format.html { render :layout => 'split' }
     end
   end
 
