@@ -7,11 +7,10 @@ module GoogleAppsProtection
   
   DataRequest = {:required => [AxEmail, AxFirstName, AxLastName]}
   
-  def authenticate_with_google_apps(domain)
+  def authenticate_with_google_apps(domain,opts={})
     domain_endpoint = Endpoint % domain
-    
-    authenticate_with_open_id(domain_endpoint, DataRequest) do |result, identity_url, data|
-            
+    options = DataRequest#.merge(:return_to => opts[:return_to]) 
+    authenticate_with_open_id(domain_endpoint, options) do |result, identity_url, data|
       case result.status
       when :missing
         login_failed "Sorry, the OpenID server couldn't be found"
@@ -31,7 +30,6 @@ module GoogleAppsProtection
         }
         
         email_domain = profile[:email].split("@").last rescue nil
-        
         if email_domain != domain
           login_failed("Domain #{profile[:email].split("@").inspect} is not allowed here")
           return 

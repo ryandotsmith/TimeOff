@@ -2,6 +2,8 @@
 
   %p= session.error_messages :class => 'message errormsg'
 
+  %p= link_to 'sign in with google', new_user_session_url(:authenticate_with_google => true)
+
   %p
     = session.label :email
     %br
