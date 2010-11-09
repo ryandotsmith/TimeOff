@@ -4,13 +4,7 @@ class DaysoffController < ApplicationController
   layout 'split', :only => [:new]
 
   def index
-    if user = User.find_by_id(params[:user_id])
-      @daysoff =  user.daysoff.pending
-      @daysoff << user.daysoff.approved
-      @daysoff.flatten!
-    else
-      @daysoff = @account.daysoff
-    end
+    @daysoff = @account.daysoff
     respond_to do |wants|
       @daysoff.map! {|d| d.to_fullcalendar_format(current_user) }
       wants.js { render :text =>  @daysoff.to_json}
