@@ -57,4 +57,18 @@ class ApplicationController < ActionController::Base
       session[:return_to] = nil
     end
 
+    def sign_out
+      reset_session
+      @current_user = nil
+    end
+
+    def authenticate_with_google
+      return if session[:user_id]
+
+      authenticate_with_google_apps "wonderset.com" do |profile|
+        @user = User.find_by_email!(profile[:email])
+        session[:user_id] = @user.id
+      end
+    end
+
 end

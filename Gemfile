@@ -16,6 +16,7 @@ gem 'delayed_job', :require => 'delayed_job'
 gem 'logworm', '0.7.7'
 gem 'logworm_client'
 gem 'right_aws'
+gem 'ruby-openid'
 
 group :test,:cucumber,:development do
   gem 'mongrel'
