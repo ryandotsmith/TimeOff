@@ -1,5 +1,5 @@
 - content_for :left_head do
-  %h2 Sign Up for a free beta Account
+  %h2 Sign Up for a free unlimited trial
   %ul
     %li= link_to "&larr; main page", root_url
 
@@ -11,10 +11,23 @@
 
 - content_for :right_body do
   .message.success
-    TimeOff is beta. So in exchange for your feedback we will give you free access.
-    No Credit Card is needed to sign up.
-    email <a href='mailto:this.ryansmith@gmail.com'>this.ryansmith@gmail.com</a> 
-    with any questions.
+    Free Unlimited Trial
+  %ul
+    %li 
+      %strong 0-5 users 
+      Free
+    %li
+      %strong 6-25 users
+      $24 per month
+    %li
+      %strong 26-50 users
+      $49 per month
+    %li 
+      %strong more than 50 useres
+      $140 per month
+
+    Everything is negotiable. Email me with any questions.
+    %a{:href => 'mailto:ryan@wonderset.com'} ryan@wonderset.com
 
 - content_for :left_body do
   - form_for @account do |form|

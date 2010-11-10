@@ -24,47 +24,49 @@
             %strong Sign in
         #signup
           %img{:alt => "", :height => "280", :src => "/images/design/img_screenshot.jpg", :width => "480"}/
-          - slogans = [ "Time Off <strong>eliminates</strong> the chaos surrounding <br /> paid time off.","Spend less time with HR &amp;<br /> <strong>More</strong> time making money." ]
           %p.slogan
-            = slogans.at(rand(2))
+            Time Off <strong>eliminates</strong> the chaos surrounding <br /> paid time off.
           %p.button
             %a{:href => new_account_url, :title => "Sign Up Now"} Sign up &amp; Pricing
-          %p.trial 30-day free trial
+          %p.trial
+            *Free Unlimited Trial
     #features
       .wrap
         #online.feature
           %span.icon
             %a{:href => "/images/screenshots/form.png", :title => "Employees can request time off anytime, anywhere.",:rel => 'screenshots'}
           %h2
-            Online Request
+            Request
             %br>/
             Form
           %p
-            Submit Time Off requests anytime, anwhere. With an easy to use form and a company calendar right next to the form, your team will make
+            With  a company calendar right next to the form, your team will make
             %strong better decisions
-            with time off requests.
         #calen.feature
           %span.icon
             %a{:href => "/images/screenshots/calendar.png", :title => "View your team's capacity in one easy to read calendar.",:rel => 'screenshots'}
           %h2
-            Builtin
-            %br>/
             Calendar
+            %br>/
+            Integration
           %p
-            All of your organization's time off is displayed in a beautiful calendar.
-            %strong Quickly
-            view your staff's availability.
+            Use the calendar on the web or
+            %strong export your calendar 
+            to 
+            %em iCal, Google Calendar or Outlook
         #email.feature
           %span.icon
             %a{:href => "#", :title => ""}
           %h2
             Email
             %br>/
-            updates
+            Integration
           %p
-            Time Off
-            %a{:href => "#", :title => "alerts the manager"} alerts the manager
-            when new requests are created.
+            Get email notice  of requests. 
+            Approve or deny requests by 
+            %strong replying to the notice.
+            
+            
         #archiv.feature
           %span.icon
             %a{:href => "/images/screenshots/archive.png", :title => "View history for your team.",:rel => 'screenshots'}
@@ -84,9 +86,16 @@
             %img{:alt => "", :height => "220", :src => "/images/design/img_vid.jpg", :width => "440"}/
         .feature
           %h2 Contact
-          %p (602) 456-9778
           %p 
-            %a{:href => 'mailto:timeoff@wonderset.com'}timeoff@wonderset.com
+            email:
+            %a{:href => 'mailto:ryan@wonderset.com'} ryan@wonderset.com
+          %p 
+            blog:
+            %a{:href => 'http://ryandotsmith.heroku.com'} ryandotsmith.heroku.com
+          %p 
+            twitter:
+            %a{:href => 'http://twitter.com/ryandotsmith'} ryandotsmith
+
         #spot.feature
           %h2 Customer Spotlight
           %p= link_to "GS Enterprises Inc", 'http://www.gsenterprises.com'
