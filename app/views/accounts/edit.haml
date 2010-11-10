@@ -1,35 +1,58 @@
 - content_for :block_head do
-  %h2 Employees
+  %h2 Account Settings
   %ul
     %li= link_to '&larr; dashboard', @account
 
+.block
+  .block_head
+    .bheadl
+    .bheadr
+    %h2 Google Authentication
+  .block_content
+    - form_for @account do |f|
+      %p
+        = f.label :subdomain
+        %br
+        = f.text_field :subdomain, :class => 'text small'
+      %p
+        = f.label :google_apps_domain
+        %br
+        = f.text_field :google_apps_domain, :class => 'text small'
+      %p
+        = f.submit "save", :class => 'submit small'
 
-%a.button{:href => "#{new_account_user_path(@account)}", :style => 'float:right', :title => "new employee"}
-  %span New Employee
 
-%table.employees
-  %tr
-    %th add timeoff
-    %th show
-    %th first name
-    %th last name
-    %th email
-    %th date of hire
-    %th max vacation
-    %th max personal
-    %th edit
-    %th delete
-  - @account.users.each do |user|
-    %tr{:id => "user_#{user.id}"}
-      %td= link_to 'add timeoff', new_user_dayoff_url(user), :rel => 'facebox'
-      %td= link_to 'show', user
-      %td= user.first_name
-      %td= user.last_name
-      %td= user.email
-      %td= user.date_of_hire
-      %td= user.max_vacation
-      %td= user.max_personal
-      %td= link_to 'edit',   edit_user_path(user), :rel => 'facebox'
-      %td= link_to 'delete', user, :method => 'delete'
+.block
+  .block_head
+    .bheadl
+    .bheadr
+    %h2 Employees
+    %a{:href => "#{new_account_user_path(@account)}", :style => 'float:right', :title => "new employee"}
+      %span New Employee
+  .block_content
+    %table.employees
+      %tr
+        %th add timeoff
+        %th show
+        %th first name
+        %th last name
+        %th email
+        %th date of hire
+        %th max vacation
+        %th max personal
+        %th edit
+        %th delete
+      - @account.users.each do |user|
+        %tr{:id => "user_#{user.id}"}
+          %td= link_to 'add timeoff', new_user_dayoff_url(user), :rel => 'facebox'
+          %td= link_to 'show', user
+          %td= user.first_name
+          %td= user.last_name
+          %td= user.email
+          %td= user.date_of_hire
+          %td= user.max_vacation
+          %td= user.max_personal
+          %td= link_to 'edit',   edit_user_path(user), :rel => 'facebox'
+          %td= link_to 'delete', user, :method => 'delete'
 
 

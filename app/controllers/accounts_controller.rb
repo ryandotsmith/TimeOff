@@ -42,8 +42,9 @@ class AccountsController < ApplicationController
   def update
     @account = Account.find(params[:id],:readonly => false)
     if @account.update_attributes(params[:account])
+      flash[:notice] = "Account updated!"
       respond_to do |format|
-        format.html
+        format.html { redirect_to edit_account_path(@account) }
         format.js {render :layout => false}
       end
     end

@@ -6,9 +6,10 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :user_session
 
   map.resources :password_resets, :only => [ :new, :create, :edit, :update ]
-  map.register '/register/:activation_code',  :controller => 'activations', :action => 'new'
-  map.activate '/activate/:id',               :controller => 'activations', :action => 'create'
-  map.sign_in  '/signin',                     :controller => 'user_sessions', :action => 'new'
+  map.register '/register/:activation_code',    :controller => 'activations', :action => 'new'
+  map.activate '/activate/:id',                 :controller => 'activations', :action => 'create'
+  map.sign_in  '/signin',                       :controller => 'user_sessions', :action => 'new'
+  map.sign_in_with_google '/signin-with-google',:controller => 'user_sessions', :action => 'new_with_google'
 
   map.resources :accounts, :shallow => true do |accounts|
     accounts.resources :daysoff
