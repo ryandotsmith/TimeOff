@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user_session, :current_user
   helper_method :current_account
+  helper_method :current_account_from_subdomain
   helper_method :load_account
 
 
@@ -14,6 +15,11 @@ class ApplicationController < ActionController::Base
 
     def current_account
       @account ||= Account.find_by_company_name(params[:id])
+    end
+
+    def current_account_from_subdomain
+      subdomain = request.subdomains.first
+      subdomain && Account.find_by_subdomain(subdomain)
     end
 
     def load_account

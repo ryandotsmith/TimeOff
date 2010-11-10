@@ -2,7 +2,8 @@
 
   %p= session.error_messages :class => 'message errormsg'
 
-  %p= link_to 'sign in with google', sign_in_with_google_url
+  - if current_account_from_subdomain
+    %p= link_to 'sign in with google', sign_in_with_google_url
 
   %p
     = session.label :email
