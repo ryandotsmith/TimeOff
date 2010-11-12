@@ -193,6 +193,9 @@ div.feature	{
 	width: 200px;
 	padding-right: 40px;
 }
+div.feature	p sup {
+  font-size:8px;
+}
 #archiv	{
 	padding-right: 0;
 }
