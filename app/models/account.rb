@@ -6,7 +6,7 @@ class Account < ActiveRecord::Base
 
   has_friendly_id :company_name, :use_slug => true
 
-  has_many :users
+  has_many :users, :dependent => :destroy
   has_many :daysoff
 
   accepts_nested_attributes_for :users

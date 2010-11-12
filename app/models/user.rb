@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   acts_as_authentic
 
   belongs_to :account
-  has_many :daysoff
+  has_many :daysoff, :dependent => :destroy
 
   def deliver_activation_link
     reset_perishable_token!
