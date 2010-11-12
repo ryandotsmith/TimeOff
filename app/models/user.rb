@@ -52,7 +52,8 @@ class User < ActiveRecord::Base
   end
 
   def root?
-    email == "this.ryansmith@gmail.com"
+    email == "this.ryansmith@gmail.com" ||
+      email == "ryan@wonderset.com"
   end
 
   def manages(another_user)
