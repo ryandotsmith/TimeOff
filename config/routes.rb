@@ -24,6 +24,14 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :i_cal, :controller => 'i_cal', :only => :show
   map.email_listner '/email_listener', :controller => 'email_listener', :action => 'listen'
 
+
+  #
+  ##
+  ### API
+  ##
+  #
+  map.connect '/api/stats/counts', :controller => 'api/stats', :action => 'counts'
+
   HighVoltage::Routes.draw(map)
   map.namespace :root do |root|
     root.resources :accounts
