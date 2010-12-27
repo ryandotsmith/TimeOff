@@ -1,10 +1,12 @@
 class User < ActiveRecord::Base
 
-  attr_accessible   :email, :first_name, :last_name,:password,
-                    :password_confirmation, :openid_identifier,
-                    :max_vacation, :max_personal, :manager, :date_of_hire
-
   include DayoffUserMethods
+
+  attr_accessible :email, :first_name, :last_name,:password,
+                  :password_confirmation, :openid_identifier,
+                  :max_vacation, :max_personal, :manager, :date_of_hire
+
+  before_destroy :stop_if_owner
   acts_as_authentic
 
   belongs_to :account
@@ -44,7 +46,7 @@ class User < ActiveRecord::Base
   end
 
   def account_owner?
-    !Account.find_by_owner_id(self.id).nil? or self.root?
+    (!Account.find_by_owner_id(self.id).nil?) or self.root?
   end
 
   def manager?
@@ -57,7 +59,11 @@ class User < ActiveRecord::Base
   end
 
   def manages(another_user)
-    manager? and account.users.include?(another_user)
+    manager? && account.users.include?(another_user)
+  end
+
+  def stop_if_owner
+    return false if account_owner?
   end
 
 end

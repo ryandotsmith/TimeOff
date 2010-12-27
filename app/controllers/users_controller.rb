@@ -49,8 +49,12 @@ class UsersController < ApplicationController
   def destroy
     @user    = User.find(params[:id])
     @account = @user.account
-    @user.destroy
-    redirect_to edit_account_path(@account), :notice => "employee was deleted!"
+    if @user.destroy
+      redirect_to edit_account_path(@account), :notice => "employee was deleted!"
+    else
+      flash[:error] = "Can not delete owner of account"
+      redirect_to :back
+    end
   end
 
   private

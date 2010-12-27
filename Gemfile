@@ -27,13 +27,13 @@ end
 
 group :test,:cucumber do
   gem 'email_spec', '0.6.3'
-  gem 'cucumber'
-  gem 'cucumber-rails'
   gem 'capybara'
-  gem 'database_cleaner'
   gem 'launchy'
   gem 'factory_girl'
   gem 'rspec','1.3.0'
   gem 'rspec-rails', '1.3.2'
+  gem 'autotest'
+  gem 'autotest-fsevent'
+  gem 'autotest-growl'
   gem 'fakeweb'
 end

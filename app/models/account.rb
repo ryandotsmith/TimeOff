@@ -8,21 +8,23 @@ class Account < ActiveRecord::Base
 
   has_many :users, :dependent => :destroy
   has_many :daysoff
+  has_one  :owner, :class_name => "User"
 
   accepts_nested_attributes_for :users
 
-  after_create :set_owner!, :set_product_handle!, :generate_i_cal_token!
+  after_create :set_product_handle!, :generate_i_cal_token!
 
-  def set_owner!
-    update_attributes(:owner_id => users.first.id)
+  def generate_i_cal_token!
+    self.update_attributes(:i_cal_token => Authlogic::Random.friendly_token)
+  end
+
+  def owner=(user)
+    user.update_attribute :manager, true
+    update_attribute :owner_id, user.id
   end
 
   def set_product_handle!
     update_attributes(:product_handle => DEFAULT_PRODUCT)
-  end
-
-  def owner
-    User.find(self.owner_id)
   end
 
   def name
@@ -44,10 +46,6 @@ class Account < ActiveRecord::Base
     when "6-25-users"
       25
     end
-  end
-
-  def generate_i_cal_token!
-    self.update_attributes(:i_cal_token => Authlogic::Random.friendly_token)
   end
 
 end

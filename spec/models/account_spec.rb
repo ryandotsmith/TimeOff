@@ -14,23 +14,16 @@ describe Account do
   end
 
   describe "callbacks" do
-    context "after create" do
-      it "should set owner" do
-        account = Factory.build(:account)
-        account.save
-        account.owner_id.should eql(account.users.first.id)
-      end
-    end
   end
 
   describe "managers" do
     it "should return a list of managers" do
       account = Factory(:account)
-      manager = Factory(:manager)
-      account.users << manager << Factory(:user)
+      manager = Factory(:manager,:account => account)
+      Factory(:user, :account => account)
 
-      account.users.count.should eql(3)
-      account.managers.count.should eql(2)
+      account.users.count.should eql(2)
+      account.managers.count.should eql(1)
       account.managers.should include manager
     end
     context "ownership" do

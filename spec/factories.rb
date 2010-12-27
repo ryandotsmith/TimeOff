@@ -1,11 +1,6 @@
-Factory.sequence :email do |n|
-  "person#{n}@example.com"
-end
-
-Factory.sequence(:subscription_id) {|n| n}
-
 Factory.define :user do |u|
-  u.email                 { Factory.next(:email) }
+  u.association :account
+  u.sequence(:email) {|i| "user#{i}@gmail.com" }
   u.first_name            {"Ryan"                }
   u.last_name             {"Smith"               }
   u.password              {"password"            }
@@ -20,14 +15,14 @@ Factory.define :manager, :parent => :user  do |manager|
   manager.manager { true }
 end
 
-Factory.define :account do |account|
-  account.company_name     { "wonderset" }
-  account.subscription_id  { 1           }
-  account.product_handle   { '0-5'       }
-  account.users            { |users| [users.association(:user,:email => Factory.next(:email)) ]}
+Factory.define :account do |a|
+  a.company_name     { "wonderset" }
+  a.subscription_id  { 1           }
+  a.product_handle   { '0-5'       }
 end
 
 Factory.define :dayoff do |h|
+  h.association :user
   h.leave_length  { 'many'                   }
   h.leave_type    { 'etc'                    }
   h.description   { 'who ha'                 }
@@ -36,5 +31,4 @@ Factory.define :dayoff do |h|
   h.reviewed_on   { DateTime.now             }
   h.begin_time    { MONDAY_THIS_YEAR         }
   h.end_time      { MONDAY_THIS_YEAR + 2.days}
-  h.association :user
 end
