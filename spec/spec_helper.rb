@@ -11,30 +11,6 @@ Spec::Runner.configure do |config|
   config.use_instantiated_fixtures  = false
 end
 
-class Spy
-
-  def initialize
-    @set = false
-  end
-
-  def set
-    @set = true
-  end
-
-  def set?
-    @set == true 
-  end
-
-  def remove
-    @set = false
-  end
-
-end
-
-def spy
-  @spy ||= Spy.new
-end
-
-MONDAY_THIS_YEAR = Date.new(2010,1,4)#monday
-TUESDAY          = Date.new(2010,1,5)#monday
-FRIDAY           = Date.new(2010,1,8)#monday
+MONDAY_THIS_YEAR = Date.new(2011,1,3)
+TUESDAY          = Date.new(2011,1,4)
+FRIDAY           = Date.new(2011,1,7)

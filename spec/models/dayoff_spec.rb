@@ -355,33 +355,32 @@ end
 describe "getting a list of dates that the user has daysoff for" do
 
   before(:each) do
-    dt = MONDAY_THIS_YEAR
-    @user = Factory( :user )
-    @dayoff = Factory(    :dayoff,
-                      :leave_length => 'many',
-                      :user => @user,
-                      :begin_time => dt,
-                      :end_time   => dt + 2.days )
-  end#do
+    @user   = Factory( :user )
+    @dayoff = Factory(:dayoff,
+      :leave_length => 'many',
+      :user         => @user,
+      :begin_time   => MONDAY_THIS_YEAR,
+      :end_time     => MONDAY_THIS_YEAR + 2.days 
+    )
+  end
 
   it "should return a list of a range of days that span a dayoff" do
-    @dayoff.included_dates().length.should eql( 3 )
+    @dayoff.included_dates.length.should == 3
   end
 
   it "should find a day that is in range of a dayoff" do
-    @arb_day = TUESDAY
-    @dayoff.included_dates.include?( @arb_day ).should eql( true )
-    @arb_day = FRIDAY
-    @dayoff.included_dates.include?( @arb_day ).should eql( false )
+    @dayoff.included_dates.include?(TUESDAY).should eql( true )
+    @dayoff.included_dates.include?(FRIDAY).should eql( false )
   end
 
   it "should return the begin_date for half-day daysoff" do
-    @h = Factory(   :dayoff,
-                 :leave_length => 'half',
-                 :user => @user,
-                 :begin_time   =>  FRIDAY,
-                 :end_time     =>  nil)
-    @h.included_dates.include?( FRIDAY ).should eql( true )
+    @h = Factory(:dayoff,
+      :leave_length => 'half',
+      :user         => @user,
+      :begin_time   => FRIDAY,
+      :end_time     => nil
+    )
+    @h.included_dates.should include FRIDAY
     @h.included_dates.length.should eql( 1 )
   end
 end

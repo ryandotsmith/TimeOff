@@ -120,16 +120,18 @@ describe DayoffUserMethods do
 
     describe "fetching daysoff that were taken in the current year" do
       it "should select daysoff with begin_time > the first of the current year" do
-        last_year = Date.new(2009,1,19) #monday
-        this_year = Date.new(2010,1,4)  #monday
-        @user    = Factory(:user)
-        @dayoff1= Factory(:dayoff,:user => @user,:begin_time => last_year,:end_time => last_year+1.day)
-        @dayoff2= Factory(:dayoff,:user => @user,:begin_time => this_year,:end_time => this_year+1.day)
+        last_year = Date.new(2010,1,19) #monday
+        this_year = Date.new(2011,1,4)  #monday
+        @user     = Factory(:user)
+        @dayoff1  = Factory(:dayoff,:user => @user,:begin_time => last_year,:end_time => last_year+1.day)
+        @dayoff2  = Factory(:dayoff,:user => @user,:begin_time => this_year,:end_time => this_year+1.day)
+
         @user.daysoff << @dayoff1
         @user.daysoff << @dayoff2
         @user.this_years_daysoff.should eql([@dayoff2]) 
       end
     end
+
     describe "Calculating a user's daysoff" do
       before(:each) do
         last_year = Date.new(2009,1,19) #monday
