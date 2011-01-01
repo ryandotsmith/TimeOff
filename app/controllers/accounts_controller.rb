@@ -33,6 +33,7 @@ class AccountsController < ApplicationController
         @account.owner = @account.users.first
         @account.owner.activate!
         UserSession.create!(@account.owner,true)
+        flash[:notice] = "Setup Complete! Welcome to Time Off"
         wants.html { redirect_to edit_account_url(@account)}
       else
         wants.html { render :action => 'new',:layout => 'split' }
