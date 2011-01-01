@@ -1,0 +1,15 @@
+%h1 New Black Out Day
+%span These days will not be counted in your Employee's Time Off
+- form_for [@account,@black_out_day], :html => { :class => 'ajax-form'} do |f|
+  %p
+    = f.error_messages
+  %p
+    = f.label :description
+    %br
+    = f.text_field :description
+  %p
+    = f.label :date
+    %br
+    = f.date_select :date
+  %p
+    = f.submit 'save'

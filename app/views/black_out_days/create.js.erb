@@ -1,0 +1,11 @@
+$(document).ready(function() {
+  jQuery.facebox.close();
+  $("#black_out_days").append("<%= 
+    escape_javascript( 
+      render(
+        :partial => 'black_out_days/black_out_day', :locals => {:black_out_day => @black_out_day}
+      )
+    ) 
+  %>");
+  $("#black_out_day_<%=@black_out_day.id%>").effect("highlight",{},6000);
+});
