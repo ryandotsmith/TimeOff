@@ -91,7 +91,7 @@ class Dayoff < ActiveRecord::Base
   #
   # This particular method will subtract the dates (which will yield the diff in sec)
   # and then convert the difference to a float.
-  def get_length()
+  def length
     length      = 0.0
     difference  = ( self.end_time.to_datetime - self.begin_time.to_datetime).to_f
     # approx is a monkey patch ( look out ). it uses the concept of epsilon math.
@@ -100,23 +100,27 @@ class Dayoff < ActiveRecord::Base
     elsif difference.approx( WHOLE_DAY, 0.01)
       length = 1.0
     else
-      self.included_dates.each {|date| length += 1.0 if date.working_day? }
+      self.included_dates.each {|date| length += 1.0 unless black_out(date) }
     end
     length
+  end
+
+  def black_out(date)
+    date.working_day? && user.account.black_out_days.map(&:date).include?(date)
   end
 
   def adjust_time!( type )
     return if self.begin_time.nil?
     case type
     when 'half'
-      self.begin_time = self.begin_time.to_datetime.change( :hour => 7,  :min => 30 )
-      self.end_time   = self.begin_time.to_datetime.change( :hour => 12, :min => 00 )
+      self.begin_time = self.begin_time.to_datetime.change( :hour => 7,   :min => 30 )
+      self.end_time   = self.begin_time.to_datetime.change( :hour => 12,  :min => 00 )
     when 'whole'
-      self.begin_time = self.begin_time.to_datetime.change( :hour => 7, :min => 30 )
-      self.end_time   = self.begin_time.to_datetime.change( :hour => 17, :min => 00 )
+      self.begin_time = self.begin_time.to_datetime.change( :hour => 7,   :min => 30 )
+      self.end_time   = self.begin_time.to_datetime.change( :hour => 17,  :min => 00 )
     when 'many'
-      self.begin_time = self.begin_time.to_datetime.change( :hour => 7, :min => 30 )
-      self.end_time   = self.end_time.to_datetime.change( :hour => 17, :min => 00 )
+      self.begin_time = self.begin_time.to_datetime.change( :hour => 7,   :min => 30 )
+      self.end_time   = self.end_time.to_datetime.change(   :hour => 17,  :min => 00 )
     end
   end
 

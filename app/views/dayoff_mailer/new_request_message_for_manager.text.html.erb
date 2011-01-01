@@ -16,7 +16,7 @@
       </tr>
       <tr>
         <td>Length:</td>
-        <td><%= @dayoff.get_length%></td>
+        <td><%= @dayoff.length%></td>
       </tr>
       <tr>
         <td>Start Date:</td>
@@ -53,7 +53,7 @@
         <tr>
           <td><%= dayoff.created_at.to_s %></td>
           <td><%= dayoff.leave_type%></td>
-          <td><%= dayoff.get_length %></td>
+          <td><%= dayoff.length %></td>
           <td><%= dayoff.begin_time.to_s %></td>
           <td><%= dayoff.end_time.to_s %></td>
           <td><%= dayoff.description%></td>

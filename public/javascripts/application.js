@@ -7,13 +7,27 @@ jQuery.fn.submitWithAjax = function() {
     var button      = $(this).find("input[type=submit]");
     var origanlText = button.val();
     button.val("loading...");
-    $.post(this.action, $(this).serialize(), function(){button.val(origanlText)}, "script");
+    $.post(this.action, $(this).serialize(), null, "script");
     return false;
   })
   return this;
 };
 
 $(document).ready(function() {
+
+  $(".delete-link").livequery(function() {
+    $(this).click( function(){
+      if( confirm("Are you sure?")){
+        $.ajax({
+          type: "delete",
+          url: $(this).attr("href"),
+          data: "&authenticity_token="+encodeURIComponent(window.rails_authenticity_token),
+          dataType: "script"
+        });
+      }
+      return false;
+    });
+  });
 
   $(".ajax-form").livequery(function() {
     $(this).submitWithAjax();

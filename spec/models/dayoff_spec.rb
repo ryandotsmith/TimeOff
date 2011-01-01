@@ -1,6 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe Dayoff do
+
   describe "denying the dayoff" do
     before(:each) {@dayoff = Factory(:dayoff,:leave_length => 'whole', :begin_time => Time.now)}
     it "should create a delayed job" do
@@ -8,6 +9,7 @@ describe Dayoff do
 
     end
   end
+
   describe "status" do
     before(:each) {@dayoff = Factory(:dayoff,:leave_length => 'whole', :begin_time => Time.now)}
     it "should return approved if the dayoff has been approved" do
@@ -24,6 +26,7 @@ describe Dayoff do
       @dayoff.status.should eql('pending')
     end
   end
+
   describe "to string methods" do
     it "should return a hash of attributes required by the full calendar lib" do
       user = Factory(:user)
@@ -33,17 +36,65 @@ describe Dayoff do
       dayoff.to_fullcalendar_format(user).should include hash
     end
   end
-  describe "sending mail after create" do
-    context "when dayoff is in pending state" do
+
+  describe "calculating the length of time off" do
+    before do
+      @begin_time = MONDAY_THIS_YEAR
+    end
+
+    describe "#length" do
+      it "should return a float" do
+        Factory(:dayoff).length.class.should eql(Float)
+      end
+
+      context "when the day off spans one day" do
+        it "should return 1.0" do
+          Factory( :dayoff,
+            :begin_time =>  @begin_time,
+            :end_time   =>  @begin_time 
+          ).length.should eql(1.0)
+        end
+      end
+
+      context "when the day off spans 2 days" do
+        it "should return 2.0" do
+          Factory( :dayoff,
+            :leave_length => 'many',
+            :begin_time =>  @begin_time,
+            :end_time   =>  @begin_time + 1.days 
+          ).length.should eql(2.0)
+        end
+      end
+
+      context "when the day off spans 1 normal day and 2 black out days" do
+        before do
+          @user = Factory(:user)
+          @account = @user.account
+          @account.black_out_days.create :date => @begin_time + 1.day 
+          @account.black_out_days.create :date => @begin_time + 2.days
+        end
+
+        it "should return 1.0" do
+          Factory( :dayoff,
+            :user => @user,
+            :account => @account,
+            :leave_length => 'many',
+            :begin_time =>  @begin_time,
+            :end_time   =>  @begin_time + 2.days 
+          ).length.should eql(1.0)
+        end
+      end
+
     end
   end
+
 end
 
 
 
 
 
-
+# legacy
 
 describe "creating a dayoff" do
   before(:each) do
@@ -96,7 +147,7 @@ describe "creating a dayoff" do
     end
     it "should ensure that end date is later than earlier date" do
       @dayoff.should_not be_valid
-      @dayoff.get_length.should eql( 0.0 )
+      @dayoff.length.should eql( 0.0 )
     end
   end
   describe "two daysoff on one calendar day" do
@@ -173,13 +224,14 @@ describe "creating a dayoff" do
         @dayoff2.should_not be_valid
       end
       it "should calculate only uniquie dayoff days" do
-        @dayoff1.get_length.should eql( 3.0 )
+        @dayoff1.length.should eql( 3.0 )
       end
     end
   end
 
 
 end
+
 describe "Dayoff states" do
   it "should be set to pending after new" do
     Factory(:dayoff).pending?().should eql(true)
@@ -194,6 +246,7 @@ describe "Dayoff states" do
     Factory(:dayoff,:state => -1).denied?().should eql(true)
   end
 end
+
 describe "Dayoff types" do
   # For now, i will specify an array in the model that will hold strings of daysoff
   # types. This array will get returned whenever we dealing with a dayoff. It should
@@ -207,38 +260,6 @@ describe "Dayoff types" do
   end
 
 end
-
-describe "get length of dayoff" do
-
-  it "should return an float which represents the number of whole days" do
-    dt = MONDAY_THIS_YEAR
-    @dayoff = Factory(
-                      :dayoff,
-                      :begin_time => dt,
-                      :end_time   => dt + 1.days )
-                      @dayoff.get_length.should eql( 2.0 )
-  end# end it
-
-  it "should correctly calculate 1 day of leave " do
-    bt  = MONDAY_THIS_YEAR
-    @dayoff = Factory(
-                      :dayoff,
-                      :begin_time =>  bt,
-                      :end_time   =>  bt  )
-                      @dayoff.get_length.should eql( 1.0 )
-
-  end
-  it "should correctly calculate 2 days of leave " do
-    bt  = MONDAY_THIS_YEAR
-    @dayoff = Factory(
-                      :dayoff,
-                      :leave_length => 'many',
-                      :begin_time =>  bt,
-                      :end_time   =>  bt + 1.days )
-                      @dayoff.get_length.should eql( 2.0 )
-  end# it
-
-end# end describe
 
 describe "adjust for half or whole days" do
   # there is a check box in the new dayoff form that will designate
@@ -259,7 +280,7 @@ describe "adjust for half or whole days" do
                       :begin_time => DateTime.now,
                       :end_time   => nil )
     # have to override the before_save method to make a half day save
-    @dayoff.get_length.should eql( 0.5 )
+    @dayoff.length.should eql( 0.5 )
 
   end
 
@@ -269,10 +290,10 @@ describe "adjust for half or whole days" do
                       :leave_length => 'whole',
                       :begin_time => DateTime.now,
                       :end_time   => nil )
-                      @dayoff.get_length.should eql( 1.0 )
+                      @dayoff.length.should eql( 1.0 )
 
   end
-end #end describe
+end
 
 describe "should return specific data sets" do
   describe "get dayoffs statistics for all users" do
@@ -376,6 +397,6 @@ describe "removing weekends from dayoff range" do
                       :end_time   =>  tuesday )
   end
   it "should remove saturday and sunday from a holiday's range" do
-    @dayoff.get_length.should == 3.0
+    @dayoff.length.should == 3.0
   end
 end

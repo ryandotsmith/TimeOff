@@ -3,6 +3,7 @@ module ApplicationHelper
   def javascript_array
    [
     'jquery',
+    'jquery.ui',
     'jquery.img.preload',
     'jquery.filestyle.mini',
     'jquery.livequery',

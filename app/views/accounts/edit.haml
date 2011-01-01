@@ -3,24 +3,6 @@
   %ul
     %li= link_to '&larr; dashboard', @account
 
-.block
-  .block_head
-    .bheadl
-    .bheadr
-    %h2 Google Authentication
-  .block_content
-    - form_for @account do |f|
-      %p
-        = f.label :subdomain
-        %br
-        = f.text_field :subdomain, :class => 'text small'
-      %p
-        = f.label :google_apps_domain
-        %br
-        = f.text_field :google_apps_domain, :class => 'text small'
-      %p
-        = f.submit "save", :class => 'submit small'
-
 
 .block
   .block_head
@@ -55,4 +37,40 @@
           %td= link_to 'edit',   edit_user_path(user), :rel => 'facebox'
           %td= link_to 'delete', user, :method => 'delete'
 
+.block.small.right
+  .block_head
+    .bheadl
+    .bheadr
+    %h2  Black Out Days
+    %a{:href => "#{new_account_black_out_day_path(@account)}", :style => 'float:right', :title => "new black out day", :rel => 'facebox'}
+      %span New Black Out Day
+  .block_content
+    %table#black_out_days
+      %tr
+        %th Date
+        %th Description
+        %th Delete
+      = render :partial => 'black_out_days/black_out_day', :collection => @account.black_out_days
 
+.block.small.left
+  .block_head
+    .bheadl
+    .bheadr
+    %h2 Google Authentication
+  .block_content
+    - form_for @account do |f|
+      %p
+        - unless @account.subdomain.blank?
+          %p 
+            Instruct your team to use the following url to sign in with their Google Apps account: 
+            = link_to "http://#{@account.subdomain}.timeoffhq.com", "http://#{@account.subdomain}.timeoffhq.com"
+        = f.label :subdomain
+        %br
+        = f.text_field :subdomain, :class => 'text small'
+      %p
+        %p Your Google Appps Account name. Often, this is the domain name in your email address. (i.e. wonderset for ryan@wonderset.com)
+        = f.label :google_apps_domain
+        %br
+        = f.text_field :google_apps_domain, :class => 'text small'
+      %p
+        = f.submit "save", :class => 'submit small'

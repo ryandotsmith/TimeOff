@@ -12,6 +12,7 @@ ActionController::Routing::Routes.draw do |map|
   map.sign_in_with_google '/signin-with-google',:controller => 'user_sessions', :action => 'new_with_google'
 
   map.resources :accounts, :shallow => true do |accounts|
+    accounts.resources :black_out_days
     accounts.resources :daysoff
     accounts.resources :archived_daysoff
     accounts.resources :users, :has_many => :daysoff

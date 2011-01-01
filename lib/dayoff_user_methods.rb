@@ -1,7 +1,7 @@
 module DayoffUserMethods
 
   def get_total_dayoff_time
-    this_years_daysoff.sum(&:get_length)
+    this_years_daysoff.sum(&:length)
   end
 
   def get_taken_dayoff_time
@@ -9,7 +9,7 @@ module DayoffUserMethods
     Dayoff.get_dayoff_types.each {|t| results[t.to_sym] = 0.0 }
     this_years_daysoff.each do |dayoff|
       if dayoff.state == 1 and dayoff.begin_time.year >= Date.today.year
-        results[dayoff.leave_type.to_sym] += dayoff.get_length
+        results[dayoff.leave_type.to_sym] += dayoff.length
       end
     end
     results
@@ -29,7 +29,7 @@ module DayoffUserMethods
     results = Dictionary.new
     Dayoff.get_dayoff_types.each {|t| results[t.to_sym] = self.send("max_#{t}").to_f}
     this_years_daysoff.each do |dayoff|
-      results[dayoff.leave_type.to_sym] -= dayoff.get_length if dayoff.state == 1
+      results[dayoff.leave_type.to_sym] -= dayoff.length if dayoff.state == 1
     end
     results
   end
@@ -37,7 +37,7 @@ module DayoffUserMethods
   def remaining(type)
     daysoff           = this_years_daysoff.select {|dayoff| dayoff.leave_type == type.to_s}
     approved_daysoff  = daysoff.select(&:approved?)
-    taken             = approved_daysoff.sum(&:get_length)
+    taken             = approved_daysoff.sum(&:length)
     (self.send("max_#{type}").to_f - taken)
   end
 
