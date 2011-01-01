@@ -92,20 +92,17 @@ class Dayoff < ActiveRecord::Base
   # This particular method will subtract the dates (which will yield the diff in sec)
   # and then convert the difference to a float.
   def length
-    length      = 0.0
-    difference  = ( self.end_time.to_datetime - self.begin_time.to_datetime).to_f
-    # approx is a monkey patch ( look out ). it uses the concept of epsilon math.
+    difference = (self.end_time.to_datetime - self.begin_time.to_datetime).to_f
     if difference.approx( HALF_DAY, 0.01)
-      length = 0.5
+      0.5
     elsif difference.approx( WHOLE_DAY, 0.01)
-      length = 1.0
+      1.0
     else
-      self.included_dates.each {|date| length += 1.0 unless black_out(date) }
+      included_dates.reject {|d| black_out?(d)}.length.to_f
     end
-    length
   end
 
-  def black_out(date)
+  def black_out?(date)
     date.working_day? && user.account.black_out_days.map(&:date).include?(date)
   end
 
