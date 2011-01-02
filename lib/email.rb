@@ -8,6 +8,22 @@ class Email
     end
   end
 
+  def act!
+    if approved?
+      dayoff.approve(manager)
+    else
+      dayoff.deny(manager)
+    end
+  end
+
+  def approved?
+    body[0..14].include?("approve")
+  end
+
+  def denied?
+    body[0..14].include?("deny")
+  end
+
   def dayoff
     Dayoff.find(filtered_dayoff_id)
   end
@@ -24,21 +40,4 @@ class Email
   def filtered_dayoff_id
     to.match(/\d+/)[0]
   end
-
-  def approved?
-    body[0..14].include?("approve")
-  end
-
-  def denied?
-    body[0..14].include?("deny")
-  end
-
-  def act!
-    if approved?
-      dayoff.approve(manager)
-    else
-      dayoff.deny(manager)
-    end
-  end
-
 end

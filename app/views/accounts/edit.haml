@@ -42,9 +42,25 @@
     .bheadl
     .bheadr
     %h2  Black Out Days
+    %a.help{:href => '#black_out_info', :rel => 'facebox'} ?
     %a{:href => "#{new_account_black_out_day_path(@account)}", :style => 'float:right', :title => "new black out day", :rel => 'facebox'}
       %span New Black Out Day
   .block_content
+    #black_out_info{:style => 'display:none;'} 
+      %p
+        %strong Definition:
+        %br
+        Black Out Days are dates that should be skipped when calculating the amount of time off an
+        %br
+        employee has taken. This is useful for things like Christmas and Thanksgiving. 
+      %p
+        %strong Example:
+        %br
+        If an employee has 4 days of approved time off and 1 Black Out Day exist in that 4 day period, 
+        %br
+        the system will show that the employee has taken 3 days of time off.
+      %p
+        If you still have questions, email support
     %table#black_out_days
       %tr
         %th Date
@@ -68,7 +84,7 @@
         %br
         = f.text_field :subdomain, :class => 'text small'
       %p
-        %p Your Google Appps Account name. Often, this is the domain name in your email address. (i.e. wonderset for ryan@wonderset.com)
+        %p Your Google Appps Account name. Often, this is the domain name in your email address. (i.e. wonderset.com for ryan@wonderset.com)
         = f.label :google_apps_domain
         %br
         = f.text_field :google_apps_domain, :class => 'text small'
