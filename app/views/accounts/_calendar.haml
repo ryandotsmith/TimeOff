@@ -28,7 +28,7 @@
         - current_user.this_years_daysoff.each do |dayoff|
           %tr{:id => "dayoff_#{dayoff.id}"}
             %td= dayoff.created_at
-            %td= dayoff.get_length
+            %td= dayoff.length
             %td= dayoff.description
             %td= dayoff.status
 
