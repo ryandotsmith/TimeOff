@@ -1,7 +1,7 @@
 class CreateBlackOutDays < ActiveRecord::Migration
   def self.up
     create_table :black_out_days do |t|
-      t.date :date
+      t.datetime :date
       t.string :description
       t.belongs_to :account
       t.timestamps

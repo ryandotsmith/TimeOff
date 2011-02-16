@@ -2,9 +2,9 @@ class BlackOutDaysController < ApplicationController
   before_filter :load_account
 
   def new
-    @black_out_day = @account.black_out_days.build   
+    @black_out_day = @account.black_out_days.build
     respond_to do |format|
-      format.js { render :layout => false } 
+      format.js { render :layout => false }
     end
   end
 

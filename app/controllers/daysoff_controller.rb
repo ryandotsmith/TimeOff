@@ -6,8 +6,9 @@ class DaysoffController < ApplicationController
   def index
     @daysoff = @account.daysoff
     respond_to do |wants|
-      @daysoff.map! {|d| d.to_fullcalendar_format(current_user) }
-      wants.js { render :text =>  @daysoff.to_json}
+      collection = @daysoff + @account.black_out_days
+      collection.map! {|d| d.to_fullcalendar_format(current_user) }
+      wants.js {render :json => collection}
     end
   end
 

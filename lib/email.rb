@@ -3,9 +3,7 @@ class Email
   attr_accessor :from, :to, :subject, :body
 
   def initialize(attributes={})
-    attributes.each do |k,v|
-      self.send("#{k}=",v)
-    end
+    attributes.each {|k,v| self.send("#{k}=",v)}
   end
 
   def act!
@@ -40,4 +38,5 @@ class Email
   def filtered_dayoff_id
     to.match(/\d+/)[0]
   end
+
 end

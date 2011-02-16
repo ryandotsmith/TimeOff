@@ -24,7 +24,7 @@ class Dayoff < ActiveRecord::Base
   default_scope :order => 'created_at DESC'
 
   def before_validation
-    adjust_time!( self.leave_length )
+    adjust_time!(self.leave_length)
     sanitize_input!
   end
 
@@ -133,13 +133,13 @@ class Dayoff < ActiveRecord::Base
 
   def to_fullcalendar_format(user)
     {
-      :title => self.to_s,
-      :start => self.begin_time.iso8601,
-      :end => self.end_time.iso8601,
-      :user_id => self.user.id,
-      :current_user_is_manager => user.manager?,
-      :allDay => self.whole?,
-      :className => (css_class(user))
+      :title      => self.to_s,
+      :start      => self.begin_time.iso8601,
+      :end        => self.end_time.iso8601,
+      :user_id    => self.user.id,
+      :allDay     => self.whole?,
+      :className  => (css_class(user)),
+      :current_user_is_manager => user.manager?
     }
   end
 

@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20101227070021) do
   end
 
   create_table "black_out_days", :force => true do |t|
-    t.date     "date"
+    t.datetime "date"
     t.string   "description"
     t.integer  "account_id"
     t.datetime "created_at"
