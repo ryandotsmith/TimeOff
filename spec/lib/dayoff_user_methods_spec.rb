@@ -52,20 +52,20 @@ describe DayoffUserMethods do
         @user = Factory( :user )
         @h1   = Factory(  :dayoff,
                           :leave_length  => 'many',
-                          :state => 1 , 
+                          :state => 1 ,
                           :user => @user,
                           :begin_time => date_time,
                           :end_time   => date_time + 2.days)
         @h2   = Factory(  :dayoff,
                           :leave_length => 'many',
-                          :state => 1 , 
+                          :state => 1 ,
                           :user => @user,
                           :begin_time => date_time + 7.days,
                           :end_time   => date_time + 9.days)
         @h3   = Factory(  :dayoff,
                           :leave_length => 'many',
-                          :state => 1, 
-                          :leave_type => 'vacation', 
+                          :state => 1,
+                          :leave_type => 'vacation',
                           :user => @user,
                           :begin_time => date_time + 14.days,
                           :end_time   => date_time + 16.days)
@@ -76,40 +76,40 @@ describe DayoffUserMethods do
 
       it "should return a list of dates of days included in all of user's daysoff" do
         # since the daysoff created in the before block have unique calendars days,
-        # and each dayoff has 2 calendars days, the list of dates should containt 
-        # 6 dates. 
+        # and each dayoff has 2 calendars days, the list of dates should containt
+        # 6 dates.
         @user.get_list_of_dates.length.should eql( 9 )
         @user.get_list_of_dates.first.class.should eql( Date )
       end
       it "should only take into account unique calendar days" do
-        # this should not be an issue. A dayoff that is created will 
+        # this should not be an issue. A dayoff that is created will
         # fail validation if the given dayoff
-        
+
       end
 
       it "should return the number of days taken on dayoff" do
         ordered_dictionary = Dictionary.new
-        ordered_dictionary[:etc] = 6.0
+        ordered_dictionary[:misc] = 6.0
         ordered_dictionary[:personal] = 0
         ordered_dictionary[:vacation] = 3.0
         @user.daysoff.length.should eql( 3 )
         @user.get_total_dayoff_time.should eql( 9.0 )
         @user.get_taken_dayoff_time.should == ordered_dictionary
       end
-      
+
       it "should return a hash of daysoff with the number of days the user has taken" do
         ordered_dictionary = Dictionary.new
-        ordered_dictionary[:etc] = 4.0
+        ordered_dictionary[:misc] = 4.0
         ordered_dictionary[:personal] = 10.0
         ordered_dictionary[:vacation] = 7.0
         @user.daysoff.length.should eql( 3 )
         @user.get_total_dayoff_time.should eql( 9.0 )
-        @user.get_remaining_dayoff_time.should == ordered_dictionary    
+        @user.get_remaining_dayoff_time.should == ordered_dictionary
       end
-      
+
       it "should return a hash of daysoff with the number of days the user has left" do
         ordered_dictionary = Dictionary.new
-        ordered_dictionary[:etc] = 4.0
+        ordered_dictionary[:misc] = 4.0
         ordered_dictionary[:personal] = 10.0
         ordered_dictionary[:vacation] = 7.0
         @user.daysoff.length.should eql( 3 )
@@ -128,7 +128,7 @@ describe DayoffUserMethods do
 
         @user.daysoff << @dayoff1
         @user.daysoff << @dayoff2
-        @user.this_years_daysoff.should eql([@dayoff2]) 
+        @user.this_years_daysoff.should eql([@dayoff2])
       end
     end
 

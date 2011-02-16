@@ -257,8 +257,8 @@ describe "Dayoff types" do
   # named = whatever_max.
 
   it "should maintain an ordered array of leave types" do
-    Dayoff.get_dayoff_types.should eql(["etc","personal","vacation"])
-    Dayoff.get_dayoff_types.should_not eql(["etc","vacation","personal"])
+    Dayoff.get_dayoff_types.should eql(["misc","personal","vacation"])
+    Dayoff.get_dayoff_types.should_not eql(["misc","vacation","personal"])
   end
 
 end
@@ -308,7 +308,7 @@ describe "should return specific data sets" do
       @dayoff_one    = Factory( :dayoff,
                                :leave_length  => 'many',
                                :state => 1,
-                               :leave_type => 'etc',
+                               :leave_type => 'misc',
                                :user => @user_one,
                                :begin_time => date,
                                :end_time   => date + 2.days)
@@ -318,7 +318,7 @@ describe "should return specific data sets" do
       @dayoff_two    = Factory( :dayoff,
                                :leave_length  => 'many',
                                :state => 1,
-                               :leave_type => 'etc',
+                               :leave_type => 'misc',
                                :user => @user_one,
                                :begin_time => date + 7.days,
                                :end_time   => date + 9.days)
@@ -328,7 +328,7 @@ describe "should return specific data sets" do
       @dayoff_three  = Factory( :dayoff,
                                :leave_length  => 'many',
                                :state => 1,
-                               :leave_type => 'etc',
+                               :leave_type => 'misc',
                                :user => @user_two,
                                :begin_time => date + 14.days,
                                :end_time   => date + 16.days )
@@ -338,7 +338,7 @@ describe "should return specific data sets" do
       @dayoff_four   = Factory( :dayoff,
                                :leave_length  => 'many',
                                :state => 0,
-                               :leave_type => 'etc',
+                               :leave_type => 'misc',
                                :user => @user_two,
                                :begin_time => date + 32.days,
                                :end_time   => date + 34.days )

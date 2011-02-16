@@ -7,7 +7,7 @@ Factory.define :user do |u|
   u.password_confirmation {"password"            }
   u.max_vacation          { 10.0                 }
   u.max_personal          { 10.0                 }
-  u.max_etc               { 10.0                 }
+  u.max_misc              { 10.0                 }
   u.active                { true                 }
 end
 
@@ -24,7 +24,7 @@ end
 Factory.define :dayoff do |h|
   h.association :user
   h.leave_length  { 'many'                   }
-  h.leave_type    { 'etc'                    }
+  h.leave_type    { 'misc'                   }
   h.description   { 'who ha'                 }
   h.state         { 0                        }
   h.reviewed_by   { 'rsmith'                 }
