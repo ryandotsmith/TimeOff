@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101227070021) do
+ActiveRecord::Schema.define(:version => 20110216045130) do
 
   create_table "accounts", :force => true do |t|
     t.string   "company_name"
@@ -109,7 +109,7 @@ ActiveRecord::Schema.define(:version => 20101227070021) do
     t.string   "last_login_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "max_etc",             :default => 10
+    t.integer  "max_misc",            :default => 10
     t.integer  "max_personal",        :default => 10
     t.integer  "max_vacation",        :default => 10
     t.boolean  "active"

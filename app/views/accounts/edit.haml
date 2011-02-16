@@ -21,6 +21,7 @@
         %th date of hire
         %th max vacation
         %th max personal
+        %th max misc.
         %th edit
         %th delete
       - @account.users.each do |user|
@@ -33,6 +34,7 @@
           %td= user.date_of_hire
           %td= user.max_vacation
           %td= user.max_personal
+          %td= user.max_misc
           %td= link_to 'edit',   edit_user_path(user), :rel => 'facebox'
           %td= link_to 'delete', user, :method => 'delete'
 
@@ -45,17 +47,17 @@
     %a{:href => "#{new_account_black_out_day_path(@account)}", :style => 'float:right', :title => "new black out day", :rel => 'facebox'}
       %span New Black Out Day
   .block_content
-    #black_out_info{:style => 'display:none;'} 
+    #black_out_info{:style => 'display:none;'}
       %p
         %strong Definition:
         %br
         Black Out Days are dates that should be skipped when calculating the amount of time off an
         %br
-        employee has taken. This is useful for things like Christmas and Thanksgiving. 
+        employee has taken. This is useful for things like Christmas and Thanksgiving.
       %p
         %strong Example:
         %br
-        If an employee has 4 days of approved time off and 1 Black Out Day exist in that 4 day period, 
+        If an employee has 4 days of approved time off and 1 Black Out Day exist in that 4 day period,
         %br
         the system will show that the employee has taken 3 days of time off.
       %p
@@ -74,7 +76,7 @@
     %h2 Google Authentication
     %a.help{:href => '#google_auth_info', :rel => 'facebox'} ?
   .block_content
-    #google_auth_info{:style => 'display:none;'} 
+    #google_auth_info{:style => 'display:none;'}
       %p
         %h3 Subdomain
         %p
@@ -82,7 +84,7 @@
           %br
           In order to use Google Authentication, You will need to sign into Time Off using a custom
           %br
-          URL. 
+          URL.
         %p
           %strong Example
           %br
@@ -90,8 +92,8 @@
           %br
           where acme is your chosen subdomain.
         %h3 Google apps domain
-        %p 
-          Your Google Appps Account name. 
+        %p
+          Your Google Appps Account name.
           %br
           Often, this is the domain name in your email address. (i.e. wonderset.com for ryan@wonderset.com)
       %p

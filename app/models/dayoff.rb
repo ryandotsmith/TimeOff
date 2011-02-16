@@ -40,7 +40,7 @@ class Dayoff < ActiveRecord::Base
   end
 
   def self.get_dayoff_types
-    ["etc","personal","vacation"]
+    ["misc","personal","vacation"]
   end
 
   def prohibit_time_travel
@@ -83,7 +83,6 @@ class Dayoff < ActiveRecord::Base
     self.save!
   end
 
-  ####################
   # get_length should get called any time that you need
   # to display the length of a holiday. Since the DB only
   # holds a begin and end DateTime, you can add methods similar to this one
@@ -103,8 +102,18 @@ class Dayoff < ActiveRecord::Base
   end
 
   def black_out?(date)
-    date.working_day? && user.account.black_out_days.map(&:date).include?(date)
+    raise ArgumentError unless date.class == Date
+    user.account.black_out_days.map(&:date).map(&:to_date).include?(date)
   end
+
+  def included_dates
+    array = []
+    begin_time.to_date.upto(end_time.to_date) do |date|
+      array << date if date.working_day?
+    end
+    array
+  end
+
 
   def adjust_time!( type )
     return if self.begin_time.nil?
@@ -119,16 +128,6 @@ class Dayoff < ActiveRecord::Base
       self.begin_time = self.begin_time.to_datetime.change( :hour => 7,   :min => 30 )
       self.end_time   = self.end_time.to_datetime.change(   :hour => 17,  :min => 00 )
     end
-  end
-
-  # returns a list of dates that are
-  # the days between and including the begin_time and end_time
-  def included_dates
-    array = []
-    begin_time.to_date.upto(end_time.to_date) do |date|
-      array << date if date.working_day?
-    end
-    array
   end
 
   def to_fullcalendar_format(user)

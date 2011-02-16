@@ -35,14 +35,11 @@
 %hr
 %h2 Maximum Time Off
 - form_for @user do |form|
-  %p
-    = form.label :max_vacation, "Vacation"
-    %br
-    = form.text_field :max_vacation, :size => '2'
-  %p
-    = form.label :max_personal, "Personal"
-    %br
-    = form.text_field :max_personal, :size => '2'
+  - @user.account.dayoff_types.each do |type|
+    %p
+      = form.label "max_#{type}", type.to_s.capitalize
+      %br
+      = form.text_field "max_#{type}", :size => '2'
   %p
     = form.submit 'update timeoff'
 %hr

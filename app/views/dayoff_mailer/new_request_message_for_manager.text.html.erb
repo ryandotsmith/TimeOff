@@ -34,8 +34,9 @@
 
     <hr />
 
-    <p><%= @dayoff.user.name %> has <%= @dayoff.user.remaining(:vacation)%> <em>vacation</em> days remaining.</p>
-    <p><%= @dayoff.user.name %> has <%= @dayoff.user.remaining(:personal)%> <em>personal</em> days remaining.</p>
+    <% @dayoff.user.account.dayoff_types.each do |type| %>
+      <p><%= @dayoff.user.name %> has <%= @dayoff.user.remaining(type)%> <em><%= type.to_s %></em> days remaining.</p>
+    <% end %>
 
     <hr />
 

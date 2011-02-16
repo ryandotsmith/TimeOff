@@ -19,15 +19,12 @@
       = form.error_messages :class => 'message errormsg'
     %table
       %tr
-        %td
-          = form.radio_button :leave_type, 'vacation'
-          = label :leave_type_vacation, 'Vacation'
-        %td
-          = form.radio_button :leave_type, 'personal', :checked => true
-          = label :leave_type_personal, 'Personal'
-        /%td
-        /  = form.radio_button :leave_type, 'etc'
-        /  = label :leave_type_etc, 'Other'
+        - @user.account.dayoff_types.each_with_object(1) do |type,i|
+          %td
+            = form.radio_button :leave_type, type, :checked => i == 1
+            = label :leave_type_vacation, type.to_s.capitalize
+          - i += 1
+
       %tr
         %td
           = form.radio_button :leave_length, 'half'

@@ -18,13 +18,9 @@
       %th remaining
       %th max available
   %tbody
-    %tr.vacation
-      %td vacation
-      %td.taken= pluralize(vacation_time_taken ,   'day')
-      %td.remaining= pluralize(vacation_time_remaining,'day')
-      %td.max= pluralize(@user.max_vacation,     'day')
-    %tr.personal
-      %td personal
-      %td.taken= pluralize(personal_time_taken ,   'day')
-      %td.remaining= pluralize(personal_time_remaining,'day')
-      %td.max= pluralize(@user.max_personal,     'day')
+    - @user.account.dayoff_types.each do |type|
+      %tr{:class => type}
+        %td= type.to_s
+        %td.taken= pluralize(@user.get_taken_dayoff_time[type], 'day')
+        %td.remaining= pluralize(@user.get_remaining_dayoff_time[type],'day')
+        %td.max= pluralize(@user.send("max_#{type}"), 'day')

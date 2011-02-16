@@ -19,6 +19,10 @@ class Account < ActiveRecord::Base
     self.update_attributes(:i_cal_token => Authlogic::Random.friendly_token)
   end
 
+  def dayoff_types
+    [:vacation, :personal, :misc]
+  end
+
   def owner=(user)
     user.update_attribute :manager, true
     update_attribute :owner_id, user.id

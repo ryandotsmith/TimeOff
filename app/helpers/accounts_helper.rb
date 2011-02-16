@@ -1,7 +1,7 @@
 module AccountsHelper
   def account_messages(account,user)
     messages = []
-    [:vacation, :personal].each do |type|
+    account.dayoff_types.each do |type|
       data = user.get_remaining_dayoff_time[type]
       max  = user.send("max_#{type}")
       message = NotificationMessage.new
@@ -13,7 +13,7 @@ module AccountsHelper
   end
 
   def requests_needs(qty)
-    qty == 1 ? 'request needs' : 'requests need' 
+    qty == 1 ? 'request needs' : 'requests need'
   end
 
 end

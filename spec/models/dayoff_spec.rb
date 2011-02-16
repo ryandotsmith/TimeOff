@@ -2,14 +2,6 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe Dayoff do
 
-  describe "denying the dayoff" do
-    before(:each) {@dayoff = Factory(:dayoff,:leave_length => 'whole', :begin_time => Time.now)}
-    it "should create a delayed job" do
-      @dayoff.deny(Factory(:user))
-
-    end
-  end
-
   describe "status" do
     before(:each) {@dayoff = Factory(:dayoff,:leave_length => 'whole', :begin_time => Time.now)}
     it "should return approved if the dayoff has been approved" do
@@ -37,54 +29,64 @@ describe Dayoff do
     end
   end
 
-  describe "calculating the length of time off" do
+  describe "#length" do
     before do
       @begin_time = MONDAY_THIS_YEAR
     end
 
-    describe "#length" do
-      it "should return a float" do
-        Factory(:dayoff).length.class.should eql(Float)
+    it "should return a float" do
+      Factory(:dayoff).length.class.should eql(Float)
+    end
+
+    context "when the day off spans one day" do
+      it "should return 1.0" do
+        Factory(:dayoff,
+          :begin_time =>  @begin_time,
+          :end_time   =>  @begin_time
+        ).length.should eql(1.0)
       end
+    end
 
-      context "when the day off spans one day" do
-        it "should return 1.0" do
-          Factory( :dayoff,
-            :begin_time =>  @begin_time,
-            :end_time   =>  @begin_time 
-          ).length.should eql(1.0)
-        end
+    context "when the day off spans 2 days" do
+      it "should return 2.0" do
+        Factory( :dayoff,
+          :leave_length => 'many',
+          :begin_time =>  @begin_time,
+          :end_time   =>  @begin_time + 1.days
+        ).length.should eql(2.0)
       end
+    end
 
-      context "when the day off spans 2 days" do
-        it "should return 2.0" do
-          Factory( :dayoff,
-            :leave_length => 'many',
-            :begin_time =>  @begin_time,
-            :end_time   =>  @begin_time + 1.days 
-          ).length.should eql(2.0)
-        end
+    context "when the day off spans 1 normal day and 2 black out days" do
+      before do
+        @user     = Factory(:user)
+        @account  = @user.account
+        @account.black_out_days.create :date => @begin_time + 1.day
+        @account.black_out_days.create :date => @begin_time + 2.days
       end
-
-      context "when the day off spans 1 normal day and 2 black out days" do
-        before do
-          @user = Factory(:user)
-          @account = @user.account
-          @account.black_out_days.create :date => @begin_time + 1.day 
-          @account.black_out_days.create :date => @begin_time + 2.days
-        end
-
-        it "should return 1.0" do
-          Factory( :dayoff,
-            :user => @user,
-            :account => @account,
-            :leave_length => 'many',
-            :begin_time =>  @begin_time,
-            :end_time   =>  @begin_time + 2.days 
-          ).length.should eql(1.0)
-        end
+      it "should return 1.0" do
+        Factory( :dayoff,
+          :user         => @user,
+          :account      => @account,
+          :leave_length => 'many',
+          :begin_time   =>  @begin_time,
+          :end_time     =>  @begin_time + 2.days
+        ).length.should eql(1.0)
       end
+    end
+  end
 
+  describe "#black_out?" do
+    let(:user)    { Factory(:user) }
+    let(:account) { user.account }
+    let(:dayoff)  { Factory(:dayoff,:user => user) }
+
+    context "when date is a working day" do
+      it "should return true" do
+        date = Date.civil 2011,1,1
+        account.black_out_days.create(:date => date)
+        dayoff.black_out?(date).should be_true
+      end
     end
   end
 
@@ -286,11 +288,11 @@ describe "adjust for half or whole days" do
 
   it "should add 24 hours to the current DateTime submitted" do
     @dayoff = Factory(
-                      :dayoff,
-                      :leave_length => 'whole',
-                      :begin_time => DateTime.now,
-                      :end_time   => nil )
-                      @dayoff.length.should eql( 1.0 )
+      :dayoff,
+      :leave_length => 'whole',
+      :begin_time => DateTime.now,
+      :end_time   => nil )
+      @dayoff.length.should eql( 1.0 )
 
   end
 end
@@ -357,11 +359,11 @@ describe "getting a list of dates that the user has daysoff for" do
   before(:each) do
     @user   = Factory( :user )
     @dayoff = Factory(:dayoff,
-      :leave_length => 'many',
-      :user         => @user,
-      :begin_time   => MONDAY_THIS_YEAR,
-      :end_time     => MONDAY_THIS_YEAR + 2.days 
-    )
+                      :leave_length => 'many',
+                      :user         => @user,
+                      :begin_time   => MONDAY_THIS_YEAR,
+                      :end_time     => MONDAY_THIS_YEAR + 2.days
+                     )
   end
 
   it "should return a list of a range of days that span a dayoff" do
@@ -375,13 +377,13 @@ describe "getting a list of dates that the user has daysoff for" do
 
   it "should return the begin_date for half-day daysoff" do
     @h = Factory(:dayoff,
-      :leave_length => 'half',
-      :user         => @user,
-      :begin_time   => FRIDAY,
-      :end_time     => nil
-    )
-    @h.included_dates.should include FRIDAY
-    @h.included_dates.length.should eql( 1 )
+                 :leave_length => 'half',
+                 :user         => @user,
+                 :begin_time   => FRIDAY,
+                 :end_time     => nil
+                )
+                @h.included_dates.should include FRIDAY
+                @h.included_dates.length.should eql( 1 )
   end
 end
 
